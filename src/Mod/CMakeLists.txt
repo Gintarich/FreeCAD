@@ -133,6 +133,10 @@ endif(BUILD_TECHDRAW)
 
 #add_subdirectory(TemplatePyMod)
 
+
+add_subdirectory(gbStructure)
+
+
 if(BUILD_TEST)
   add_subdirectory(Test)
 endif(BUILD_TEST)
