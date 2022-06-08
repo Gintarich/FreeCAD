@@ -120,6 +120,40 @@ public:
         float angle;
         rot.getValue(axis, angle);
         SbVec3f dif = point1 - point2;
+    #if 1
+        SbRotation rot1;
+        SbRotation rot2;
+
+        float dx = abs(dif[ 0 ]) / ( abs(dif[ 0 ]) + abs(dif[ 1 ]) );
+        if( dx < 0 )
+            dx = -dx;
+        float dy = 1 - dx;
+        float angle1 = angle * dy;
+        float angle2 = angle * dx;
+
+        SbVec3f xaxis(1, 0, 0);
+        if( dif[ 1 ] < 0 )
+            angle1 = -angle1;
+        rot1.setValue(xaxis, angle1);
+
+        SbVec3f zaxis(0, 0, 1);
+        this->worldToScreen.multDirMatrix(zaxis, zaxis);
+        if( zaxis[ 1 ] < 0 )
+        {
+            if( dif[ 0 ] < 0 )
+                angle2 = -angle2;
+        }
+        else
+        {
+            if( dif[ 0 ] > 0 )
+                angle2 = -angle2;
+    }
+        rot2.setValue(zaxis, angle2);
+        rot = rot1 * rot2;
+    #endif // 1
+
+    #if 0
+
         if (fabs(dif[1]) > fabs(dif[0])) {
             SbVec3f xaxis(1,0,0);
             if (dif[1] < 0)
@@ -139,6 +173,7 @@ public:
             }
             rot.setValue(zaxis, angle);
         }
+    #endif // 0
 
         return rot;
     }
@@ -968,6 +1003,13 @@ void NavigationStyle::spin(const SbVec2f & pointerpos)
     // when the user quickly trigger (as in "click-drag-release") a spin
     // animation.
     if (this->spinsamplecounter > 3) this->spinsamplecounter = 3;
+
+    //trick to remove tilt from camera
+    auto orientation = viewer->getSoRenderManager()->getCamera()->orientation.getValue();
+    SbMatrix myMat;
+    myMat.setRotate(orientation);
+    myMat[ 0 ][ 2 ] = 0;
+    viewer->getSoRenderManager()->getCamera()->orientation.setValue(SbRotation{ myMat });
 }
 
 /*!
@@ -1002,6 +1044,12 @@ void NavigationStyle::spin_simplified(SoCamera* cam, SbVec2f curpos, SbVec2f pre
     r.invert();
     this->reorientCamera(cam, r);
 
+    //trick to remove tilt from camera
+    auto orientation = viewer->getSoRenderManager()->getCamera()->orientation.getValue();
+    SbMatrix myMat;
+    myMat.setRotate(orientation);
+    myMat[ 0 ][ 2 ] = 0;
+    viewer->getSoRenderManager()->getCamera()->orientation.setValue(SbRotation{ myMat });
 }
 
 SbBool NavigationStyle::doSpin()

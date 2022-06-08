@@ -261,10 +261,10 @@ SbBool BlenderNavigationStyle::processSoEvent(const SoEvent * const ev)
     case BUTTON1DOWN|BUTTON2DOWN:
         newmode = NavigationStyle::PANNING;
         break;
-    case SHIFTDOWN|BUTTON3DOWN:
+    case BUTTON3DOWN:
         newmode = NavigationStyle::PANNING;
         break;
-    case BUTTON3DOWN:
+    case SHIFTDOWN | BUTTON3DOWN:
         if (newmode != NavigationStyle::DRAGGING) {
             saveCursorPosition(ev);
         }
