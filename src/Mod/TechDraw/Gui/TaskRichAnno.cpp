@@ -54,6 +54,7 @@
 #include <Mod/TechDraw/Gui/ui_TaskRichAnno.h>
 
 #include "PreferencesGui.h"
+#include "QGSPage.h"
 #include "QGVPage.h"
 #include "QGIView.h"
 #include "QGIPrimPath.h"
@@ -99,14 +100,14 @@ TaskRichAnno::TaskRichAnno(TechDrawGui::ViewProviderRichAnno* annoVP) :
     m_annoFeat = m_annoVP->getFeature();
 
     m_basePage = m_annoFeat->findParentPage();
-    if ( m_basePage == nullptr ) {
+    if (!m_basePage) {
         Base::Console().Error("TaskRichAnno - bad parameters (2).  Can not proceed.\n");
         return;
     }
 
     //m_baseFeat can be null
     App::DocumentObject* obj = m_annoFeat->AnnoParent.getValue();
-    if (obj != nullptr) {
+    if (obj) {
         if ( obj->isDerivedFrom(TechDraw::DrawView::getClassTypeId()) )  {
             m_baseFeat = static_cast<TechDraw::DrawView*>(m_annoFeat->AnnoParent.getValue());
         }
@@ -119,10 +120,10 @@ TaskRichAnno::TaskRichAnno(TechDrawGui::ViewProviderRichAnno* annoVP) :
     m_mdi = dvp->getMDIViewPage();
     m_qgParent = nullptr;
     m_haveMdi = true;
-    if (m_mdi != nullptr) {
-        m_view = m_mdi->getQGVPage();
-        if (m_baseFeat != nullptr) {
-            m_qgParent = m_view->findQViewForDocObj(m_baseFeat);
+    if (m_mdi) {
+        m_scene = m_mdi->getQGSPage();
+        if (m_baseFeat) {
+            m_qgParent = m_scene->findQViewForDocObj(m_baseFeat);
         }
     } else {
         m_haveMdi = false;
@@ -174,9 +175,9 @@ TaskRichAnno::TaskRichAnno(TechDraw::DrawView* baseFeat,
     m_qgParent = nullptr;
     m_haveMdi = true;
     m_mdi = dvp->getMDIViewPage();
-    if (m_mdi != nullptr) {
-        m_view = m_mdi->getQGVPage();
-        m_qgParent = m_view->findQViewForDocObj(baseFeat);
+    if (m_mdi) {
+        m_scene= m_mdi->getQGSPage();
+        m_qgParent = m_scene->findQViewForDocObj(baseFeat);
     } else {
         m_haveMdi = false;
     }
@@ -213,7 +214,7 @@ void TaskRichAnno::setUiPrimary()
     enableVPUi(false);
     setWindowTitle(m_title);
 
-    if (m_baseFeat != nullptr) {
+    if (m_baseFeat) {
         std::string baseName = m_baseFeat->getNameInDocument();
         ui->leBaseView->setText(Base::Tools::fromStdString(baseName));
     }
@@ -252,10 +253,10 @@ void TaskRichAnno::setUiEdit()
     setWindowTitle(m_title);
     enableTextUi(true);
 
-    if (m_annoFeat != nullptr) {
+    if (m_annoFeat) {
         std::string baseName("None");
         App::DocumentObject* docObj = m_annoFeat->AnnoParent.getValue();
-        if (docObj != nullptr) {
+        if (docObj) {
             baseName = docObj->getNameInDocument();
         }
         ui->leBaseView->setText(Base::Tools::fromStdString(baseName));
@@ -264,7 +265,7 @@ void TaskRichAnno::setUiEdit()
         ui->cbShowFrame->setChecked(m_annoFeat->ShowFrame.getValue());
     }
 
-    if (m_annoVP != nullptr) {
+    if (m_annoVP) {
         ui->cpFrameColor->setColor(m_annoVP->LineColor.getValue().asValue<QColor>());
         ui->dsbWidth->setValue(m_annoVP->LineWidth.getValue());
         ui->cFrameStyle->setCurrentIndex(m_annoVP->LineStyle.getValue());
@@ -346,12 +347,12 @@ void TaskRichAnno::createAnnoFeature()
     Command::doCommand(Command::Doc,"App.activeDocument().%s.addView(App.activeDocument().%s)",
                        PageName.c_str(),annoName.c_str());
 
-    if (m_baseFeat != nullptr) {
+    if (m_baseFeat) {
         Command::doCommand(Command::Doc,"App.activeDocument().%s.AnnoParent = App.activeDocument().%s",
                                annoName.c_str(),m_baseFeat->getNameInDocument());
     }
     App::DocumentObject* obj = m_basePage->getDocument()->getObject(annoName.c_str());
-    if (obj == nullptr) {
+    if (!obj) {
         throw Base::RuntimeError("TaskRichAnno - new RichAnno object not found");
     }
     if (obj->isDerivedFrom(TechDraw::DrawRichAnno::getClassTypeId())) {
@@ -369,10 +370,10 @@ void TaskRichAnno::createAnnoFeature()
         }
     }
 
-    if (m_annoFeat != nullptr) {
+    if (m_annoFeat) {
         Gui::ViewProvider* vp = QGIView::getViewProvider(m_annoFeat);
         auto annoVP = dynamic_cast<ViewProviderRichAnno*>(vp);
-        if (annoVP != nullptr) {
+        if (annoVP) {
             App::Color ac;
             ac.setValue<QColor>(ui->cpFrameColor->color());
             annoVP->LineColor.setValue(ac);
@@ -385,13 +386,13 @@ void TaskRichAnno::createAnnoFeature()
     Gui::Command::commitCommand();
 
     //trigger collectChildren in tree
-    if (m_baseFeat != nullptr) {
+    if (m_baseFeat) {
         m_baseFeat->touch();
     }
 
     m_basePage->touch();
 
-    if (m_annoFeat != nullptr) {
+    if (m_annoFeat) {
         m_annoFeat->requestPaint();
     }
 }
@@ -423,27 +424,28 @@ void TaskRichAnno::commonFeatureUpdate(void)
 void TaskRichAnno::removeFeature(void)
 {
 //    Base::Console().Message("TRA::removeFeature()\n");
-    if (m_annoFeat != nullptr) {
-        if (m_createMode) {
-            try {
-                // this doesn't remove the QGMText item??
-                std::string PageName = m_basePage->getNameInDocument();
-                Gui::Command::doCommand(Gui::Command::Gui,"App.activeDocument().%s.removeView(App.activeDocument().%s)",
-                                        PageName.c_str(),m_annoFeat->getNameInDocument());
-                Gui::Command::doCommand(Gui::Command::Gui,"App.activeDocument().removeObject('%s')",
-                                         m_annoFeat->getNameInDocument());
-            }
-            catch (...) {
-                Base::Console().Warning("TRA::removeFeature - failed to delete feature\n");
-                return;
-            }
+    if (!m_annoFeat)
+        return;
+
+    if (m_createMode) {
+        try {
+            // this doesn't remove the QGMText item??
+            std::string PageName = m_basePage->getNameInDocument();
+            Gui::Command::doCommand(Gui::Command::Gui,"App.activeDocument().%s.removeView(App.activeDocument().%s)",
+                                    PageName.c_str(),m_annoFeat->getNameInDocument());
+            Gui::Command::doCommand(Gui::Command::Gui,"App.activeDocument().removeObject('%s')",
+                                        m_annoFeat->getNameInDocument());
+        }
+        catch (...) {
+            Base::Console().Warning("TRA::removeFeature - failed to delete feature\n");
+            return;
+        }
+    } else {
+        if (Gui::Command::hasPendingCommand()) {
+            std::vector<std::string> undos = Gui::Application::Instance->activeDocument()->getUndoVector();
+            Gui::Application::Instance->activeDocument()->undo(1);
         } else {
-            if (Gui::Command::hasPendingCommand()) {
-                std::vector<std::string> undos = Gui::Application::Instance->activeDocument()->getUndoVector();
-                Gui::Application::Instance->activeDocument()->undo(1);
-            } else {
-                Base::Console().Log("TaskRichAnno: Edit mode - NO command is active\n");
-            }
+            Base::Console().Log("TaskRichAnno: Edit mode - NO command is active\n");
         }
     }
 }
@@ -465,22 +467,20 @@ QPointF TaskRichAnno::calcTextStartPos(double scale)
     }
 
     std::vector<Base::Vector3d> points;
-    if (m_baseFeat != nullptr) {
+    if (m_baseFeat) {
         if (m_baseFeat->isDerivedFrom(TechDraw::DrawLeaderLine::getClassTypeId())) {
             TechDraw::DrawLeaderLine* dll = static_cast<TechDraw::DrawLeaderLine*>(m_baseFeat);
             points = dll->WayPoints.getValues();
         } else {
 //            Base::Console().Message("TRA::calcTextPos - m_baseFeat is not Leader\n");
-            QPointF result(0.0,0.0);
-            return result;
+            return QPointF(0.0,0.0);
         }
     } else {
 //        Base::Console().Message("TRA::calcStartPos - no m_baseFeat\n");
-        if (m_basePage != nullptr) {
+        if (m_basePage) {
             double w = Rez::guiX(m_basePage->getPageWidth() / 2.0);
             double h = Rez::guiX(m_basePage->getPageHeight() / 2.0);
-            QPointF result(w,h);
-            return result;
+            return QPointF(w,h);
         } else {
             Base::Console().Message("TRA::calcStartPos - no m_basePage\n"); //shouldn't happen. caught elsewhere
         }
@@ -501,8 +501,7 @@ QPointF TaskRichAnno::calcTextStartPos(double scale)
             tPosY = lastOffset.y() - textHeight;
         }
     }
-    QPointF result(tPosX, -tPosY);
-    return result;
+    return QPointF(tPosX, -tPosY);
 }
 
 void TaskRichAnno::saveButtons(QPushButton* btnOK,
@@ -533,10 +532,10 @@ bool TaskRichAnno::accept()
     if (!doc)
         return false;
 
-    if (!getCreateMode())  {
-        updateAnnoFeature();
-    } else {
+    if (getCreateMode())  {
         createAnnoFeature();
+    } else {
+        updateAnnoFeature();
     }
 //    m_mdi->setContextMenuPolicy(m_saveContextPolicy);
     Gui::Command::doCommand(Gui::Command::Gui,"Gui.ActiveDocument.resetEdit()");
@@ -552,13 +551,12 @@ bool TaskRichAnno::reject()
         return false;
     }
 
-    if (m_basePage != nullptr) {
+    if (m_basePage) {
         Gui::Document* doc = Gui::Application::Instance->getDocument(m_basePage->getDocument());
         if (!doc) {
             return false;
         }
-        if (getCreateMode() &&
-            (m_annoFeat != nullptr) )  {
+        if (getCreateMode() && m_annoFeat)  {
             removeFeature();
         }
     }

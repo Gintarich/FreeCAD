@@ -21,7 +21,14 @@
  ***************************************************************************/
 
 #include "PreCompiled.h"
+
 #ifndef _PreComp_
+
+// to avoid compiler warnings of redefining contents of basic.h
+// later by #include <Gui/ViewProviderGeometryObject.h>
+# define _USE_MATH_DEFINES
+# include <cmath>
+
 # include <Inventor/actions/SoGetBoundingBoxAction.h>
 # include <Inventor/nodes/SoCamera.h>
 # include <Inventor/nodes/SoOrthographicCamera.h>
@@ -107,7 +114,7 @@ SectionCut::SectionCut(QWidget* parent)
             ObjectsListVisible.push_back(*it);
     }
 
-    // lambda function to set color and transpareny
+    // lambda function to set color and transparency
     auto setColorTransparency = [&](Part::Box* pcBox) {
         App::Color cutColor;
         long cutTransparency;

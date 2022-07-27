@@ -20,27 +20,27 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
+# include <BRepOffsetAPI_MakePipeShell.hxx>
 # include <gp_Ax2.hxx>
 # include <gp_Dir.hxx>
 # include <gp_Pnt.hxx>
-# include <TopoDS.hxx>
-# include <TopoDS_Wire.hxx>
-# include <BRepOffsetAPI_MakePipeShell.hxx>
 # include <Standard_Version.hxx>
+# include <TopoDS.hxx>
 # include <TopTools_ListIteratorOfListOfShape.hxx>
 #endif
 
-#include "TopoShapePy.h"
-#include "TopoShapeVertexPy.h"
+#include <Base/GeometryPyCXX.h>
+#include <Base/VectorPy.h>
+
 #include "BRepOffsetAPI_MakePipeShellPy.h"
 #include "BRepOffsetAPI_MakePipeShellPy.cpp"
-#include "Tools.h"
 #include "OCCError.h"
-#include <Base/VectorPy.h>
-#include <Base/GeometryPyCXX.h>
+#include "Tools.h"
+#include "TopoShapePy.h"
+#include "TopoShapeVertexPy.h"
+
 
 using namespace Part;
 
@@ -78,7 +78,7 @@ PyObject* BRepOffsetAPI_MakePipeShellPy::setFrenetMode(PyObject *args)
         return nullptr;
 
     try {
-        this->getBRepOffsetAPI_MakePipeShellPtr()->SetMode(PyObject_IsTrue(obj) ? Standard_True : Standard_False);
+        this->getBRepOffsetAPI_MakePipeShellPtr()->SetMode(Base::asBoolean(obj));
         Py_Return;
     }
     catch (Standard_Failure& e) {
@@ -142,7 +142,6 @@ PyObject* BRepOffsetAPI_MakePipeShellPy::setSpineSupport(PyObject *args)
 
 PyObject* BRepOffsetAPI_MakePipeShellPy::setAuxiliarySpine(PyObject *args)
 {
-#if OCC_VERSION_HEX >= 0x060700
     PyObject *spine, *curv, *keep;
     if (!PyArg_ParseTuple(args, "O!O!O!",&Part::TopoShapePy::Type,&spine
                                         ,&PyBool_Type,&curv
@@ -170,7 +169,7 @@ PyObject* BRepOffsetAPI_MakePipeShellPy::setAuxiliarySpine(PyObject *args)
         }
         this->getBRepOffsetAPI_MakePipeShellPtr()->SetMode(
             TopoDS::Wire(s),
-            PyObject_IsTrue(curv) ? Standard_True : Standard_False,
+            Base::asBoolean(curv),
             typeOfCantact);
         Py_Return;
     }
@@ -178,31 +177,6 @@ PyObject* BRepOffsetAPI_MakePipeShellPy::setAuxiliarySpine(PyObject *args)
         PyErr_SetString(PartExceptionOCCError, e.GetMessageString());
         return nullptr;
     }
-#else
-    PyObject *spine, *curv, *keep;
-    if (!PyArg_ParseTuple(args, "O!O!O!",&Part::TopoShapePy::Type,&spine
-                                        ,&PyBool_Type,&curv
-                                        ,&PyBool_Type,&keep))
-        return 0;
-
-    try {
-        const TopoDS_Shape& s = static_cast<Part::TopoShapePy*>(spine)->getTopoShapePtr()->getShape();
-        if (s.IsNull() || s.ShapeType() != TopAbs_WIRE) {
-            PyErr_SetString(PyExc_TypeError, "spine is not a wire");
-            return 0;
-        }
-
-        this->getBRepOffsetAPI_MakePipeShellPtr()->SetMode(
-            TopoDS::Wire(s),
-            PyObject_IsTrue(curv) ? Standard_True : Standard_False,
-            PyObject_IsTrue(keep) ? Standard_True : Standard_False);
-        Py_Return;
-    }
-    catch (Standard_Failure& e) {
-        PyErr_SetString(PartExceptionOCCError, e.GetMessageString());
-        return 0;
-    }
-#endif
 }
 
 PyObject* BRepOffsetAPI_MakePipeShellPy::add(PyObject *args, PyObject *kwds)
@@ -215,9 +189,7 @@ PyObject* BRepOffsetAPI_MakePipeShellPy::add(PyObject *args, PyObject *kwds)
                                         ,&PyBool_Type,&keep)) {
         try {
             const TopoDS_Shape& s = static_cast<Part::TopoShapePy*>(prof)->getTopoShapePtr()->getShape();
-            this->getBRepOffsetAPI_MakePipeShellPtr()->Add(s,
-                PyObject_IsTrue(curv) ? Standard_True : Standard_False,
-                PyObject_IsTrue(keep) ? Standard_True : Standard_False);
+            this->getBRepOffsetAPI_MakePipeShellPtr()->Add(s, Base::asBoolean(curv), Base::asBoolean(keep));
             Py_Return;
         }
         catch (Standard_Failure& e) {
@@ -237,9 +209,7 @@ PyObject* BRepOffsetAPI_MakePipeShellPy::add(PyObject *args, PyObject *kwds)
         try {
             const TopoDS_Shape& s = static_cast<Part::TopoShapePy*>(prof)->getTopoShapePtr()->getShape();
             const TopoDS_Vertex& v = TopoDS::Vertex(static_cast<Part::TopoShapePy*>(loc)->getTopoShapePtr()->getShape());
-            this->getBRepOffsetAPI_MakePipeShellPtr()->Add(s, v,
-                PyObject_IsTrue(curv) ? Standard_True : Standard_False,
-                PyObject_IsTrue(keep) ? Standard_True : Standard_False);
+            this->getBRepOffsetAPI_MakePipeShellPtr()->Add(s, v, Base::asBoolean(curv), Base::asBoolean(keep));
             Py_Return;
         }
         catch (Standard_Failure& e) {
@@ -440,14 +410,8 @@ PyObject* BRepOffsetAPI_MakePipeShellPy::setMaxDegree(PyObject *args)
         return nullptr;
 
     try {
-#if OCC_VERSION_HEX >= 0x060800
         this->getBRepOffsetAPI_MakePipeShellPtr()->SetMaxDegree(degree);
         Py_Return;
-#else
-        (void)args;
-        PyErr_SetString(PyExc_RuntimeError, "requires OCC >= 6.8");
-        return 0;
-#endif
     }
     catch (Standard_Failure& e) {
         PyErr_SetString(PartExceptionOCCError, e.GetMessageString());
@@ -462,14 +426,8 @@ PyObject* BRepOffsetAPI_MakePipeShellPy::setMaxSegments(PyObject *args)
         return nullptr;
 
     try {
-#if OCC_VERSION_HEX >= 0x060800
         this->getBRepOffsetAPI_MakePipeShellPtr()->SetMaxSegments(nbseg);
         Py_Return;
-#else
-        (void)args;
-        PyErr_SetString(PyExc_RuntimeError, "requires OCC >= 6.8");
-        return 0;
-#endif
     }
     catch (Standard_Failure& e) {
         PyErr_SetString(PartExceptionOCCError, e.GetMessageString());
@@ -484,13 +442,8 @@ PyObject* BRepOffsetAPI_MakePipeShellPy::setForceApproxC1(PyObject *args)
         return nullptr;
 
     try {
-#if OCC_VERSION_HEX >= 0x060700
-        this->getBRepOffsetAPI_MakePipeShellPtr()->SetForceApproxC1(PyObject_IsTrue(obj) ? Standard_True : Standard_False);
+        this->getBRepOffsetAPI_MakePipeShellPtr()->SetForceApproxC1(Base::asBoolean(obj));
         Py_Return;
-#else
-        PyErr_SetString(PyExc_RuntimeError, "requires OCC >= 6.7");
-        return 0;
-#endif
     }
     catch (Standard_Failure& e) {
         PyErr_SetString(PartExceptionOCCError, e.GetMessageString());

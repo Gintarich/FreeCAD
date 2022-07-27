@@ -2,88 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
-    <name>PartDesign_InvoluteGear</name>
-    <message>
-        <location filename="../../../InvoluteGearFeature.py" line="57"/>
-        <source>Involute gear...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../InvoluteGearFeature.py" line="59"/>
-        <source>Creates or edit the involute gear definition.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>PartDesign_Sprocket</name>
-    <message>
-        <location filename="../../../SprocketFeature.py" line="62"/>
-        <source>Sprocket...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../SprocketFeature.py" line="64"/>
-        <source>Creates or edit the sprocket definition.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>WizardShaft</name>
-    <message>
-        <location filename="../../../WizardShaft/WizardShaft.py" line="210"/>
-        <source>Shaft design wizard...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../WizardShaft/WizardShaft.py" line="211"/>
-        <source>Start the shaft design wizard</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>WizardShaftTable</name>
-    <message>
-        <location filename="../../../WizardShaft/WizardShaftTable.py" line="43"/>
-        <source>Length [mm]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../WizardShaft/WizardShaftTable.py" line="44"/>
-        <source>Diameter [mm]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../WizardShaft/WizardShaftTable.py" line="45"/>
-        <source>Inner diameter [mm]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../WizardShaft/WizardShaftTable.py" line="46"/>
-        <source>Constraint type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../WizardShaft/WizardShaftTable.py" line="47"/>
-        <source>Start edge type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../WizardShaft/WizardShaftTable.py" line="48"/>
-        <source>Start edge size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../WizardShaft/WizardShaftTable.py" line="49"/>
-        <source>End edge type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../WizardShaft/WizardShaftTable.py" line="50"/>
-        <source>End edge size</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>App::Property</name>
     <message>
         <location filename="../../../App/FeatureHelix.cpp" line="72"/>
@@ -940,8 +858,8 @@ so that self intersection is avoided.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../CommandBody.cpp" line="189"/>
         <location filename="../../DlgActiveBody.cpp" line="104"/>
+        <location filename="../../CommandBody.cpp" line="189"/>
         <source>Add a Body</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1635,14 +1553,6 @@ click again to end selection</source>
     </message>
 </context>
 <context>
-    <name>PartDesignGui::TaskDatumParameters</name>
-    <message>
-        <location filename="../../TaskDatumParameters.cpp" line="56"/>
-        <source> parameters</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>PartDesignGui::TaskDlgBooleanParameters</name>
     <message>
         <location filename="../../TaskBooleanParameters.cpp" line="352"/>
@@ -1684,7 +1594,7 @@ click again to end selection</source>
 <context>
     <name>PartDesignGui::TaskDlgShapeBinder</name>
     <message>
-        <location filename="../../TaskShapeBinder.cpp" line="331"/>
+        <location filename="../../TaskShapeBinder.cpp" line="412"/>
         <source>Input error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3109,6 +3019,11 @@ measured along the specified direction</source>
         <source>Datum shape parameters</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../../TaskShapeBinder.cpp" line="131"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PartDesignGui::TaskSketchBasedParameters</name>
@@ -3291,6 +3206,101 @@ click again to end selection</source>
     </message>
 </context>
 <context>
+    <name>PartDesignGui::ViewProviderChamfer</name>
+    <message>
+        <location filename="../../ViewProviderChamfer.h" line="41"/>
+        <source>Chamfer parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartDesignGui::ViewProviderDatum</name>
+    <message>
+        <location filename="../../ViewProviderDatum.cpp" line="111"/>
+        <source>Datum Plane parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ViewProviderDatum.cpp" line="116"/>
+        <source>Datum Line parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ViewProviderDatum.cpp" line="121"/>
+        <source>Datum Point parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ViewProviderDatum.cpp" line="126"/>
+        <source>Local Coordinate System parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartDesignGui::ViewProviderDraft</name>
+    <message>
+        <location filename="../../ViewProviderDraft.h" line="42"/>
+        <source>Draft parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartDesignGui::ViewProviderFillet</name>
+    <message>
+        <location filename="../../ViewProviderFillet.h" line="41"/>
+        <source>Fillet parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartDesignGui::ViewProviderLinearPattern</name>
+    <message>
+        <location filename="../../ViewProviderLinearPattern.h" line="38"/>
+        <source>LinearPattern parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartDesignGui::ViewProviderMultiTransform</name>
+    <message>
+        <location filename="../../ViewProviderMultiTransform.h" line="38"/>
+        <source>MultiTransform parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartDesignGui::ViewProviderPolarPattern</name>
+    <message>
+        <location filename="../../ViewProviderPolarPattern.h" line="38"/>
+        <source>PolarPattern parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartDesignGui::ViewProviderScaled</name>
+    <message>
+        <location filename="../../ViewProviderScaled.h" line="38"/>
+        <source>Scaled parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartDesignGui::ViewProviderThickness</name>
+    <message>
+        <location filename="../../ViewProviderThickness.h" line="41"/>
+        <source>Thickness parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartDesignGuii::ViewProviderMirrored</name>
+    <message>
+        <location filename="../../ViewProviderMirrored.h" line="38"/>
+        <source>Mirrored parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PartDesign_CompPrimitiveAdditive</name>
     <message>
         <location filename="../../CommandPrimitive.cpp" line="200"/>
@@ -3377,6 +3387,19 @@ click again to end selection</source>
     </message>
 </context>
 <context>
+    <name>PartDesign_InvoluteGear</name>
+    <message>
+        <location filename="../../../InvoluteGearFeature.py" line="57"/>
+        <source>Involute gear...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../InvoluteGearFeature.py" line="61"/>
+        <source>Creates or edit the involute gear definition.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PartDesign_MoveFeature</name>
     <message>
         <location filename="../../CommandBody.cpp" line="728"/>
@@ -3414,6 +3437,19 @@ click again to end selection</source>
     <message>
         <location filename="../../CommandBody.cpp" line="955"/>
         <source>Do you want the last feature to be the new tip?</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartDesign_Sprocket</name>
+    <message>
+        <location filename="../../../SprocketFeature.py" line="62"/>
+        <source>Sprocket...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../SprocketFeature.py" line="66"/>
+        <source>Creates or edit the sprocket definition.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3487,28 +3523,28 @@ click again to end selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../ViewProvider.cpp" line="98"/>
+        <location filename="../../ViewProviderHole.cpp" line="79"/>
+        <location filename="../../ViewProviderDatum.cpp" line="246"/>
+        <location filename="../../ViewProviderShapeBinder.cpp" line="98"/>
+        <location filename="../../ViewProviderPrimitive.cpp" line="73"/>
         <location filename="../../Command.cpp" line="811"/>
         <location filename="../../Command.cpp" line="1226"/>
         <location filename="../../Command.cpp" line="2225"/>
-        <location filename="../../ViewProvider.cpp" line="98"/>
         <location filename="../../ViewProviderBoolean.cpp" line="80"/>
-        <location filename="../../ViewProviderDatum.cpp" line="242"/>
-        <location filename="../../ViewProviderHole.cpp" line="79"/>
-        <location filename="../../ViewProviderPrimitive.cpp" line="73"/>
-        <location filename="../../ViewProviderShapeBinder.cpp" line="98"/>
         <source>A dialog is already open in the task panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../ViewProvider.cpp" line="99"/>
+        <location filename="../../ViewProviderHole.cpp" line="80"/>
+        <location filename="../../ViewProviderDatum.cpp" line="247"/>
+        <location filename="../../ViewProviderShapeBinder.cpp" line="99"/>
+        <location filename="../../ViewProviderPrimitive.cpp" line="74"/>
         <location filename="../../Command.cpp" line="812"/>
         <location filename="../../Command.cpp" line="1227"/>
         <location filename="../../Command.cpp" line="2226"/>
-        <location filename="../../ViewProvider.cpp" line="99"/>
         <location filename="../../ViewProviderBoolean.cpp" line="81"/>
-        <location filename="../../ViewProviderDatum.cpp" line="243"/>
-        <location filename="../../ViewProviderHole.cpp" line="80"/>
-        <location filename="../../ViewProviderPrimitive.cpp" line="74"/>
-        <location filename="../../ViewProviderShapeBinder.cpp" line="99"/>
         <source>Do you want to close this dialog?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3777,14 +3813,14 @@ This may lead to unexpected results.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../TaskRevolutionParameters.cpp" line="124"/>
         <location filename="../../TaskTransformedParameters.cpp" line="287"/>
+        <location filename="../../TaskRevolutionParameters.cpp" line="124"/>
         <source>Vertical sketch axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../TaskRevolutionParameters.cpp" line="125"/>
         <location filename="../../TaskTransformedParameters.cpp" line="288"/>
+        <location filename="../../TaskRevolutionParameters.cpp" line="125"/>
         <source>Horizontal sketch axis</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3836,11 +3872,11 @@ If you have a legacy document with PartDesign objects without Body, use the migr
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ViewProvider.cpp" line="65"/>
-        <location filename="../../ViewProviderDressUp.cpp" line="50"/>
-        <location filename="../../ViewProviderMultiTransform.cpp" line="42"/>
-        <location filename="../../ViewProviderShapeBinder.cpp" line="204"/>
         <location filename="../../ViewProviderTransformed.cpp" line="65"/>
+        <location filename="../../ViewProvider.cpp" line="65"/>
+        <location filename="../../ViewProviderShapeBinder.cpp" line="204"/>
+        <location filename="../../ViewProviderMultiTransform.cpp" line="42"/>
+        <location filename="../../ViewProviderDressUp.cpp" line="50"/>
         <source>Edit %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3856,29 +3892,29 @@ If you have a legacy document with PartDesign objects without Body, use the migr
     </message>
     <message>
         <location filename="../../ViewProviderDatum.cpp" line="110"/>
-        <location filename="../../ViewProviderDatum.cpp" line="200"/>
+        <location filename="../../ViewProviderDatum.cpp" line="204"/>
         <source>Plane</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ViewProviderDatum.cpp" line="114"/>
-        <location filename="../../ViewProviderDatum.cpp" line="196"/>
+        <location filename="../../ViewProviderDatum.cpp" line="115"/>
+        <location filename="../../ViewProviderDatum.cpp" line="200"/>
         <source>Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ViewProviderDatum.cpp" line="118"/>
-        <location filename="../../ViewProviderDatum.cpp" line="204"/>
+        <location filename="../../ViewProviderDatum.cpp" line="120"/>
+        <location filename="../../ViewProviderDatum.cpp" line="208"/>
         <source>Point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ViewProviderDatum.cpp" line="122"/>
+        <location filename="../../ViewProviderDatum.cpp" line="125"/>
         <source>Coordinate System</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ViewProviderDatum.cpp" line="221"/>
+        <location filename="../../ViewProviderDatum.cpp" line="225"/>
         <source>Edit datum</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4591,6 +4627,64 @@ over 90: larger hole radius at the bottom</source>
     <message>
         <location filename="../../TaskTransformedMessages.ui" line="25"/>
         <source>No message</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>WizardShaft</name>
+    <message>
+        <location filename="../../../WizardShaft/WizardShaft.py" line="186"/>
+        <location filename="../../../WizardShaft/WizardShaft.py" line="211"/>
+        <source>Shaft design wizard...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../WizardShaft/WizardShaft.py" line="187"/>
+        <location filename="../../../WizardShaft/WizardShaft.py" line="212"/>
+        <source>Start the shaft design wizard</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>WizardShaftTable</name>
+    <message>
+        <location filename="../../../WizardShaft/WizardShaftTable.py" line="43"/>
+        <source>Length [mm]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../WizardShaft/WizardShaftTable.py" line="44"/>
+        <source>Diameter [mm]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../WizardShaft/WizardShaftTable.py" line="45"/>
+        <source>Inner diameter [mm]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../WizardShaft/WizardShaftTable.py" line="46"/>
+        <source>Constraint type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../WizardShaft/WizardShaftTable.py" line="47"/>
+        <source>Start edge type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../WizardShaft/WizardShaftTable.py" line="48"/>
+        <source>Start edge size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../WizardShaft/WizardShaftTable.py" line="49"/>
+        <source>End edge type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../WizardShaft/WizardShaftTable.py" line="53"/>
+        <source>End edge size</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

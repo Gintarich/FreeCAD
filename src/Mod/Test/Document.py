@@ -203,6 +203,15 @@ class DocumentBasicCases(unittest.TestCase):
     with self.assertRaises(ValueError):
       obj.myEnumeration = enumeration_choices[0]
 
+    obj.myEnumeration = enumeration_choices
+    obj.myEnumeration = 0
+    self.Doc.openTransaction("Modify enum")
+    obj.myEnumeration = 1
+    self.assertTrue(obj.myEnumeration, enumeration_choices[1])
+    self.Doc.commitTransaction()
+    self.Doc.undo()
+    self.assertTrue(obj.myEnumeration, enumeration_choices[0])
+
   def testWrongTypes(self):
     with self.assertRaises(TypeError):
       self.Doc.addObject("App::DocumentObjectExtension")
@@ -221,6 +230,13 @@ class DocumentBasicCases(unittest.TestCase):
 
     with self.assertRaises(TypeError):
       self.Doc.findObjects(Type="App::DocumentObjectExtension")
+
+    e = FreeCAD.Base.TypeId.fromName("App::LinkExtensionPython")
+    self.assertIsNone(e.createInstance())
+
+    if FreeCAD.GuiUp:
+      obj = self.Doc.addObject("App::DocumentObject", viewType="App::Extension")
+      self.assertIsNone(obj.ViewObject)
 
   def testMem(self):
     self.Doc.MemSize
@@ -1544,6 +1560,14 @@ class DocumentExpressionCases(unittest.TestCase):
     # must not raise a topological error
     self.assertEqual(self.Doc.recompute(), 2)
 
+    # add test for issue #6948
+    self.Obj3 = self.Doc.addObject("App::FeatureTest", "Test")
+    self.Obj3.setExpression('Float', u'2*(5%3)')
+    self.Doc.recompute()
+    self.assertEqual(self.Obj3.Float, 4)
+    self.assertEqual(self.Obj3.evalExpression(self.Obj3.ExpressionEngine[0][1]), 4)
+
+
   def testIssue4649(self):
       class Cls():
           def __init__(self, obj):
@@ -2158,3 +2182,127 @@ class DocumentObserverCases(unittest.TestCase):
     #closing doc
     FreeCAD.removeDocumentObserver(self.Obs)
     self.Obs = None
+
+class FeatureTestColumn(unittest.TestCase):
+    def setUp(self):
+        doc = FreeCAD.newDocument("TestColumn")
+        self.obj = doc.addObject("App::FeatureTestColumn", "Column")
+
+    def testEmpty(self):
+        value = self.obj.Value
+        self.obj.Column = ""
+        self.assertFalse(self.obj.recompute())
+        self.assertEqual(self.obj.Value, value)
+
+    def testA(self):
+        self.obj.Column = "A"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 0)
+
+    def testZ(self):
+        self.obj.Column = "Z"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 25)
+
+    def testAA(self):
+        self.obj.Column = "AA"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 26)
+
+    def testAB(self):
+        self.obj.Column = "AB"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 27)
+
+    def testAZ(self):
+        self.obj.Column = "AZ"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 51)
+
+    def testBA(self):
+        self.obj.Column = "BA"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 52)
+
+    def testCB(self):
+        self.obj.Column = "CB"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 79)
+
+    def testZA(self):
+        self.obj.Column = "ZA"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 676)
+
+    def testZZ(self):
+        self.obj.Column = "ZZ"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 701)
+
+    def testAAA(self):
+        self.obj.Column = "AAA"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 702)
+
+    def testAAZ(self):
+        self.obj.Column = "AAZ"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 727)
+
+    def testCBA(self):
+        self.obj.Column = "CBA"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 2080)
+
+    def testAZA(self):
+        self.obj.Column = "AZA"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 1352)
+
+    def testZZA(self):
+        self.obj.Column = "ZZA"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 18252)
+
+    def testZZZ(self):
+        self.obj.Column = "ZZZ"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 18277)
+
+    def testALL(self):
+        self.obj.Column = "ALL"
+        self.obj.recompute()
+        self.assertEqual(self.obj.Value, 999)
+
+    def testAb(self):
+        value = self.obj.Value
+        self.obj.Column = "Ab"
+        self.assertFalse(self.obj.recompute())
+        self.assertEqual(self.obj.Value, value)
+
+    def testABCD(self):
+        value = self.obj.Value
+        self.obj.Column = "ABCD"
+        self.assertFalse(self.obj.recompute())
+        self.assertEqual(self.obj.Value, value)
+
+    def testEmptySilent(self):
+        self.obj.Column = ""
+        self.obj.Silent = True
+        self.assertTrue(self.obj.recompute())
+        self.assertEqual(self.obj.Value, -1)
+
+    def testAbSilent(self):
+        self.obj.Column = "Ab"
+        self.obj.Silent = True
+        self.assertTrue(self.obj.recompute())
+        self.assertEqual(self.obj.Value, -1)
+
+    def testABCDSilent(self):
+        self.obj.Column = "ABCD"
+        self.obj.Silent = True
+        self.assertTrue(self.obj.recompute())
+        self.assertEqual(self.obj.Value, -1)
+
+    def tearDown(self):
+        FreeCAD.closeDocument("TestColumn")

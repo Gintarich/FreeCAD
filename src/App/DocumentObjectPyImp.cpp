@@ -91,7 +91,7 @@ PyObject*  DocumentObjectPy::addProperty(PyObject *args)
     }
 
     getDocumentObjectPtr()->addDynamicProperty(sType,sName,sGroup,sDocStr.c_str(),attr,
-            PyObject_IsTrue(ro) ? true : false, PyObject_IsTrue(hd) ? true : false);
+            Base::asBoolean(ro), Base::asBoolean(hd));
 
     return Py::new_reference_to(this);
 }
@@ -374,12 +374,12 @@ PyObject*  DocumentObjectPy::evalExpression(PyObject *self, PyObject * args)
 
 PyObject*  DocumentObjectPy::recompute(PyObject *args)
 {
-    PyObject *recursive=Py_False;
-    if (!PyArg_ParseTuple(args, "|O",&recursive))
+    PyObject *recursive = Py_False;
+    if (!PyArg_ParseTuple(args, "|O!", &PyBool_Type, &recursive))
         return nullptr;
 
     try {
-        bool ok = getDocumentObjectPtr()->recomputeFeature(PyObject_IsTrue(recursive));
+        bool ok = getDocumentObjectPtr()->recomputeFeature(Base::asBoolean(recursive));
         return Py_BuildValue("O", (ok ? Py_True : Py_False));
     }
     catch (const Base::Exception& e) {
@@ -434,8 +434,8 @@ PyObject* DocumentObjectPy::getSubObject(PyObject *args, PyObject *keywds)
     short depth = 0;
 
     static char *kwlist[] = {"subname", "retType", "matrix", "transform", "depth", nullptr};
-    if (!PyArg_ParseTupleAndKeywords(args, keywds, "O|hO!Oh", kwlist,
-                                     &obj, &retType, &Base::MatrixPy::Type, &pyMat, &doTransform, &depth))
+    if (!PyArg_ParseTupleAndKeywords(args, keywds, "O|hO!O!h", kwlist,
+                                     &obj, &retType, &Base::MatrixPy::Type, &pyMat, &PyBool_Type, &doTransform, &depth))
         return nullptr;
 
     if (retType < 0 || retType > 6) {
@@ -469,7 +469,7 @@ PyObject* DocumentObjectPy::getSubObject(PyObject *args, PyObject *keywds)
         return nullptr;
     }
 
-    bool transform = PyObject_IsTrue(doTransform);
+    bool transform = Base::asBoolean(doTransform);
 
     struct SubInfo {
         App::DocumentObject *sobj;
@@ -578,8 +578,8 @@ PyObject*  DocumentObjectPy::getLinkedObject(PyObject *args, PyObject *keywds)
     PyObject *transform = Py_True;
     short depth = 0;
     static char *kwlist[] = {"recursive","matrix","transform","depth", nullptr};
-    if (!PyArg_ParseTupleAndKeywords(args, keywds, "|OOOh", kwlist,
-                &recursive,&pyMat,&transform,&depth))
+    if (!PyArg_ParseTupleAndKeywords(args, keywds, "|O!OO!h", kwlist,
+                &PyBool_Type,&recursive,&pyMat,&PyBool_Type,&transform,&depth))
         return nullptr;
 
     Base::Matrix4D _mat;
@@ -595,7 +595,7 @@ PyObject*  DocumentObjectPy::getLinkedObject(PyObject *args, PyObject *keywds)
 
     PY_TRY {
         auto linked = getDocumentObjectPtr()->getLinkedObject(
-                PyObject_IsTrue(recursive), mat, PyObject_IsTrue(transform),depth);
+                Base::asBoolean(recursive), mat, Base::asBoolean(transform), depth);
         if(!linked)
             linked = getDocumentObjectPtr();
         auto pyObj = Py::Object(linked->getPyObject(),true);
@@ -623,10 +623,10 @@ PyObject*  DocumentObjectPy::setElementVisible(PyObject *args)
 {
     char *element = nullptr;
     PyObject *visible = Py_True;
-    if (!PyArg_ParseTuple(args, "s|O", &element,&visible))
+    if (!PyArg_ParseTuple(args, "s|O!", &element, &PyBool_Type, &visible))
         return nullptr;
     PY_TRY {
-        return Py_BuildValue("h", getDocumentObjectPtr()->setElementVisible(element,PyObject_IsTrue(visible)));
+        return Py_BuildValue("h", getDocumentObjectPtr()->setElementVisible(element, Base::asBoolean(visible)));
     } PY_CATCH;
 }
 
@@ -696,7 +696,7 @@ PyObject*  DocumentObjectPy::getPathsByOutList(PyObject *args)
                 (o)->getDocumentObjectPtr();
         auto array = getDocumentObjectPtr()->getPathsByOutList(target);
         Py::List list;
-        for (auto it : array) {
+        for (const auto& it : array) {
             Py::List path;
             for (auto jt : it) {
                 path.append(Py::asObject(jt->getPyObject()));
@@ -710,87 +710,13 @@ PyObject*  DocumentObjectPy::getPathsByOutList(PyObject *args)
     }
 }
 
-PyObject *DocumentObjectPy::getCustomAttributes(const char* attr) const
+PyObject *DocumentObjectPy::getCustomAttributes(const char* ) const
 {
-    // Dynamic property is now directly supported in PropertyContainer. So we
-    // can comment out here and let PropertyContainerPy handle it.
-#if 1
-    (void)attr;
-#else
-    // search for dynamic property
-    Property* prop = getDocumentObjectPtr()->getDynamicPropertyByName(attr);
-    if (prop)
-        return prop->getPyObject();
-    else
-#endif
         return nullptr;
 }
-
-int DocumentObjectPy::setCustomAttributes(const char* attr, PyObject *obj)
+//remove
+int DocumentObjectPy::setCustomAttributes(const char* , PyObject *)
 {
-    // The following code is practically the same as in PropertyContainerPy,
-    // especially since now dynamic property is directly supported in
-    // PropertyContainer. So we can comment out here and let PropertyContainerPy
-    // handle it.
-#if 1
-    (void)attr;
-    (void)obj;
-#else
-    // explicitly search for dynamic property
-    try {
-        Property* prop = getDocumentObjectPtr()->getDynamicPropertyByName(attr);
-        if (prop) {
-            if(prop->testStatus(Property::Immutable)) {
-                std::stringstream s;
-                s << "'DocumentObject' attribute '" << attr << "' is read-only"; 
-                throw Py::AttributeError(s.str());
-            }
-            prop->setPyObject(obj);
-            return 1;
-        }
-    }
-    catch (Base::ValueError &exc) {
-        std::stringstream s;
-        s << "Property '" << attr << "': " << exc.what();
-        throw Py::ValueError(s.str());
-    }
-    catch (Base::Exception &exc) {
-        std::stringstream s;
-        s << "Attribute (Name: " << attr << ") error: '" << exc.what() << "' ";
-        throw Py::AttributeError(s.str());
-    }
-    catch (Py::AttributeError &) {
-        throw;
-    }catch (...) {
-        std::stringstream s;
-        s << "Unknown error in attribute " << attr;
-        throw Py::AttributeError(s.str());
-    }
-
-    // search in PropertyList
-    Property *prop = getDocumentObjectPtr()->getPropertyByName(attr);
-    if (prop) {
-        // Read-only attributes must not be set over its Python interface
-        if(prop->testStatus(Property::Immutable) ||
-           (getDocumentObjectPtr()->getPropertyType(prop) & Prop_ReadOnly))
-        {
-            std::stringstream s;
-            s << "'DocumentObject' attribute '" << attr << "' is read-only"; 
-            throw Py::AttributeError(s.str());
-        }
-
-        try {
-            prop->setPyObject(obj);
-        }
-        catch (const Base::TypeError& e) {
-            std::stringstream s;
-            s << "Property '" << prop->getName() << "': " << e.what();
-            throw Py::TypeError(s.str());
-        }
-        return 1;
-    } 
-#endif
-
     return 0;
 }
 
@@ -830,13 +756,13 @@ PyObject *DocumentObjectPy::resolveSubElement(PyObject *args)
     const char *subname;
     PyObject *append = Py_False;
     int type = 0;
-    if (!PyArg_ParseTuple(args, "s|Oi",&subname,&append,&type))
+    if (!PyArg_ParseTuple(args, "s|O!i",&subname,&PyBool_Type,&append,&type))
         return nullptr;
 
     PY_TRY {
         std::pair<std::string,std::string> elementName;
         auto obj = GeoFeature::resolveElement(getDocumentObjectPtr(), subname,elementName,
-                PyObject_IsTrue(append),(GeoFeature::ElementNameType)type);
+                Base::asBoolean(append), (GeoFeature::ElementNameType)type);
         Py::Tuple ret(3);
         ret.setItem(0,obj?Py::Object(obj->getPyObject(),true):Py::None());
         ret.setItem(1,Py::String(elementName.first));
@@ -866,7 +792,7 @@ PyObject *DocumentObjectPy::adjustRelativeLinks(PyObject *args) {
         std::set<App::DocumentObject *> visited;
         return Py::new_reference_to(Py::Boolean(
                     getDocumentObjectPtr()->adjustRelativeLinks(inList,
-                        PyObject_IsTrue(recursive)?&visited:nullptr)));
+                        Base::asBoolean(recursive) ? &visited : nullptr)));
     }PY_CATCH
 }
 

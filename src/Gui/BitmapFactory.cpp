@@ -42,6 +42,7 @@
 
 #include <App/Application.h>
 #include <Base/Console.h>
+#include <Base/ConsoleObserver.h>
 
 #include "BitmapFactory.h"
 
@@ -90,7 +91,7 @@ BitmapFactoryInst* BitmapFactoryInst::_pcSingleton = nullptr;
 
 BitmapFactoryInst& BitmapFactoryInst::instance(void)
 {
-    if (_pcSingleton == nullptr)
+    if (!_pcSingleton)
     {
         _pcSingleton = new BitmapFactoryInst;
         std::map<std::string,std::string>::const_iterator it;
@@ -114,7 +115,7 @@ BitmapFactoryInst& BitmapFactoryInst::instance(void)
 
 void BitmapFactoryInst::destruct (void)
 {
-    if (_pcSingleton != nullptr)
+    if (_pcSingleton)
     delete _pcSingleton;
     _pcSingleton = nullptr;
 }
@@ -169,7 +170,7 @@ QStringList BitmapFactoryInst::findIconFiles() const
 
     QStringList paths = QDir::searchPaths(QString::fromLatin1("icons"));
     paths.removeDuplicates();
-    for (QStringList::ConstIterator pt = paths.begin(); pt != paths.end(); ++pt) {
+    for (QStringList::Iterator pt = paths.begin(); pt != paths.end(); ++pt) {
         QDir d(*pt);
         d.setNameFilters(filters);
         QFileInfoList fi = d.entryInfoList();
@@ -193,7 +194,7 @@ void BitmapFactoryInst::addPixmapToCache(const char* name, const QPixmap& icon)
 
 bool BitmapFactoryInst::findPixmapInCache(const char* name, QPixmap& px) const
 {
-    QMap<std::string, QPixmap>::ConstIterator it = d->xpmCache.find(name);
+    QMap<std::string, QPixmap>::Iterator it = d->xpmCache.find(name);
     if (it != d->xpmCache.end()) {
         px = it.value();
         return true;
@@ -241,13 +242,13 @@ QPixmap BitmapFactoryInst::pixmap(const char* name) const
         return QPixmap();
 
     // as very first test check whether the pixmap is in the cache
-    QMap<std::string, QPixmap>::ConstIterator it = d->xpmCache.find(name);
+    QMap<std::string, QPixmap>::Iterator it = d->xpmCache.find(name);
     if (it != d->xpmCache.end())
         return it.value();
 
     // now try to find it in the built-in XPM
     QPixmap icon;
-    QMap<std::string,const char**>::ConstIterator It = d->xpmMap.find(name);
+    QMap<std::string,const char**>::Iterator It = d->xpmMap.find(name);
     if (It != d->xpmMap.end())
         icon = QPixmap(It.value());
 
@@ -337,10 +338,12 @@ QPixmap BitmapFactoryInst::pixmapFromSvg(const QByteArray& originalContents, con
     image.fill(0x00000000);
 
     QPainter p(&image);
-    // tmp. disable the report window to suppress some bothering warnings
-    Base::Console().SetEnabledMsgType("ReportOutput", Base::ConsoleSingleton::MsgType_Wrn, false);
-    QSvgRenderer svg(contents);
-    Base::Console().SetEnabledMsgType("ReportOutput", Base::ConsoleSingleton::MsgType_Wrn, true);
+    QSvgRenderer svg;
+    {
+        // tmp. disable the report window to suppress some bothering warnings
+        const Base::ILoggerBlocker blocker("ReportOutput", Base::ConsoleSingleton::MsgType_Wrn);
+        svg.load(contents);
+    }
     svg.render(&p);
     p.end();
 
@@ -350,9 +353,9 @@ QPixmap BitmapFactoryInst::pixmapFromSvg(const QByteArray& originalContents, con
 QStringList BitmapFactoryInst::pixmapNames() const
 {
     QStringList names;
-    for (QMap<std::string,const char**>::ConstIterator It = d->xpmMap.begin(); It != d->xpmMap.end(); ++It)
+    for (QMap<std::string,const char**>::Iterator It = d->xpmMap.begin(); It != d->xpmMap.end(); ++It)
         names << QString::fromUtf8(It.key().c_str());
-    for (QMap<std::string, QPixmap>::ConstIterator It = d->xpmCache.begin(); It != d->xpmCache.end(); ++It) {
+    for (QMap<std::string, QPixmap>::Iterator It = d->xpmCache.begin(); It != d->xpmCache.end(); ++It) {
         QString item = QString::fromUtf8(It.key().c_str());
         if (!names.contains(item))
             names << item;

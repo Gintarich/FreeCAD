@@ -71,6 +71,14 @@ static int          altDecimals();
 
 static int         mattingStyle();
 
+static std::string svgFile();
+static std::string patFile();
+
+static std::string bitmapFill(void);
+
+static double      GapISO();
+static double      GapASME();
+
 };
 
 } //end namespace TechDraw

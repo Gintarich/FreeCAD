@@ -26,7 +26,6 @@
 #include <QDir>
 #include <QFileInfo>
 #include <boost/algorithm/string/predicate.hpp>
-#include <boost_bind_bind.hpp>
 
 #include <Base/Console.h>
 #include <Base/Exception.h>
@@ -116,7 +115,7 @@ void PropertyLinkBase::unregisterLabelReferences()
 
 void PropertyLinkBase::getLabelReferences(std::vector<std::string> &subs,const char *subname) {
     const char *dot;
-    for(;(subname=strchr(subname,'$'))!=nullptr; subname=dot+1) {
+    for (; (subname = strchr(subname, '$')) != nullptr; subname = dot + 1) {
         ++subname;
         dot = strchr(subname,'.');
         if(!dot) break;
@@ -155,7 +154,7 @@ std::string PropertyLinkBase::updateLabelReference(const App::DocumentObject *pa
     // hierarchies, we have to search for all occurrences, and make sure the
     // referenced sub-object at the found hierarchy is actually the given
     // object.
-    for(const char *pos=subname; ((pos=strstr(pos,ref.c_str()))!=nullptr); pos+=ref.size()) {
+    for (const char *pos = subname; ((pos = strstr(pos, ref.c_str())) != nullptr); pos += ref.size()) {
         auto sub = std::string(subname,pos+ref.size()-subname);
         auto sobj = parent->getSubObject(sub.c_str());
         if(sobj == obj) {
@@ -294,17 +293,6 @@ PropertyLinkBase::tryReplaceLink(const PropertyContainer *owner, DocumentObject 
 
     if(oldObj == obj) {
         if(owner == parent) {
-            // Do not throw on sub object error yet. It's better to let
-            // recompute find out the error and point out the affected objects
-            // to user.
-#if 0
-            if(subname && subname[0] && !newObj->getSubObject(subname)) {
-                FC_THROWM(Base::RuntimeError,
-                        "Sub-object '" << newObj->getFullName()
-                        << '.' << subname << "' not found when replacing link in "
-                        << owner->getFullName() << '.' << getName());
-            }
-#endif
             res.first = newObj;
             if(subname) res.second = subname;
             return res;
@@ -327,14 +315,6 @@ PropertyLinkBase::tryReplaceLink(const PropertyContainer *owner, DocumentObject 
             break;
         if(sobj == oldObj) {
             if(prev == parent) {
-#if 0
-                if(sub[pos] && !newObj->getSubObject(sub.c_str()+pos)) {
-                    FC_THROWM(Base::RuntimeError,
-                            "Sub-object '" << newObj->getFullName()
-                            << '.' << (sub.c_str()+pos) << "' not found when replacing link in "
-                            << owner->getFullName() << '.' << getName());
-                }
-#endif
                 if(sub[prevPos] == '$')
                     sub.replace(prevPos+1,pos-1-prevPos,newObj->Label.getValue());
                 else
@@ -1722,7 +1702,7 @@ void PropertyLinkSubList::setValues(const std::vector<DocumentObject*>& lValue,c
     _lSubList.resize(lSubNames.size());
     int i = 0;
     for (std::vector<const char*>::const_iterator it = lSubNames.begin();it!=lSubNames.end();++it,++i) {
-        if (*it != nullptr)
+        if (*it)
             _lSubList[i] = *it;
     }
     updateElementReference(nullptr);
@@ -1924,7 +1904,7 @@ DocumentObject *PropertyLinkSubList::getValue() const
     App::DocumentObject* ret = nullptr;
     //FIXME: cache this to avoid iterating each time, to improve speed
     for (std::size_t i = 0; i < this->_lValueList.size(); i++) {
-        if (ret == nullptr)
+        if (!ret)
             ret = this->_lValueList[i];
         if (ret != this->_lValueList[i])
             return nullptr;
@@ -1999,7 +1979,6 @@ std::vector<PropertyLinkSubList::SubSet> PropertyLinkSubList::getSubListValues(b
 
 PyObject *PropertyLinkSubList::getPyObject(void)
 {
-#if 1
     std::vector<SubSet> subLists = getSubListValues();
     std::size_t count = subLists.size();
 #if 0//FIXME: Should switch to tuple
@@ -2022,24 +2001,6 @@ PyObject *PropertyLinkSubList::getPyObject(void)
     }
 
     return Py::new_reference_to(sequence);
-#else
-    unsigned int count = getSize();
-#if 0//FIXME: Should switch to tuple
-    Py::Tuple sequence(count);
-#else
-    Py::List sequence(count);
-#endif
-    for (unsigned int i = 0; i<count; i++) {
-        Py::Tuple tup(2);
-        tup[0] = Py::asObject(_lValueList[i]->getPyObject());
-        std::string subItem;
-        if (_lSubList.size() > i)
-            subItem = _lSubList[i];
-        tup[1] = Py::String(subItem);
-        sequence[i] = tup;
-    }
-    return Py::new_reference_to(sequence);
-#endif
 }
 
 void PropertyLinkSubList::setPyObject(PyObject *value)
@@ -2676,7 +2637,6 @@ public:
         if (path.startsWith(QLatin1String("https://")))
             return path;
         else {
-            // return QFileInfo(path).canonicalFilePath();
             return QFileInfo(path).absoluteFilePath();
         }
     }
@@ -2686,7 +2646,6 @@ public:
         if (path.startsWith(QLatin1String("https://")))
             return path;
         else {
-            // return QFileInfo(myPos->first).canonicalFilePath();
             return QFileInfo(myPos->first).absoluteFilePath();
         }
     }
@@ -2833,7 +2792,6 @@ public:
             return;
 
         QFileInfo info(myPos->first);
-        // QString path(info.canonicalFilePath());
         QString path(info.absoluteFilePath());
         const char *filename = doc.getFileName();
         QString docPath(getFullPath(filename));
@@ -2855,7 +2813,6 @@ public:
             tmp.swap(links);
             for(auto link : tmp) {
                 auto owner = static_cast<DocumentObject*>(link->getContainer());
-                QString path = QString::fromUtf8(link->filePath.c_str());
                 // adjust file path for each PropertyXLink
                 DocInfo::get(filename,owner->getDocument(),link,link->objectName.c_str());
             }

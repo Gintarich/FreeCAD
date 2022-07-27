@@ -2,102 +2,11 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ka" sourcelanguage="en">
   <context>
-    <name>MoveView</name>
-    <message>
-      <location filename="../../../TechDrawTools/CommandMoveView.py" line="47"/>
-      <source>Move View</source>
-      <translation>ხედის გადატანა</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/CommandMoveView.py" line="48"/>
-      <source>Move a View to a new Page</source>
-      <translation>ხედის ახალ გვერდზე გადატანა</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskMoveView.py" line="47"/>
-      <source>Move View to a different Page</source>
-      <translation>ხედების სხვა გვერდზე გადატანა</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskMoveView.py" line="74"/>
-      <source>Select View to move from list.</source>
-      <translation>აირჩიეთ ხედი სიიდან გადასატანად.</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskMoveView.py" line="75"/>
-      <source>Select View</source>
-      <translation>აირჩიეთ ხედი</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskMoveView.py" line="93"/>
-      <source>Select From Page.</source>
-      <translation>მონიშვნა დაწყებული გვერდიდან.</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskMoveView.py" line="113"/>
-      <source>Select Page</source>
-      <translation>აირჩიეთ გვერდი</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskMoveView.py" line="112"/>
-      <source>Select To Page.</source>
-      <translation>მონიშვნა გვერდამდე.</translation>
-    </message>
-  </context>
-  <context>
-    <name>ShareView</name>
-    <message>
-      <location filename="../../../TechDrawTools/CommandShareView.py" line="47"/>
-      <source>Share View</source>
-      <translation>ხედის გაზიარება</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/CommandShareView.py" line="48"/>
-      <source>Share a View on a second Page</source>
-      <translation>ხედის მეორე გვერდზე გაზიარება</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskShareView.py" line="46"/>
-      <source>Share View with another Page</source>
-      <translation>ხედის სხვა გვერდზე გაზიარება</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskShareView.py" line="47"/>
-      <source>View to share</source>
-      <translation>გასაზიარებელი ხედი</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskShareView.py" line="74"/>
-      <source>Select View to share from list.</source>
-      <translation>აირჩიეთ ხედი სიიდან გასაზიარებლად.</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskShareView.py" line="75"/>
-      <source>Select View</source>
-      <translation>აირჩიეთ ხედი</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskShareView.py" line="93"/>
-      <source>Select From Page.</source>
-      <translation>მონიშვნა დაწყებული გვერდიდან.</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskShareView.py" line="113"/>
-      <source>Select Page</source>
-      <translation>აირჩიეთ გვერდი</translation>
-    </message>
-    <message>
-      <location filename="../../../TechDrawTools/TaskShareView.py" line="112"/>
-      <source>Select To Page.</source>
-      <translation>მონიშვნა გვერდამდე.</translation>
-    </message>
-  </context>
-  <context>
     <name>Cmd2LineCenterLine</name>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="665"/>
       <source>Add Centerline between 2 Lines</source>
-      <translation type="unfinished">Add Centerline between 2 Lines</translation>
+      <translation>ორ ხაზს შუა ცენტრის ხაზის გავლება</translation>
     </message>
   </context>
   <context>
@@ -105,7 +14,7 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="669"/>
       <source>Add Centerline between 2 Points</source>
-      <translation type="unfinished">Add Centerline between 2 Points</translation>
+      <translation>ორ წერტილს შორის ცენტრის ხაზის დამატება</translation>
     </message>
   </context>
   <context>
@@ -134,7 +43,7 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="801"/>
       <source>Add Centerline between 2 Lines</source>
-      <translation type="unfinished">Add Centerline between 2 Lines</translation>
+      <translation>ორ ხაზს შუა ცენტრის ხაზის გავლება</translation>
     </message>
   </context>
   <context>
@@ -147,7 +56,7 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="878"/>
       <source>Add Centerline between 2 Points</source>
-      <translation type="unfinished">Add Centerline between 2 Points</translation>
+      <translation>ორ წერტილს შორის ცენტრის ხაზის დამატება</translation>
     </message>
   </context>
   <context>
@@ -166,12 +75,12 @@
   <context>
     <name>CmdTechDraw3PtAngleDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="891"/>
+      <location filename="../../CommandCreateDims.cpp" line="879"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="892"/>
+      <location filename="../../CommandCreateDims.cpp" line="880"/>
       <source>Insert 3-Point Angle Dimension</source>
       <translation>სამწერტილიანი კუთხური ზომის ჩასმა</translation>
     </message>
@@ -192,12 +101,12 @@
   <context>
     <name>CmdTechDrawAngleDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="803"/>
+      <location filename="../../CommandCreateDims.cpp" line="791"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="804"/>
+      <location filename="../../CommandCreateDims.cpp" line="792"/>
       <source>Insert Angle Dimension</source>
       <translation>კუთხური ზომის მითითება</translation>
     </message>
@@ -381,12 +290,12 @@
   <context>
     <name>CmdTechDrawDiameterDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="375"/>
+      <location filename="../../CommandCreateDims.cpp" line="369"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="376"/>
+      <location filename="../../CommandCreateDims.cpp" line="370"/>
       <source>Insert Diameter Dimension</source>
       <translation>დიამეტრის მითითება</translation>
     </message>
@@ -437,12 +346,12 @@
     <message>
       <location filename="../../Command.cpp" line="1445"/>
       <source>Save DXF file</source>
-      <translation type="unfinished">Save DXF file</translation>
+      <translation>DXF ფაილის შენახვა</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="1447"/>
       <source>DXF (*.dxf)</source>
-      <translation type="unfinished">DXF (*.dxf)</translation>
+      <translation>DXF (*.dxf)</translation>
     </message>
   </context>
   <context>
@@ -468,7 +377,7 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1642"/>
       <source>Extend Line</source>
-      <translation type="unfinished">Extend Line</translation>
+      <translation>ხაზის გაგრძელება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1643"/>
@@ -486,12 +395,12 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1745"/>
       <source>Calculate the area of selected faces</source>
-      <translation type="unfinished">Calculate the area of selected faces</translation>
+      <translation>მონიშნული ზედაპირების ფართობის დათვლა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1746"/>
       <source>Select several faces&lt;br&gt;    - click this tool</source>
-      <translation type="unfinished">Select several faces&lt;br&gt;    - click this tool</translation>
+      <translation>მონიშნეთ რამდენიმე ზედაპირი &lt;br&gt;  - დააწკაპუნეთ ამ ხელსაწყოზე</translation>
     </message>
   </context>
   <context>
@@ -504,7 +413,7 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1061"/>
       <source>Cascade Horizontal Dimensions</source>
-      <translation type="unfinished">Cascade Horizontal Dimensions</translation>
+      <translation>კასკადის ჰორიზონტალური ზომები</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1062"/>
@@ -523,7 +432,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="887"/>
       <location filename="../../CommandExtensionDims.cpp" line="1137"/>
       <source>Cascade Horizontal Dimensions</source>
-      <translation type="unfinished">Cascade Horizontal Dimensions</translation>
+      <translation>კასკადის ჰორიზონტალური ზომები</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="888"/>
@@ -543,7 +452,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="1025"/>
       <location filename="../../CommandExtensionDims.cpp" line="1155"/>
       <source>Cascade Oblique Dimensions</source>
-      <translation type="unfinished">Cascade Oblique Dimensions</translation>
+      <translation>კასკადის ირიბი ზომები</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1026"/>
@@ -563,7 +472,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="952"/>
       <location filename="../../CommandExtensionDims.cpp" line="1146"/>
       <source>Cascade Vertical Dimensions</source>
-      <translation type="unfinished">Cascade Vertical Dimensions</translation>
+      <translation>კასკადის ვერტიკალური ზომები</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="953"/>
@@ -582,7 +491,7 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="2031"/>
       <source>Create Horizontal Chamfer Dimension</source>
-      <translation type="unfinished">Create Horizontal Chamfer Dimension</translation>
+      <translation>კუთხის ჰორიზონტალური ნაზოლის ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="2032"/>
@@ -600,7 +509,7 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="746"/>
       <source>Change Line Attributes</source>
-      <translation type="unfinished">Change Line Attributes</translation>
+      <translation>ხაზის ატრიბუტების შეცვლა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="747"/>
@@ -619,7 +528,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="240"/>
       <location filename="../../CommandExtensionPack.cpp" line="340"/>
       <source>Add Circle Centerlines</source>
-      <translation type="unfinished">Add Circle Centerlines</translation>
+      <translation>წრეწირის ცენტრის ხაზების დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="241"/>
@@ -638,7 +547,7 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="274"/>
       <source>Add Circle Centerlines</source>
-      <translation type="unfinished">Add Circle Centerlines</translation>
+      <translation>წრეწირის ცენტრის ხაზების დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="275"/>
@@ -656,7 +565,7 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1408"/>
       <source>Create Horizontal Chain Dimensions</source>
-      <translation type="unfinished">Create Horizontal Chain Dimensions</translation>
+      <translation>ჯაჭვის ჰორიზონტალური ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1409"/>
@@ -674,7 +583,7 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1770"/>
       <source>Create Horizontal Coordinate Dimensions</source>
-      <translation type="unfinished">Create Horizontal Coordinate Dimensions</translation>
+      <translation>ჰორიზონტალური კოორდინატების ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1771"/>
@@ -693,7 +602,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="1215"/>
       <location filename="../../CommandExtensionDims.cpp" line="1482"/>
       <source>Create Horizontal Chain Dimensions</source>
-      <translation type="unfinished">Create Horizontal Chain Dimensions</translation>
+      <translation>ჯაჭვის ჰორიზონტალური ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1216"/>
@@ -713,7 +622,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="1929"/>
       <location filename="../../CommandExtensionDims.cpp" line="2098"/>
       <source>Create Horizontal Chamfer Dimension</source>
-      <translation type="unfinished">Create Horizontal Chamfer Dimension</translation>
+      <translation>კუთხის ჰორიზონტალური ნაზოლის ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1930"/>
@@ -733,7 +642,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="1561"/>
       <location filename="../../CommandExtensionDims.cpp" line="1846"/>
       <source>Create Horizontal Coordinate Dimensions</source>
-      <translation type="unfinished">Create Horizontal Coordinate Dimensions</translation>
+      <translation>ჰორიზონტალური კოორდინატების ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1562"/>
@@ -752,7 +661,7 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="2131"/>
       <source>Create Arc Length Dimension</source>
-      <translation type="unfinished">Create Arc Length Dimension</translation>
+      <translation>რკალის სიგრძის ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="2132"/>
@@ -771,7 +680,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="1374"/>
       <location filename="../../CommandExtensionDims.cpp" line="1496"/>
       <source>Create Oblique Chain Dimensions</source>
-      <translation type="unfinished">Create Oblique Chain Dimensions</translation>
+      <translation>ჯაჭვის ირიბი ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1375"/>
@@ -791,7 +700,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="1734"/>
       <location filename="../../CommandExtensionDims.cpp" line="1864"/>
       <source>Create Oblique Coordinate Dimensions</source>
-      <translation type="unfinished">Create Oblique Coordinate Dimensions</translation>
+      <translation>კოორდინატების ირიბი ზომების შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1735"/>
@@ -811,7 +720,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="1282"/>
       <location filename="../../CommandExtensionDims.cpp" line="1489"/>
       <source>Create Vertical Chain Dimensions</source>
-      <translation type="unfinished">Create Vertical Chain Dimensions</translation>
+      <translation>ჯაჭვის ვერტიკალური ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1283"/>
@@ -831,7 +740,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="1998"/>
       <location filename="../../CommandExtensionDims.cpp" line="2105"/>
       <source>Create Vertical Chamfer Dimension</source>
-      <translation type="unfinished">Create Vertical Chamfer Dimension</translation>
+      <translation>კუთხის ვერტიკალური ნაზოლის ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1999"/>
@@ -851,7 +760,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="1635"/>
       <location filename="../../CommandExtensionDims.cpp" line="1855"/>
       <source>Create Vertical Coordinate Dimensions</source>
-      <translation type="unfinished">Create Vertical Coordinate Dimensions</translation>
+      <translation>ვერტიკალური კოორდინატების ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1636"/>
@@ -870,7 +779,7 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="2209"/>
       <source>Customize Format Label</source>
-      <translation type="unfinished">Customize Format Label</translation>
+      <translation>ფორმატის ჭდის მორგება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="2210"/>
@@ -889,7 +798,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="422"/>
       <location filename="../../CommandExtensionDims.cpp" line="529"/>
       <source>Decrease Decimal Places</source>
-      <translation type="unfinished">Decrease Decimal Places</translation>
+      <translation>ათწილადი ადგილების შემცირება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="423"/>
@@ -908,7 +817,7 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1056"/>
       <source>Add Cosmetic Circle</source>
-      <translation type="unfinished">Add Cosmetic Circle</translation>
+      <translation>კოსმეტიკური წრეწირის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1057"/>
@@ -927,7 +836,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="895"/>
       <location filename="../../CommandExtensionPack.cpp" line="1141"/>
       <source>Add Cosmetic Arc</source>
-      <translation type="unfinished">Add Cosmetic Arc</translation>
+      <translation>კოსმეტიკური რკალის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="896"/>
@@ -947,7 +856,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="956"/>
       <location filename="../../CommandExtensionPack.cpp" line="1132"/>
       <source>Add Cosmetic Circle</source>
-      <translation type="unfinished">Add Cosmetic Circle</translation>
+      <translation>კოსმეტიკური წრეწირის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="957"/>
@@ -967,7 +876,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="1021"/>
       <location filename="../../CommandExtensionPack.cpp" line="1151"/>
       <source>Add Cosmetic Circle 3 Points</source>
-      <translation type="unfinished">Add Cosmetic Circle 3 Points</translation>
+      <translation>კოსმეტიკური წრის დამატება 3 წერტილით</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1022"/>
@@ -991,7 +900,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="1572"/>
       <location filename="../../CommandExtensionPack.cpp" line="1710"/>
       <source>Extend Line</source>
-      <translation type="unfinished">Extend Line</translation>
+      <translation>ხაზის გაგრძელება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1573"/>
@@ -1011,7 +920,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="166"/>
       <location filename="../../CommandExtensionPack.cpp" line="348"/>
       <source>Add Bolt Circle Centerlines</source>
-      <translation type="unfinished">Add Bolt Circle Centerlines</translation>
+      <translation>ხრახნის რკალის ცენტრის ხაზები</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="167"/>
@@ -1031,7 +940,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="389"/>
       <location filename="../../CommandExtensionDims.cpp" line="522"/>
       <source>Increase Decimal Places</source>
-      <translation type="unfinished">Increase Decimal Places</translation>
+      <translation>ათწილადი ადგილების გაზრდა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="390"/>
@@ -1050,7 +959,7 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="455"/>
       <source>Increase Decimal Places</source>
-      <translation type="unfinished">Increase Decimal Places</translation>
+      <translation>ათწილადი ადგილების გაზრდა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="456"/>
@@ -1069,7 +978,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="126"/>
       <location filename="../../CommandExtensionDims.cpp" line="322"/>
       <source>Insert &apos;⌀&apos; Prefix</source>
-      <translation type="unfinished">Insert &apos;⌀&apos; Prefix</translation>
+      <translation>პრეფიქსის &apos;⌀&apos; ჩასმა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="127"/>
@@ -1088,7 +997,7 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="248"/>
       <source>Insert &apos;⌀&apos; Prefix</source>
-      <translation type="unfinished">Insert &apos;⌀&apos; Prefix</translation>
+      <translation>პრეფიქსის &apos;⌀&apos; ჩასმა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="249"/>
@@ -1106,14 +1015,14 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="159"/>
       <location filename="../../CommandExtensionDims.cpp" line="329"/>
-      <source>Insert &apos;〼&apos; Prefix</source>
-      <translation type="unfinished">Insert &apos;〼&apos; Prefix</translation>
+      <source>Insert &apos;□&apos; Prefix</source>
+      <translation>პრეფიქსის &apos;□&apos; ჩასმა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="160"/>
       <location filename="../../CommandExtensionDims.cpp" line="330"/>
-      <source>Insert a &apos;〼&apos; symbol at the beginning of the dimension text:&lt;br&gt;- Select one or more dimensions&lt;br&gt;- Click this tool</source>
-      <translation type="unfinished">Insert a &apos;〼&apos; symbol at the beginning of the dimension text:&lt;br&gt;- Select one or more dimensions&lt;br&gt;- Click this tool</translation>
+      <source>Insert a &apos;□&apos; symbol at the beginning of the dimension text:&lt;br&gt;- Select one or more dimensions&lt;br&gt;- Click this tool</source>
+      <translation type="unfinished">Insert a &apos;□&apos; symbol at the beginning of the dimension text:&lt;br&gt;- Select one or more dimensions&lt;br&gt;- Click this tool</translation>
     </message>
   </context>
   <context>
@@ -1126,7 +1035,7 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1288"/>
       <source>Add Cosmetic Parallel Line</source>
-      <translation type="unfinished">Add Cosmetic Parallel Line</translation>
+      <translation>კოსმეტიკური პარალელური ხაზის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1289"/>
@@ -1145,7 +1054,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="1220"/>
       <location filename="../../CommandExtensionPack.cpp" line="1356"/>
       <source>Add Cosmetic Parallel Line</source>
-      <translation type="unfinished">Add Cosmetic Parallel Line</translation>
+      <translation>კოსმეტიკური პარალელური ხაზის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1221"/>
@@ -1165,7 +1074,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="1254"/>
       <location filename="../../CommandExtensionPack.cpp" line="1364"/>
       <source>Add Cosmetic Perpendicular Line</source>
-      <translation type="unfinished">Add Cosmetic Perpendicular Line</translation>
+      <translation>კოსმეტიკური მართობული ხაზის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1255"/>
@@ -1184,7 +1093,7 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1391"/>
       <source>Lock/Unlock View</source>
-      <translation type="unfinished">Lock/Unlock View</translation>
+      <translation>ხედის დაბლოკვა/განბლოკვა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1392"/>
@@ -1202,7 +1111,7 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="740"/>
       <source>Position Horizontal Chain Dimensions</source>
-      <translation type="unfinished">Position Horizontal Chain Dimensions</translation>
+      <translation>ჯაჭვის ჰორიზონტალური ზომის მოთავსება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="741"/>
@@ -1221,7 +1130,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="580"/>
       <location filename="../../CommandExtensionDims.cpp" line="815"/>
       <source>Position Horizontal Chain Dimensions</source>
-      <translation type="unfinished">Position Horizontal Chain Dimensions</translation>
+      <translation>ჯაჭვის ჰორიზონტალური ზომის მოთავსება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="581"/>
@@ -1241,7 +1150,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="705"/>
       <location filename="../../CommandExtensionDims.cpp" line="831"/>
       <source>Position Oblique Chain Dimensions</source>
-      <translation type="unfinished">Position Oblique Chain Dimensions</translation>
+      <translation>ჯაჭვის ირიბი ზომის მოთავსება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="706"/>
@@ -1261,7 +1170,7 @@
       <location filename="../../CommandExtensionDims.cpp" line="640"/>
       <location filename="../../CommandExtensionDims.cpp" line="823"/>
       <source>Position Vertical Chain Dimensions</source>
-      <translation type="unfinished">Position Vertical Chain Dimensions</translation>
+      <translation>ჯაჭვის ვერტიკალური ზომის მოთავსება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="641"/>
@@ -1280,7 +1189,7 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1434"/>
       <source>Position Section View</source>
-      <translation type="unfinished">Position Section View</translation>
+      <translation>ჭრილის ხედის მდებარეობა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1435"/>
@@ -1298,7 +1207,7 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="215"/>
       <source>Remove Prefix</source>
-      <translation type="unfinished">Remove Prefix</translation>
+      <translation>პრეფიქსის წაშლა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="216"/>
@@ -1335,7 +1244,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="1607"/>
       <location filename="../../CommandExtensionPack.cpp" line="1718"/>
       <source>Shorten Line</source>
-      <translation type="unfinished">Shorten Line</translation>
+      <translation>ხაზის დაპატარავება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1608"/>
@@ -1355,7 +1264,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="545"/>
       <location filename="../../CommandExtensionPack.cpp" line="685"/>
       <source>Add Cosmetic Thread Bolt Bottom View</source>
-      <translation type="unfinished">Add Cosmetic Thread Bolt Bottom View</translation>
+      <translation>კოსმეტიკური კუთხვილის ხრახნის ძირის ხედის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="546"/>
@@ -1375,7 +1284,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="443"/>
       <location filename="../../CommandExtensionPack.cpp" line="677"/>
       <source>Add Cosmetic Thread Bolt Side View</source>
-      <translation type="unfinished">Add Cosmetic Thread Bolt Side View</translation>
+      <translation>კოსმეტიკური კუთხვილის ხრახნის გვერდხედის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="444"/>
@@ -1395,7 +1304,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="494"/>
       <location filename="../../CommandExtensionPack.cpp" line="669"/>
       <source>Add Cosmetic Thread Hole Bottom View</source>
-      <translation type="unfinished">Add Cosmetic Thread Hole Bottom View</translation>
+      <translation>კოსმეტიკური კუთხვილის ხრახნის ნახვრეტის ძირის ხედის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="495"/>
@@ -1415,7 +1324,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="392"/>
       <location filename="../../CommandExtensionPack.cpp" line="661"/>
       <source>Add Cosmetic Thread Hole Side View</source>
-      <translation type="unfinished">Add Cosmetic Thread Hole Side View</translation>
+      <translation>კოსმეტიკური კუთხვილის ხვრელის გვერდხედის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="393"/>
@@ -1434,7 +1343,7 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="579"/>
       <source>Add Cosmetic Thread Hole Side View</source>
-      <translation type="unfinished">Add Cosmetic Thread Hole Side View</translation>
+      <translation>კოსმეტიკური კუთხვილის ხვრელის გვერდხედის დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="580"/>
@@ -1452,7 +1361,7 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="805"/>
       <source>Add Cosmetic Intersection Vertex(es)</source>
-      <translation type="unfinished">Add Cosmetic Intersection Vertex(es)</translation>
+      <translation>კოსმეტიკური კვეთის წვეროების დამატება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="806"/>
@@ -1463,22 +1372,22 @@
   <context>
     <name>CmdTechDrawExtentGroup</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1060"/>
+      <location filename="../../CommandCreateDims.cpp" line="1048"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1061"/>
+      <location filename="../../CommandCreateDims.cpp" line="1049"/>
       <source>Insert Extent Dimension</source>
       <translation>გაბარიტული ზომის მითითება</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1127"/>
+      <location filename="../../CommandCreateDims.cpp" line="1115"/>
       <source>Horizontal Extent</source>
       <translation>ჰორიზონტალური გაბარიტული ზომა</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1131"/>
+      <location filename="../../CommandCreateDims.cpp" line="1119"/>
       <source>Vertical Extent</source>
       <translation>ვერტიკალური მასშტაბი</translation>
     </message>
@@ -1525,12 +1434,12 @@
   <context>
     <name>CmdTechDrawHorizontalDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="598"/>
+      <location filename="../../CommandCreateDims.cpp" line="586"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="599"/>
+      <location filename="../../CommandCreateDims.cpp" line="587"/>
       <source>Insert Horizontal Dimension</source>
       <translation>ჰორიზონტალური ზომის ჩასმა</translation>
     </message>
@@ -1538,14 +1447,14 @@
   <context>
     <name>CmdTechDrawHorizontalExtentDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1153"/>
+      <location filename="../../CommandCreateDims.cpp" line="1141"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1154"/>
+      <location filename="../../CommandCreateDims.cpp" line="1142"/>
       <source>Insert Horizontal Extent Dimension</source>
-      <translation type="unfinished">Insert Horizontal Extent Dimension</translation>
+      <translation>ჰორიზონტალური გაბარიტული ზომის ჩასმა</translation>
     </message>
   </context>
   <context>
@@ -1580,12 +1489,12 @@
   <context>
     <name>CmdTechDrawLandmarkDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1323"/>
+      <location filename="../../CommandCreateDims.cpp" line="1311"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1324"/>
+      <location filename="../../CommandCreateDims.cpp" line="1312"/>
       <source>Insert Landmark Dimension - EXPERIMENTAL</source>
       <translation>მაჩვენებლის ზომის ჩასმა - ექსპერიმენტალური</translation>
     </message>
@@ -1606,12 +1515,12 @@
   <context>
     <name>CmdTechDrawLengthDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="496"/>
+      <location filename="../../CommandCreateDims.cpp" line="484"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="497"/>
+      <location filename="../../CommandCreateDims.cpp" line="485"/>
       <source>Insert Length Dimension</source>
       <translation>გრძივი ზომის მითითება</translation>
     </message>
@@ -1619,12 +1528,12 @@
   <context>
     <name>CmdTechDrawLinkDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="983"/>
+      <location filename="../../CommandCreateDims.cpp" line="971"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="984"/>
+      <location filename="../../CommandCreateDims.cpp" line="972"/>
       <source>Link Dimension to 3D Geometry</source>
       <translation>ზომის 3D გეომეტრიაზე მიბმა</translation>
     </message>
@@ -1840,12 +1749,12 @@
   <context>
     <name>CmdTechDrawVerticalDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="701"/>
+      <location filename="../../CommandCreateDims.cpp" line="689"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="702"/>
+      <location filename="../../CommandCreateDims.cpp" line="690"/>
       <source>Insert Vertical Dimension</source>
       <translation>ვერტიკალური ზომის მითითება</translation>
     </message>
@@ -1853,14 +1762,14 @@
   <context>
     <name>CmdTechDrawVerticalExtentDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1240"/>
+      <location filename="../../CommandCreateDims.cpp" line="1228"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1241"/>
+      <location filename="../../CommandCreateDims.cpp" line="1229"/>
       <source>Insert Vertical Extent Dimension</source>
-      <translation type="unfinished">Insert Vertical Extent Dimension</translation>
+      <translation>ვერტიკალური სიდიდის ზომის ჩასმა</translation>
     </message>
   </context>
   <context>
@@ -1969,14 +1878,14 @@
       <translation>ანოტაციის შექმნა</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="336"/>
-      <location filename="../../CommandCreateDims.cpp" line="458"/>
-      <location filename="../../CommandCreateDims.cpp" line="555"/>
-      <location filename="../../CommandCreateDims.cpp" line="658"/>
-      <location filename="../../CommandCreateDims.cpp" line="761"/>
-      <location filename="../../CommandCreateDims.cpp" line="853"/>
-      <location filename="../../CommandCreateDims.cpp" line="942"/>
-      <location filename="../../CommandCreateDims.cpp" line="1368"/>
+      <location filename="../../CommandCreateDims.cpp" line="330"/>
+      <location filename="../../CommandCreateDims.cpp" line="446"/>
+      <location filename="../../CommandCreateDims.cpp" line="543"/>
+      <location filename="../../CommandCreateDims.cpp" line="646"/>
+      <location filename="../../CommandCreateDims.cpp" line="749"/>
+      <location filename="../../CommandCreateDims.cpp" line="841"/>
+      <location filename="../../CommandCreateDims.cpp" line="930"/>
+      <location filename="../../CommandCreateDims.cpp" line="1356"/>
       <source>Create Dimension</source>
       <translation>ზომის მითითება</translation>
     </message>
@@ -1996,12 +1905,12 @@
       <translation>გამოსახულების შექმნა</translation>
     </message>
     <message>
-      <location filename="../../QGIViewBalloon.cpp" line="518"/>
+      <location filename="../../QGIViewBalloon.cpp" line="536"/>
       <source>Drag Balloon</source>
       <translation>სქოლიოს გადათრევა</translation>
     </message>
     <message>
-      <location filename="../../QGIViewDimension.cpp" line="682"/>
+      <location filename="../../QGIViewDimension.cpp" line="695"/>
       <source>Drag Dimension</source>
       <translation>ზომის გადათრევა</translation>
     </message>
@@ -2066,9 +1975,9 @@
       <translation>კვეთის ხედის შექმნა</translation>
     </message>
     <message>
-      <location filename="../../TaskSectionView.cpp" line="465"/>
+      <location filename="../../TaskSectionView.cpp" line="463"/>
       <source>Edit SectionView</source>
-      <translation type="unfinished">Edit SectionView</translation>
+      <translation>სექციის ხედის ჩასწორება</translation>
     </message>
     <message>
       <location filename="../../TaskWeldingSymbol.cpp" line="644"/>
@@ -2088,172 +1997,172 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="105"/>
       <source>Insert Prefix</source>
-      <translation type="unfinished">Insert Prefix</translation>
+      <translation>პრეფიქსის ჩასმა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="189"/>
       <source>Remove Prefix</source>
-      <translation type="unfinished">Remove Prefix</translation>
+      <translation>პრეფიქსის წაშლა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="359"/>
       <source>Increase/Decrease Decimal</source>
-      <translation type="unfinished">Increase/Decrease Decimal</translation>
+      <translation>მეათედების გაზრდა/შემცირდება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="552"/>
       <source>Pos Horiz Chain Dim</source>
-      <translation type="unfinished">Pos Horiz Chain Dim</translation>
+      <translation>პოზ. ჰორიზ. ჯაჭვის ზომა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="611"/>
       <source>Pos Vert Chain Dim</source>
-      <translation type="unfinished">Pos Vert Chain Dim</translation>
+      <translation>პოზ. ვერტ. ჯაჭვის ზომა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="671"/>
       <source>Pos Oblique Chain Dim</source>
-      <translation type="unfinished">Pos Oblique Chain Dim</translation>
+      <translation>პოზ. ირიბი ჯაჭვის ზომა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="855"/>
       <source>Cascade Horiz Dim</source>
-      <translation type="unfinished">Cascade Horiz Dim</translation>
+      <translation>კასკადის ჰორიზ. ზომა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="919"/>
       <source>Cascade Vert Dim</source>
-      <translation type="unfinished">Cascade Vert Dim</translation>
+      <translation>კასკადის ვერტ. ზომა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="984"/>
       <source>Cascade Oblique Dim</source>
-      <translation type="unfinished">Cascade Oblique Dim</translation>
+      <translation>კასკადის ირიბი ზომა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1182"/>
       <source>Create Horiz Chain Dim</source>
-      <translation type="unfinished">Create Horiz Chain Dim</translation>
+      <translation>ჰორიზ. ჯაჭვის ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1248"/>
       <source>Create Vert Chain Dim</source>
-      <translation type="unfinished">Create Vert Chain Dim</translation>
+      <translation>ვერტ. ჯაჭვის ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1314"/>
       <source>Create Oblique Chain Dim</source>
-      <translation type="unfinished">Create Oblique Chain Dim</translation>
+      <translation>ჯაჭვის ირიბი ზომის სექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1522"/>
       <source>Create Horiz Coord Dim</source>
-      <translation type="unfinished">Create Horiz Coord Dim</translation>
+      <translation>ჰორიზ. კოორდ. ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1595"/>
       <source>Create Vert Coord Dim</source>
-      <translation type="unfinished">Create Vert Coord Dim</translation>
+      <translation>ვერტ. კოორდ. ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1669"/>
       <source>Create Oblique Coord Dim</source>
-      <translation type="unfinished">Create Oblique Coord Dim</translation>
+      <translation>ირიბი კოორდ. ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1892"/>
       <source>Create Horiz Chamfer Dim</source>
-      <translation type="unfinished">Create Horiz Chamfer Dim</translation>
+      <translation>ჰორიზ. კუთხის ნაზოლის ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="1961"/>
       <source>Create Vert Chamfer Dim</source>
-      <translation type="unfinished">Create Vert Chamfer Dim</translation>
+      <translation>ვერტ. კუთხის ნაზოლის ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="2147"/>
       <source>Create Arc Length Dim</source>
-      <translation type="unfinished">Create Arc Length Dim</translation>
+      <translation>რკალის სიგრძის ზომის შექმნა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="130"/>
       <source>Bolt Circle Centerlines</source>
-      <translation type="unfinished">Bolt Circle Centerlines</translation>
+      <translation>ხრახნის წრის ცენტრის ხაზები</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="200"/>
       <source>Circle Centerlines</source>
-      <translation type="unfinished">Circle Centerlines</translation>
+      <translation>წრეწირის ცენრის ხაზები</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="374"/>
       <source>Cosmetic Thread Hole Side</source>
-      <translation type="unfinished">Cosmetic Thread Hole Side</translation>
+      <translation>კოსმეტიკური კუთხვილის ხრახნის ნახვრეტის კედელი</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="425"/>
       <source>Cosmetic Thread Bolt Side</source>
-      <translation type="unfinished">Cosmetic Thread Bolt Side</translation>
+      <translation>ჰოსმეტიკური კუთხვილის ხრახნის გვერდი</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="476"/>
       <source>Cosmetic Thread Hole Bottom</source>
-      <translation type="unfinished">Cosmetic Thread Hole Bottom</translation>
+      <translation>კოსმეტიკური კუთხვილის ხრახნის ნახვრეტის ძირი</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="527"/>
       <source>Cosmetic Thread Bolt Bottom</source>
-      <translation type="unfinished">Cosmetic Thread Bolt Bottom</translation>
+      <translation>ჰოსმეტიკური კუთხვილის ხრახნის ძირი</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="763"/>
       <source>Change Line Attributes</source>
-      <translation type="unfinished">Change Line Attributes</translation>
+      <translation>ხაზის ატრიბუტების შეცვლა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="822"/>
       <source>Cosmetic Intersection Vertex(es)</source>
-      <translation type="unfinished">Cosmetic Intersection Vertex(es)</translation>
+      <translation>კოსმეტიკური კვეთის წვეროები</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="868"/>
       <source>Cosmetic Arc</source>
-      <translation type="unfinished">Cosmetic Arc</translation>
+      <translation>კოსმეტიკური რკალი</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="931"/>
       <source>Cosmetic Circle</source>
-      <translation type="unfinished">Cosmetic Circle</translation>
+      <translation>კოსმეტიკური წრეწირი</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="991"/>
       <source>Cosmetic Circle 3 Points</source>
-      <translation type="unfinished">Cosmetic Circle 3 Points</translation>
+      <translation>კოსმეტიკური წრე 3 წერტილი</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1177"/>
       <source>Cosmetic Line Parallel/Perpendicular</source>
-      <translation type="unfinished">Cosmetic Line Parallel/Perpendicular</translation>
+      <translation>კოსმეტიკური ხაზი პარალელურია თუ მართობული</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1407"/>
       <source>Lock/Unlock View</source>
-      <translation type="unfinished">Lock/Unlock View</translation>
+      <translation>ხედის დაბლოკვა/განბლოკვა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1500"/>
       <source>Extend/Shorten Line</source>
-      <translation type="unfinished">Extend/Shorten Line</translation>
+      <translation>ხაზის გაგრძელება/შემოკლება</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1806"/>
       <source>Calculate Face Area</source>
-      <translation type="unfinished">Calculate Face Area</translation>
+      <translation>ზედაპირის ფართობის გამოთვლა</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.cpp" line="221"/>
       <source>Customize Format</source>
-      <translation type="unfinished">Customize Format</translation>
+      <translation>ფორმატის მორგება</translation>
     </message>
   </context>
   <context>
@@ -2517,8 +2426,8 @@
       <location filename="../../CommandAnnotate.cpp" line="1376"/>
       <location filename="../../CommandAnnotate.cpp" line="1381"/>
       <location filename="../../CommandAnnotate.cpp" line="1445"/>
-      <location filename="../../CommandCreateDims.cpp" line="1341"/>
-      <location filename="../../CommandCreateDims.cpp" line="1349"/>
+      <location filename="../../CommandCreateDims.cpp" line="1329"/>
+      <location filename="../../CommandCreateDims.cpp" line="1337"/>
       <source>Wrong selection</source>
       <translation>არასწორი არჩევანი</translation>
     </message>
@@ -2532,18 +2441,18 @@
       <location filename="../../Command.cpp" line="497"/>
       <location filename="../../Command.cpp" line="548"/>
       <source>Select at least 1 DrawViewPart object as Base.</source>
-      <translation type="unfinished">Select at least 1 DrawViewPart object as Base.</translation>
+      <translation>საბაზისოდ ერთი DrawViewPart ობიექტი მაინც მონიშნეთ.</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="782"/>
       <location filename="../../Command.cpp" line="789"/>
       <location filename="../../Command.cpp" line="796"/>
       <location filename="../../Command.cpp" line="808"/>
-      <location filename="../../CommandCreateDims.cpp" line="1439"/>
-      <location filename="../../CommandCreateDims.cpp" line="1446"/>
+      <location filename="../../CommandCreateDims.cpp" line="1427"/>
+      <location filename="../../CommandCreateDims.cpp" line="1434"/>
+      <location filename="../../CommandCreateDims.cpp" line="1441"/>
       <location filename="../../CommandCreateDims.cpp" line="1453"/>
-      <location filename="../../CommandCreateDims.cpp" line="1465"/>
-      <location filename="../../CommandCreateDims.cpp" line="1482"/>
+      <location filename="../../CommandCreateDims.cpp" line="1470"/>
       <location filename="../../CommandDecorate.cpp" line="387"/>
       <location filename="../../CommandDecorate.cpp" line="394"/>
       <location filename="../../CommandDecorate.cpp" line="401"/>
@@ -2552,25 +2461,25 @@
     </message>
     <message>
       <location filename="../../Command.cpp" line="783"/>
-      <location filename="../../CommandCreateDims.cpp" line="1440"/>
+      <location filename="../../CommandCreateDims.cpp" line="1428"/>
       <source>Select an object first</source>
       <translation>ჯერ აირჩიეთ ობიექტი</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="790"/>
-      <location filename="../../CommandCreateDims.cpp" line="1447"/>
+      <location filename="../../CommandCreateDims.cpp" line="1435"/>
       <source>Too many objects selected</source>
       <translation>მონიშნულია მეტისმეტად ბევრი ობიექტი</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="797"/>
-      <location filename="../../CommandCreateDims.cpp" line="1454"/>
+      <location filename="../../CommandCreateDims.cpp" line="1442"/>
       <source>Create a page first.</source>
       <translation>ჯერ შექმენით გვერდი.</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="809"/>
-      <location filename="../../CommandCreateDims.cpp" line="1466"/>
+      <location filename="../../CommandCreateDims.cpp" line="1454"/>
       <source>No View of a Part in selection.</source>
       <translation>მონიშნულში არ არსებობს ნაწილის ხედი.</translation>
     </message>
@@ -2627,7 +2536,7 @@
     <message>
       <location filename="../../Command.cpp" line="1222"/>
       <source>There were no DraftWB objects in the selection.</source>
-      <translation type="unfinished">There were no DraftWB objects in the selection.</translation>
+      <translation>მონიშნულში DraftWB ტიპის ობიექტები არ არსებობს.</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="1271"/>
@@ -2662,11 +2571,11 @@
     <message>
       <location filename="../../Command.cpp" line="1431"/>
       <source>Page contains DrawViewArch which will not be exported. Continue?</source>
-      <translation type="unfinished">Page contains DrawViewArch which will not be exported. Continue?</translation>
+      <translation>გვერდი შეიცავს DrawViewArch-ს, რომელიც არ იქნება გატანილი. გავაგრძელო?</translation>
     </message>
     <message>
       <location filename="../../CommandCreateDims.cpp" line="297"/>
-      <location filename="../../CommandCreateDims.cpp" line="419"/>
+      <location filename="../../CommandCreateDims.cpp" line="413"/>
       <source>Ellipse Curve Warning</source>
       <translation>ოვალის რკალის გაფრთხლება</translation>
     </message>
@@ -2677,93 +2586,125 @@
     </message>
     <message>
       <location filename="../../CommandCreateDims.cpp" line="308"/>
-      <location filename="../../CommandCreateDims.cpp" line="319"/>
-      <location filename="../../CommandCreateDims.cpp" line="430"/>
-      <location filename="../../CommandCreateDims.cpp" line="441"/>
+      <location filename="../../CommandCreateDims.cpp" line="424"/>
       <source>BSpline Curve Warning</source>
       <translation>B-სპლაინის რკალის გაფრთხილება</translation>
     </message>
     <message>
       <location filename="../../CommandCreateDims.cpp" line="309"/>
-      <location filename="../../CommandCreateDims.cpp" line="320"/>
       <source>Selected edge is a BSpline.  Radius will be approximate. Continue?</source>
       <translation>მონიშნული წიბო B-სპლაინს წარმოადგენს. რადიუსი მხოლოდ დაახლოებითი იქნება. გავაგრძელო?</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="331"/>
-      <location filename="../../CommandCreateDims.cpp" line="453"/>
-      <location filename="../../CommandCreateDims.cpp" line="550"/>
-      <location filename="../../CommandCreateDims.cpp" line="653"/>
-      <location filename="../../CommandCreateDims.cpp" line="756"/>
-      <location filename="../../CommandCreateDims.cpp" line="848"/>
-      <location filename="../../CommandCreateDims.cpp" line="937"/>
-      <location filename="../../CommandCreateDims.cpp" line="1021"/>
-      <location filename="../../CommandCreateDims.cpp" line="1027"/>
+      <location filename="../../CommandCreateDims.cpp" line="323"/>
+      <location filename="../../CommandCreateDims.cpp" line="439"/>
+      <location filename="../../CommandCreateDims.cpp" line="537"/>
+      <location filename="../../CommandCreateDims.cpp" line="640"/>
+      <location filename="../../CommandCreateDims.cpp" line="743"/>
+      <location filename="../../CommandCreateDims.cpp" line="836"/>
+      <location filename="../../CommandCreateDims.cpp" line="925"/>
+      <location filename="../../CommandCreateDims.cpp" line="1009"/>
+      <location filename="../../CommandCreateDims.cpp" line="1015"/>
+      <location filename="../../TaskDimension.cpp" line="411"/>
       <location filename="../../CommandDecorate.cpp" line="408"/>
       <location filename="../../CommandDecorate.cpp" line="414"/>
-      <location filename="../../TaskDimension.cpp" line="411"/>
       <source>Incorrect Selection</source>
       <translation>არასწორი არჩევანი</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="420"/>
+      <location filename="../../CommandCreateDims.cpp" line="318"/>
+      <location filename="../../CommandCreateDims.cpp" line="434"/>
+      <source>BSpline Curve Error</source>
+      <translation>B-სპლაინის რკალის შეცდომა</translation>
+    </message>
+    <message>
+      <location filename="../../CommandCreateDims.cpp" line="319"/>
+      <source>Selected edge is a BSpline and a radius can not be calculated.</source>
+      <translation type="unfinished">Selected edge is a BSpline and a radius can not be calculated.</translation>
+    </message>
+    <message>
+      <location filename="../../CommandCreateDims.cpp" line="414"/>
       <source>Selected edge is an Ellipse.  Diameter will be approximate. Continue?</source>
       <translation>მონიშნული წიბო ოვალს წარმოადგენს. დიამეტრი მხოლოდ დაახლოებითი იქნება. გავაგრძელო?</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="431"/>
-      <location filename="../../CommandCreateDims.cpp" line="442"/>
+      <location filename="../../CommandCreateDims.cpp" line="425"/>
       <source>Selected edge is a BSpline.  Diameter will be approximate. Continue?</source>
       <translation>მონიშნული წიბო B-სპლაინს წარმოადგენს. დიამეტრი მხოლოდ დაახლოებითი იქნება. გავაგრძელო?</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="849"/>
+      <location filename="../../CommandCreateDims.cpp" line="435"/>
+      <source>Selected edge is a BSpline and a diameter can not be calculated.</source>
+      <translation type="unfinished">Selected edge is a BSpline and a diameter can not be calculated.</translation>
+    </message>
+    <message>
+      <location filename="../../CommandCreateDims.cpp" line="440"/>
+      <source>Selection for Diameter does not contain a circular edge (edge type: %1)</source>
+      <translation type="unfinished">Selection for Diameter does not contain a circular edge (edge type: %1)</translation>
+    </message>
+    <message>
+      <location filename="../../CommandCreateDims.cpp" line="538"/>
+      <source>Need 2 Vertexes, 2 Edges or 1 Vertex and 1 Edge for Distance Dimension</source>
+      <translation type="unfinished">Need 2 Vertexes, 2 Edges or 1 Vertex and 1 Edge for Distance Dimension</translation>
+    </message>
+    <message>
+      <location filename="../../CommandCreateDims.cpp" line="641"/>
+      <source>Need 2 Vertexes, 2 Edges or 1 Vertex and 1 Edge for Horizontal Dimension</source>
+      <translation type="unfinished">Need 2 Vertexes, 2 Edges or 1 Vertex and 1 Edge for Horizontal Dimension</translation>
+    </message>
+    <message>
+      <location filename="../../CommandCreateDims.cpp" line="744"/>
+      <source>Need 2 Vertexes, 2 Edges or 1 Vertex and 1 Edge for Vertical Dimension</source>
+      <translation type="unfinished">Need 2 Vertexes, 2 Edges or 1 Vertex and 1 Edge for Vertical Dimension</translation>
+    </message>
+    <message>
+      <location filename="../../CommandCreateDims.cpp" line="837"/>
       <source>Need two straight edges to make an Angle Dimension</source>
       <translation>კუთხის ზომის შესაქმნელად საჭიროა ორი სწორი წიბო</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="938"/>
+      <location filename="../../CommandCreateDims.cpp" line="926"/>
       <source>Need three points to make a 3 point Angle Dimension</source>
       <translation>3 წერტილიანი კუთხის ზომისთვის საჭროა სამი წერტილი</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1022"/>
+      <location filename="../../CommandCreateDims.cpp" line="1010"/>
       <source>There is no 3D object in your selection</source>
       <translation>თქვენს მონიშნულში 3D ობიექტი არ არსებობს</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1028"/>
+      <location filename="../../CommandCreateDims.cpp" line="1016"/>
       <source>There are no 3D Edges or Vertices in your selection</source>
-      <translation type="unfinished">There are no 3D Edges or Vertices in your selection</translation>
+      <translation>მონიშნულში 3D წიბოები და წვეროები ნაპოვნი არაა</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1194"/>
-      <location filename="../../CommandCreateDims.cpp" line="1199"/>
-      <location filename="../../CommandCreateDims.cpp" line="1281"/>
-      <location filename="../../CommandCreateDims.cpp" line="1286"/>
+      <location filename="../../CommandCreateDims.cpp" line="1182"/>
+      <location filename="../../CommandCreateDims.cpp" line="1187"/>
+      <location filename="../../CommandCreateDims.cpp" line="1269"/>
+      <location filename="../../CommandCreateDims.cpp" line="1274"/>
       <source>Selection Error</source>
       <translation>მონიშვნის შეცდომა</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1200"/>
-      <location filename="../../CommandCreateDims.cpp" line="1287"/>
+      <location filename="../../CommandCreateDims.cpp" line="1188"/>
+      <location filename="../../CommandCreateDims.cpp" line="1275"/>
       <source>Please select a View [and Edges].</source>
       <translation>გთხოვთ, აირჩიეთ ხედი [და წიბოები].</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1342"/>
+      <location filename="../../CommandCreateDims.cpp" line="1330"/>
       <source>Select 2 point objects and 1 View. (1)</source>
       <translation>არჩიეთ 2 წერტილოვანი ობიექტი და 1 ხედი. (1)</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1350"/>
+      <location filename="../../CommandCreateDims.cpp" line="1338"/>
       <source>Select 2 point objects and 1 View. (2)</source>
       <translation>არჩიეთ 2 წერტილოვანი ობიექტი და 1 ხედი. (2)</translation>
     </message>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1483"/>
+      <location filename="../../CommandCreateDims.cpp" line="1471"/>
       <source>No Feature with Shape in selection.</source>
-      <translation type="unfinished">No Feature with Shape in selection.</translation>
+      <translation>მონიშნულში მოხაზულობის მქონე თვისება არ არსებობს.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="119"/>
@@ -2781,9 +2722,14 @@
       <location filename="../../CommandAnnotate.cpp" line="1283"/>
       <location filename="../../CommandAnnotate.cpp" line="1361"/>
       <location filename="../../CommandAnnotate.cpp" line="1427"/>
-      <location filename="../../CommandCreateDims.cpp" line="1073"/>
-      <location filename="../../CommandCreateDims.cpp" line="1167"/>
-      <location filename="../../CommandCreateDims.cpp" line="1254"/>
+      <location filename="../../CommandExtensionPack.cpp" line="286"/>
+      <location filename="../../CommandExtensionPack.cpp" line="593"/>
+      <location filename="../../CommandExtensionPack.cpp" line="1071"/>
+      <location filename="../../CommandExtensionPack.cpp" line="1302"/>
+      <location filename="../../CommandExtensionPack.cpp" line="1656"/>
+      <location filename="../../CommandCreateDims.cpp" line="1061"/>
+      <location filename="../../CommandCreateDims.cpp" line="1155"/>
+      <location filename="../../CommandCreateDims.cpp" line="1242"/>
       <location filename="../../CommandExtensionDims.cpp" line="261"/>
       <location filename="../../CommandExtensionDims.cpp" line="468"/>
       <location filename="../../CommandExtensionDims.cpp" line="754"/>
@@ -2791,13 +2737,13 @@
       <location filename="../../CommandExtensionDims.cpp" line="1421"/>
       <location filename="../../CommandExtensionDims.cpp" line="1785"/>
       <location filename="../../CommandExtensionDims.cpp" line="2044"/>
-      <location filename="../../CommandExtensionPack.cpp" line="286"/>
-      <location filename="../../CommandExtensionPack.cpp" line="593"/>
-      <location filename="../../CommandExtensionPack.cpp" line="1071"/>
-      <location filename="../../CommandExtensionPack.cpp" line="1302"/>
-      <location filename="../../CommandExtensionPack.cpp" line="1656"/>
       <source>Task In Progress</source>
       <translation>მიმდინარეობს ამოცანის შესრულება</translation>
+    </message>
+    <message>
+      <location filename="../../CommandCreateDims.cpp" line="324"/>
+      <source>Selection for Radius does not contain a circular edge (edge type: %1)</source>
+      <translation type="unfinished">Selection for Radius does not contain a circular edge (edge type: %1)</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="120"/>
@@ -2815,9 +2761,14 @@
       <location filename="../../CommandAnnotate.cpp" line="1284"/>
       <location filename="../../CommandAnnotate.cpp" line="1362"/>
       <location filename="../../CommandAnnotate.cpp" line="1428"/>
-      <location filename="../../CommandCreateDims.cpp" line="1074"/>
-      <location filename="../../CommandCreateDims.cpp" line="1168"/>
-      <location filename="../../CommandCreateDims.cpp" line="1255"/>
+      <location filename="../../CommandExtensionPack.cpp" line="287"/>
+      <location filename="../../CommandExtensionPack.cpp" line="594"/>
+      <location filename="../../CommandExtensionPack.cpp" line="1072"/>
+      <location filename="../../CommandExtensionPack.cpp" line="1303"/>
+      <location filename="../../CommandExtensionPack.cpp" line="1657"/>
+      <location filename="../../CommandCreateDims.cpp" line="1062"/>
+      <location filename="../../CommandCreateDims.cpp" line="1156"/>
+      <location filename="../../CommandCreateDims.cpp" line="1243"/>
       <location filename="../../CommandExtensionDims.cpp" line="262"/>
       <location filename="../../CommandExtensionDims.cpp" line="469"/>
       <location filename="../../CommandExtensionDims.cpp" line="755"/>
@@ -2825,11 +2776,6 @@
       <location filename="../../CommandExtensionDims.cpp" line="1422"/>
       <location filename="../../CommandExtensionDims.cpp" line="1786"/>
       <location filename="../../CommandExtensionDims.cpp" line="2045"/>
-      <location filename="../../CommandExtensionPack.cpp" line="287"/>
-      <location filename="../../CommandExtensionPack.cpp" line="594"/>
-      <location filename="../../CommandExtensionPack.cpp" line="1072"/>
-      <location filename="../../CommandExtensionPack.cpp" line="1303"/>
-      <location filename="../../CommandExtensionPack.cpp" line="1657"/>
       <source>Close active task dialog and try again.</source>
       <translation>დახურეთ აქტიური ამოცანის ფანჯარა და თავიდან სცადეთ.</translation>
     </message>
@@ -2855,8 +2801,8 @@
       <location filename="../../CommandAnnotate.cpp" line="1122"/>
       <location filename="../../CommandAnnotate.cpp" line="1298"/>
       <location filename="../../CommandAnnotate.cpp" line="1303"/>
-      <location filename="../../CommandAnnotate.cpp" line="1514"/>
-      <location filename="../../CommandAnnotate.cpp" line="1528"/>
+      <location filename="../../CommandAnnotate.cpp" line="1512"/>
+      <location filename="../../CommandAnnotate.cpp" line="1525"/>
       <source>Wrong Selection</source>
       <translation>არასწორი არჩევანი</translation>
     </message>
@@ -2871,7 +2817,7 @@
       <location filename="../../CommandAnnotate.cpp" line="926"/>
       <location filename="../../CommandAnnotate.cpp" line="1058"/>
       <source>You must select a base View for the line.</source>
-      <translation type="unfinished">You must select a base View for the line.</translation>
+      <translation>უნდა აირჩიოთ ხაზის საბაზისო ხედი.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="332"/>
@@ -2882,27 +2828,27 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="732"/>
       <location filename="../../CommandAnnotate.cpp" line="921"/>
-      <location filename="../../CommandCreateDims.cpp" line="1195"/>
-      <location filename="../../CommandCreateDims.cpp" line="1282"/>
+      <location filename="../../CommandCreateDims.cpp" line="1183"/>
+      <location filename="../../CommandCreateDims.cpp" line="1270"/>
       <source>No base View in Selection.</source>
       <translation>მონიშნული საბაზისო ხედი არაა.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="764"/>
       <source>You must select Faces or an existing CenterLine.</source>
-      <translation type="unfinished">You must select Faces or an existing CenterLine.</translation>
+      <translation>უნდა მონიშნოთ ზედაპირები ან არსებული ცენტრის ხაზები.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="774"/>
       <source>No CenterLine in selection.</source>
-      <translation type="unfinished">No CenterLine in selection.</translation>
+      <translation>მონიშნულში ცენტრის ხაზები არაა.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="780"/>
       <location filename="../../CommandAnnotate.cpp" line="852"/>
       <location filename="../../CommandAnnotate.cpp" line="965"/>
       <source>Selection is not a CenterLine.</source>
-      <translation type="unfinished">Selection is not a CenterLine.</translation>
+      <translation>მონიშნული ცენტრის ხაზი არაა.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="862"/>
@@ -2912,12 +2858,12 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="953"/>
       <source>You must select 2 Vertexes or an existing CenterLine.</source>
-      <translation type="unfinished">You must select 2 Vertexes or an existing CenterLine.</translation>
+      <translation>უნდა მონიშნოთ 2 წვერო ან არსებული ცენტრის ხაზები.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="975"/>
       <source>Need 2 Vertices or 1 CenterLine.</source>
-      <translation type="unfinished">Need 2 Vertices or 1 CenterLine.</translation>
+      <translation>საჭიროა ორი წვერო ან ერთი ცენტრი ხაზი.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1052"/>
@@ -2948,7 +2894,7 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1183"/>
       <source>At least 1 object in selection is not a part view</source>
-      <translation type="unfinished">At least 1 object in selection is not a part view</translation>
+      <translation>მონიშნულში მინიმუმ 1 ობიექტი ნაწილის ხედს არ წარმოადგენს</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1233"/>
@@ -2974,6 +2920,16 @@
       <location filename="../../CommandAnnotate.cpp" line="1446"/>
       <source>Select exactly one Leader line or one Weld symbol.</source>
       <translation>აირჩიეთ ზუსტად ერთი გატანადი ხაზი ან ერთი შედუღების ნიშანი.</translation>
+    </message>
+    <message>
+      <location filename="../../CommandAnnotate.cpp" line="1513"/>
+      <source>No Part View in Selection</source>
+      <translation type="unfinished">No Part View in Selection</translation>
+    </message>
+    <message>
+      <location filename="../../CommandAnnotate.cpp" line="1526"/>
+      <source>No %1 in Selection</source>
+      <translation>მონიშნულში %1 არ არსებობს</translation>
     </message>
     <message>
       <location filename="../../CommandDecorate.cpp" line="124"/>
@@ -3053,9 +3009,9 @@
       <translation>გვერდის SVG ფაილად გატანა</translation>
     </message>
     <message>
+      <location filename="../../ViewProviderTemplate.cpp" line="195"/>
       <location filename="../../ViewProviderPage.cpp" line="224"/>
       <location filename="../../ViewProviderProjGroup.cpp" line="201"/>
-      <location filename="../../ViewProviderTemplate.cpp" line="195"/>
       <source>Are you sure you want to continue?</source>
       <translation>დარწმუნებული ბრძანდებით, რომ გნებავთ გააგრძელოთ?</translation>
     </message>
@@ -3090,9 +3046,9 @@
       <translation>ფორმატირებული ტექსტის შემქმნელი</translation>
     </message>
     <message>
-      <location filename="../../QGIRichAnno.cpp" line="376"/>
       <location filename="../../TaskRichAnno.cpp" line="134"/>
       <location filename="../../TaskRichAnno.cpp" line="291"/>
+      <location filename="../../QGIRichAnno.cpp" line="376"/>
       <source>Rich text editor</source>
       <translation>ტექსტის ფორმატირების რედაქტორი</translation>
     </message>
@@ -3137,7 +3093,7 @@
       <translation>ჭრილის ხედის შეცვლა</translation>
     </message>
     <message>
-      <location filename="../../TaskSectionView.cpp" line="504"/>
+      <location filename="../../TaskSectionView.cpp" line="500"/>
       <source>Operation Failed</source>
       <translation>ოპერაცია წარუმატებლად დასრულდა</translation>
     </message>
@@ -3180,78 +3136,78 @@
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="557"/>
       <source>TechDraw PosHorizChainDimension</source>
-      <translation type="unfinished">TechDraw PosHorizChainDimension</translation>
+      <translation>TechDraw PosHorizChainDimension</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="558"/>
       <location filename="../../CommandExtensionDims.cpp" line="861"/>
       <source>No horizontal dimensions selected</source>
-      <translation type="unfinished">No horizontal dimensions selected</translation>
+      <translation>ჰორიზონტალური ზომები მონიშნული არაა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="616"/>
       <source>TechDraw PosVertChainDimension</source>
-      <translation type="unfinished">TechDraw PosVertChainDimension</translation>
+      <translation>TechDraw PosVertChainDimension</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="617"/>
       <location filename="../../CommandExtensionDims.cpp" line="925"/>
       <source>No vertical dimensions selected</source>
-      <translation type="unfinished">No vertical dimensions selected</translation>
+      <translation>ვერტიკალური ზომები მონიშნული არაა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="676"/>
       <source>TechDraw PosObliqueChainDimension</source>
-      <translation type="unfinished">TechDraw PosObliqueChainDimension</translation>
+      <translation>TechDraw PosObliqueChainDimension</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="677"/>
       <location filename="../../CommandExtensionDims.cpp" line="990"/>
       <source>No oblique dimensions selected</source>
-      <translation type="unfinished">No oblique dimensions selected</translation>
+      <translation>დახრილი ზომები მითითებული არაა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="860"/>
       <source>TechDraw CascadeHorizDimension</source>
-      <translation type="unfinished">TechDraw CascadeHorizDimension</translation>
+      <translation>TechDraw CascadeHorizDimension</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="924"/>
       <source>TechDraw CascadeVertDimension</source>
-      <translation type="unfinished">TechDraw CascadeVertDimension</translation>
+      <translation>TechDraw CascadeVertDimension</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="989"/>
       <source>TechDraw CascadeObliqueDimension</source>
-      <translation type="unfinished">TechDraw CascadeObliqueDimension</translation>
+      <translation>TechDraw CascadeObliqueDimension</translation>
     </message>
     <message>
-      <location filename="../../CommandExtensionDims.cpp" line="2251"/>
       <location filename="../../CommandExtensionPack.cpp" line="1451"/>
       <location filename="../../CommandExtensionPack.cpp" line="1908"/>
+      <location filename="../../CommandExtensionDims.cpp" line="2251"/>
       <source>Selection is empty</source>
       <translation>მონიშნული ცარიელია</translation>
     </message>
     <message>
-      <location filename="../../CommandExtensionDims.cpp" line="2269"/>
       <location filename="../../CommandExtensionPack.cpp" line="1916"/>
+      <location filename="../../CommandExtensionDims.cpp" line="2269"/>
       <source>No object selected</source>
       <translation>ობიექტი მონიშნული არაა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="126"/>
       <source>TechDraw Hole Circle</source>
-      <translation type="unfinished">TechDraw Hole Circle</translation>
+      <translation>TechDraw-ის ნახვრეტის წრეწირი</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="127"/>
       <source>Fewer than three circles selected</source>
-      <translation type="unfinished">Fewer than three circles selected</translation>
+      <translation>მონიშნულია სამზე ნაკლები წრეწირი</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="1450"/>
       <source>TechDraw Position Section View</source>
-      <translation type="unfinished">TechDraw Position Section View</translation>
+      <translation>TechDraw-ის ჭრილის ხედის მდებარეობა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="2019"/>
@@ -3266,7 +3222,23 @@
     <message>
       <location filename="../../TaskDimension.cpp" line="412"/>
       <source>Select 2 Vertexes or 1 Edge</source>
-      <translation type="unfinished">Select 2 Vertexes or 1 Edge</translation>
+      <translation>აირჩიეთ 2 წვერო ან 1 წიბო</translation>
+    </message>
+    <message>
+      <location filename="../../DlgPrefsTechDrawAnnotationImp.cpp" line="147"/>
+      <source>Please select a Line Group</source>
+      <translation type="unfinished">Please select a Line Group</translation>
+    </message>
+    <message>
+      <location filename="../../DlgPrefsTechDrawAnnotationImp.cpp" line="158"/>
+      <source>%1 defines these line widths:
+ thin: %2
+ graphic: %3
+ thick: %4</source>
+      <translation type="unfinished">%1 defines these line widths:
+ thin: %2
+ graphic: %3
+ thick: %4</translation>
     </message>
   </context>
   <context>
@@ -3279,19 +3251,19 @@ it has a weld symbol that would become broken.</source>
 რომ მას აქვს შედუღების ნიშანი, რომელიც გაფუჭდება.</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderLeader.cpp" line="243"/>
-      <location filename="../../ViewProviderPage.cpp" line="227"/>
-      <location filename="../../ViewProviderProjGroup.cpp" line="188"/>
-      <location filename="../../ViewProviderProjGroup.cpp" line="204"/>
+      <location filename="../../ViewProviderWeld.cpp" line="187"/>
       <location filename="../../ViewProviderProjGroupItem.cpp" line="166"/>
       <location filename="../../ViewProviderProjGroupItem.cpp" line="175"/>
       <location filename="../../ViewProviderProjGroupItem.cpp" line="183"/>
       <location filename="../../ViewProviderProjGroupItem.cpp" line="191"/>
-      <location filename="../../ViewProviderTemplate.cpp" line="199"/>
       <location filename="../../ViewProviderViewPart.cpp" line="348"/>
       <location filename="../../ViewProviderViewPart.cpp" line="356"/>
       <location filename="../../ViewProviderViewPart.cpp" line="364"/>
-      <location filename="../../ViewProviderWeld.cpp" line="187"/>
+      <location filename="../../ViewProviderTemplate.cpp" line="199"/>
+      <location filename="../../ViewProviderLeader.cpp" line="243"/>
+      <location filename="../../ViewProviderPage.cpp" line="227"/>
+      <location filename="../../ViewProviderProjGroup.cpp" line="188"/>
+      <location filename="../../ViewProviderProjGroup.cpp" line="204"/>
       <source>Object dependencies</source>
       <translation>ობიექტის დამოკიდებულებები</translation>
     </message>
@@ -3387,8 +3359,8 @@ it has a tile weld that would become broken.</translation>
       <location filename="../../TaskActiveView.ui" line="115"/>
       <source>Minimal distance of the object from
 the top and left view border</source>
-      <translation type="unfinished">Minimal distance of the object from
-the top and left view border</translation>
+      <translation>ობიექტის მინიმალური დაცილება
+ზედა და მარცხენა ხედის საზღვრიდან</translation>
     </message>
     <message>
       <location filename="../../TaskActiveView.ui" line="132"/>
@@ -3423,7 +3395,7 @@ the top and left view border</translation>
     <message>
       <location filename="../../TaskActiveView.ui" line="213"/>
       <source>Drawing style - see SoRenderManager</source>
-      <translation type="unfinished">Drawing style - see SoRenderManager</translation>
+      <translation>ხაზვის სტილი - იხილეთ SoRenderManager</translation>
     </message>
     <message>
       <location filename="../../TaskActiveView.ui" line="217"/>
@@ -3443,7 +3415,7 @@ the top and left view border</translation>
     <message>
       <location filename="../../TaskActiveView.ui" line="232"/>
       <source>Wireframe overlay</source>
-      <translation type="unfinished">Wireframe overlay</translation>
+      <translation>კარკასის განლაგება</translation>
     </message>
     <message>
       <location filename="../../TaskActiveView.ui" line="237"/>
@@ -3466,7 +3438,7 @@ the top and left view border</translation>
     <message>
       <location filename="../../TaskMoveView.ui" line="22"/>
       <source>View to move</source>
-      <translation type="unfinished">View to move</translation>
+      <translation>გადასატანი ხედი</translation>
     </message>
     <message>
       <location filename="../../TaskMoveView.ui" line="36"/>
@@ -3478,12 +3450,12 @@ the top and left view border</translation>
     <message>
       <location filename="../../TaskMoveView.ui" line="43"/>
       <source>From Page</source>
-      <translation type="unfinished">From Page</translation>
+      <translation>გვერდიდან</translation>
     </message>
     <message>
       <location filename="../../TaskMoveView.ui" line="64"/>
       <source>To Page</source>
-      <translation type="unfinished">To Page</translation>
+      <translation>გვერდზე</translation>
     </message>
   </context>
   <context>
@@ -3624,8 +3596,8 @@ at the kink in the leader line</translation>
       <location filename="../../TaskWeldingSymbol.ui" line="301"/>
       <source>Directory path for welding symbols.
 This directory will be used for the symbol selection.</source>
-      <translation type="unfinished">Directory path for welding symbols.
-This directory will be used for the symbol selection.</translation>
+      <translation>შედუღების სიმბოლოების საქაღალდის ბილიკი.
+ეს საქაღალდე გამოყენებული იქნება შედუღების სიმბოლოების ასარჩევად.</translation>
     </message>
     <message>
       <location filename="../../TaskWeldingSymbol.ui" line="308"/>
@@ -3638,17 +3610,17 @@ This directory will be used for the symbol selection.</translation>
     <message>
       <location filename="../../DlgPageChooser.ui" line="17"/>
       <source>Page Chooser</source>
-      <translation type="unfinished">Page Chooser</translation>
+      <translation>გვერდის ამრჩევი</translation>
     </message>
     <message>
       <location filename="../../DlgPageChooser.ui" line="29"/>
       <source>FreeCAD could not determine which Page to use.  Please select a Page.</source>
-      <translation type="unfinished">FreeCAD could not determine which Page to use.  Please select a Page.</translation>
+      <translation>FreeCAD-ი ვერ მიხვდა, რომელი გვერდი გახსნას. აირჩიეთ გვერდი.</translation>
     </message>
     <message>
       <location filename="../../DlgPageChooser.ui" line="39"/>
       <source>Select a Page that should be used</source>
-      <translation type="unfinished">Select a Page that should be used</translation>
+      <translation>აირჩიეთ გამოსაყენებელი გვერდი</translation>
     </message>
   </context>
   <context>
@@ -3678,7 +3650,7 @@ can be a performance penalty in complex models.</source>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="86"/>
       <source>Highlights border of section cut in section views</source>
-      <translation type="unfinished">Highlights border of section cut in section views</translation>
+      <translation>კვეთებში საზღვრების გამოკვეთა</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="89"/>
@@ -3733,7 +3705,7 @@ can be a performance penalty in complex models.</source>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="232"/>
       <source>Show Loose 2D Geom</source>
-      <translation type="unfinished">Show Loose 2D Geom</translation>
+      <translation>2D გეომეტრიის კარგვების ჩვენება</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="260"/>
@@ -3768,8 +3740,8 @@ Each unit is approx. 0.1 mm wide</source>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="391"/>
       <source>Shape of line end caps.
 Only change unless you know what you are doing!</source>
-      <translation type="unfinished">Shape of line end caps.
-Only change unless you know what you are doing!</translation>
+      <translation>ხაზის ბოლოს ფორმა.
+შეცვალეთ, თუ ზუსტად იცით, რას აკეთებთ!</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="402"/>
@@ -3931,7 +3903,7 @@ when hatching a face with a PAT pattern</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="243"/>
       <source>Line group used to set line widths</source>
-      <translation type="unfinished">Line group used to set line widths</translation>
+      <translation>სიგანის დასაყენებელი ხაზების ჯგუფი</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="246"/>
@@ -3946,7 +3918,7 @@ when hatching a face with a PAT pattern</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="302"/>
       <source>Outline shape for detail views</source>
-      <translation type="unfinished">Outline shape for detail views</translation>
+      <translation>კიდის მოხაზულობა დეტალური ხედისთვის</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="312"/>
@@ -4032,22 +4004,22 @@ when hatching a face with a PAT pattern</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="661"/>
       <source>Style for balloon leader line ends</source>
-      <translation type="unfinished">Style for balloon leader line ends</translation>
+      <translation>ოვალური სქოლოს ხაზის დასრულების სტილი</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="679"/>
       <source>Length of horizontal portion of Balloon leader</source>
-      <translation type="unfinished">Length of horizontal portion of Balloon leader</translation>
+      <translation>ოვალური სქოლიოს ჰორიზონტალური ნაწილის სიგრძე</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="682"/>
       <source>Ballon Leader Kink Length</source>
-      <translation type="unfinished">Ballon Leader Kink Length</translation>
+      <translation>ოვალური სქოლიოს მოღუნვის სიგრძე</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="701"/>
       <source>Length of balloon leader line kink</source>
-      <translation type="unfinished">Length of balloon leader line kink</translation>
+      <translation>ოვალური სქოლიოს მოღუნვის სიგრძე</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="732"/>
@@ -4062,7 +4034,7 @@ when hatching a face with a PAT pattern</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="763"/>
       <source>Forces last leader line segment to be horizontal</source>
-      <translation type="unfinished">Forces last leader line segment to be horizontal</translation>
+      <translation>სქოლიოს უკანასკნელი სეგმენტის ჰორიზონტალურად გავლება</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="766"/>
@@ -4082,7 +4054,7 @@ when hatching a face with a PAT pattern</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="830"/>
       <source>Show arc centers in printed output</source>
-      <translation type="unfinished">Show arc centers in printed output</translation>
+      <translation>დაბეჭვისას რკალის ცენტრების ჩვენება</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="833"/>
@@ -4241,7 +4213,7 @@ when hatching a face with a PAT pattern</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawColors.ui" line="493"/>
       <source>Grid Color</source>
-      <translation type="unfinished">Grid Color</translation>
+      <translation>ბადის ფერი</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawColors.ui" line="528"/>
@@ -4330,12 +4302,12 @@ when hatching a face with a PAT pattern</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawDimensions.ui" line="195"/>
       <source>Number of decimals if &apos;Use Global Decimals&apos; is not used</source>
-      <translation type="unfinished">Number of decimals if &apos;Use Global Decimals&apos; is not used</translation>
+      <translation>ათეულების რიცხვი, თუ &apos;გლობალური მეათედები&apos; არ გამოიყენება</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawDimensions.ui" line="219"/>
       <source>Dimension Format</source>
-      <translation type="unfinished">Dimension Format</translation>
+      <translation>ზომის ფორმატი</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawDimensions.ui" line="226"/>
@@ -4355,7 +4327,7 @@ when hatching a face with a PAT pattern</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawDimensions.ui" line="315"/>
       <source>Tolerance Text Scale</source>
-      <translation type="unfinished">Tolerance Text Scale</translation>
+      <translation>ტოლერანტობის ტექსტის გადიდება</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawDimensions.ui" line="340"/>
@@ -4420,7 +4392,7 @@ Multiplier of &apos;Font Size&apos;</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="61"/>
       <source>Whether or not pages are updated every time the 3D model is changed</source>
-      <translation type="unfinished">Whether or not pages are updated every time the 3D model is changed</translation>
+      <translation>განახლდება თუ არა გვერდები 3D მოდელის თითოეული ცვლილებისას</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="64"/>
@@ -4437,7 +4409,7 @@ can override the global &apos;Update With 3D&apos; parameter</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="96"/>
       <source>Allow Page Override (global policy)</source>
-      <translation type="unfinished">Allow Page Override (global policy)</translation>
+      <translation>გვერდის გადაფარვის დაშვება (გლობალური წესი)</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="123"/>
@@ -4455,8 +4427,8 @@ This can slow down the response time.</source>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="160"/>
       <source>Automatically distribute secondary views
 for ProjectionGroups</source>
-      <translation type="unfinished">Automatically distribute secondary views
-for ProjectionGroups</translation>
+      <translation>პროექციების ჯგუფებისთვის მეორადი ხედების
+ავტომატური განაწილება</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="164"/>
@@ -4588,7 +4560,7 @@ for ProjectionGroups</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="648"/>
       <source>Alternate file for personal LineGroup definition</source>
-      <translation type="unfinished">Alternate file for personal LineGroup definition</translation>
+      <translation>პერსონალური LineGroup-ის აღწერის ალტერნატიული ფაილი</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="672"/>
@@ -4633,22 +4605,22 @@ for ProjectionGroups</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="805"/>
       <source>Set ShowGrid property to true on new Pages.</source>
-      <translation type="unfinished">Set ShowGrid property to true on new Pages.</translation>
+      <translation>ახალ გვერდებზე ShowGrid თვისების ჩართვა.</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="808"/>
       <source>Show Grid</source>
-      <translation type="unfinished">Show Grid</translation>
+      <translation>ბადის ჩვენება</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="829"/>
       <source>Grid Spacing</source>
-      <translation type="unfinished">Grid Spacing</translation>
+      <translation>ბადის ბიჯი</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="849"/>
       <source>Distance between Page grid lines.</source>
-      <translation type="unfinished">Distance between Page grid lines.</translation>
+      <translation>მანძილი გვერდის ბადის ხაზებს შორის.</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="879"/>
@@ -4693,7 +4665,7 @@ Fast, but result is a collection of short straight lines.</source>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="140"/>
       <source>Show hard and outline edges (always shown)</source>
-      <translation type="unfinished">Show hard and outline edges (always shown)</translation>
+      <translation>მყარი და კიდის წიბოების ჩვენება (ყოველთვის ნაჩვენებია)</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="143"/>
@@ -4704,7 +4676,7 @@ Fast, but result is a collection of short straight lines.</source>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="173"/>
       <source>Show hidden hard and outline edges</source>
-      <translation type="unfinished">Show hidden hard and outline edges</translation>
+      <translation>დამალული მყარი და კიდის წიბოების ჩვენება</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="200"/>
@@ -4741,7 +4713,7 @@ Fast, but result is a collection of short straight lines.</source>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="314"/>
       <source>Make lines of equal parameterization</source>
-      <translation type="unfinished">Make lines of equal parameterization</translation>
+      <translation>თანაბარი პარამეტრიზაციის ხაზების შექმნა</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="317"/>
@@ -4762,7 +4734,7 @@ Fast, but result is a collection of short straight lines.</source>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="387"/>
       <source>Number of ISO lines per face edge</source>
-      <translation type="unfinished">Number of ISO lines per face edge</translation>
+      <translation>ხაზების რაოდენობა თითოეულ ზედაპირის წიბოსთან</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="414"/>
@@ -4846,7 +4818,7 @@ Fast, but result is a collection of short straight lines.</source>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="324"/>
       <source>Size of center marks. Multiplier of vertex size.</source>
-      <translation type="unfinished">Size of center marks. Multiplier of vertex size.</translation>
+      <translation>ნიშნების ცენტრის ზომა. წარმოადგენს წვეროს ნამრავლს.</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="349"/>
@@ -4938,12 +4910,12 @@ Do you want to continue?</source>
     <message>
       <location filename="../../MDIViewPage.cpp" line="902"/>
       <source>Save DXF file</source>
-      <translation type="unfinished">Save DXF file</translation>
+      <translation>DXF ფაილის შენახვა</translation>
     </message>
     <message>
       <location filename="../../MDIViewPage.cpp" line="904"/>
       <source>DXF (*.dxf)</source>
-      <translation type="unfinished">DXF (*.dxf)</translation>
+      <translation>DXF (*.dxf)</translation>
     </message>
     <message>
       <location filename="../../MDIViewPage.cpp" line="1389"/>
@@ -5137,53 +5109,53 @@ Do you want to continue?</source>
     <message>
       <location filename="../../TaskBalloon.ui" line="343"/>
       <source>Length of balloon leader line kink</source>
-      <translation type="unfinished">Length of balloon leader line kink</translation>
+      <translation>ოვალური სქოლიოს მოღუნვის სიგრძე</translation>
     </message>
   </context>
   <context>
     <name>TechDrawGui::TaskCenterLine</name>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="29"/>
+      <location filename="../../TaskCenterLine.ui" line="17"/>
       <source>Center Line</source>
       <translation>ცენტრის ხაზი</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="41"/>
+      <location filename="../../TaskCenterLine.ui" line="29"/>
       <source>Base View</source>
       <translation>საბაზისო ხედი</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="64"/>
+      <location filename="../../TaskCenterLine.ui" line="52"/>
       <source>Elements</source>
       <translation>ელემენტები</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="95"/>
+      <location filename="../../TaskCenterLine.ui" line="83"/>
       <source>Orientation</source>
       <translation>ორიენტაცია</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="101"/>
+      <location filename="../../TaskCenterLine.ui" line="89"/>
       <source>Top to Bottom line</source>
       <translation>ხაზი ზემოდან ქვემოთ</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="104"/>
+      <location filename="../../TaskCenterLine.ui" line="92"/>
       <source>Vertical</source>
       <translation>ვერტიკალურად</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="120"/>
+      <location filename="../../TaskCenterLine.ui" line="108"/>
       <source>Left to Right line</source>
       <translation>ხაზი მარცხნიდან მარჯვნივ</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="123"/>
+      <location filename="../../TaskCenterLine.ui" line="111"/>
       <source>Horizontal</source>
       <translation>ჰორიზონტალურად</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="136"/>
+      <location filename="../../TaskCenterLine.ui" line="124"/>
       <source>centerline between
 - lines: in equal distance to the lines and with
   half of the angle the lines have to each other
@@ -5194,92 +5166,92 @@ Do you want to continue?</source>
 - points: in equal distance to the points</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="142"/>
+      <location filename="../../TaskCenterLine.ui" line="130"/>
       <source>Aligned</source>
       <translation>გათანაბრებული</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="157"/>
+      <location filename="../../TaskCenterLine.ui" line="145"/>
       <source>Shift Horizontal</source>
       <translation>ჰორიზონტალური წანაცვლება</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="170"/>
+      <location filename="../../TaskCenterLine.ui" line="158"/>
       <source>Move line -Left or +Right</source>
       <translation>ხაზის -მარცხნივ ან +მარჯვნივ გაწევა</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="183"/>
+      <location filename="../../TaskCenterLine.ui" line="171"/>
       <source>Shift Vertical</source>
       <translation>ვერტიკალური წანაცვლება</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="196"/>
+      <location filename="../../TaskCenterLine.ui" line="184"/>
       <source>Move line +Up or -Down</source>
       <translation>ხაზის +მაღლა ან -დაბლა გადატანა</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="209"/>
+      <location filename="../../TaskCenterLine.ui" line="197"/>
       <source>Rotate</source>
       <translation>შებრუნება</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="222"/>
+      <location filename="../../TaskCenterLine.ui" line="210"/>
       <source>Rotate line +CCW or -CW</source>
       <translation>ხაზის მოტრიალება +სისმ ან -სიმ</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="249"/>
+      <location filename="../../TaskCenterLine.ui" line="237"/>
       <source>Extend By</source>
       <translation>გაფართოება</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="262"/>
+      <location filename="../../TaskCenterLine.ui" line="250"/>
       <source>Make the line a little longer.</source>
       <translation>ხაზის ოდნავ გაგრძელება.</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="268"/>
+      <location filename="../../TaskCenterLine.ui" line="256"/>
       <source>mm</source>
       <translation>მმ</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="278"/>
+      <location filename="../../TaskCenterLine.ui" line="266"/>
       <source>Color</source>
       <translation>ფერი</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="296"/>
+      <location filename="../../TaskCenterLine.ui" line="284"/>
       <source>Weight</source>
       <translation>სისქე</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="316"/>
+      <location filename="../../TaskCenterLine.ui" line="304"/>
       <source>Style</source>
       <translation>სტილი</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="327"/>
+      <location filename="../../TaskCenterLine.ui" line="315"/>
       <source>Continuous</source>
       <translation>უწყვეტი</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="336"/>
+      <location filename="../../TaskCenterLine.ui" line="324"/>
       <source>Dash</source>
       <translation>შტრიხი</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="345"/>
+      <location filename="../../TaskCenterLine.ui" line="333"/>
       <source>Dot</source>
       <translation>წერტილი</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="354"/>
+      <location filename="../../TaskCenterLine.ui" line="342"/>
       <source>DashDot</source>
       <translation>შტრიხპუნქტირი</translation>
     </message>
     <message>
-      <location filename="../../TaskCenterLine.ui" line="363"/>
+      <location filename="../../TaskCenterLine.ui" line="351"/>
       <source>DashDotDot</source>
       <translation>ტირე-წერტილის ხაზი 2 წერტილით</translation>
     </message>
@@ -5287,44 +5259,56 @@ Do you want to continue?</source>
   <context>
     <name>TechDrawGui::TaskCosVertex</name>
     <message>
-      <location filename="../../TaskCosVertex.ui" line="26"/>
+      <location filename="../../TaskCosVertex.ui" line="14"/>
       <source>Cosmetic Vertex</source>
       <translation>დამხმარე წვერო</translation>
     </message>
     <message>
-      <location filename="../../TaskCosVertex.ui" line="38"/>
+      <location filename="../../TaskCosVertex.ui" line="26"/>
       <source>Base View</source>
       <translation>საბაზისო ხედი</translation>
     </message>
     <message>
-      <location filename="../../TaskCosVertex.ui" line="78"/>
+      <location filename="../../TaskCosVertex.ui" line="66"/>
+      <location filename="../../TaskCosVertex.cpp" line="136"/>
       <source>Point Picker</source>
       <translation>აირჩიეთ წერტილები</translation>
     </message>
     <message>
-      <location filename="../../TaskCosVertex.ui" line="107"/>
+      <location filename="../../TaskCosVertex.ui" line="95"/>
       <source>Position from the view center</source>
       <translation>პოზიცია ხედის ცენტრიდან</translation>
     </message>
     <message>
-      <location filename="../../TaskCosVertex.ui" line="110"/>
+      <location filename="../../TaskCosVertex.ui" line="98"/>
       <source>Position</source>
       <translation type="unfinished">Position</translation>
     </message>
     <message>
-      <location filename="../../TaskCosVertex.ui" line="118"/>
+      <location filename="../../TaskCosVertex.ui" line="106"/>
       <source>X</source>
       <translation>X</translation>
     </message>
     <message>
-      <location filename="../../TaskCosVertex.ui" line="154"/>
+      <location filename="../../TaskCosVertex.ui" line="142"/>
       <source>Y</source>
       <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../../TaskCosVertex.cpp" line="180"/>
+      <location filename="../../TaskCosVertex.cpp" line="266"/>
+      <source>Pick Points</source>
+      <translation>წერტილების არჩევა</translation>
     </message>
     <message>
       <location filename="../../TaskCosVertex.cpp" line="194"/>
       <source>Pick a point for cosmetic vertex</source>
       <translation>აირჩიეთ კოსმეტიკური წვეროს დასასმელი წერტილი</translation>
+    </message>
+    <message>
+      <location filename="../../TaskCosVertex.cpp" line="197"/>
+      <source>Escape picking</source>
+      <translation type="unfinished">Escape picking</translation>
     </message>
     <message>
       <location filename="../../TaskCosVertex.cpp" line="222"/>
@@ -5383,650 +5367,386 @@ Do you want to continue?</source>
   <context>
     <name>TechDrawGui::TaskCustomizeFormat</name>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="26"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="14"/>
       <source>Format Symbols</source>
-      <translation type="unfinished">Format Symbols</translation>
+      <translation>სიმბოლოების ფორმატი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="34"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="20"/>
       <source>GD&amp;T</source>
-      <translation type="unfinished">GD&amp;T</translation>
+      <translation>GD&amp;T</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="41"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="29"/>
       <source>Straightness</source>
-      <translation type="unfinished">Straightness</translation>
+      <translation>სისწორე</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="44"/>
-      <source>⏤</source>
-      <translation type="unfinished">⏤</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="51"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="39"/>
       <source>Flatness</source>
-      <translation type="unfinished">Flatness</translation>
+      <translation>სიბრტყელე</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="54"/>
-      <source>⏥</source>
-      <translation type="unfinished">⏥</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="61"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="49"/>
       <source>Circularity</source>
-      <translation type="unfinished">Circularity</translation>
+      <translation>სიმრგვალე</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="64"/>
-      <source>○</source>
-      <translation type="unfinished">○</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="71"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="59"/>
       <source>Cylindricity</source>
-      <translation type="unfinished">Cylindricity</translation>
+      <translation>ცილინდრულობა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="74"/>
-      <source>⌭</source>
-      <translation type="unfinished">⌭</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="81"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="69"/>
       <source>Parallelism</source>
-      <translation type="unfinished">Parallelism</translation>
+      <translation>პარალელიზმი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="84"/>
-      <source>∥</source>
-      <translation type="unfinished">∥</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="91"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="79"/>
       <source>Perpendicularity</source>
-      <translation type="unfinished">Perpendicularity</translation>
+      <translation>მართობულობა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="94"/>
-      <source>⟂</source>
-      <translation type="unfinished">⟂</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="101"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="89"/>
       <source>Angularity</source>
-      <translation type="unfinished">Angularity</translation>
+      <translation>მაქსიმალური კუთხე</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="104"/>
-      <source>∠</source>
-      <translation type="unfinished">∠</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="116"/>
       <source>Profile of a line</source>
-      <translation type="unfinished">Profile of a line</translation>
+      <translation>ხაზის პროფილი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="119"/>
-      <source>⌒</source>
-      <translation type="unfinished">⌒</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="126"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="114"/>
       <source>Profile of a surface</source>
-      <translation type="unfinished">Profile of a surface</translation>
+      <translation>ზედაპირის პროფილი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="129"/>
-      <source>⌓</source>
-      <translation type="unfinished">⌓</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="136"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="124"/>
       <source>Circular runout</source>
-      <translation type="unfinished">Circular runout</translation>
+      <translation>წრიული გამოსვლა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="139"/>
-      <source>↗</source>
-      <translation type="unfinished">↗</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="146"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="134"/>
       <source>Total runout</source>
-      <translation type="unfinished">Total runout</translation>
+      <translation>ჯამური გადაცილება</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="149"/>
-      <source>⌰</source>
-      <translation type="unfinished">⌰</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="156"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="144"/>
       <source>Position</source>
       <translation type="unfinished">Position</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="159"/>
-      <source>⌖</source>
-      <translation type="unfinished">⌖</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="166"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="154"/>
       <source>Concentricity</source>
-      <translation type="unfinished">Concentricity</translation>
+      <translation>კონცენტრირებულობა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="169"/>
-      <source>◎</source>
-      <translation type="unfinished">◎</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="176"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="164"/>
       <source>Symmetry</source>
       <translation>სიმეტრია</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="179"/>
-      <source>⌯</source>
-      <translation type="unfinished">⌯</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="188"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="176"/>
       <source>Modifiers</source>
-      <translation type="unfinished">Modifiers</translation>
+      <translation>მოდიფიკატორი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="202"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="190"/>
       <source>derived geometry element</source>
-      <translation type="unfinished">derived geometry element</translation>
+      <translation>მიღებულ გეომეტრიული ელემენტი</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="205"/>
-      <source>Ⓐ</source>
-      <translation type="unfinished">Ⓐ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="217"/>
       <source>Minimax (Tschebyschew)</source>
-      <translation type="unfinished">Minimax (Tschebyschew)</translation>
+      <translation>მინიმაქსი (ჩებიშევი)</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="220"/>
-      <source>Ⓒ</source>
-      <translation type="unfinished">Ⓒ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="232"/>
       <source>Hull condition</source>
-      <translation type="unfinished">Hull condition</translation>
+      <translation>კორპუსის მდგომარეობა</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="235"/>
-      <source>Ⓔ</source>
-      <translation type="unfinished">Ⓔ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="247"/>
       <source>Free state</source>
-      <translation type="unfinished">Free state</translation>
+      <translation>თავისუფალი მდგომარეობა</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="250"/>
-      <source>Ⓕ</source>
-      <translation type="unfinished">Ⓕ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="262"/>
       <source>Least square geometry element</source>
-      <translation type="unfinished">Least square geometry element</translation>
+      <translation>ყველაზე ნაკლებად ოთხკუთხედი გეომეტრიული ელემენტი</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="265"/>
-      <source>Ⓖ</source>
-      <translation type="unfinished">Ⓖ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="277"/>
       <source>Least material condition (LMC)</source>
-      <translation type="unfinished">Least material condition (LMC)</translation>
+      <translation>უმცირესი მასალის პირობა (LMC)</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="280"/>
-      <source>Ⓛ</source>
-      <translation type="unfinished">Ⓛ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="292"/>
       <source>Maximum material condition (MMC)</source>
-      <translation type="unfinished">Maximum material condition (MMC)</translation>
+      <translation>ყველაზე მეტი მასალის პირობა (MMC)</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="295"/>
-      <source>Ⓜ</source>
-      <translation type="unfinished">Ⓜ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="307"/>
       <source>least inscribed geometry element</source>
-      <translation type="unfinished">least inscribed geometry element</translation>
+      <translation>ყველაზე იშვიათად ჩაწერილი გეომეტრიული ელემენტი</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="310"/>
-      <source>Ⓝ</source>
-      <translation type="unfinished">Ⓝ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="322"/>
       <source>Projected tolerance zone</source>
-      <translation type="unfinished">Projected tolerance zone</translation>
+      <translation>პროექციის სიზუსტის ზონა</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="325"/>
-      <source>Ⓟ</source>
-      <translation type="unfinished">Ⓟ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="337"/>
       <source>Reciprocity condition</source>
-      <translation type="unfinished">Reciprocity condition</translation>
+      <translation>ორმხრივი პირობა</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="340"/>
-      <source>Ⓡ</source>
-      <translation type="unfinished">Ⓡ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="352"/>
       <source>Regardless of feature size (RFS)</source>
-      <translation type="unfinished">Regardless of feature size (RFS)</translation>
+      <translation>თვისების ზომის მიუხედავად (RFS)</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="355"/>
-      <source>Ⓢ</source>
-      <translation type="unfinished">Ⓢ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="367"/>
       <source>Tangent plane</source>
-      <translation type="unfinished">Tangent plane</translation>
+      <translation>მხები სიბრტყე</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="370"/>
-      <source>Ⓣ</source>
-      <translation type="unfinished">Ⓣ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="382"/>
       <source>Unequal Bilateral</source>
-      <translation type="unfinished">Unequal Bilateral</translation>
+      <translation>არათანაბარი ორმხრივი</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="385"/>
-      <source>Ⓤ</source>
-      <translation type="unfinished">Ⓤ</translation>
+      <source>most inscribed geometry element</source>
+      <translation>ყველაზე ხშირად ჩაწერილი გეომეტრიული ელემენტი</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="397"/>
-      <source>most inscribed geometry element</source>
-      <translation type="unfinished">most inscribed geometry element</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="400"/>
-      <source>Ⓧ</source>
-      <translation type="unfinished">Ⓧ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="409"/>
       <source>Radius &amp; Diameter</source>
-      <translation type="unfinished">Radius &amp; Diameter</translation>
+      <translation>რადიუსი &amp; დიამეტრი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="418"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="406"/>
       <source>Radius</source>
       <translation>რადიუსი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="421"/>
-      <source>R</source>
-      <translation>R</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="428"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="416"/>
       <source>Diameter</source>
       <translation>დიამეტრი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="431"/>
-      <source>⌀</source>
-      <translation>⌀</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="438"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="426"/>
       <source>Radius of sphere</source>
-      <translation type="unfinished">Radius of sphere</translation>
+      <translation>სფეროს რადიუსი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="441"/>
-      <source>SR</source>
-      <translation type="unfinished">SR</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="448"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="436"/>
       <source>Diameter of sphere</source>
-      <translation type="unfinished">Diameter of sphere</translation>
+      <translation>სფეროს დიამეტრი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="451"/>
-      <source>S⌀</source>
-      <translation type="unfinished">S⌀</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="458"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="446"/>
       <source>Square</source>
       <translation>კვადრატი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="461"/>
-      <source>□</source>
-      <translation type="unfinished">□</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="470"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="458"/>
       <source>Angles</source>
-      <translation type="unfinished">Angles</translation>
+      <translation>კუთხეები</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="479"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="467"/>
       <source>Degree</source>
       <translation>გრადუსი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="482"/>
-      <source>°</source>
-      <translation>°</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="489"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="477"/>
       <source>(Arc) Minute</source>
-      <translation type="unfinished">(Arc) Minute</translation>
+      <translation>(რკალი) მინუტი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="492"/>
-      <source>′</source>
-      <translation type="unfinished">′</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="499"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="487"/>
       <source>(Arc) Second</source>
-      <translation type="unfinished">(Arc) Second</translation>
+      <translation>(რკალი) სეკუნდი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="502"/>
-      <source>″</source>
-      <translation type="unfinished">″</translation>
+      <location filename="../../TaskCustomizeFormat.ui" line="497"/>
+      <source>(Arc) Tertie</source>
+      <translation>(რკალი) მესამეული</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="509"/>
-      <source>(Arc) Tertie</source>
-      <translation type="unfinished">(Arc) Tertie</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="512"/>
-      <source>‴</source>
-      <translation type="unfinished">‴</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="521"/>
       <source>Other</source>
       <translation>სხვა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="533"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="521"/>
       <source>Taper</source>
       <translation>შევიწროება</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="536"/>
-      <source>⌲</source>
-      <translation type="unfinished">⌲</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="543"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="531"/>
       <source>Slope</source>
       <translation>დახრა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="546"/>
-      <source>⌳</source>
-      <translation type="unfinished">⌳</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="553"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="541"/>
       <source>Counterbore</source>
       <translation>მოტორსვა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="556"/>
-      <source>⌴</source>
-      <translation type="unfinished">⌴</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="563"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="551"/>
       <source>Countersink</source>
       <translation>ჩაძირვა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="566"/>
-      <source>⌵</source>
-      <translation type="unfinished">⌵</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="573"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="561"/>
       <source>Plus - Minus</source>
-      <translation type="unfinished">Plus - Minus</translation>
+      <translation>პლუს - მინუს</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="576"/>
-      <source>±</source>
-      <translation type="unfinished">±</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="583"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="571"/>
       <source>Centerline</source>
       <translation>ღერძის ხაზი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="586"/>
-      <source>℄</source>
-      <translation type="unfinished">℄</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="593"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="581"/>
       <source>Left/right arrow</source>
-      <translation type="unfinished">Left/right arrow</translation>
+      <translation>მარცხენა/მარჯვენა ისარი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="596"/>
-      <source>↔</source>
-      <translation type="unfinished">↔</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="603"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="591"/>
       <source>Downward arrow</source>
-      <translation type="unfinished">Downward arrow</translation>
+      <translation>დაბლა ისარი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="606"/>
-      <source>↧</source>
-      <translation type="unfinished">↧</translation>
+      <location filename="../../TaskCustomizeFormat.ui" line="601"/>
+      <source>Multiplication sign</source>
+      <translation>გამრავლების ნიშანი</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.ui" line="613"/>
-      <source>Multiplication sign</source>
-      <translation type="unfinished">Multiplication sign</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="616"/>
-      <source>×</source>
-      <translation type="unfinished">×</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="625"/>
       <source>Greek Letters</source>
-      <translation type="unfinished">Greek Letters</translation>
+      <translation>ბერძნული ასოები</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="634"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="622"/>
       <source>Capital delta</source>
-      <translation type="unfinished">Capital delta</translation>
+      <translation>დიდი დელტა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="637"/>
-      <source>Δ</source>
-      <translation type="unfinished">Δ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="644"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="632"/>
       <source>Capital sigma</source>
-      <translation type="unfinished">Capital sigma</translation>
+      <translation>დიდი სიგმა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="647"/>
-      <source>Σ</source>
-      <translation type="unfinished">Σ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="654"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="642"/>
       <source>Capital omega</source>
-      <translation type="unfinished">Capital omega</translation>
+      <translation>დიდი ომეგა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="657"/>
-      <source>Ω</source>
-      <translation type="unfinished">Ω</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="664"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="652"/>
       <source>Small mu</source>
-      <translation type="unfinished">Small mu</translation>
+      <translation>მატარა მიუ</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="667"/>
-      <source>μ</source>
-      <translation type="unfinished">μ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="674"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="662"/>
       <source>Small sigma</source>
-      <translation type="unfinished">Small sigma</translation>
+      <translation>პატარა სიგმა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="677"/>
-      <source>σ</source>
-      <translation type="unfinished">σ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="684"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="672"/>
       <source>Small phi</source>
-      <translation type="unfinished">Small phi</translation>
+      <translation>პატარა ფი</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="687"/>
-      <source>φ</source>
-      <translation type="unfinished">φ</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="694"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="682"/>
       <source>Small omega</source>
-      <translation type="unfinished">Small omega</translation>
+      <translation>პატარა ომეგა</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="697"/>
-      <source>⍵</source>
-      <translation type="unfinished">⍵</translation>
-    </message>
-    <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="708"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="696"/>
       <source>Format:</source>
-      <translation type="unfinished">Format:</translation>
+      <translation>ფორმატი:</translation>
     </message>
     <message>
-      <location filename="../../TaskCustomizeFormat.ui" line="718"/>
+      <location filename="../../TaskCustomizeFormat.ui" line="706"/>
       <source>Preview:</source>
       <translation>მინიატურა:</translation>
     </message>
     <message>
       <location filename="../../TaskCustomizeFormat.cpp" line="111"/>
       <source>Customize Format</source>
-      <translation type="unfinished">Customize Format</translation>
+      <translation>ფორმატის მორგება</translation>
     </message>
   </context>
   <context>
     <name>TechDrawGui::TaskDetail</name>
     <message>
-      <location filename="../../TaskDetail.ui" line="26"/>
+      <location filename="../../TaskDetail.ui" line="14"/>
       <source>Detail Anchor</source>
       <translation>დეტალური მიბმა</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="38"/>
+      <location filename="../../TaskDetail.ui" line="26"/>
       <source>Base View</source>
       <translation>საბაზისო ხედი</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="61"/>
+      <location filename="../../TaskDetail.ui" line="49"/>
       <source>Detail View</source>
       <translation>დეტალური ხედი</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="92"/>
+      <location filename="../../TaskDetail.ui" line="80"/>
       <source>Click to drag detail highlight to new position</source>
       <translation>დეტალის გამოკვეთის გადასათრევად დააწკაპუნეთ</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="95"/>
+      <location filename="../../TaskDetail.ui" line="83"/>
+      <location filename="../../TaskDetail.cpp" line="296"/>
       <source>Drag Highlight</source>
       <translation>მონიშნულის გადათრევა</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="126"/>
+      <location filename="../../TaskDetail.ui" line="114"/>
       <source>X</source>
       <translation>X</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="146"/>
+      <location filename="../../TaskDetail.ui" line="134"/>
       <source>x position of detail highlight within view</source>
       <translation>ხედზე დეტალის გამოკვეთის X მდებარეობა</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="165"/>
+      <location filename="../../TaskDetail.ui" line="153"/>
       <source>Y</source>
       <translation>Y</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="172"/>
+      <location filename="../../TaskDetail.ui" line="160"/>
       <source>y position of detail highlight within view</source>
       <translation>ხედზე დეტალის გამოკვეთის Y მდებარეობა</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="188"/>
+      <location filename="../../TaskDetail.ui" line="176"/>
       <source>Radius</source>
       <translation>რადიუსი</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="195"/>
+      <location filename="../../TaskDetail.ui" line="183"/>
       <source>size of detail view</source>
       <translation>ნაწილის ხედის ზომა</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="214"/>
+      <location filename="../../TaskDetail.ui" line="202"/>
       <source>Scale Type</source>
       <translation>მასშტაბირების ტიპი</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="221"/>
+      <location filename="../../TaskDetail.ui" line="209"/>
       <source>Page: scale factor of page is used
 Automatic: if the detail view is larger than the page,
                    it will be scaled down to fit into the page
@@ -6037,37 +5757,37 @@ Custom: custom scale factor is used</source>
 მორგება: იყენებს მორგებული მასშტაბირების ფაქტორს</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="228"/>
+      <location filename="../../TaskDetail.ui" line="216"/>
       <source>Page</source>
       <translation>გვერდი</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="233"/>
+      <location filename="../../TaskDetail.ui" line="221"/>
       <source>Automatic</source>
       <translation>ავტომატური</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="238"/>
+      <location filename="../../TaskDetail.ui" line="226"/>
       <source>Custom</source>
       <translation>მომხმარებლის</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="246"/>
+      <location filename="../../TaskDetail.ui" line="234"/>
       <source>Scale Factor</source>
       <translation>გადიდების კოეფიციენტი</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="256"/>
+      <location filename="../../TaskDetail.ui" line="244"/>
       <source>scale factor for detail view</source>
       <translation>დეტალის ხედის მასშტაბის კოეფიციენტი</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="278"/>
+      <location filename="../../TaskDetail.ui" line="266"/>
       <source>Reference</source>
       <translation>ბმა</translation>
     </message>
     <message>
-      <location filename="../../TaskDetail.ui" line="285"/>
+      <location filename="../../TaskDetail.ui" line="273"/>
       <source>reference label</source>
       <translation>ბმული ჭდე</translation>
     </message>
@@ -6087,7 +5807,7 @@ Custom: custom scale factor is used</source>
     <message>
       <location filename="../../TaskDimension.ui" line="28"/>
       <source>If theoretical exact (basic) dimension</source>
-      <translation type="unfinished">If theoretical exact (basic) dimension</translation>
+      <translation>თუ თეორიული ზუსტი (საბაზისო) ზომა</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="31"/>
@@ -6103,7 +5823,7 @@ Custom: custom scale factor is used</source>
     <message>
       <location filename="../../TaskDimension.ui" line="41"/>
       <source>Equal Tolerance</source>
-      <translation type="unfinished">Equal Tolerance</translation>
+      <translation>თანაბარი ტოლერანტობა</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="48"/>
@@ -6164,7 +5884,7 @@ be used instead if the dimension value</source>
     <message>
       <location filename="../../TaskDimension.ui" line="148"/>
       <source>OverTolerance Format Specifier:</source>
-      <translation type="unfinished">OverTolerance Format Specifier:</translation>
+      <translation>ზეტოლერანტობის ფორმატის მიმთითებელი:</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="155"/>
@@ -6174,7 +5894,7 @@ be used instead if the dimension value</source>
     <message>
       <location filename="../../TaskDimension.ui" line="162"/>
       <source>UnderTolerance Format Specifier:</source>
-      <translation type="unfinished">UnderTolerance Format Specifier:</translation>
+      <translation>ქვეტოლერანტობის ფორმატის მიმთითებელი:</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="169"/>
@@ -6254,17 +5974,17 @@ be used instead if the dimension value</source>
     <message>
       <location filename="../../TaskDimension.ui" line="319"/>
       <source>Use override angles if checked. Use default angles if unchecked.</source>
-      <translation type="unfinished">Use override angles if checked. Use default angles if unchecked.</translation>
+      <translation>კუთხეების გადაფარვა, თუ ჩართულია. ნაგულისხმები კუთხეები, თუ გამორთული.</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="322"/>
       <source>Override angles</source>
-      <translation type="unfinished">Override angles</translation>
+      <translation>კუთხეების გადაფარვა</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="329"/>
       <source>Dimension line angle</source>
-      <translation type="unfinished">Dimension line angle</translation>
+      <translation>ზომის ხაზის კუთხე</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="336"/>
@@ -6274,29 +5994,29 @@ be used instead if the dimension value</source>
     <message>
       <location filename="../../TaskDimension.ui" line="352"/>
       <source>Set dimension line angle to default (ortho view).</source>
-      <translation type="unfinished">Set dimension line angle to default (ortho view).</translation>
+      <translation>ზომის ხაზის კუთხის ნაგულისხმებზე დაყენება (ორთო ხედი).</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="355"/>
       <location filename="../../TaskDimension.ui" line="398"/>
       <source>Use default</source>
-      <translation type="unfinished">Use default</translation>
+      <translation>ნაგულისხმევის გამოყენება</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="362"/>
       <source>Set dimension line angle to match selected edge or vertices.</source>
-      <translation type="unfinished">Set dimension line angle to match selected edge or vertices.</translation>
+      <translation>ზომის ხაზის კუთხის მონიშნული ჭდის ან წვეროების ტოლად დაყენება.</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="365"/>
       <location filename="../../TaskDimension.ui" line="408"/>
       <source>Use selection</source>
-      <translation type="unfinished">Use selection</translation>
+      <translation>მონიშნულის გამოყენება</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="372"/>
       <source>Extension line angle</source>
-      <translation type="unfinished">Extension line angle</translation>
+      <translation>გაგრძელების ხაზის კუთხე</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="379"/>
@@ -6306,12 +6026,12 @@ be used instead if the dimension value</source>
     <message>
       <location filename="../../TaskDimension.ui" line="395"/>
       <source>Set extension line angle to default (ortho).</source>
-      <translation type="unfinished">Set extension line angle to default (ortho).</translation>
+      <translation>გაგრძელების ხაზის კუთხის ნაგულისხმებზე დაყენება (ორთო).</translation>
     </message>
     <message>
       <location filename="../../TaskDimension.ui" line="405"/>
       <source>Set extension line angle to match selected edge or vertices.</source>
-      <translation type="unfinished">Set extension line angle to match selected edge or vertices.</translation>
+      <translation>გაგრძელების ხაზის კუთხის მონიშნული ჭდის ან წვეროების ტოლად დაყენება.</translation>
     </message>
   </context>
   <context>
@@ -6456,6 +6176,7 @@ You can pick further points to get line segments.</source>
     </message>
     <message>
       <location filename="../../TaskLeaderLine.ui" line="118"/>
+      <location filename="../../TaskLeaderLine.cpp" line="518"/>
       <source>Pick Points</source>
       <translation>წერტილების არჩევა</translation>
     </message>
@@ -6530,15 +6251,44 @@ You can pick further points to get line segments.</source>
       <translation>ტირე-წერტილის ხაზი 2 წერტილით</translation>
     </message>
     <message>
+      <location filename="../../TaskLeaderLine.cpp" line="273"/>
+      <source>Pick points</source>
+      <translation>აირჩიეთ წერტილები</translation>
+    </message>
+    <message>
+      <location filename="../../TaskLeaderLine.cpp" line="322"/>
+      <location filename="../../TaskLeaderLine.cpp" line="688"/>
+      <location filename="../../TaskLeaderLine.cpp" line="740"/>
+      <location filename="../../TaskLeaderLine.cpp" line="757"/>
+      <source>Edit points</source>
+      <translation>წერტილების ჩასწორება</translation>
+    </message>
+    <message>
+      <location filename="../../TaskLeaderLine.cpp" line="530"/>
+      <source>Edit Points</source>
+      <translation>წერტილების ჩასწორება</translation>
+    </message>
+    <message>
       <location filename="../../TaskLeaderLine.cpp" line="547"/>
       <location filename="../../TaskLeaderLine.cpp" line="591"/>
       <source>Pick a starting point for leader line</source>
       <translation>აირჩიეთ გატანადი ხაზის საწყისი წერტილი</translation>
     </message>
     <message>
+      <location filename="../../TaskLeaderLine.cpp" line="550"/>
+      <source>Save Points</source>
+      <translation>წერტილების შენახვა</translation>
+    </message>
+    <message>
       <location filename="../../TaskLeaderLine.cpp" line="574"/>
       <source>Click and drag markers to adjust leader line</source>
       <translation>გატანადი ხაზის მოსარგებად დააჭირეთ და გადაათრიეთ მარკერები</translation>
+    </message>
+    <message>
+      <location filename="../../TaskLeaderLine.cpp" line="577"/>
+      <location filename="../../TaskLeaderLine.cpp" line="594"/>
+      <source>Save changes</source>
+      <translation>ცვლილებების შენახვა</translation>
     </message>
     <message>
       <location filename="../../TaskLeaderLine.cpp" line="624"/>
@@ -6616,7 +6366,7 @@ You can pick further points to get line segments.</source>
     <message>
       <location filename="../../TaskLineDecor.ui" line="158"/>
       <source>Thickness of pattern lines.</source>
-      <translation type="unfinished">Thickness of pattern lines.</translation>
+      <translation>შაბლონის ხაზების სისქე.</translation>
     </message>
     <message>
       <location filename="../../TaskLineDecor.ui" line="171"/>
@@ -6723,7 +6473,7 @@ You can pick further points to get line segments.</source>
     <message>
       <location filename="../../TaskProjGroup.ui" line="74"/>
       <source>Scale Page/Auto/Custom</source>
-      <translation type="unfinished">Scale Page/Auto/Custom</translation>
+      <translation>გვერდის გადიდება/ავტომატური/ხელით</translation>
     </message>
     <message>
       <location filename="../../TaskProjGroup.ui" line="83"/>
@@ -6854,8 +6604,8 @@ You can pick further points to get line segments.</source>
       <location filename="../../TaskProjGroup.ui" line="653"/>
       <source>Distributes projections automatically
 using the given X/Y Spacing</source>
-      <translation type="unfinished">Distributes projections automatically
-using the given X/Y Spacing</translation>
+      <translation>პროექციების ავტომატური გადანაწილება
+მითითებული X/Y დაშორებით</translation>
     </message>
     <message>
       <location filename="../../TaskProjGroup.ui" line="657"/>
@@ -7092,7 +6842,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../TaskRichAnno.cpp" line="229"/>
       <source>Input the annotation text directly or start the rich text editor</source>
-      <translation type="unfinished">Input the annotation text directly or start the rich text editor</translation>
+      <translation>შეიყვანეთ ანოტაციის ტექსტი პირდაპირ არ გაუშვით მდიდარი ტექსტის რედაქტორი</translation>
     </message>
   </context>
   <context>
@@ -7125,7 +6875,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../TaskSectionView.ui" line="94"/>
       <source>Scale Page/Auto/Custom</source>
-      <translation type="unfinished">Scale Page/Auto/Custom</translation>
+      <translation>გვერდის გადიდება/ავტომატური/ხელით</translation>
     </message>
     <message>
       <location filename="../../TaskSectionView.ui" line="98"/>
@@ -7180,7 +6930,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../TaskSectionView.ui" line="318"/>
       <source>Position from the 3D origin of the object in the view</source>
-      <translation type="unfinished">Position from the 3D origin of the object in the view</translation>
+      <translation>მდებარეობა ხედში მოქცეული ობიექტის 3D წერტილის მიმართ</translation>
     </message>
     <message>
       <location filename="../../TaskSectionView.ui" line="321"/>
@@ -7208,7 +6958,7 @@ using the given X/Y Spacing</translation>
       <translation>გადასატარებელი არაფერია. კვეთის მიმართულება არჩეული არაა</translation>
     </message>
     <message>
-      <location filename="../../TaskSectionView.cpp" line="503"/>
+      <location filename="../../TaskSectionView.cpp" line="499"/>
       <source>Can not continue. Object * %1 * not found.</source>
       <translation>გაგრძელება შეუძლებელია. ობიექტი * %1 * ნაპოვნი არაა.</translation>
     </message>
@@ -7218,7 +6968,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="26"/>
       <source>Line attributes</source>
-      <translation type="unfinished">Line attributes</translation>
+      <translation>ხაზის ატრიბუტები</translation>
     </message>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="34"/>
@@ -7228,7 +6978,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="41"/>
       <source>Set line style to solid</source>
-      <translation type="unfinished">Set line style to solid</translation>
+      <translation>ხაზის სტილის მყარზე შეცვლა</translation>
     </message>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="44"/>
@@ -7258,17 +7008,17 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="110"/>
       <source>Thin 0,18</source>
-      <translation type="unfinished">Thin 0,18</translation>
+      <translation>თხელი 0,18</translation>
     </message>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="123"/>
       <source>Middle 0,35</source>
-      <translation type="unfinished">Middle 0,35</translation>
+      <translation>საშუალო 0,35</translation>
     </message>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="139"/>
       <source>Thick 0,70</source>
-      <translation type="unfinished">Thick 0,70</translation>
+      <translation>სქელი 0,70</translation>
     </message>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="156"/>
@@ -7288,7 +7038,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="192"/>
       <source>Grey</source>
-      <translation type="unfinished">Grey</translation>
+      <translation>Რუხი</translation>
     </message>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="205"/>
@@ -7318,17 +7068,17 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="283"/>
       <source>Cascade spacing</source>
-      <translation type="unfinished">Cascade spacing</translation>
+      <translation>კასკადებს შორის დაშორება</translation>
     </message>
     <message>
       <location filename="../../TaskSelectLineAttributes.ui" line="297"/>
       <source>Delta distance</source>
-      <translation type="unfinished">Delta distance</translation>
+      <translation>დელტა დაშორება</translation>
     </message>
     <message>
       <location filename="../../TaskSelectLineAttributes.cpp" line="229"/>
       <source>Select line attributes</source>
-      <translation type="unfinished">Select line attributes</translation>
+      <translation>აირჩიეთ ხაზის ატრიბუტები</translation>
     </message>
   </context>
   <context>
@@ -7384,7 +7134,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="666"/>
       <source>Adds a Centerline between 2 Lines</source>
-      <translation type="unfinished">Adds a Centerline between 2 Lines</translation>
+      <translation>ორ ხაზს შუა ცენტრის ხაზის გავლება</translation>
     </message>
   </context>
   <context>
@@ -7392,7 +7142,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="670"/>
       <source>Adds a Centerline between 2 Points</source>
-      <translation type="unfinished">Adds a Centerline between 2 Points</translation>
+      <translation>ორ წერტილს შორის ცენტრის ხაზის დამატება</translation>
     </message>
   </context>
   <context>
@@ -7408,7 +7158,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="336"/>
       <source>Remove Prefix</source>
-      <translation type="unfinished">Remove Prefix</translation>
+      <translation>პრეფიქსის წაშლა</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionDims.cpp" line="337"/>
@@ -7421,15 +7171,15 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="662"/>
       <source>Adds a Centerline to Faces</source>
-      <translation type="unfinished">Adds a Centerline to Faces</translation>
+      <translation>ზედაპირებზე ცენტრის ხაზების დამატება</translation>
     </message>
   </context>
   <context>
     <name>TechDraw_HorizontalExtent</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1128"/>
+      <location filename="../../CommandCreateDims.cpp" line="1116"/>
       <source>Insert Horizontal Extent Dimension</source>
-      <translation type="unfinished">Insert Horizontal Extent Dimension</translation>
+      <translation>ჰორიზონტალური გაბარიტული ზომის ჩასმა</translation>
     </message>
   </context>
   <context>
@@ -7441,6 +7191,50 @@ using the given X/Y Spacing</translation>
     </message>
   </context>
   <context>
+    <name>TechDraw_MoveView</name>
+    <message>
+      <location filename="../../../TechDrawTools/CommandMoveView.py" line="47"/>
+      <source>Move View</source>
+      <translation>ხედის გადატანა</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/CommandMoveView.py" line="50"/>
+      <source>Move a View to a new Page</source>
+      <translation>ხედის ახალ გვერდზე გადატანა</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskMoveView.py" line="47"/>
+      <source>Move View to a different Page</source>
+      <translation>ხედების სხვა გვერდზე გადატანა</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskMoveView.py" line="74"/>
+      <source>Select View to move from list.</source>
+      <translation>აირჩიეთ ხედი სიიდან გადასატანად.</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskMoveView.py" line="75"/>
+      <source>Select View</source>
+      <translation>აირჩიეთ ხედი</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskMoveView.py" line="93"/>
+      <source>Select From Page.</source>
+      <translation>მონიშვნა დაწყებული გვერდიდან.</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskMoveView.py" line="94"/>
+      <location filename="../../../TechDrawTools/TaskMoveView.py" line="113"/>
+      <source>Select Page</source>
+      <translation>აირჩიეთ გვერდი</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskMoveView.py" line="112"/>
+      <source>Select To Page.</source>
+      <translation>მონიშვნა გვერდამდე.</translation>
+    </message>
+  </context>
+  <context>
     <name>TechDraw_Quadrants</name>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="304"/>
@@ -7449,11 +7243,60 @@ using the given X/Y Spacing</translation>
     </message>
   </context>
   <context>
+    <name>TechDraw_ShareView</name>
+    <message>
+      <location filename="../../../TechDrawTools/CommandShareView.py" line="47"/>
+      <source>Share View</source>
+      <translation>ხედის გაზიარება</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/CommandShareView.py" line="50"/>
+      <source>Share a View on a second Page</source>
+      <translation>ხედის მეორე გვერდზე გაზიარება</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskShareView.py" line="46"/>
+      <source>Share View with another Page</source>
+      <translation>ხედის სხვა გვერდზე გაზიარება</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskShareView.py" line="47"/>
+      <source>View to share</source>
+      <translation>გასაზიარებელი ხედი</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskShareView.py" line="74"/>
+      <source>Select View to share from list.</source>
+      <translation>აირჩიეთ ხედი სიიდან გასაზიარებლად.</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskShareView.py" line="75"/>
+      <source>Select View</source>
+      <translation>აირჩიეთ ხედი</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskShareView.py" line="93"/>
+      <source>Select From Page.</source>
+      <translation>მონიშვნა დაწყებული გვერდიდან.</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskShareView.py" line="94"/>
+      <location filename="../../../TechDrawTools/TaskShareView.py" line="113"/>
+      <source>Select Page</source>
+      <translation>აირჩიეთ გვერდი</translation>
+    </message>
+    <message>
+      <location filename="../../../TechDrawTools/TaskShareView.py" line="112"/>
+      <source>Select To Page.</source>
+      <translation>მონიშვნა გვერდამდე.</translation>
+    </message>
+  </context>
+  <context>
     <name>TechDraw_VerticalExtentDimension</name>
     <message>
-      <location filename="../../CommandCreateDims.cpp" line="1132"/>
+      <location filename="../../CommandCreateDims.cpp" line="1120"/>
       <source>Insert Vertical Extent Dimension</source>
-      <translation type="unfinished">Insert Vertical Extent Dimension</translation>
+      <translation>ვერტიკალური სიდიდის ზომის ჩასმა</translation>
     </message>
   </context>
   <context>
@@ -7466,18 +7309,18 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../Workbench.cpp" line="38"/>
       <source>Extensions: Attributes/Modifications</source>
-      <translation type="unfinished">Extensions: Attributes/Modifications</translation>
+      <translation>გაფართოებები: ატრიბუტები/მოდიფიკაციები</translation>
     </message>
     <message>
       <location filename="../../Workbench.cpp" line="39"/>
       <location filename="../../Workbench.cpp" line="55"/>
       <source>Extensions: Centerlines/Threading</source>
-      <translation type="unfinished">Extensions: Centerlines/Threading</translation>
+      <translation>გაფართოებები: ცენტრის ხაზები/კუთხვილები</translation>
     </message>
     <message>
       <location filename="../../Workbench.cpp" line="40"/>
       <source>Extensions: Dimensions</source>
-      <translation type="unfinished">Extensions: Dimensions</translation>
+      <translation>გაფართოებები: ზომები</translation>
     </message>
     <message>
       <location filename="../../Workbench.cpp" line="41"/>
@@ -7522,7 +7365,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../Workbench.cpp" line="50"/>
       <source>TechDraw Tool Attributes</source>
-      <translation type="unfinished">TechDraw Tool Attributes</translation>
+      <translation>Techdraw-ის ხელსაწყოს ატრიბუტები</translation>
     </message>
     <message>
       <location filename="../../Workbench.cpp" line="51"/>

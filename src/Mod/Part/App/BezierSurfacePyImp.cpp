@@ -20,26 +20,23 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
-# include <Geom_BezierCurve.hxx>
 # include <Geom_BezierSurface.hxx>
-# include <Geom_BezierCurve.hxx>
-# include <TColStd_Array1OfReal.hxx>
-# include <TColStd_Array2OfReal.hxx>
 # include <TColgp_Array1OfPnt.hxx>
 # include <TColgp_Array2OfPnt.hxx>
+# include <TColStd_Array1OfReal.hxx>
+# include <TColStd_Array2OfReal.hxx>
 #endif
 
-#include <Base/VectorPy.h>
 #include <Base/GeometryPyCXX.h>
+#include <Base/VectorPy.h>
 
-#include "OCCError.h"
-#include "Geometry.h"
 #include "BezierCurvePy.h"
 #include "BezierSurfacePy.h"
 #include "BezierSurfacePy.cpp"
+#include "OCCError.h"
+
 
 using namespace Part;
 
@@ -181,7 +178,7 @@ PyObject* BezierSurfacePy::insertPoleColAfter(PyObject *args)
 
         Handle(Geom_BezierSurface) surf = Handle(Geom_BezierSurface)::DownCast
             (getGeometryPtr()->handle());
-        if (obj2 == nullptr) {
+        if (!obj2) {
             surf->InsertPoleColAfter(vindex, poles);
         }
         else {
@@ -221,7 +218,7 @@ PyObject* BezierSurfacePy::insertPoleRowAfter(PyObject *args)
 
         Handle(Geom_BezierSurface) surf = Handle(Geom_BezierSurface)::DownCast
             (getGeometryPtr()->handle());
-        if (obj2 == nullptr) {
+        if (!obj2) {
             surf->InsertPoleRowAfter(uindex, poles);
         }
         else {
@@ -261,7 +258,7 @@ PyObject* BezierSurfacePy::insertPoleColBefore(PyObject *args)
 
         Handle(Geom_BezierSurface) surf = Handle(Geom_BezierSurface)::DownCast
             (getGeometryPtr()->handle());
-        if (obj2 == nullptr) {
+        if (!obj2) {
             surf->InsertPoleColBefore(vindex, poles);
         }
         else {
@@ -301,7 +298,7 @@ PyObject* BezierSurfacePy::insertPoleRowBefore(PyObject *args)
 
         Handle(Geom_BezierSurface) surf = Handle(Geom_BezierSurface)::DownCast
             (getGeometryPtr()->handle());
-        if (obj2 == nullptr) {
+        if (!obj2) {
             surf->InsertPoleRowBefore(uindex, poles);
         }
         else {
@@ -415,7 +412,7 @@ PyObject* BezierSurfacePy::setPoleCol(PyObject *args)
 
         Handle(Geom_BezierSurface) surf = Handle(Geom_BezierSurface)::DownCast
             (getGeometryPtr()->handle());
-        if (obj2 == nullptr) {
+        if (!obj2) {
             surf->SetPoleCol(vindex, poles);
         }
         else {
@@ -455,7 +452,7 @@ PyObject* BezierSurfacePy::setPoleRow(PyObject *args)
 
         Handle(Geom_BezierSurface) surf = Handle(Geom_BezierSurface)::DownCast
             (getGeometryPtr()->handle());
-        if (obj2 == nullptr) {
+        if (!obj2) {
             surf->SetPoleRow(uindex, poles);
         }
         else {

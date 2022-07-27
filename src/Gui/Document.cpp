@@ -487,17 +487,7 @@ void Document::_resetEdit(void)
         // changed into a private one,  _resetEdit(). And the exposed
         // resetEdit() above calls into Application->setEditDocument(0) which
         // will prevent recursive calling.
-#if 0
-        // Nullify the member variable before calling finishEditing().
-        // This is to avoid a possible stack overflow when a view provider wrongly
-        // invokes the document's resetEdit() method.
-        ViewProvider* editViewProvider = d->_editViewProvider;
-        d->_editViewProvider = nullptr;
 
-        editViewProvider->finishEditing();
-        if (editViewProvider->isDerivedFrom(ViewProviderDocumentObject::getClassTypeId()))
-            signalResetEdit(*(static_cast<ViewProviderDocumentObject*>(editViewProvider)));
-#endif
         App::GetApplication().closeActiveTransaction();
     }
     d->_editViewProviderParent = nullptr;
@@ -667,21 +657,22 @@ void Document::slotNewObject(const App::DocumentObject& Obj)
                 FC_LOG(Obj.getFullName() << " has no view provider specified");
                 return;
             }
-            Base::BaseClass* base = static_cast<Base::BaseClass*>(
-                    Base::Type::createInstanceByName(cName.c_str(),true));
-            pcProvider = Base::freecad_dynamic_cast<ViewProviderDocumentObject>(base);
+            Base::Type type = Base::Type::getTypeIfDerivedFrom(cName.c_str(), ViewProviderDocumentObject::getClassTypeId(), true);
+            pcProvider = static_cast<ViewProviderDocumentObject*>(type.createInstance());
+            // createInstance could return a null pointer
             if (!pcProvider) {
                 // type not derived from ViewProviderDocumentObject!!!
                 FC_ERR("Invalid view provider type '" << cName << "' for " << Obj.getFullName());
-                delete base;
                 return;
-            } else if (cName!=Obj.getViewProviderName() && !pcProvider->allowOverride(Obj)) {
+            }
+            else if (cName!=Obj.getViewProviderName() && !pcProvider->allowOverride(Obj)) {
                 FC_WARN("View provider type '" << cName << "' does not support " << Obj.getFullName());
-                delete base;
                 pcProvider = nullptr;
                 cName = Obj.getViewProviderName();
-            } else
+            }
+             else {
                 break;
+            }
         }
 
         setModified(true);
@@ -758,9 +749,6 @@ void Document::slotDeletedObject(const App::DocumentObject& Obj)
 
     handleChildren3D(viewProvider,true);
 
-#if 0 // With this we can show child objects again if this method was called by undo
-    viewProvider->onDelete(std::vector<std::string>());
-#endif
     if (viewProvider && viewProvider->getTypeId().isDerivedFrom
         (ViewProviderDocumentObject::getClassTypeId())) {
         // go through the views
@@ -795,7 +783,6 @@ void Document::beforeDelete() {
 
 void Document::slotChangedObject(const App::DocumentObject& Obj, const App::Property& Prop)
 {
-    //Base::Console().Log("Document::slotChangedObject() called\n");
     ViewProvider* viewProvider = getViewProvider(&Obj);
     if (viewProvider) {
         try {
@@ -1219,7 +1206,7 @@ bool Document::saveAs(void)
     QString exe = qApp->applicationName();
     QString fn = FileDialog::getSaveFileName(getMainWindow(), QObject::tr("Save %1 Document").arg(exe),
         QString::fromUtf8(getDocument()->FileName.getValue()),
-        QString::fromLatin1("%1 %2 (*.FCStd)").arg(exe).arg(QObject::tr("Document")));
+        QString::fromLatin1("%1 %2 (*.FCStd)").arg(exe, QObject::tr("Document")));
 
     if (!fn.isEmpty()) {
         QFileInfo fi;
@@ -1355,7 +1342,7 @@ unsigned int Document::getMemSize (void) const
 void Document::Save (Base::Writer &writer) const
 {
     // It's only possible to add extra information if force of XML is disabled
-    if (writer.isForceXML() == false) {
+    if (!writer.isForceXML()) {
         writer.addFile("GuiDocument.xml", this);
 
         ParameterGrp::handle hGrp = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/Document");
@@ -1908,7 +1895,7 @@ void Document::detachView(Gui::BaseView* pcView, bool bPassiv)
             }
 
             // is already closing the document, and is not linked by other documents
-            if (d->_isClosing == false &&
+            if (!d->_isClosing &&
                 App::PropertyXLink::getDocumentInList(getDocument()).empty())
             {
                 d->_pcAppWnd->onLastWindowClosed(this);
@@ -2337,20 +2324,18 @@ bool Document::checkTransactionID(bool undo, int iSteps) {
             }
             str << "    " << doc->getName() << "\n";
         }
-        int ret = QMessageBox::warning(getMainWindow(),
-                    undo?QObject::tr("Undo"):QObject::tr("Redo"),
-                    QString::fromLatin1("%1,\n%2%3")
-                        .arg(QObject::tr(
-                            "There are grouped transactions in the following documents with "
-                            "other preceding transactions"))
-                        .arg(QString::fromUtf8(str.str().c_str()))
-                        .arg(QObject::tr("Choose 'Yes' to roll back all preceding transactions.\n"
-                                         "Choose 'No' to roll back in the active document only.\n"
-                                         "Choose 'Abort' to abort")),
+        int ret = QMessageBox::warning(getMainWindow(), undo ? QObject::tr("Undo") : QObject::tr("Redo"),
+                    QString::fromLatin1("%1,\n%2%3").arg(
+                        QObject::tr("There are grouped transactions in the following documents with "
+                                    "other preceding transactions"),
+                        QString::fromStdString(str.str()),
+                        QObject::tr("Choose 'Yes' to roll back all preceding transactions.\n"
+                                    "Choose 'No' to roll back in the active document only.\n"
+                                    "Choose 'Abort' to abort")),
                     QMessageBox::Yes|QMessageBox::No|QMessageBox::Abort, QMessageBox::Yes);
-        if(ret == QMessageBox::Abort)
+        if (ret == QMessageBox::Abort)
             return false;
-        if(ret == QMessageBox::No)
+        if (ret == QMessageBox::No)
             return true;
     }
     for(auto &v : dmap) {
@@ -2412,6 +2397,8 @@ void Document::handleChildren3D(ViewProvider* viewProvider, bool deleting)
     if (viewProvider && viewProvider->getChildRoot()) {
         std::vector<App::DocumentObject*> children = viewProvider->claimChildren3D();
         SoGroup* childGroup =  viewProvider->getChildRoot();
+        SoGroup* frontGroup = viewProvider->getFrontRoot();
+        SoGroup* backGroup = viewProvider->getFrontRoot();
 
         // size not the same -> build up the list new
         if (deleting || childGroup->getNumChildren() != static_cast<int>(children.size())) {
@@ -2424,6 +2411,8 @@ void Document::handleChildren3D(ViewProvider* viewProvider, bool deleting)
             }
 
             Gui::coinRemoveAllChildren(childGroup);
+            Gui::coinRemoveAllChildren(frontGroup);
+            Gui::coinRemoveAllChildren(backGroup);
 
             if(!deleting) {
                 for (std::vector<App::DocumentObject*>::iterator it=children.begin();it!=children.end();++it) {
@@ -2434,6 +2423,14 @@ void Document::handleChildren3D(ViewProvider* viewProvider, bool deleting)
 
                         SoSeparator* childRootNode =  ChildViewProvider->getRoot();
                         childGroup->addChild(childRootNode);
+
+                        SoSeparator* childFrontNode = ChildViewProvider->getFrontRoot();
+                        if (frontGroup && childFrontNode)
+                            frontGroup->addChild(childFrontNode);
+
+                        SoSeparator* childBackNode = ChildViewProvider->getBackRoot();
+                        if (backGroup && childBackNode)
+                            backGroup->addChild(childBackNode);
 
                         // cycling to all views of the document to remove the viewprovider from the viewer itself
                         for (std::list<Gui::BaseView*>::iterator vIt = d->baseViews.begin();vIt != d->baseViews.end();++vIt) {

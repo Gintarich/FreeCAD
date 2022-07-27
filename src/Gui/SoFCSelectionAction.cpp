@@ -1030,7 +1030,7 @@ SoBoxSelectionRenderActionP::initBoxGraph()
 void
 SoBoxSelectionRenderActionP::updateBbox(const SoPath * path)
 {
-    if (this->camerasearch == nullptr) {
+    if (!this->camerasearch) {
         this->camerasearch = new SoSearchAction;
     }
 
@@ -1047,7 +1047,7 @@ SoBoxSelectionRenderActionP::updateBbox(const SoPath * path)
     this->localRoot->insertChild(this->camerasearch->getPath()->getTail(), 0);
     this->camerasearch->reset();
 
-    if (this->bboxaction == nullptr) {
+    if (!this->bboxaction) {
         this->bboxaction = new SoGetBoundingBoxAction(SbViewportRegion(100, 100));
     }
     this->bboxaction->setViewportRegion(PUBLIC(this)->getViewportRegion());
@@ -1063,7 +1063,7 @@ SoBoxSelectionRenderActionP::updateBbox(const SoPath * path)
         this->cube->height  = y;
         this->cube->depth = z;
 
-        SbMatrix transform = box.getTransform();
+        SbMatrix transform = box.getTransform(); // clazy:exclude=rule-of-two-soft
 
         // get center (in the local bbox coordinate system)
         SbVec3f center = box.SbBox3f::getCenter();

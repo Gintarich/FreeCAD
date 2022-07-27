@@ -92,14 +92,14 @@ PyObject* CommandPy::listByShortcut(PyObject *args)
 
     std::vector <Command*> cmds = Application::Instance->commandManager().getAllCommands();
     std::vector <std::string> matches;
-    for (Command* c : cmds){
+    for (Command* c : cmds) {
         Action* action = c->getAction();
-        if (action){
+        if (action) {
             QString spc = QString::fromLatin1(" ");
-            if(PyObject_IsTrue(bIsRegularExp)){
+            if (Base::asBoolean(bIsRegularExp)) {
                QRegExp re = QRegExp(QString::fromLatin1(shortcut_to_find));
                re.setCaseSensitivity(Qt::CaseInsensitive);
-               if (!re.isValid()){
+               if (!re.isValid()) {
                    std::stringstream str;
                    str << "Invalid regular expression:" << ' ' << shortcut_to_find;
                    throw Py::RuntimeError(str.str());
@@ -118,7 +118,7 @@ PyObject* CommandPy::listByShortcut(PyObject *args)
 
     PyObject* pyList = PyList_New(matches.size());
     int i=0;
-    for (std::string match : matches) {
+    for (const std::string& match : matches) {
         PyObject* str = PyUnicode_FromString(match.c_str());
         PyList_SetItem(pyList, i++, str);
     }
@@ -309,7 +309,8 @@ PyObject* CommandPy::getAction(PyObject *args)
 
         Py::List list;
         if (group) {
-            for (auto a : group->actions())
+            const auto actions = group->actions();
+            for (auto a : actions)
                 list.append(wrap.fromQObject(a));
         }
         else if (action) {

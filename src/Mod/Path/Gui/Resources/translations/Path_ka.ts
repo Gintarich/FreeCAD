@@ -4,3551 +4,1444 @@
   <context>
     <name>App::Property</name>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="188"/>
-      <source>Stop index(angle) for rotational scan</source>
-      <translation type="unfinished">Stop index(angle) for rotational scan</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="164"/>
-      <source>Additional offset to the selected bounding box</source>
-      <translation>მონიშნული შემომსაზღვრელი ჩარჩოს დამატებითი წანაცვლება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="172"/>
-      <source>The model will be rotated around this axis.</source>
-      <translation>მოდელი შემოტრიალდება ღერძის გარშემო.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="180"/>
-      <source>Start index(angle) for rotational scan</source>
-      <translation type="unfinished">Start index(angle) for rotational scan</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="233"/>
-      <source>Do not cut internal features on avoided faces.</source>
-      <translation>არ გაჭრა თავიდან ასაცილებელი ზედაპირების შიდა თვისებები.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="295"/>
-      <source>Select the overall boundary for the operation.</source>
-      <translation>აირჩიეთ ოპერაციის საერთო საზღვარი.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="330"/>
-      <source>The yaw angle used for certain clearing patterns</source>
-      <translation type="unfinished">The yaw angle used for certain clearing patterns</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="373"/>
-      <source>Set the start point for the cut pattern.</source>
-      <translation>დააყენეთ შაბლონის ამოჭრის საწყისი წერტილი.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="345"/>
-      <source>Profile the edges of the selection.</source>
-      <translation>მონიშნულის წიბოების პროფილირება.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="234"/>
-      <source>Make True, if specifying a Start Point</source>
-      <translation>ჩართვა, თუ საწყისი წერტილი მიეთითება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathCopy.py" line="37"/>
-      <source>The path to be copied</source>
-      <translation>დასაკოპირებელი ტრაექტორია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="121"/>
+      <location filename="../../../PathScripts/PathDressupDragknife.py" line="59"/>
+      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="57"/>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="69"/>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="59"/>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="953"/>
+      <location filename="../../../PathScripts/PathDressupDogbone.py" line="427"/>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="65"/>
+      <location filename="../../../PathScripts/PathDressupPathBoundary.py" line="55"/>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="125"/>
       <source>The base path to modify</source>
       <translation>ჩასასწორებელი საბაზისო ტრაექტორია</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupDragknife.py" line="70"/>
-      <source>Distance the point trails behind the spindle</source>
-      <translation type="unfinished">Distance the point trails behind the spindle</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupDragknife.py" line="78"/>
-      <source>Height to raise during corner action</source>
-      <translation>კუთხის მოქმედებისას აწევის სიმაღლე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathHop.py" line="35"/>
-      <source>The object to be reached by this hop</source>
-      <translation>ამ ბილით ობიექტამდე ვერ მიაღწევთ</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathHop.py" line="41"/>
-      <source>The Z height of the hop</source>
-      <translation>ბიჯის Z სიმაღლე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathFeatureExtensions.py" line="478"/>
-      <source>Default length of extensions.</source>
-      <translation>გაფართოებებიის ნაგულისხმევი სიგრძე.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathFeatureExtensions.py" line="485"/>
-      <source>List of features to extend.</source>
-      <translation>გასაფართოებელი თვისებების სია.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathAdaptive.py" line="1032"/>
-      <source>Stop processing</source>
-      <translation>დამუშავების შეწყვეტა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathProbe.py" line="53"/>
-      <source>X offset between tool and probe</source>
-      <translation>ზონდსა და ხელსაწყოს შორის წანაცვლების X</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathProbe.py" line="59"/>
-      <source>Y offset between tool and probe</source>
-      <translation>ზონდსა და ხელსაწყოს შორის წანაცვლების Y</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathProbe.py" line="65"/>
-      <source>Number of points to probe in X direction</source>
-      <translation>X მიმართულებით ზონდირებადი წერტილების რაოდენობა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathProbe.py" line="73"/>
-      <source>Number of points to probe in Y direction</source>
-      <translation>Y მიმართულებით ზონდირებადი წერტილების რაოდენობა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathProbe.py" line="81"/>
-      <source>The output location for the probe data to be written</source>
-      <translation>ფაილის, სადაც ზონდის მონაცემები ჩაიწერება, მდებარეობა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="113"/>
-      <source>The base geometry for this operation</source>
-      <translation>ამ ოპერაციის საბაზისო გეომეტრია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="122"/>
-      <source>Holds the calculated value for the StartDepth</source>
-      <translation>შეიცავს StartDepth-ის გამოთვლილ მნიშვნელობას</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="132"/>
-      <source>Holds the calculated value for the FinalDepth</source>
-      <translation>შეიცავს FinalDepth-ის გამოთვლილ მნიშვნელობას</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="142"/>
-      <source>Holds the diameter of the tool</source>
-      <translation>ამ ხელსაწყოს დიამეტრის შეზღუდვა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="150"/>
-      <source>Holds the max Z value of Stock</source>
-      <translation>შეიცავს ნედლეულის Z-ის უდიდეს მნიშვნელობას</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="157"/>
-      <source>Holds the min Z value of Stock</source>
-      <translation>შეიცავს ნედლეულის Z-ის უმცირეს მნიშვნელობას</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathPlane.py" line="41"/>
-      <source>Make False, to prevent operation from generating code</source>
-      <translation>გამორთეთ ოპერაციისთვის კოდის გენერაციის ხელის შესაშლელად</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="176"/>
-      <source>An optional comment for this Operation</source>
-      <translation>ამ ოპერაციის არასავალდებულო კომენტარი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="184"/>
-      <source>User Assigned Label</source>
-      <translation>მომხმარებლის მიერ მინიჭებული ჭდე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="496"/>
-      <source>Operations Cycle Time Estimation</source>
-      <translation>ოპერაციების ციკლის დაახლოებითი დრო</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="204"/>
-      <source>Base locations for this operation</source>
-      <translation>საბაზისო მდებარეობა ამ ოპერაციისთვის</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="224"/>
-      <source>Coolant mode for this operation</source>
-      <translation>გამაგრილებლის რეჟიმი ამ ოპერაციისთვის</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="232"/>
-      <source>Starting Depth of Tool- first cut depth in Z</source>
-      <translation>ხელსაწყოს საწყისი სიღრმე - პირველი ჭრის Z</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="240"/>
-      <source>Final Depth of Tool- lowest value in Z</source>
-      <translation>ხელსაწყოს საბოლოო სიღრმე - Z-ში მისი უმცირესი მნიშვნელობა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="267"/>
-      <source>Incremental Step Down of Tool</source>
-      <translation type="unfinished">Incremental Step Down of Tool</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="275"/>
-      <source>Maximum material removed on final pass.</source>
-      <translation>ბოლო გავლისას მოცილებული მასალების მაქსიმუმი.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="294"/>
-      <source>Rapid Safety Height between locations.</source>
-      <translation>ლოკაციებს შორის უქმი მოძრაობის უსაფრთხო სიმაღლე.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="304"/>
-      <source>The start point of this path</source>
-      <translation>ამ ტრაექტორიის საწყისი წერტილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="320"/>
-      <source>Lower limit of the turning diameter</source>
-      <translation>შემობრუნების დიამეტრის ქვედა ზღვარი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="328"/>
-      <source>Upper limit of the turning diameter.</source>
-      <translation>შემობრუნების დიამეტრის ზედა ზღვარი.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="439"/>
-      <source>Coolant option for this operation</source>
-      <translation>გამაგრილებლის მორგება ამ ოპერაციისთვის</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathEngrave.py" line="76"/>
-      <source>Additional base objects to be engraved</source>
-      <translation type="unfinished">Additional base objects to be engraved</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathVcarve.py" line="222"/>
-      <source>The deflection value for discretizing arcs</source>
-      <translation type="unfinished">The deflection value for discretizing arcs</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathVcarve.py" line="240"/>
-      <source>Vcarve Tolerance</source>
-      <translation>Vcarve-ს გადახრა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="59"/>
-      <source>The input mapping axis</source>
-      <translation type="unfinished">The input mapping axis</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="65"/>
-      <source>The radius of the wrapped axis</source>
-      <translation type="unfinished">The radius of the wrapped axis</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="71"/>
-      <source>Calculate roll-on to path</source>
-      <translation type="unfinished">Calculate roll-on to path</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="77"/>
-      <source>Calculate roll-off from path</source>
-      <translation>ტრაექტორიიდან roll-off-ის გამოთვლა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="83"/>
-      <source>Keep the Tool Down in Path</source>
-      <translation type="unfinished">Keep the Tool Down in Path</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="98"/>
-      <source>Length or Radius of the approach</source>
-      <translation>მიდგომის რადიუსის სიგრძე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="104"/>
-      <source>The Style of motion into the Path</source>
-      <translation>ტრაექტორიაზე მოძრაობის სტილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="111"/>
-      <source>The Style of motion out of the Path</source>
-      <translation>ტრაექტორიის გარეთ მოძრაობის სტილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="118"/>
-      <source>The Mode of Point Radiusoffset or Center</source>
-      <translation type="unfinished">The Mode of Point Radiusoffset or Center</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="131"/>
-      <source>Extends LeadIn distance</source>
-      <translation type="unfinished">Extends LeadIn distance</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="137"/>
-      <source>Extends LeadOut distance</source>
-      <translation type="unfinished">Extends LeadOut distance</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="143"/>
-      <source>Perform plunges with G0</source>
-      <translation type="unfinished">Perform plunges with G0</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="149"/>
-      <source>Apply LeadInOut to layers within an operation</source>
-      <translation type="unfinished">Apply LeadInOut to layers within an operation</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathFixture.py" line="34"/>
-      <source>Fixture Offset Number</source>
-      <translation>სამაგრის წანაცვლების ნომერი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBit.py" line="141"/>
-      <source>Shape for bit shape</source>
-      <translation>მჭრელი იარაღის ფორმა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBit.py" line="147"/>
-      <source>The parametrized body representing the tool bit</source>
-      <translation>ხელსაწყოს მჭრელი იარაღის აღმწერი პარამეტრიზებული სხეული</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBit.py" line="155"/>
-      <source>The file of the tool</source>
-      <translation>ხელსაწყოს ნახაზის ფაილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBit.py" line="161"/>
-      <source>The name of the shape file</source>
-      <translation>ფორმის ფაილის სახელი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBit.py" line="205"/>
-      <source>List of all properties inherited from the bit</source>
-      <translation>მჭრელი იარაღიდან მემკვიდრეობით მიღებული ყველა თვისების სია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathCustom.py" line="52"/>
-      <source>The gcode to be inserted</source>
-      <translation>G-Code-ის ჩაისმება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="61"/>
-      <source>Angle of ramp.</source>
-      <translation type="unfinished">Angle of ramp.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="67"/>
-      <source>Ramping Method</source>
-      <translation type="unfinished">Ramping Method</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="73"/>
-      <source>Which feed rate to use for ramping</source>
-      <translation type="unfinished">Which feed rate to use for ramping</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="79"/>
-      <source>Custom feed rate</source>
-      <translation>მიწოდების სიჩქარის ხელით მითითება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="127"/>
-      <source>Width of tags.</source>
-      <translation>ჭდეების სიგანე.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="133"/>
-      <source>Height of tags.</source>
-      <translation>ჭდეების სიმაღლე.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="139"/>
-      <source>Angle of tag plunge and ascent.</source>
-      <translation type="unfinished">Angle of tag plunge and ascent.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="145"/>
-      <source>Radius of the fillet for the tag.</source>
-      <translation>ჭდის მომრგვალების რადიუსი.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="151"/>
-      <source>Locations of inserted holding tags</source>
-      <translation type="unfinished">Locations of inserted holding tags</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="157"/>
-      <source>IDs of disabled holding tags</source>
-      <translation type="unfinished">IDs of disabled holding tags</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDrilling.py" line="112"/>
-      <source>Enable pecking</source>
-      <translation>G83 ციკლის ჩართვა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDrilling.py" line="118"/>
-      <source>The time to dwell between peck cycles</source>
-      <translation>G83 ციკლებს შორის დაყოვნების დრო</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDrilling.py" line="124"/>
-      <source>Enable dwell</source>
-      <translation>დაყოვნების ჩართვა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDrilling.py" line="139"/>
-      <source>Controls how tool retracts Default=G99</source>
-      <translation>აკონტროლებს, როგორ გამოდის ხელსაწყო. ნაგულისხმევი=G99</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDrilling.py" line="156"/>
-      <source>How far the drill depth is extended</source>
-      <translation type="unfinished">How far the drill depth is extended</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathPlane.py" line="34"/>
-      <source>Orientation plane of CNC path</source>
-      <translation>CNC-ის ტრაექტორიის ორიენტაციის სიბრტყე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathMillFace.py" line="93"/>
-      <source>Shape to use for calculating Boundary</source>
-      <translation>საზღვრის დასათვლელად გამოსაყენებელი მონახაზი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathMillFace.py" line="99"/>
-      <source>Clear edges of surface (Only applicable to BoundBox)</source>
-      <translation>ზედაპირების წიბოების გასუფთავება (ვრცელდება მხოლოდ შემომსაზღვრელი ჩარჩოებზე)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathMillFace.py" line="108"/>
-      <source>Exclude milling raised areas inside the face.</source>
-      <translation type="unfinished">Exclude milling raised areas inside the face.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="356"/>
-      <source>Ignore outer waterlines above this height.</source>
-      <translation>მითითებული სიმაღლის ზემოთ გარე წყალხაზის იგნორირება.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathPocketShape.py" line="65"/>
-      <source>Uses the outline of the base geometry.</source>
-      <translation type="unfinished">Uses the outline of the base geometry.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathCollision.py" line="54"/>
-      <source>The base object this collision refers to</source>
-      <translation type="unfinished">The base object this collision refers to</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="128"/>
-      <source>Enter custom start point for slot path.</source>
-      <translation type="unfinished">Enter custom start point for slot path.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="136"/>
-      <source>Enter custom end point for slot path.</source>
-      <translation type="unfinished">Enter custom end point for slot path.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathComment.py" line="37"/>
-      <source>Comment or note for CNC program</source>
-      <translation>კომენტარი ან შენიშვნა CNC პროგრამისთვის</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSetupSheet.py" line="112"/>
-      <source>Default speed for horizontal rapid moves.</source>
-      <translation>ჰორიზონტალური უქმი მოძრაობის ნაგულისხმევი სიჩქარე.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSetupSheet.py" line="120"/>
-      <source>Default speed for vertical rapid moves.</source>
-      <translation>ვერტიკალური უქმი მოძრაობის ნაგულისხმევი სიჩქარე.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSetupSheet.py" line="410"/>
-      <source>Coolant Modes</source>
-      <translation>გამაგრილებლის რეჟიმები</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSetupSheet.py" line="419"/>
-      <source>Default coolant mode.</source>
-      <translation>გამაგრილებლის ნაგულისხმევი რეჟიმი.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSetupSheet.py" line="149"/>
-      <source>Expression set for the SafeHeight of new operations.</source>
-      <translation>ახალი ოპერაციების SafeHeight-სთვის გამოყენებული გამოთქმების ნაკრები.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSetupSheet.py" line="175"/>
-      <source>Expression used for StartDepth of new operations.</source>
-      <translation>ახალი ოპერაციების StepDepth-სთვის გამოყენებული გამოთქმა.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSetupSheet.py" line="183"/>
-      <source>Expression used for FinalDepth of new operations.</source>
-      <translation>ახალი ოპერაციების FinalDepth-სთვის გამოყენებული გამოთქმა.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSetupSheet.py" line="191"/>
-      <source>Expression used for StepDown of new operations.</source>
-      <translation>ახალი ოპერაციების StepDown-სთვის გამოყენებული გამოთქმა.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="138"/>
-      <source>Start pocketing at center or boundary</source>
-      <translation type="unfinished">Start pocketing at center or boundary</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathHelix.py" line="122"/>
-      <source>Percent of cutter diameter to step over on each pass</source>
-      <translation type="unfinished">Percent of cutter diameter to step over on each pass</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="152"/>
-      <source>Angle of the zigzag pattern</source>
-      <translation type="unfinished">Angle of the zigzag pattern</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="158"/>
-      <source>Clearing pattern to use</source>
-      <translation>შაბლონის გასუფთავება გამოსაყენებლად</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="164"/>
-      <source>Use 3D Sorting of Path</source>
-      <translation>ტრაექტორიის 3D დალაგების გამოყენება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="170"/>
-      <source>Attempts to avoid unnecessary retractions.</source>
-      <translation type="unfinished">Attempts to avoid unnecessary retractions.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupDogbone.py" line="429"/>
+      <location filename="../../../PathScripts/PathDressupDogbone.py" line="433"/>
       <source>The side of path to insert bones</source>
       <translation>ბილიკის მხარე კუთხის გარშემო შემოჭრის ჩასასმელად</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupDogbone.py" line="437"/>
+      <location filename="../../../PathScripts/PathDressupDogbone.py" line="441"/>
       <source>The style of bones</source>
       <translation>კუთხის გარშემო შემოჭრის სტილი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupDogbone.py" line="445"/>
+      <location filename="../../../PathScripts/PathDressupDogbone.py" line="449"/>
       <source>Bones that aren't dressed up</source>
       <translation>კუთხის გარშემო შემოჭრები, რომლებსაც ზღუდარი არ აქვთ</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupDogbone.py" line="453"/>
+      <location filename="../../../PathScripts/PathDressupDogbone.py" line="459"/>
       <source>The algorithm to determine the bone length</source>
       <translation>კუთხის გარშემო შემოჭრის სიგრძის გამოთვლის ალგორითმი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupDogbone.py" line="463"/>
+      <location filename="../../../PathScripts/PathDressupDogbone.py" line="467"/>
       <source>Dressup length if Incision == custom</source>
       <translation>ზღუდარის სიგრძე, თუ შეჭრა == ხელით მითითებულს</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathStop.py" line="36"/>
-      <source>Add Optional or Mandatory Stop to the program</source>
-      <translation>პროგრამაში აუცილებელი ან არასავალდებული შეჩერების ჩამატება</translation>
+      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="63"/>
+      <source>The input mapping axis</source>
+      <translation type="unfinished">The input mapping axis</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathArray.py" line="41"/>
-      <source>The path(s) to array</source>
-      <translation>ტრაექტორი(ებ)-იდან მასივამდე</translation>
+      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="69"/>
+      <source>The radius of the wrapped axis</source>
+      <translation type="unfinished">The radius of the wrapped axis</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathArray.py" line="47"/>
-      <source>Pattern method</source>
-      <translation>შაბლონის მეთოდი</translation>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="127"/>
+      <location filename="../../../PathScripts/PathProfile.py" line="109"/>
+      <source>The direction that the toolpath should go around the part ClockWise (CW) or CounterClockWise (CCW)</source>
+      <translation>ხელსაწყოს მჭრელი იარაღის მიმართულება საათის(ს. მ.) ან საათის საწინააღმდეგო (ს. ს. მ.) მიმართულებით მოძრაობა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathArray.py" line="62"/>
-      <source>The number of copies in X direction in Linear pattern</source>
-      <translation>ასლების რაოდენობა X მიმართულებით ხაზოვანი შაბლონით</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="247"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="266"/>
+      <location filename="../../../PathScripts/PathPocket.py" line="68"/>
+      <location filename="../../../PathScripts/PathProfile.py" line="118"/>
+      <source>Choose how to process multiple Base Geometry features.</source>
+      <translation type="unfinished">Choose how to process multiple Base Geometry features.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathArray.py" line="70"/>
-      <source>The number of copies in Y direction in Linear pattern</source>
-      <translation>ასლების რაოდენობა Y მიმართულებით ხაზოვანი შაბლონით</translation>
+      <location filename="../../../PathScripts/PathProfile.py" line="127"/>
+      <source>Controls how tool moves around corners. Default=Round</source>
+      <translation type="unfinished">Controls how tool moves around corners. Default=Round</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathArray.py" line="78"/>
-      <source>Total angle in Polar pattern</source>
-      <translation>ჯამური კუთხე პოლარულ შაბლონში</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathArray.py" line="84"/>
-      <source>The number of copies in Linear 1D and Polar pattern</source>
-      <translation>ასლების რაოდენობა ხაზოვან 1D და პოლარულ შაბლონში</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathArray.py" line="92"/>
-      <source>The centre of rotation in Polar pattern</source>
-      <translation>პოლარულ შაბლონში ბრუნვის ცენტრი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathArray.py" line="109"/>
-      <source>Percent of copies to randomly offset</source>
-      <translation>შემთხვევით წასანაცვლებელი ასლების რაოდენობა (%)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathArray.py" line="115"/>
-      <source>Maximum random offset of copies</source>
-      <translation>ასლების მაქსიმალური შემთხვევითი წანაცვლება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathArray.py" line="169"/>
-      <source>Seed value for jitter randomness</source>
-      <translation type="unfinished">Seed value for jitter randomness</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathPropertyBag.py" line="71"/>
-      <source>List of custom property groups</source>
-      <translation>ხელით მითითებული თვისებების სია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="67"/>
-      <source>The point file from the surface probing.</source>
-      <translation type="unfinished">The point file from the surface probing.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="77"/>
-      <source>Deflection distance for arc interpolation</source>
-      <translation>არეკვლის მანძილი რკალის ინტერპოლაციისთვის</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="271"/>
-      <source>Set thread orientation</source>
-      <translation>დააყენეთ კუთხვილის ორიენტაცია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="278"/>
-      <source>Currently only internal</source>
-      <translation>მიმდინარედ მხოლოდ შიდა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="285"/>
-      <source>Defines which standard thread was chosen</source>
-      <translation>აყენებს, რომელი სტანდარტული კუთხვილი იქნა არჩეული</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="293"/>
-      <source>Set thread's major diameter</source>
-      <translation>დააყენეთ კუთხვილის ძირითადი დიამეტრი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="299"/>
-      <source>Set thread's minor diameter</source>
-      <translation>დააყენეთ კუთხვილის მცირე დიამეტრი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="305"/>
-      <source>Set thread's pitch - used for metric threads</source>
-      <translation type="unfinished">Set thread's pitch - used for metric threads</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="330"/>
-      <source>Set how many passes are used to cut the thread</source>
-      <translation>დაყენება, რამდენი გავლაა საჭირო კუთხვილის ამოსაჭრელად</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="338"/>
-      <source>Direction of thread cutting operation</source>
-      <translation>კუთხვილის ამოჭრის ოპერაციის მიმართულება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="353"/>
-      <source>Operation to clear the inside of the thread</source>
-      <translation>კუთხვილის შიგნიდან გაწმენდის ოპერაცია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDeburr.py" line="122"/>
-      <source>The desired width of the chamfer</source>
-      <translation>ნაზოლის სასურველი სიგანე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDeburr.py" line="128"/>
-      <source>The additional depth of the tool path</source>
-      <translation>ხელსაწყოს ტრაექტორიის დამატებითი სიღრმე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDeburr.py" line="134"/>
-      <source>How to join chamfer segments</source>
-      <translation>როგორ შევაერთოთ კუთხის ნაზოლის სეგმენტები</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDeburr.py" line="142"/>
-      <source>Direction of Operation</source>
-      <translation>ოპერაციის მიმართულება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDeburr.py" line="149"/>
-      <source>Side of Operation</source>
-      <translation>ოპერაციის მხარე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDeburr.py" line="157"/>
-      <source>Select the segment, there the operations starts</source>
-      <translation>ოპერაციის დასაწყებად მონიშნეთ კვეთა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathStock.py" line="104"/>
-      <source>The base object this stock is derived from</source>
-      <translation>ამ ნედლეულის საბაზისო ობიექტი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathStock.py" line="166"/>
-      <source>A material for this object</source>
-      <translation>ობიექტის მასალა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathStock.py" line="238"/>
-      <source>Length of this stock box</source>
-      <translation>ნედლეულის შემ. ჩარჩოს სიგრძე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathStock.py" line="244"/>
-      <source>Width of this stock box</source>
-      <translation>ნედლეულის შემ. ჩარჩოს სიგანე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathStock.py" line="250"/>
-      <source>Height of this stock box</source>
-      <translation>ნედლეულის შემ. ჩარჩოს სიმაღლე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathStock.py" line="290"/>
-      <source>Radius of this stock cylinder</source>
-      <translation>ნედლეულის ცილინდრის რადიუსი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathStock.py" line="296"/>
-      <source>Height of this stock cylinder</source>
-      <translation>ნედლეულის ცილინდრის სიმაღლე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathStock.py" line="332"/>
-      <source>Internal representation of stock type</source>
-      <translation>ნედლეულის ტიპის შიდა გამოხატულება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathAreaOp.py" line="164"/>
-      <source>Split Arcs into discrete segments</source>
-      <translation>რკალების დისკრეტულ სეგმენტებად დაყოფა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="67"/>
-      <source>The active tool</source>
-      <translation>მიმდინარე ხელსაწყო</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="74"/>
-      <source>The speed of the cutting spindle in RPM</source>
-      <translation>მჭრელი შპინდელის ბრუნების რაოდენობა წუთში</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="82"/>
-      <source>Direction of spindle rotation</source>
-      <translation>შპინდელის ბრუნვის მიმართულება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="88"/>
-      <source>Feed rate for vertical moves in Z</source>
-      <translation>მიწოდების სიჩქარე Z-ში ვერტიკალური გადაადგილებისთვის</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="94"/>
-      <source>Feed rate for horizontal moves</source>
-      <translation>მიწოდების სიჩქარე ჰორიზონტალური გადაადგილებისთვის</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="100"/>
-      <source>Rapid rate for vertical moves in Z</source>
-      <translation>ჰორიზონტალური უქმი მოძრაობის სიჩქარე Z ღერძზე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="106"/>
-      <source>Rapid rate for horizontal moves</source>
-      <translation>ჰორიზონტალური უქმი მოძრაობის სიჩქარე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="324"/>
-      <source>The tool used by this controller</source>
-      <translation>ამ კონტროლერის მიერ გამოყენებული ხელსაწყო</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathCircularHoleBase.py" line="76"/>
-      <source>List of disabled features</source>
-      <translation>გამორთული თვისებების სია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="113"/>
-      <source>The NC output file for this project</source>
-      <translation>ამ პროექტის NC გამოსატანი ფაილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="119"/>
-      <source>Select the Post Processor</source>
-      <translation>აირჩიეთ პოსტპროცესორი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="141"/>
-      <source>Last Time the Job was post-processed</source>
-      <translation>დრო, როცა ამოცანის პოსტპროცესინგი ბოლოჯერ მოხდა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="149"/>
-      <source>An optional description for this job</source>
-      <translation>ამ ამოცანის არასავალდებულო აღწერა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="155"/>
-      <source>Job Cycle Time Estimation</source>
-      <translation type="unfinished">Job Cycle Time Estimation</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="172"/>
-      <source>Solid object to be used as stock.</source>
-      <translation>ნედლეულად გამოყენებული იქნება მყარი სხეული.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="538"/>
-      <source>Select the Type of Job</source>
-      <translation>აირჩიეთ ამოცანის ტიპი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="527"/>
-      <source>Split output into multiple gcode files</source>
-      <translation>გამომავლის მრავალ gcode ფაილად დაშლა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="516"/>
-      <source>If multiple WCS, order the output this way</source>
-      <translation type="unfinished">If multiple WCS, order the output this way</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="505"/>
-      <source>The Work Coordinate Systems for the Job</source>
-      <translation>ამოცანის სამუშაო კოორდინატთა სისტემები</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="300"/>
-      <source>SetupSheet holding the settings for this job</source>
-      <translation type="unfinished">SetupSheet holding the settings for this job</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="323"/>
-      <source>The base objects for all operations</source>
-      <translation>ყველა ოპერაციის საბაზისო ობიექტები</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJob.py" line="359"/>
-      <source>Collection of all tool controllers for the job</source>
-      <translation>ამოცანის ხელსაწყოების ყველა კონტროლერის კრებული</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathHelix.py" line="113"/>
-      <source>Start cutting from the inside or outside</source>
-      <translation>ამოჭრის შიგნდან დაწყება თუ გარედან</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathHelix.py" line="152"/>
-      <source>Starting Radius</source>
-      <translation>საწყისი რადიუსი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="129"/>
+      <location filename="../../../PathScripts/PathProfile.py" line="135"/>
       <source>Maximum distance before a miter join is truncated</source>
       <translation>მაქსიმალური დაშორება ირიბპირა შეერთებამდე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="146"/>
+      <location filename="../../../PathScripts/PathHelix.py" line="143"/>
+      <location filename="../../../PathScripts/PathHelix.py" line="168"/>
+      <location filename="../../../PathScripts/PathProfile.py" line="144"/>
+      <source>Extra value to stay away from final profile- good for roughing toolpath</source>
+      <translation type="unfinished">Extra value to stay away from final profile- good for roughing toolpath</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="152"/>
       <source>Profile holes as well as the outline</source>
       <translation type="unfinished">Profile holes as well as the outline</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="154"/>
+      <location filename="../../../PathScripts/PathProfile.py" line="158"/>
       <source>Profile the outline</source>
       <translation>პროფილის მონახაზი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="160"/>
+      <location filename="../../../PathScripts/PathProfile.py" line="164"/>
       <source>Profile round holes</source>
       <translation>პროფილის მრგვალი ხვრელები</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="166"/>
+      <location filename="../../../PathScripts/PathProfile.py" line="170"/>
       <source>Side of edge that tool should cut</source>
       <translation type="unfinished">Side of edge that tool should cut</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="172"/>
+      <location filename="../../../PathScripts/PathProfile.py" line="178"/>
       <source>Make True, if using Cutter Radius Compensation</source>
       <translation>ჩართეთ, თუ იყენებთ ხელსაწყოს რადიუსის კომპენსაციას</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathEngrave.py" line="88"/>
-      <source>The vertex index to start the path from</source>
-      <translation>ტრაექტორიის საწყისი წვეროს ინდექსი</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path</name>
-    <message>
-      <location filename="../../../PathScripts/PathEngraveGui.py" line="73"/>
-      <source>%s is not a Base Model object of the job %s</source>
-      <translation type="unfinished">%s is not a Base Model object of the job %s</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="117"/>
+      <source>The base geometry for this operation</source>
+      <translation>ამ ოპერაციის საბაზისო გეომეტრია</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathIconViewProvider.py" line="97"/>
-      <source>Edit</source>
-      <translation>ჩასწორება</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="128"/>
+      <source>Holds the calculated value for the StartDepth</source>
+      <translation>შეიცავს StartDepth-ის გამოთვლილ მნიშვნელობას</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathEngraveGui.py" line="82"/>
-      <source>Base shape %s already in the list</source>
-      <translation>საბაზისო მოხაზულობა %s უკვე სიაშია</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="138"/>
+      <source>Holds the calculated value for the FinalDepth</source>
+      <translation>შეიცავს FinalDepth-ის გამოთვლილ მნიშვნელობას</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathUtils.py" line="546"/>
-      <source>Legacy Tools not supported</source>
-      <translation>მოძველებული ხელსაწყოების მხარდაჭერა გამორთულია</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="146"/>
+      <source>Holds the diameter of the tool</source>
+      <translation>ამ ხელსაწყოს დიამეტრის შეზღუდვა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathUtils.py" line="550"/>
-      <source>Selected tool is not a drill</source>
-      <translation>არჩეული ხელსაწყო ბურღი არაა</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="154"/>
+      <source>Holds the max Z value of Stock</source>
+      <translation>შეიცავს ნედლეულის Z-ის უდიდეს მნიშვნელობას</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathUtils.py" line="556"/>
-      <source>Invalid Cutting Edge Angle %.2f, must be &amp;gt;0° and &amp;lt;=180°</source>
-      <translation type="unfinished">Invalid Cutting Edge Angle %.2f, must be &amp;gt;0° and &amp;lt;=180°</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="161"/>
+      <source>Holds the min Z value of Stock</source>
+      <translation>შეიცავს ნედლეულის Z-ის უმცირეს მნიშვნელობას</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathUtils.py" line="566"/>
-      <source>Cutting Edge Angle (%.2f) results in negative tool tip length</source>
-      <translation type="unfinished">Cutting Edge Angle (%.2f) results in negative tool tip length</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="637"/>
-      <source>No parent job found for operation.</source>
-      <translation type="unfinished">No parent job found for operation.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="641"/>
-      <source>Parent job %s doesn't have a base object</source>
-      <translation type="unfinished">Parent job %s doesn't have a base object</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="838"/>
-      <source>No Tool Controller selected.</source>
-      <translation>ხელსაწყოს კონტროლერი არჩეული არაა.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="839"/>
-      <source>Tool Error</source>
-      <translation>ხელსაწყოს შეცდომა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="855"/>
-      <source>Feedrate Error</source>
-      <translation>მიწოდების სიჩქარის შეცდომა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="871"/>
-      <source>Cycletime Error</source>
-      <translation>ციკლის დროის შეცდომა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="894"/>
-      <source>Base object %s.%s already in the list</source>
-      <translation>საბაზისო ობიექტი %s.%s უკვე სიაშია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOp.py" line="907"/>
-      <source>Base object %s.%s rejected by operation</source>
-      <translation type="unfinished">Base object %s.%s rejected by operation</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathProfileGui.py" line="160"/>
-      <source>Profile</source>
-      <translation>პროფილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathProfileGui.py" line="160"/>
-      <source>Profile entire model, selected face(s) or selected edge(s)</source>
-      <translation type="unfinished">Profile entire model, selected face(s) or selected edge(s)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathPocket.py" line="377"/>
-      <source>The non-planar adaptive start is also unavailable.</source>
-      <translation>არაბრტყელი ადაპტიური სტარტიც ხელმიუწვდომელია.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathUtilsGui.py" line="92"/>
-      <source>Choose a Path Job</source>
-      <translation>აირჩიეთ ტრაექტორიის ამოცანა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="626"/>
-      <source>Feed(H)</source>
-      <translation>მიწოდება(ჰ)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="630"/>
-      <source>Feed(V)</source>
-      <translation>მიწოდება(ვ)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitGui.py" line="199"/>
-      <source>Invalid Filename</source>
-      <translation>ფაილის არასწორი სახელი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDeburr.py" line="185"/>
-      <source>CW</source>
-      <translation>სმ</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDeburr.py" line="186"/>
-      <source>CCW</source>
-      <translation>სსს</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="276"/>
-      <source>Warning</source>
-      <translation>გაფრთხილება</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="279"/>
-      <source>Ok</source>
-      <translation>დიახ</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="280"/>
-      <source>Don't Show This Anymore</source>
-      <translation>აღარ მაჩვენო</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathAreaOp</name>
-    <message>
-      <location filename="../../../PathScripts/PathAreaOp.py" line="121"/>
-      <source>job %s has no Base.</source>
-      <translation>ამოცანა %s-ს ბაზა არ გააჩნია.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathAreaOp.py" line="125"/>
-      <source>no job for op %s found.</source>
-      <translation type="unfinished">no job for op %s found.</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathArray</name>
-    <message>
-      <location filename="../../../PathScripts/PathArray.py" line="376"/>
-      <source>No base objects for PathArray.</source>
-      <translation>PathArray-ს საბაზისო ობიექტების გარეშე.</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathDeburr</name>
-    <message>
-      <location filename="../../../PathScripts/PathDeburr.py" line="189"/>
-      <source>Round</source>
-      <translation>მრგვალი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDeburr.py" line="190"/>
-      <source>Miter</source>
-      <translation>ირიბპირა</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathFixture</name>
-    <message>
-      <location filename="../../../PathScripts/PathFixture.py" line="155"/>
-      <source>Fixture</source>
-      <translation>სამაგრი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathFixture.py" line="156"/>
-      <source>Creates a Fixture Offset object</source>
-      <translation>სამაგრის წანაცვლების ობიექტის შექმნა</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathGeom</name>
-    <message>
-      <location filename="../../../PathScripts/PathGeom.py" line="173"/>
-      <source>face %s not handled, assuming not vertical</source>
-      <translation type="unfinished">face %s not handled, assuming not vertical</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathGeom.py" line="190"/>
-      <source>edge %s not handled, assuming not vertical</source>
-      <translation type="unfinished">edge %s not handled, assuming not vertical</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathGeom.py" line="196"/>
-      <source>isVertical(%s) not supported</source>
-      <translation>isVertical(%s) მხარდაჭერილი არაა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathGeom.py" line="227"/>
-      <source>isHorizontal(%s) not supported</source>
-      <translation>isHorizontal(%s) მხარდაჭერილი არაა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathGeom.py" line="675"/>
-      <source>%s not supported for flipping</source>
-      <translation>%s-ს არ აქვს გადაბრუნების მხარდაჭერა</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathGui</name>
-    <message>
-      <location filename="../../../PathScripts/PathUtil.py" line="57"/>
-      <source>%s has no property %s (%s))</source>
-      <translation>%s-ს არ გააჩნია თვისება %s (%s))</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathJob</name>
-    <message>
-      <location filename="../../../PathScripts/PathDressupPathBoundaryGui.py" line="165"/>
-      <source>Unsupported stock object %s</source>
-      <translation>ნედლეულის მხაარდაუჭერელი ობექტი %s</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathDressupPathBoundaryGui.py" line="181"/>
-      <source>Unsupported stock type %s (%d)</source>
-      <translation>ნედლეულის მხარდაუჭერელი ტიპი %s (%d)</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathOp</name>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="191"/>
-      <source>Edit</source>
-      <translation>ჩასწორება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="494"/>
-      <source>Base Geometry</source>
-      <translation>ბაზური გეომეტრია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="560"/>
-      <source>Vertexes are not supported</source>
-      <translation>წვეროები მხარდაჭერილი არაა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="567"/>
-      <source>Edges are not supported</source>
-      <translation>წიბოები მხარდაჭერილი არაა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="574"/>
-      <source>Faces are not supported</source>
-      <translation>ზედაპირები მხარდაჭერილი არაა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="640"/>
-      <source>Mulitiple operations are labeled as</source>
-      <translation>ოპერაციების ჯგუფი მონიშნულია, როგორც</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="716"/>
-      <source>Base Location</source>
-      <translation>ბაზური მდებარეობა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="835"/>
-      <source>Heights</source>
-      <translation>სიმაღლეები</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="936"/>
-      <source>Depths</source>
-      <translation>სიღრმეები</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="1041"/>
-      <source>Diameters</source>
-      <translation>დიამეტრები</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="1075"/>
-      <source>AreaOp Operation</source>
-      <translation>ოპერაცია AreaOp</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="1140"/>
-      <source>Operation</source>
-      <translation>ოპერაცია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="1205"/>
-      <source>Uncreate AreaOp Operation</source>
-      <translation type="unfinished">Uncreate AreaOp Operation</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="1347"/>
-      <source>Pick Start Point</source>
-      <translation>აირჩიეთ საწყისი წერტილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="1387"/>
-      <source>No suitable tool controller found.
-Aborting op creation</source>
-      <translation>ხელსაწყოს შესატყვისი კონტროლერი ნაპოვნი არაა.
-ოპის შექმნა გაუქმებულია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathOpGui.py" line="1394"/>
-      <source>No tool controller, aborting op creation</source>
-      <translation>ხელსაწყოს კონტროლერი ნაპოვნი არაა. ოპის შექმნა შეჩერებულია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathArray.py" line="199"/>
+      <location filename="../../../PathScripts/PathOp.py" line="174"/>
+      <location filename="../../../PathScripts/PathFixture.py" line="64"/>
+      <location filename="../../../PathScripts/PathPlane.py" line="47"/>
       <source>Make False, to prevent operation from generating code</source>
       <translation>გამორთეთ ოპერაციისთვის კოდის გენერაციის ხელის შესაშლელად</translation>
     </message>
-  </context>
-  <context>
-    <name>PathPlane</name>
     <message>
-      <location filename="../../../PathScripts/PathPlane.py" line="117"/>
-      <source>Selection Plane</source>
-      <translation>სიბრტყის არჩევა</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="182"/>
+      <source>An optional comment for this Operation</source>
+      <translation>ამ ოპერაციის არასავალდებულო კომენტარი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPlane.py" line="118"/>
-      <source>Create a Selection Plane object</source>
-      <translation>მონიშნული სიბრტყის ობიექტის შექმნა</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="188"/>
+      <source>User Assigned Label</source>
+      <translation>მომხმარებლის მიერ მინიჭებული ჭდე</translation>
     </message>
-  </context>
-  <context>
-    <name>PathPocket</name>
     <message>
-      <location filename="../../../PathScripts/PathFeatureExtensionsGui.py" line="180"/>
-      <source>Normal</source>
-      <translation>ნორმალური</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="194"/>
+      <location filename="../../../PathScripts/PathOp.py" line="465"/>
+      <location filename="../../../PathScripts/PathJob.py" line="503"/>
+      <source>Operations Cycle Time Estimation</source>
+      <translation>ოპერაციების ციკლის დაახლოებითი დრო</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathFeatureExtensionsGui.py" line="181"/>
-      <source>X</source>
-      <translation>X</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="208"/>
+      <source>Base locations for this operation</source>
+      <translation>საბაზისო მდებარეობა ამ ოპერაციისთვის</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathFeatureExtensionsGui.py" line="182"/>
-      <source>Y</source>
-      <translation>Y</translation>
+      <location filename="../../../PathScripts/PathCopy.py" line="50"/>
+      <location filename="../../../PathScripts/PathOp.py" line="219"/>
+      <location filename="../../../PathScripts/PathArray.py" line="134"/>
+      <source>The tool controller that will be used to calculate the path</source>
+      <translation>ტრაექტორიის გამოსათვლელად გამოყენებული ხელსაწყოს კონტროლერი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketBaseGui.py" line="81"/>
-      <source>Pass Extension</source>
-      <translation>გამოტოვება</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="228"/>
+      <source>Coolant mode for this operation</source>
+      <translation>გამაგრილებლის რეჟიმი ამ ოპერაციისთვის</translation>
     </message>
-  </context>
-  <context>
-    <name>PathProfile</name>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="210"/>
-      <source>Outside</source>
-      <translation>გარედან</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="238"/>
+      <source>Starting Depth of Tool- first cut depth in Z</source>
+      <translation>ხელსაწყოს საწყისი სიღრმე - პირველი ჭრის Z</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="211"/>
-      <source>Inside</source>
-      <translation>შიგნით</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="246"/>
+      <source>Final Depth of Tool- lowest value in Z</source>
+      <translation>ხელსაწყოს საბოლოო სიღრმე - Z-ში მისი უმცირესი მნიშვნელობა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="197"/>
-      <source>CW</source>
-      <translation>სმ</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="260"/>
+      <source>Starting Depth internal use only for derived values</source>
+      <translation type="unfinished">Starting Depth internal use only for derived values</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="198"/>
-      <source>CCW</source>
-      <translation>სსს</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="271"/>
+      <source>Incremental Step Down of Tool</source>
+      <translation type="unfinished">Incremental Step Down of Tool</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="201"/>
-      <source>Collectively</source>
-      <translation>ერთად</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="281"/>
+      <source>Maximum material removed on final pass.</source>
+      <translation>ბოლო გავლისას მოცილებული მასალების მაქსიმუმი.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="202"/>
-      <source>Individually</source>
-      <translation>ცალცალკე</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="292"/>
+      <source>The height needed to clear clamps and obstructions</source>
+      <translation type="unfinished">The height needed to clear clamps and obstructions</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="205"/>
-      <source>Round</source>
-      <translation>მრგვალი</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="300"/>
+      <source>Rapid Safety Height between locations.</source>
+      <translation>ლოკაციებს შორის უქმი მოძრაობის უსაფრთხო სიმაღლე.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="206"/>
-      <source>Square</source>
-      <translation>კვადრატი</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="308"/>
+      <source>The start point of this path</source>
+      <translation>ამ ტრაექტორიის საწყისი წერტილი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="207"/>
-      <source>Miter</source>
-      <translation>ირიბპირა</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="431"/>
+      <location filename="../../../PathScripts/PathOp.py" line="316"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="459"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="240"/>
+      <source>Make True, if specifying a Start Point</source>
+      <translation>ჩართვა, თუ საწყისი წერტილი მიეთითება</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProfile.py" line="486"/>
-      <source>Unable to create path for face(s).</source>
-      <translation>ტრაექტორიის შექმნა ზედაპირ(ებ)-ისთვის შეუძლებელია.</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="326"/>
+      <source>Lower limit of the turning diameter</source>
+      <translation>შემობრუნების დიამეტრის ქვედა ზღვარი</translation>
     </message>
-  </context>
-  <context>
-    <name>PathStock</name>
     <message>
-      <location filename="../../../PathScripts/PathStock.py" line="89"/>
-      <source>Invalid base object %s - no shape found</source>
-      <translation type="unfinished">Invalid base object %s - no shape found</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="334"/>
+      <source>Upper limit of the turning diameter.</source>
+      <translation>შემობრუნების დიამეტრის ზედა ზღვარი.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathStock.py" line="596"/>
-      <source>Unsupported stock type named {}</source>
-      <translation>ნედლეულის მხარდაუჭერელი ტიპი სახელით {}</translation>
+      <location filename="../../../PathScripts/PathOp.py" line="445"/>
+      <source>Coolant option for this operation</source>
+      <translation>გამაგრილებლის მორგება ამ ოპერაციისთვის</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathStock.py" line="602"/>
-      <source>Unsupported PathStock template version {}</source>
-      <translation>PathStock-ის შაბლონის მხარდაუჭერელი ვერსია {}</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="117"/>
+      <source>The NC output file for this project</source>
+      <translation>ამ პროექტის NC გამოსატანი ფაილი</translation>
     </message>
-  </context>
-  <context>
-    <name>PathSurface</name>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="40"/>
-      <source>This operation requires OpenCamLib to be installed.</source>
-      <translation>ოპერაციის შესასრულებლად საჭიროა OpenCamLib-ი.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="123"/>
+      <source>Select the Post Processor</source>
+      <translation>აირჩიეთ პოსტპროცესორი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="559"/>
-      <source>The GeometryTolerance for this Job is 0.0.</source>
-      <translation>ამ დავალების GeometryTolerance 0.0-ის ტოლია.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="132"/>
+      <source>Arguments for the Post Processor (specific to the script)</source>
+      <translation type="unfinished">Arguments for the Post Processor (specific to the script)</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="560"/>
-      <source>Initializing LinearDeflection to 0.001 mm.</source>
-      <translation>LinearDeflection-ის საწყისი მნიშვნელობაა 0.0001 მმ.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="138"/>
+      <location filename="../../../PathScripts/PathJob.py" line="145"/>
+      <source>Last Time the Job was post-processed</source>
+      <translation>დრო, როცა ამოცანის პოსტპროცესინგი ბოლოჯერ მოხდა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="786"/>
-      <source>No JOB</source>
-      <translation>დავალებები არაა</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="153"/>
+      <source>An optional description for this job</source>
+      <translation>ამ ამოცანის არასავალდებულო აღწერა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="1041"/>
-      <source>operation time is</source>
-      <translation>ოპერაციის დრო</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="159"/>
+      <source>Job Cycle Time Estimation</source>
+      <translation>დავალების ციკლის დაახლოებითი დრო</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="1045"/>
-      <source>Canceled 3D Surface operation.</source>
-      <translation>ოპერაცია 3D ზედაპირზე გაუქმებულია.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="169"/>
+      <source>For computing Paths; smaller increases accuracy, but slows down computation</source>
+      <translation type="unfinished">For computing Paths; smaller increases accuracy, but slows down computation</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="1146"/>
-      <source>No profile geometry shape returned.</source>
-      <translation>პროფილის გეომეტრიის მოხაზულობის მიღების შეცდომა.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="176"/>
+      <source>Solid object to be used as stock.</source>
+      <translation>ნედლეულად გამოყენებული იქნება მყარი სხეული.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="1153"/>
-      <source>No profile path geometry returned.</source>
-      <translation>პროფილის ტრაექტორიის გეომეტრის მიღების შეცდომა.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="185"/>
+      <source>Compound path of all operations in the order they are processed.</source>
+      <translation type="unfinished">Compound path of all operations in the order they are processed.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="1168"/>
-      <source>No clearing shape returned.</source>
-      <translation>გაწმენდის ფორმა არ დაბრუნებულა.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="192"/>
+      <location filename="../../../PathScripts/PathJob.py" line="545"/>
+      <source>Select the Type of Job</source>
+      <translation>აირჩიეთ ამოცანის ტიპი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="1174"/>
-      <source>No clearing path geometry returned.</source>
-      <translation>გასუფთავების ტრაექტორიის გეომეტრიის მიღების შეცდომა.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="202"/>
+      <location filename="../../../PathScripts/PathJob.py" line="536"/>
+      <source>Split output into multiple gcode files</source>
+      <translation>გამომავლის მრავალ gcode ფაილად დაშლა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="1196"/>
-      <source>No scan data to convert to Gcode.</source>
-      <translation type="unfinished">No scan data to convert to Gcode.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="210"/>
+      <location filename="../../../PathScripts/PathJob.py" line="525"/>
+      <source>If multiple WCS, order the output this way</source>
+      <translation type="unfinished">If multiple WCS, order the output this way</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="2767"/>
-      <source>Failed to identify tool for operation.</source>
-      <translation>ამ ოპერაციის ხელსაწყოს გამოცნობის შეცდომა.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="218"/>
+      <location filename="../../../PathScripts/PathJob.py" line="514"/>
+      <source>The Work Coordinate Systems for the Job</source>
+      <translation>ამოცანის სამუშაო კოორდინატთა სისტემები</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="2777"/>
-      <source>Failed to map selected tool to an OCL tool type.</source>
-      <translation type="unfinished">Failed to map selected tool to an OCL tool type.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="306"/>
+      <source>SetupSheet holding the settings for this job</source>
+      <translation type="unfinished">SetupSheet holding the settings for this job</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="2791"/>
-      <source>Failed to translate active tool to OCL tool type.</source>
-      <translation>აქტიური ხელსაწყოს OCL ხელსაწყოს ტიპად გარდაქმნის შეცდომა.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="329"/>
+      <source>The base objects for all operations</source>
+      <translation>ყველა ოპერაციის საბაზისო ობიექტები</translation>
     </message>
-  </context>
-  <context>
-    <name>PathSurfaceSupport</name>
     <message>
-      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="94"/>
-      <source>Shape appears to not be horizontal planar.</source>
-      <translation>მოხაზულობა არ წარმოადგენს ჰორიზონტალურ სიბრტყეს.</translation>
+      <location filename="../../../PathScripts/PathJob.py" line="365"/>
+      <source>Collection of all tool controllers for the job</source>
+      <translation>ამოცანის ხელსაწყოების ყველა კონტროლერის კრებული</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="119"/>
-      <source>Cannot calculate the Center Of Mass.</source>
-      <translation>მასის ცენტრის გამოთვლა შეუძლებელია.</translation>
+      <location filename="../../../PathScripts/PathDrilling.py" line="110"/>
+      <source>Incremental Drill depth before retracting to clear chips</source>
+      <translation type="unfinished">Incremental Drill depth before retracting to clear chips</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="122"/>
-      <source>Using Center of Boundbox instead.</source>
-      <translation>ვიყენებ შემომსაზღვრელი ჩარჩოს ცენტრს ამის მაგიერ.</translation>
+      <location filename="../../../PathScripts/PathDrilling.py" line="116"/>
+      <source>Enable pecking</source>
+      <translation>G83 ციკლის ჩართვა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="511"/>
-      <source>Ignoring selected faces.</source>
-      <translation>მონიშნული ზედაპირების იგნორი.</translation>
+      <location filename="../../../PathScripts/PathDrilling.py" line="122"/>
+      <source>The time to dwell between peck cycles</source>
+      <translation>G83 ციკლებს შორის დაყოვნების დრო</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="2652"/>
-      <source>Diameter dimension missing from ToolBit shape.</source>
-      <translation>ხელსაწყოს მონახაზში დიამეტრის ზომა აკლია.</translation>
+      <location filename="../../../PathScripts/PathDrilling.py" line="128"/>
+      <source>Enable dwell</source>
+      <translation>დაყოვნების ჩართვა</translation>
     </message>
-  </context>
-  <context>
-    <name>PathToolBit</name>
     <message>
-      <location filename="../../../PathScripts/PathToolBitGui.py" line="116"/>
-      <source>Toolbit cannot be edited: Shapefile not found</source>
-      <translation>ხელსაწყოს იარაღის მჭრელი იარაღის ჩასწორება შეუძლებელია: Shapefile ვერ ვიპოვე</translation>
+      <location filename="../../../PathScripts/PathDrilling.py" line="137"/>
+      <source>Calculate the tip length and subtract from final depth</source>
+      <translation type="unfinished">Calculate the tip length and subtract from final depth</translation>
     </message>
-  </context>
-  <context>
-    <name>PathToolLibraryManager</name>
     <message>
-      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="141"/>
-      <source>Tooltable JSON (*.json)</source>
-      <translation>ხელსაწყოების ცხრილის JSON (*.json)</translation>
+      <location filename="../../../PathScripts/PathDrilling.py" line="145"/>
+      <source>Controls how tool retracts Default=G99</source>
+      <translation>აკონტროლებს, როგორ გამოდის ხელსაწყო. ნაგულისხმევი=G99</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="142"/>
-      <source>Tooltable XML (*.xml)</source>
-      <translation>ხელსაწყოების ცხრილის XML (*.xml)</translation>
+      <location filename="../../../PathScripts/PathDrilling.py" line="154"/>
+      <source>The height where feed starts and height during retract tool when path is finished while in a peck operation</source>
+      <translation type="unfinished">The height where feed starts and height during retract tool when path is finished while in a peck operation</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="143"/>
-      <source>HeeksCAD tooltable (*.tooltable)</source>
-      <translation>HeeksCAD-ის ხელსაწყოების ცხრილი (*.tooltable)</translation>
+      <location filename="../../../PathScripts/PathDrilling.py" line="160"/>
+      <source>How far the drill depth is extended</source>
+      <translation type="unfinished">How far the drill depth is extended</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="146"/>
-      <source>LinuxCNC tooltable (*.tbl)</source>
-      <translation>LinuxCNC-ის ხელსაწყოების ცხრილი (*.tbl)</translation>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="959"/>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="131"/>
+      <source>Width of tags.</source>
+      <translation>ჭდეების სიგანე.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="220"/>
-      <source>Tool Table Same Name</source>
-      <translation>ხელსაწყოების ცხრილის გამეორებადი სახელი</translation>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="965"/>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="137"/>
+      <source>Height of tags.</source>
+      <translation>ჭდეების სიმაღლე.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="223"/>
-      <source>Tool Table Name Exists</source>
-      <translation>ხელსაწყოების ცხრილის სახელი უკვე არსებობს</translation>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="971"/>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="143"/>
+      <source>Angle of tag plunge and ascent.</source>
+      <translation type="unfinished">Angle of tag plunge and ascent.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="296"/>
-      <source>Unsupported Path tooltable</source>
-      <translation>ტრაექტორიის ხელსაწყოების ცხრილი მხარდაუჭერელია</translation>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="977"/>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="149"/>
+      <source>Radius of the fillet for the tag.</source>
+      <translation>ჭდის მომრგვალების რადიუსი.</translation>
     </message>
-  </context>
-  <context>
-    <name>PathWaterline</name>
     <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="187"/>
-      <source>New property added to</source>
-      <translation>ახალი თვისება დაემატა</translation>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="983"/>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="155"/>
+      <source>Locations of inserted holding tags</source>
+      <translation type="unfinished">Locations of inserted holding tags</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="189"/>
-      <source>Check default value(s).</source>
-      <translation>ნაგულისხმევი მნიშვნელობების შემოწმება.</translation>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="989"/>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="161"/>
+      <source>IDs of disabled holding tags</source>
+      <translation type="unfinished">IDs of disabled holding tags</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="505"/>
-      <source>The GeometryTolerance for this Job is 0.0.</source>
-      <translation>ამ დავალების GeometryTolerance 0.0-ის ტოლია.</translation>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="998"/>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="170"/>
+      <source>Factor determining the # of segments used to approximate rounded tags.</source>
+      <translation type="unfinished">Factor determining the # of segments used to approximate rounded tags.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="508"/>
-      <source>Initializing LinearDeflection to 0.0001 mm.</source>
-      <translation>LinearDeflection-ის საწყისი მნიშვნელობაა 0.0001 მმ.</translation>
+      <location filename="../../../PathScripts/PathToolController.py" line="71"/>
+      <source>The active tool</source>
+      <translation>მიმდინარე ხელსაწყო</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="662"/>
-      <source>Cut pattern angle limits are +-360 degrees.</source>
-      <translation type="unfinished">Cut pattern angle limits are +-360 degrees.</translation>
+      <location filename="../../../PathScripts/PathToolController.py" line="80"/>
+      <source>The speed of the cutting spindle in RPM</source>
+      <translation>მჭრელი შპინდელის ბრუნების რაოდენობა წუთში</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="669"/>
-      <source>Cut pattern angle limits are +- 360 degrees.</source>
-      <translation type="unfinished">Cut pattern angle limits are +- 360 degrees.</translation>
+      <location filename="../../../PathScripts/PathToolController.py" line="86"/>
+      <source>Direction of spindle rotation</source>
+      <translation>შპინდელის ბრუნვის მიმართულება</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="771"/>
-      <source>No JOB</source>
-      <translation>დავალებები არაა</translation>
+      <location filename="../../../PathScripts/PathToolController.py" line="92"/>
+      <source>Feed rate for vertical moves in Z</source>
+      <translation>მიწოდების სიჩქარე Z-ში ვერტიკალური გადაადგილებისთვის</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="1040"/>
-      <source>operation time is</source>
-      <translation>ოპერაციის დრო</translation>
+      <location filename="../../../PathScripts/PathToolController.py" line="98"/>
+      <source>Feed rate for horizontal moves</source>
+      <translation>მიწოდების სიჩქარე ჰორიზონტალური გადაადგილებისთვის</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_3dTools</name>
     <message>
-      <location filename="../../../InitGui.py" line="167"/>
-      <source>3D Operations</source>
-      <translation>3D ოპერაციები</translation>
+      <location filename="../../../PathScripts/PathToolController.py" line="104"/>
+      <source>Rapid rate for vertical moves in Z</source>
+      <translation>ჰორიზონტალური უქმი მოძრაობის სიჩქარე Z ღერძზე</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Adaptive</name>
     <message>
-      <location filename="../../../PathScripts/PathAdaptive.py" line="915"/>
-      <source>Outside</source>
-      <translation>გარედან</translation>
+      <location filename="../../../PathScripts/PathToolController.py" line="110"/>
+      <source>Rapid rate for horizontal moves</source>
+      <translation>ჰორიზონტალური უქმი მოძრაობის სიჩქარე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathAdaptive.py" line="916"/>
-      <source>Inside</source>
-      <translation>შიგნით</translation>
+      <location filename="../../../PathScripts/PathToolController.py" line="321"/>
+      <location filename="../../../PathScripts/PathToolController.py" line="330"/>
+      <source>The tool used by this controller</source>
+      <translation>ამ კონტროლერის მიერ გამოყენებული ხელსაწყო</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathAdaptive.py" line="919"/>
-      <source>Clearing</source>
-      <translation>გასუფთავება</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="127"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="204"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="126"/>
+      <source>Show the temporary path construction objects when module is in DEBUG mode.</source>
+      <translation type="unfinished">Show the temporary path construction objects when module is in DEBUG mode.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathAdaptive.py" line="920"/>
-      <source>Profiling</source>
-      <translation>პროფილირება</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="136"/>
+      <source>Smaller values yield a finer, more accurate mesh. Smaller values increase processing time a lot.</source>
+      <translation>რაც მცირეა მნიშვნელობა, ბადე მით უფრო ზუსტი და მკაფიო იქნება. მცირე მნიშვნელობები ასევე საგრძნობლად ზრდიან დამუშავების დროს.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathAdaptiveGui.py" line="137"/>
-      <source>Adaptive</source>
-      <translation>ადაპტაციური</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="145"/>
+      <source>Smaller values yield a finer, more accurate mesh. Smaller values do not increase processing time much.</source>
+      <translation>მცირე მნიშვნელობების შედეგია უფრო ზუსტი ბადე. მცირე მნიშვნელობები გადამუშავების დროს არც ისე ძალიან ზრდიან.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathAdaptiveGui.py" line="137"/>
-      <source>Adaptive clearing and profiling</source>
-      <translation>ადაპტიური გაწმენდა და პროფილირება</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="153"/>
+      <location filename="../../../PathScripts/PathSurface.py" line="194"/>
+      <source>Stop index(angle) for rotational scan</source>
+      <translation type="unfinished">Stop index(angle) for rotational scan</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Array</name>
     <message>
-      <location filename="../../../PathScripts/PathArray.py" line="512"/>
-      <source>Array</source>
-      <translation>მასივი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="162"/>
+      <source>Dropcutter lines are created parallel to this axis.</source>
+      <translation type="unfinished">Dropcutter lines are created parallel to this axis.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathArray.py" line="513"/>
-      <source>Creates an array from selected path(s)</source>
-      <translation>მონიშნული ტრაექტორი(ებ)-ისგან მასივის შექმნა</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="170"/>
+      <source>Additional offset to the selected bounding box</source>
+      <translation>მონიშნული შემომსაზღვრელი ჩარჩოს დამატებითი წანაცვლება</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathArray.py" line="532"/>
-      <source>Arrays can be created only from Path operations.</source>
-      <translation>მასივების შექმნა მხოლოდ ტრაექტორიის ოპერაციებითაა შესაძლებელი.</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="178"/>
+      <source>The model will be rotated around this axis.</source>
+      <translation>მოდელი შემოტრიალდება ღერძის გარშემო.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Comment</name>
     <message>
-      <location filename="../../../PathScripts/PathComment.py" line="103"/>
-      <source>Comment</source>
-      <translation>კომენტარი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="186"/>
+      <source>Start index(angle) for rotational scan</source>
+      <translation type="unfinished">Start index(angle) for rotational scan</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathComment.py" line="104"/>
-      <source>Add a Comment to your CNC program</source>
-      <translation>თქვენს CNC პროგრამაში კომენტარის ჩამატება</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="203"/>
+      <source>Planar: Flat, 3D surface scan.  Rotational: 4th-axis rotational scan.</source>
+      <translation type="unfinished">Planar: Flat, 3D surface scan.  Rotational: 4th-axis rotational scan.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Copy</name>
     <message>
-      <location filename="../../../PathScripts/PathCopy.py" line="91"/>
-      <source>Copy</source>
-      <translation>კოპირება</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="212"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="231"/>
+      <source>Avoid cutting the last 'N' faces in the Base Geometry list of selected faces.</source>
+      <translation type="unfinished">Avoid cutting the last 'N' faces in the Base Geometry list of selected faces.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathCopy.py" line="92"/>
-      <source>Creates a linked copy of another path</source>
-      <translation>სხვა ტრაექტორიაზე მიბმული ასლის შექმნა</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="220"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="239"/>
+      <source>Do not cut internal features on avoided faces.</source>
+      <translation>არ გაჭრა თავიდან ასაცილებელი ზედაპირების შიდა თვისებები.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Custom</name>
     <message>
-      <location filename="../../../PathScripts/PathCustomGui.py" line="67"/>
-      <source>Custom</source>
-      <translation>მომხმარებლის</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="229"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="248"/>
+      <source>Positive values push the cutter toward, or beyond, the boundary. Negative values retract the cutter away from the boundary.</source>
+      <translation type="unfinished">Positive values push the cutter toward, or beyond, the boundary. Negative values retract the cutter away from the boundary.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathCustomGui.py" line="67"/>
-      <source>Create custom gcode snippet</source>
-      <translation>მომხმარებლის gcode-ის ფრაგმენტის შექმნა</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="238"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="257"/>
+      <source>If true, the cutter will remain inside the boundaries of the model or selected face(s).</source>
+      <translation type="unfinished">If true, the cutter will remain inside the boundaries of the model or selected face(s).</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Deburr</name>
     <message>
-      <location filename="../../../PathScripts/PathDeburrGui.py" line="140"/>
-      <source>Deburr</source>
-      <translation>დებური</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="256"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="275"/>
+      <source>Positive values push the cutter toward, or into, the feature. Negative values retract the cutter away from the feature.</source>
+      <translation type="unfinished">Positive values push the cutter toward, or into, the feature. Negative values retract the cutter away from the feature.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDeburrGui.py" line="140"/>
-      <source>Creates a Deburr Path along Edges or around Faces</source>
-      <translation type="unfinished">Creates a Deburr Path along Edges or around Faces</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="265"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="284"/>
+      <source>Cut internal feature areas within a larger selected face.</source>
+      <translation type="unfinished">Cut internal feature areas within a larger selected face.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Dressup</name>
     <message>
-      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="367"/>
-      <source>Please select one path object
-</source>
-      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი
-</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="273"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="301"/>
+      <source>Select the overall boundary for the operation.</source>
+      <translation>აირჩიეთ ოპერაციის საერთო საზღვარი.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="372"/>
-      <source>The selected object is not a path
-</source>
-      <translation>მონიშნული ობიექტი მისამართი არაა
-</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="282"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="319"/>
+      <source>Set the direction for the cutting tool to engage the material: Climb (ClockWise) or Conventional (CounterClockWise)</source>
+      <translation type="unfinished">Set the direction for the cutting tool to engage the material: Climb (ClockWise) or Conventional (CounterClockWise)</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="377"/>
-      <source>Please select a Path object</source>
-      <translation>აირჩიეთ ტრაექტორიის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="291"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="328"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="151"/>
+      <source>Set the geometric clearing pattern to use for the operation.</source>
+      <translation type="unfinished">Set the geometric clearing pattern to use for the operation.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_DressupAxisMap</name>
     <message>
-      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="266"/>
-      <source>Axis Map Dress-up</source>
-      <translation>ღერძების რუკის ზღუდარი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="299"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="336"/>
+      <source>The yaw angle used for certain clearing patterns</source>
+      <translation type="unfinished">The yaw angle used for certain clearing patterns</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="268"/>
-      <source>Remap one axis to another.</source>
-      <translation type="unfinished">Remap one axis to another.</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="308"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="345"/>
+      <source>Reverse the cut order of the stepover paths. For circular cut patterns, begin at the outside and work toward the center.</source>
+      <translation type="unfinished">Reverse the cut order of the stepover paths. For circular cut patterns, begin at the outside and work toward the center.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_DressupDogbone</name>
     <message>
-      <location filename="../../../PathScripts/PathDressupDogbone.py" line="1365"/>
-      <source>Dogbone Dress-up</source>
-      <translation>კუთხის გარშემო შემოჭრის ზღუდარი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="317"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="354"/>
+      <source>Set the Z-axis depth offset from the target surface.</source>
+      <translation type="unfinished">Set the Z-axis depth offset from the target surface.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupDogbone.py" line="1384"/>
-      <source>Please select one path object</source>
-      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="326"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="371"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="178"/>
+      <source>Complete the operation in a single pass at depth, or mulitiple passes to final depth.</source>
+      <translation>ოპერაციის სიღრმეზე ერთი გავლის დასრულება. ან აირჩიეთ მრავალი გავლა, სრული სიღრმის მისაღწევად.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupDogbone.py" line="1390"/>
-      <source>The selected object is not a path</source>
-      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="334"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="379"/>
+      <source>Set the start point for the cut pattern.</source>
+      <translation>დააყენეთ შაბლონის ამოჭრის საწყისი წერტილი.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_DressupDragKnife</name>
     <message>
-      <location filename="../../../PathScripts/PathDressupDragknife.py" line="602"/>
-      <source>DragKnife Dress-up</source>
-      <translation>დანის ტექნიკური ზღუდარი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="343"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="388"/>
+      <source>Choose location of the center point for starting the cut pattern.</source>
+      <translation type="unfinished">Choose location of the center point for starting the cut pattern.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupDragknife.py" line="623"/>
-      <source>Please select one path object</source>
-      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="351"/>
+      <source>Profile the edges of the selection.</source>
+      <translation>მონიშნულის წიბოების პროფილირება.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupDragknife.py" line="629"/>
-      <source>The selected object is not a path</source>
-      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="360"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="397"/>
+      <source>Set the sampling resolution. Smaller values quickly increase processing time.</source>
+      <translation>დააყენეთ სამპლინგის გაფართოება. მცირე მნიშვნელობები სწრაფად ზრდიან დამუშავების დროს.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupDragknife.py" line="635"/>
-      <source>Please select a Path object</source>
-      <translation>აირჩიეთ ტრაექტორიის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="369"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="406"/>
+      <source>Set the stepover percentage, based on the tool's diameter.</source>
+      <translation type="unfinished">Set the stepover percentage, based on the tool's diameter.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_DressupLeadInOut</name>
     <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="60"/>
-      <source>Arc</source>
-      <translation>რკალი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="378"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="415"/>
+      <source>Enable optimization of linear paths (co-linear points). Removes unnecessary co-linear points from G-Code output.</source>
+      <translation type="unfinished">Enable optimization of linear paths (co-linear points). Removes unnecessary co-linear points from G-Code output.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="61"/>
-      <source>Tangent</source>
-      <translation>მხები</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="387"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="424"/>
+      <source>Enable separate optimization of transitions between, and breaks within, each step over path.</source>
+      <translation>ტრაექტორიის თითოეული ბიჯის, მათ შორის გადასვლის და ჩატეხვების ცალცალკე გაუმჯობესება.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="62"/>
-      <source>Perpendicular</source>
-      <translation type="unfinished">Perpendicular</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="396"/>
+      <source>Convert co-planar arcs to G2/G3 gcode commands for `Circular` and `CircularZigZag` cut patterns.</source>
+      <translation type="unfinished">Convert co-planar arcs to G2/G3 gcode commands for `Circular` and `CircularZigZag` cut patterns.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="127"/>
-      <source>Radius</source>
-      <translation>რადიუსი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="405"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="433"/>
+      <source>Collinear and co-radial artifact gaps that are smaller than this threshold are closed in the path.</source>
+      <translation type="unfinished">Collinear and co-radial artifact gaps that are smaller than this threshold are closed in the path.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="128"/>
-      <source>Center</source>
-      <translation>ცენტრი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="414"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="442"/>
+      <source>Feedback: three smallest gaps identified in the path geometry.</source>
+      <translation>კომენტარი: ტრაექტორიის გეომეტრიაში ნაპოვნია სამი ძალიან პატარა ღრიჭო.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="189"/>
-      <source>Length/Radius positive not Null</source>
-      <translation>სიგრძე/რადიუსი უნდა იყოს ნულზე მეტი</translation>
+      <location filename="../../../PathScripts/PathSurface.py" line="423"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="451"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="232"/>
+      <source>The custom start point for the path of this operation</source>
+      <translation type="unfinished">The custom start point for the path of this operation</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="709"/>
-      <source>LeadInOut Dressup</source>
-      <translation type="unfinished">LeadInOut Dressup</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="45"/>
+      <source>The path(s) to array</source>
+      <translation>ტრაექტორი(ებ)-იდან მასივამდე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="726"/>
-      <source>Please select one path object</source>
-      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="51"/>
+      <source>Pattern method</source>
+      <translation>შაბლონის მეთოდი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="733"/>
-      <source>The selected object is not a path</source>
-      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="60"/>
+      <source>The spacing between the array copies in Linear pattern</source>
+      <translation>მასივის ასლებს შორის დაცილება ხაზოვან შაბლონში</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="739"/>
-      <source>Please select a Profile object</source>
-      <translation>გთხოვთ, აირჩიეთ პროფილის ტიპის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="68"/>
+      <source>The number of copies in X direction in Linear pattern</source>
+      <translation>ასლების რაოდენობა X მიმართულებით ხაზოვანი შაბლონით</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="44"/>
-      <source>Dressup</source>
-      <translation>შეფუთვა</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="76"/>
+      <source>The number of copies in Y direction in Linear pattern</source>
+      <translation>ასლების რაოდენობა Y მიმართულებით ხაზოვანი შაბლონით</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="82"/>
-      <source>LeadIn</source>
-      <translation type="unfinished">LeadIn</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="82"/>
+      <source>Total angle in Polar pattern</source>
+      <translation>ჯამური კუთხე პოლარულ შაბლონში</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="97"/>
-      <source>Enable LeadIn</source>
-      <translation type="unfinished">Enable LeadIn</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="90"/>
+      <source>The number of copies in Linear 1D and Polar pattern</source>
+      <translation>ასლების რაოდენობა ხაზოვან 1D და პოლარულ შაბლონში</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="106"/>
-      <source>Extend In:</source>
-      <translation type="unfinished">Extend In:</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="98"/>
+      <source>The centre of rotation in Polar pattern</source>
+      <translation>პოლარულ შაბლონში ბრუნვის ცენტრი</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="127"/>
-      <source>Style In:</source>
-      <translation type="unfinished">Style In:</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="107"/>
+      <source>Make copies in X direction before Y in Linear 2D pattern</source>
+      <translation type="unfinished">Make copies in X direction before Y in Linear 2D pattern</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="162"/>
-      <source>LeadOut</source>
-      <translation type="unfinished">LeadOut</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="113"/>
+      <source>Percent of copies to randomly offset</source>
+      <translation>შემთხვევით წასანაცვლებელი ასლების რაოდენობა (%)</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="177"/>
-      <source>Enable LeadOut</source>
-      <translation type="unfinished">Enable LeadOut</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="119"/>
+      <source>Maximum random offset of copies</source>
+      <translation>ასლების მაქსიმალური შემთხვევითი წანაცვლება</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="186"/>
-      <source>Extend Out:</source>
-      <translation type="unfinished">Extend Out:</translation>
+      <location filename="../../../PathScripts/PathArray.py" line="125"/>
+      <location filename="../../../PathScripts/PathArray.py" line="175"/>
+      <source>Seed value for jitter randomness</source>
+      <translation type="unfinished">Seed value for jitter randomness</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="207"/>
-      <source>Style Out:</source>
-      <translation type="unfinished">Style Out:</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="118"/>
+      <source>Default speed for horizontal rapid moves.</source>
+      <translation>ჰორიზონტალური უქმი მოძრაობის ნაგულისხმევი სიჩქარე.</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="242"/>
-      <source>Length / Radius:</source>
-      <translation type="unfinished">Length / Radius:</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="126"/>
+      <source>Default speed for vertical rapid moves.</source>
+      <translation>ვერტიკალური უქმი მოძრაობის ნაგულისხმევი სიჩქარე.</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="269"/>
-      <source>Radius / Center:</source>
-      <translation type="unfinished">Radius / Center:</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="132"/>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="414"/>
+      <source>Coolant Modes</source>
+      <translation>გამაგრილებლის რეჟიმები</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="296"/>
-      <source>Keep Tool Down</source>
-      <translation type="unfinished">Keep Tool Down</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="138"/>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="423"/>
+      <source>Default coolant mode.</source>
+      <translation>გამაგრილებლის ნაგულისხმევი რეჟიმი.</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="303"/>
-      <source>Rapid Plunge</source>
-      <translation type="unfinished">Rapid Plunge</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="147"/>
+      <source>The usage of this field depends on SafeHeightExpression - by default its value is added to StartDepth and used for SafeHeight of an operation.</source>
+      <translation>ამ ველის გამოყენება დამოკიდებულია SafeHeightExpression-ზე. ნაგულისხმევად მისი მნიშვნელობა ემატება StarDepth-ს და გამოიყენება SafeHeight ოპერაციის მიერ.</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="314"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Apply Lead In/Out on all layers&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Apply Lead In/Out on all layers&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="155"/>
+      <source>Expression set for the SafeHeight of new operations.</source>
+      <translation>ახალი ოპერაციების SafeHeight-სთვის გამოყენებული გამოთქმების ნაკრები.</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="317"/>
-      <source>Include Layers</source>
-      <translation type="unfinished">Include Layers</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="164"/>
+      <source>The usage of this field depends on ClearanceHeightExpression - by default is value is added to StartDepth and used for ClearanceHeight of an operation.</source>
+      <translation>ამ ველის გამოყენება დამოკიდებულია ClearanceHeightExpression-ზე - ნაგულისხმევად მისი მნიშვნელობა ემატება StartDepth-ს და გამოიყენება ClearanceHeight ოპერაციის მიერ.</translation>
     </message>
     <message>
-      <location filename="../panels/DressUpLeadInOutEdit.ui" line="324"/>
-      <source>Use Machine CRC</source>
-      <translation type="unfinished">Use Machine CRC</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="173"/>
+      <source>Expression set for the ClearanceHeight of new operations.</source>
+      <translation>ახალი ოპერაციების ClearanceHeight-სთვის გამოყენებული გამოთქმების ნაკრები.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_DressupPathBoundary</name>
     <message>
-      <location filename="../../../PathScripts/PathDressupPathBoundaryGui.py" line="263"/>
-      <source>Boundary Dress-up</source>
-      <translation>საზღვრის ზღუდარი</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="181"/>
+      <source>Expression used for StartDepth of new operations.</source>
+      <translation>ახალი ოპერაციების StepDepth-სთვის გამოყენებული გამოთქმა.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupPathBoundaryGui.py" line="283"/>
-      <source>Please select one path object</source>
-      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="189"/>
+      <source>Expression used for FinalDepth of new operations.</source>
+      <translation>ახალი ოპერაციების FinalDepth-სთვის გამოყენებული გამოთქმა.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupPathBoundary.py" line="304"/>
-      <source>The selected object is not a path</source>
-      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+      <location filename="../../../PathScripts/PathSetupSheet.py" line="197"/>
+      <source>Expression used for StepDown of new operations.</source>
+      <translation>ახალი ოპერაციების StepDown-სთვის გამოყენებული გამოთქმა.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_DressupRampEntry</name>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="133"/>
-      <source>RampMethod1</source>
-      <translation>RampMethod1</translation>
+      <location filename="../../../PathScripts/PathDressupDragknife.py" line="68"/>
+      <source>Angles less than filter angle will not receive corner actions</source>
+      <translation type="unfinished">Angles less than filter angle will not receive corner actions</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="134"/>
-      <source>RampMethod2</source>
-      <translation>RampMethod2</translation>
+      <location filename="../../../PathScripts/PathDressupDragknife.py" line="76"/>
+      <source>Distance the point trails behind the spindle</source>
+      <translation type="unfinished">Distance the point trails behind the spindle</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="135"/>
-      <source>RampMethod3</source>
-      <translation>RampMethod3</translation>
+      <location filename="../../../PathScripts/PathDressupDragknife.py" line="82"/>
+      <source>Height to raise during corner action</source>
+      <translation>კუთხის მოქმედებისას აწევის სიმაღლე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="136"/>
-      <source>Helix</source>
-      <translation>სპირალები</translation>
+      <location filename="../../../PathScripts/PathCircularHoleBase.py" line="80"/>
+      <source>List of disabled features</source>
+      <translation>გამორთული თვისებების სია</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="139"/>
-      <source>Horizontal Feed Rate</source>
-      <translation>ჰორიზონტალური მიწოდების სიჩქარე</translation>
+      <location filename="../../../PathScripts/PathFeatureExtensions.py" line="482"/>
+      <source>Default length of extensions.</source>
+      <translation>გაფართოებებიის ნაგულისხმევი სიგრძე.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="143"/>
-      <source>Vertical Feed Rate</source>
-      <translation>ვერტიკალური მიწოდების სიჩქარე</translation>
+      <location filename="../../../PathScripts/PathFeatureExtensions.py" line="489"/>
+      <source>List of features to extend.</source>
+      <translation>გასაფართოებელი თვისებების სია.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="147"/>
-      <source>Ramp Feed Rate</source>
-      <translation>რამპის მიწოდების სიჩქარე</translation>
+      <location filename="../../../PathScripts/PathFeatureExtensions.py" line="499"/>
+      <source>When enabled connected extension edges are combined to wires.</source>
+      <translation type="unfinished">When enabled connected extension edges are combined to wires.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="151"/>
-      <source>Custom</source>
-      <translation>მომხმარებლის</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1116"/>
+      <location filename="../../../PathScripts/PathPocketShape.py" line="71"/>
+      <source>Uses the outline of the base geometry.</source>
+      <translation type="unfinished">Uses the outline of the base geometry.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="900"/>
-      <source>RampEntry Dress-up</source>
-      <translation type="unfinished">RampEntry Dress-up</translation>
+      <location filename="../../../PathScripts/PathAreaOp.py" line="99"/>
+      <location filename="../../../PathScripts/PathAreaOp.py" line="168"/>
+      <source>Split Arcs into discrete segments</source>
+      <translation>რკალების დისკრეტულ სეგმენტებად დაყოფა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="920"/>
-      <source>Please select one path object</source>
-      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathDressupPathBoundary.py" line="65"/>
+      <source>Solid object to be used to limit the generated Path.</source>
+      <translation>გენერირებული ტრაექტორიის შესაზღუდად გამოყენებული მყარი სხეული.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="927"/>
-      <source>The selected object is not a path</source>
-      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+      <location filename="../../../PathScripts/PathDressupPathBoundary.py" line="75"/>
+      <source>Determines if Boundary describes an inclusion or exclusion mask.</source>
+      <translation type="unfinished">Determines if Boundary describes an inclusion or exclusion mask.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="933"/>
-      <source>Please select a Profile object</source>
-      <translation>გთხოვთ, აირჩიეთ პროფილის ტიპის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathComment.py" line="41"/>
+      <source>Comment or note for CNC program</source>
+      <translation>კომენტარი ან შენიშვნა CNC პროგრამისთვის</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_DressupTag</name>
     <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="301"/>
-      <source>The selected object is not a path</source>
-      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+      <location filename="../../../PathScripts/PathCopy.py" line="41"/>
+      <source>The path to be copied</source>
+      <translation>დასაკოპირებელი ტრაექტორია</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="307"/>
-      <source>Please select a Profile object</source>
-      <translation>გთხოვთ, აირჩიეთ პროფილის ტიპის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathProbe.py" line="57"/>
+      <source>X offset between tool and probe</source>
+      <translation>ზონდსა და ხელსაწყოს შორის წანაცვლების X</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupTagPreferences.py" line="93"/>
-      <source>Holding Tag</source>
-      <translation type="unfinished">Holding Tag</translation>
+      <location filename="../../../PathScripts/PathProbe.py" line="63"/>
+      <source>Y offset between tool and probe</source>
+      <translation>ზონდსა და ხელსაწყოს შორის წანაცვლების Y</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupTagGui.py" line="566"/>
-      <source>Tag Dress-up</source>
-      <translation>ჭდის ზღუდარი</translation>
+      <location filename="../../../PathScripts/PathProbe.py" line="71"/>
+      <source>Number of points to probe in X direction</source>
+      <translation>X მიმართულებით ზონდირებადი წერტილების რაოდენობა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupTagGui.py" line="567"/>
-      <source>Creates a Tag Dress-up object from a selected path</source>
-      <translation>მონიშნული ტრაექტორიიდან ჭდის ზღუდარის ობიექტის შექმნა</translation>
+      <location filename="../../../PathScripts/PathProbe.py" line="79"/>
+      <source>Number of points to probe in Y direction</source>
+      <translation>Y მიმართულებით ზონდირებადი წერტილების რაოდენობა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupTagGui.py" line="583"/>
-      <source>Please select one path object</source>
-      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathProbe.py" line="87"/>
+      <source>The output location for the probe data to be written</source>
+      <translation>ფაილის, სადაც ზონდის მონაცემები ჩაიწერება, მდებარეობა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="202"/>
-      <source>No Base object found.</source>
-      <translation>საბაზისო ობიექტები ნაპოვნი არაა.</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="948"/>
+      <source>Side of selected faces that tool should cut</source>
+      <translation type="unfinished">Side of selected faces that tool should cut</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="205"/>
-      <source>Base is not a Path::Feature object.</source>
-      <translation>ბაზა არ წარმოადგენს Path::Feature ობიექტს.</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="962"/>
+      <source>Type of adaptive operation</source>
+      <translation>ადაპტიური ოპერაციის ტიპი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="210"/>
-      <source>Base doesn't have a Path to dress-up.</source>
-      <translation>ზღუდარის დასადებად ბაზისს ტრაექტორია არ გააჩნია.</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="976"/>
+      <source>Influences accuracy and performance</source>
+      <translation type="unfinished">Influences accuracy and performance</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupTag.py" line="215"/>
-      <source>Base Path is empty.</source>
-      <translation>საბაზისო ტრაექტორია ცარიელია.</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="985"/>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="150"/>
+      <location filename="../../../PathScripts/PathHelix.py" line="128"/>
+      <source>Percent of cutter diameter to step over on each pass</source>
+      <translation type="unfinished">Percent of cutter diameter to step over on each pass</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_DressupZCorrect</name>
     <message>
-      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="346"/>
-      <source>Z Depth Correction Dress-up</source>
-      <translation>Z-ის სიღრმის გასწორების ზღუდარი</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="994"/>
+      <source>Lift distance for rapid moves</source>
+      <translation type="unfinished">Lift distance for rapid moves</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="350"/>
-      <source>Use Probe Map to correct Z depth</source>
-      <translation>ზონდის რუკის გამოყენება Z-ის სიღრმის ჩასასწორებლად</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1003"/>
+      <source>Max length of keep tool down path compared to direct distance between points</source>
+      <translation type="unfinished">Max length of keep tool down path compared to direct distance between points</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Drilling</name>
     <message>
-      <location filename="../../../PathScripts/PathDrilling.py" line="71"/>
-      <source>G99</source>
-      <translation>G99</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1012"/>
+      <source>How much stock to leave (i.e. for finishing operation)</source>
+      <translation type="unfinished">How much stock to leave (i.e. for finishing operation)</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDrilling.py" line="72"/>
-      <source>G98</source>
-      <translation>G98</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1021"/>
+      <source>Force plunging into material inside and clearing towards the edges</source>
+      <translation type="unfinished">Force plunging into material inside and clearing towards the edges</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDrilling.py" line="75"/>
-      <source>None</source>
-      <translation>არცერთი</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1030"/>
+      <source>To take a finishing profile path at the end</source>
+      <translation type="unfinished">To take a finishing profile path at the end</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDrilling.py" line="76"/>
-      <source>Drill Tip</source>
-      <translation>ბურღის წვერი</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1036"/>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1047"/>
+      <source>Stop processing</source>
+      <translation>დამუშავების შეწყვეტა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDrilling.py" line="77"/>
-      <source>2x Drill Tip</source>
-      <translation>2x ბურღის წვერი</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1058"/>
+      <source>Use Arcs (G2) for helix ramp</source>
+      <translation type="unfinished">Use Arcs (G2) for helix ramp</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathDrillingGui.py" line="153"/>
-      <source>Drilling</source>
-      <translation>ბურღვა</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1068"/>
+      <source>Internal input state</source>
+      <translation>შიდა შეყვანის მდგომარეობა</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Engrave</name>
     <message>
-      <location filename="../../../PathScripts/PathEngraveGui.py" line="167"/>
-      <source>Engrave</source>
-      <translation>ამოტვიფრვა</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1077"/>
+      <source>Internal output state</source>
+      <translation>შიდა გამოტანის მდგომარეობა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathEngraveGui.py" line="167"/>
-      <source>Creates an Engraving Path around a Draft ShapeString</source>
-      <translation type="unfinished">Creates an Engraving Path around a Draft ShapeString</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1088"/>
+      <source>Helix ramp entry angle (degrees)</source>
+      <translation type="unfinished">Helix ramp entry angle (degrees)</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_EngraveTools</name>
     <message>
-      <location filename="../../../InitGui.py" line="143"/>
-      <source>Engraving Operations</source>
-      <translation>ტვიფვრის ოპერაციები</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1097"/>
+      <source>Helix cone angle (degrees)</source>
+      <translation>სპირალის კონუსის კუთხე (გრადუსები)</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_ExportTemplate</name>
     <message>
-      <location filename="../../../PathScripts/PathJobCmd.py" line="103"/>
-      <source>Export Template</source>
-      <translation>შაბლონის გატანა</translation>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="1106"/>
+      <source>Limit helix entry diameter, if limit larger than tool diameter or 0, tool diameter is used</source>
+      <translation type="unfinished">Limit helix entry diameter, if limit larger than tool diameter or 0, tool diameter is used</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Gcode_pre</name>
     <message>
-      <location filename="../../../PathScripts/post/gcode_pre.py" line="226"/>
-      <source>No active document</source>
-      <translation>აქტიური დოკუმენტის გარეშე</translation>
+      <location filename="../../../PathScripts/PathPlane.py" line="38"/>
+      <source>Orientation plane of CNC path</source>
+      <translation>CNC-ის ტრაექტორიის ორიენტაციის სიბრტყე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/post/gcode_pre.py" line="229"/>
-      <source>No job object</source>
-      <translation>დავალების ობიექტის გარეშე</translation>
+      <location filename="../../../PathScripts/PathSlot.py" line="134"/>
+      <source>Enter custom start point for slot path.</source>
+      <translation type="unfinished">Enter custom start point for slot path.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Helix</name>
     <message>
-      <location filename="../../../PathScripts/PathHelixGui.py" line="107"/>
-      <source>Helix</source>
-      <translation>სპირალები</translation>
+      <location filename="../../../PathScripts/PathSlot.py" line="142"/>
+      <source>Enter custom end point for slot path.</source>
+      <translation type="unfinished">Enter custom end point for slot path.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathHelixGui.py" line="107"/>
-      <source>Creates a Path Helix object from a features of a base object</source>
-      <translation>საბაზისო ობიექტის თვისებებიდან სპირალური ტრაექტორიის შექმნა</translation>
+      <location filename="../../../PathScripts/PathSlot.py" line="160"/>
+      <source>Positive extends the beginning of the path, negative shortens.</source>
+      <translation>დადებითი მნიშვნელობა დააგრძელებს ტრაექტორიის დასაწყისს, უარყოფითი კი დაამოკლებს.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathHelix.py" line="72"/>
-      <source>CW</source>
-      <translation>სმ</translation>
+      <location filename="../../../PathScripts/PathSlot.py" line="169"/>
+      <source>Positive extends the end of the path, negative shortens.</source>
+      <translation type="unfinished">Positive extends the end of the path, negative shortens.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathHelix.py" line="73"/>
-      <source>CCW</source>
-      <translation>სსს</translation>
+      <location filename="../../../PathScripts/PathSlot.py" line="187"/>
+      <source>Choose the path orientation with regard to the feature(s) selected.</source>
+      <translation type="unfinished">Choose the path orientation with regard to the feature(s) selected.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Hop</name>
     <message>
-      <location filename="../../../PathScripts/PathHop.py" line="101"/>
-      <source>Hop</source>
-      <translation>ბიჯი</translation>
+      <location filename="../../../PathScripts/PathSlot.py" line="196"/>
+      <source>Choose what point to use on the first selected feature.</source>
+      <translation type="unfinished">Choose what point to use on the first selected feature.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathHop.py" line="102"/>
-      <source>Creates a Path Hop object</source>
-      <translation>ტრაექტორიის ბიჯის ობიექტის შექმნა</translation>
+      <location filename="../../../PathScripts/PathSlot.py" line="205"/>
+      <source>Choose what point to use on the second selected feature.</source>
+      <translation type="unfinished">Choose what point to use on the second selected feature.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathHop.py" line="117"/>
-      <source>Please select one path object</source>
-      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathSlot.py" line="214"/>
+      <source>For arcs/circlular edges, offset the radius for the path.</source>
+      <translation type="unfinished">For arcs/circlular edges, offset the radius for the path.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathHop.py" line="122"/>
-      <source>The selected object is not a path</source>
-      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+      <location filename="../../../PathScripts/PathSlot.py" line="223"/>
+      <source>Enable to reverse the cut direction of the slot path.</source>
+      <translation type="unfinished">Enable to reverse the cut direction of the slot path.</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Inspect</name>
     <message>
-      <location filename="../../../PathScripts/PathInspect.py" line="260"/>
-      <source>Inspect Path Commands</source>
-      <translation>ტრაექტორიის ბრძანებების გადახედვა</translation>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="65"/>
+      <source>Angle of ramp.</source>
+      <translation>რამპის კუთხე.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathInspect.py" line="262"/>
-      <source>Inspects the contents of a Path object</source>
-      <translation>ტრაექტორიის ობიექტის შემცველობის გადამოწმება</translation>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="71"/>
+      <source>Ramping Method</source>
+      <translation>რამპის მეთოდი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathInspect.py" line="281"/>
-      <source>Please select exactly one path object</source>
-      <translation>გთხოვთ აირჩიოთ ზუსტად ერთი ტრაექტორიის ობიექტი</translation>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="77"/>
+      <source>Which feed rate to use for ramping</source>
+      <translation type="unfinished">Which feed rate to use for ramping</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Job</name>
     <message>
-      <location filename="../../../PathScripts/PathJobCmd.py" line="59"/>
-      <source>Job</source>
-      <translation>დავალება</translation>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="83"/>
+      <source>Custom feed rate</source>
+      <translation>მიწოდების სიჩქარის ხელით მითითება</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobCmd.py" line="61"/>
-      <source>Creates a Path Job object</source>
-      <translation>ტრაექტორიის ამოცანის ობიექტის შექმნა</translation>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="92"/>
+      <source>Should the dressup ignore motion commands above DressupStartDepth</source>
+      <translation type="unfinished">Should the dressup ignore motion commands above DressupStartDepth</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="286"/>
-      <source>Edit</source>
-      <translation>ჩასწორება</translation>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="101"/>
+      <source>The depth where the ramp dressup is enabled. Above this ramps are not generated, but motion commands are passed through as is.</source>
+      <translation type="unfinished">The depth where the ramp dressup is enabled. Above this ramps are not generated, but motion commands are passed through as is.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="529"/>
-      <source>Stock not a cylinder!</source>
-      <translation>ნედლეული ცილინდი არაა!</translation>
+      <location filename="../../../PathScripts/PathVcarve.py" line="216"/>
+      <location filename="../../../PathScripts/PathEngrave.py" line="72"/>
+      <location filename="../../../PathScripts/PathEngrave.py" line="82"/>
+      <source>Additional base objects to be engraved</source>
+      <translation type="unfinished">Additional base objects to be engraved</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="910"/>
-      <source>Select Output File</source>
-      <translation>აირჩიეთ გამოსატანი ფაილი</translation>
+      <location filename="../../../PathScripts/PathVcarve.py" line="228"/>
+      <source>The deflection value for discretizing arcs</source>
+      <translation type="unfinished">The deflection value for discretizing arcs</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="910"/>
-      <source>All Files (*.*)</source>
-      <translation>ყველა ფაილი (*.*)</translation>
+      <location filename="../../../PathScripts/PathVcarve.py" line="238"/>
+      <source>Cutoff for removing colinear segments (degrees). 
+                        default=10.0.</source>
+      <translation type="unfinished">Cutoff for removing colinear segments (degrees). 
+                        default=10.0.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="1298"/>
-      <source>Unsupported stock object %s</source>
-      <translation>ნედლეულის მხაარდაუჭერელი ობექტი %s</translation>
+      <location filename="../../../PathScripts/PathVcarve.py" line="244"/>
+      <source>Vcarve Tolerance</source>
+      <translation>Vcarve-ს გადახრა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="1314"/>
-      <source>Unsupported stock type %s (%d)</source>
-      <translation>ნედლეულის მხარდაუჭერელი ტიპი %s (%d)</translation>
+      <location filename="../../../PathScripts/PathPocket.py" line="79"/>
+      <source>Use adaptive algorithm to eliminate excessive air milling above planar pocket top.</source>
+      <translation type="unfinished">Use adaptive algorithm to eliminate excessive air milling above planar pocket top.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="1407"/>
-      <source>Model Selection</source>
-      <translation>მოდელის არჩევა</translation>
+      <location filename="../../../PathScripts/PathPocket.py" line="89"/>
+      <source>Use adaptive algorithm to eliminate excessive air milling below planar pocket bottom.</source>
+      <translation type="unfinished">Use adaptive algorithm to eliminate excessive air milling below planar pocket bottom.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="1594"/>
-      <source>Warning</source>
-      <translation>გაფრთხილება</translation>
+      <location filename="../../../PathScripts/PathPocket.py" line="99"/>
+      <source>Process the model and stock in an operation with no Base Geometry selected.</source>
+      <translation type="unfinished">Process the model and stock in an operation with no Base Geometry selected.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="1595"/>
-      <source>Please add one.</source>
-      <translation>დაამატეთ.</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="275"/>
+      <source>Set thread orientation</source>
+      <translation>დააყენეთ კუთხვილის ორიენტაცია</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="1596"/>
-      <source>Ok</source>
-      <translation>დიახ</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="282"/>
+      <source>Currently only internal</source>
+      <translation>მიმდინარედ მხოლოდ შიდა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="1597"/>
-      <source>Add</source>
-      <translation>დამატება</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="291"/>
+      <source>Defines which standard thread was chosen</source>
+      <translation>აყენებს, რომელი სტანდარტული კუთხვილი იქნა არჩეული</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="1609"/>
-      <source>This job has no base model.</source>
-      <translation>დავალებას საბაზისო მოდელი არ გააჩნია.</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="297"/>
+      <source>Set thread's major diameter</source>
+      <translation>დააყენეთ კუთხვილის ძირითადი დიამეტრი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobGui.py" line="1616"/>
-      <source>This job has no tool.</source>
-      <translation>დავალებას ხელსაწყო არ გააჩნია.</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="303"/>
+      <source>Set thread's minor diameter</source>
+      <translation>დააყენეთ კუთხვილის მცირე დიამეტრი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJob.py" line="257"/>
-      <source>Fixture</source>
-      <translation>სამაგრი</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="311"/>
+      <source>Set thread's pitch - used for metric threads</source>
+      <translation type="unfinished">Set thread's pitch - used for metric threads</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJob.py" line="258"/>
-      <source>Tool</source>
-      <translation>ხელსაწყო</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="320"/>
+      <source>Set thread's TPI (turns per inch) - used for imperial threads</source>
+      <translation>კუთხვილის TPI(შემოტრიალება დუიმზე) - გამოიყენება იმპერიული კუთხვილებისთვის</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJob.py" line="259"/>
-      <source>Operation</source>
-      <translation>ოპერაცია</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="328"/>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="336"/>
+      <source>Set how many passes are used to cut the thread</source>
+      <translation>დაყენება, რამდენი გავლაა საჭირო კუთხვილის ამოსაჭრელად</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobDlg.py" line="62"/>
-      <source>2D</source>
-      <translation>2D</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="342"/>
+      <source>Direction of thread cutting operation</source>
+      <translation>კუთხვილის ამოჭრის ოპერაციის მიმართულება</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJob.py" line="263"/>
-      <source>2.5D</source>
-      <translation>2.5D</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="351"/>
+      <source>Set to True to get lead in and lead out arcs at the start and end of the thread cut</source>
+      <translation type="unfinished">Set to True to get lead in and lead out arcs at the start and end of the thread cut</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJob.py" line="264"/>
-      <source>Lathe</source>
-      <translation>დაზგა</translation>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="359"/>
+      <source>Operation to clear the inside of the thread</source>
+      <translation>კუთხვილის შიგნიდან გაწმენდის ოპერაცია</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJob.py" line="265"/>
-      <source>Multiaxis</source>
-      <translation>მრავალღერძიანი</translation>
+      <location filename="../../../PathScripts/PathCustom.py" line="56"/>
+      <source>The gcode to be inserted</source>
+      <translation>G-Code-ის ჩაისმება</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobDlg.py" line="61"/>
-      <source>Solids</source>
-      <translation>მასივები</translation>
+      <location filename="../../../PathScripts/PathToolBit.py" line="145"/>
+      <source>Shape for bit shape</source>
+      <translation>მჭრელი იარაღის ფორმა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobDlg.py" line="63"/>
-      <source>Jobs</source>
-      <translation>დავალებები</translation>
+      <location filename="../../../PathScripts/PathToolBit.py" line="153"/>
+      <source>The parametrized body representing the tool bit</source>
+      <translation>ხელსაწყოს მჭრელი იარაღის აღმწერი პარამეტრიზებული სხეული</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobDlg.py" line="331"/>
-      <source>Base -/+ %.2f/%.2f %.2f/%.2f %.2f/%.2f</source>
-      <translation>ბაზისი -/+ %.2f/%.2f %.2f/%.2f %.2f/%.2f</translation>
+      <location filename="../../../PathScripts/PathToolBit.py" line="159"/>
+      <source>The file of the tool</source>
+      <translation>ხელსაწყოს ნახაზის ფაილი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobDlg.py" line="341"/>
-      <source>Box: %.2f x %.2f x %.2f</source>
-      <translation>შემ. ჩარჩო %.2f x %.2f x %.2f</translation>
+      <location filename="../../../PathScripts/PathToolBit.py" line="165"/>
+      <source>The name of the shape file</source>
+      <translation>ფორმის ფაილის სახელი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathJobDlg.py" line="356"/>
-      <source>Unsupported stock type</source>
-      <translation>ნედლეულის მხარდაუჭერელი ტიპი</translation>
+      <location filename="../../../PathScripts/PathToolBit.py" line="173"/>
+      <location filename="../../../PathScripts/PathToolBit.py" line="211"/>
+      <source>List of all properties inherited from the bit</source>
+      <translation>მჭრელი იარაღიდან მემკვიდრეობით მიღებული ყველა თვისების სია</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Job:</name>
     <message>
-      <location filename="../../../PathScripts/PathJobDlg.py" line="347"/>
-      <source>Cylinder: %.2f x %.2f</source>
-      <translation>ცილინდრი: %.2f %.2f-ზე</translation>
+      <location filename="../../../PathScripts/PathCollision.py" line="60"/>
+      <source>The base object this collision refers to</source>
+      <translation type="unfinished">The base object this collision refers to</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_MillFace</name>
     <message>
-      <location filename="../../../PathScripts/PathMillFaceGui.py" line="71"/>
-      <source>Face</source>
-      <translation>სიბრტყე</translation>
+      <location filename="../../../PathScripts/PathFixture.py" line="38"/>
+      <source>Fixture Offset Number</source>
+      <translation>სამაგრის წანაცვლების ნომერი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathMillFaceGui.py" line="71"/>
-      <source>Create a Facing Operation from a model or face</source>
-      <translation type="unfinished">Create a Facing Operation from a model or face</translation>
+      <location filename="../../../PathScripts/PathHelix.py" line="110"/>
+      <source>The direction of the circular cuts, ClockWise (CW), or CounterClockWise (CCW)</source>
+      <translation>წრიული ჭრილების მიმართულება: საათის მიმართულებით (ს. მ.) ან საათის საწინააღმდეგო მიმართულებით(ს. ს. მ)</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_OpActiveToggle</name>
     <message>
-      <location filename="../../../PathCommands.py" line="153"/>
-      <source>Toggle the Active State of the Operation</source>
-      <translation>ოპერაციის აქტიური მდგომარეობის ჩართ/გამორთ</translation>
+      <location filename="../../../PathScripts/PathHelix.py" line="119"/>
+      <source>Start cutting from the inside or outside</source>
+      <translation>ამოჭრის შიგნდან დაწყება თუ გარედან</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Operation</name>
     <message>
-      <location filename="../../../PathScripts/PathOp.py" line="380"/>
-      <source>None</source>
-      <translation>არცერთი</translation>
+      <location filename="../../../PathScripts/PathHelix.py" line="134"/>
+      <location filename="../../../PathScripts/PathHelix.py" line="157"/>
+      <source>Starting Radius</source>
+      <translation>საწყისი რადიუსი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathOp.py" line="381"/>
-      <source>Flood</source>
-      <translation>გადავსება</translation>
+      <location filename="../../../PathScripts/PathPropertyBag.py" line="75"/>
+      <source>List of custom property groups</source>
+      <translation>ხელით მითითებული თვისებების სია</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathOp.py" line="382"/>
-      <source>Mist</source>
-      <translation>ბურუსი</translation>
+      <location filename="../../../PathScripts/PathMillFace.py" line="97"/>
+      <source>Shape to use for calculating Boundary</source>
+      <translation>საზღვრის დასათვლელად გამოსაყენებელი მონახაზი</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_OperationCopy</name>
     <message>
-      <location filename="../../../PathCommands.py" line="195"/>
-      <source>Copy the operation in the job</source>
-      <translation>ოპერაციის ამოცანაში კოპირება</translation>
+      <location filename="../../../PathScripts/PathMillFace.py" line="105"/>
+      <source>Clear edges of surface (Only applicable to BoundBox)</source>
+      <translation>ზედაპირების წიბოების გასუფთავება (ვრცელდება მხოლოდ შემომსაზღვრელი ჩარჩოებზე)</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Pocket</name>
     <message>
-      <location filename="../../../PathScripts/PathMillFace.py" line="69"/>
-      <source>Boundbox</source>
-      <translation>შემომსაზღვრელი ჩარჩო</translation>
+      <location filename="../../../PathScripts/PathMillFace.py" line="114"/>
+      <source>Exclude milling raised areas inside the face.</source>
+      <translation type="unfinished">Exclude milling raised areas inside the face.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathMillFace.py" line="70"/>
-      <source>Face Region</source>
-      <translation>ზედაპირის რეგიონი</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="75"/>
+      <source>Calculate roll-on to path</source>
+      <translation type="unfinished">Calculate roll-on to path</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathMillFace.py" line="71"/>
-      <source>Perimeter</source>
-      <translation>პერიმეტრი</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="81"/>
+      <source>Calculate roll-off from path</source>
+      <translation>ტრაექტორიიდან roll-off-ის გამოთვლა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathMillFace.py" line="72"/>
-      <source>Stock</source>
-      <translation>ნედლეული</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="87"/>
+      <source>Keep the Tool Down in Path</source>
+      <translation type="unfinished">Keep the Tool Down in Path</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocket.py" line="119"/>
-      <source>Collectively</source>
-      <translation>ერთად</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="96"/>
+      <source>Use Machine Cutter Radius Compensation /Tool Path Offset G41/G42</source>
+      <translation type="unfinished">Use Machine Cutter Radius Compensation /Tool Path Offset G41/G42</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocket.py" line="120"/>
-      <source>Individually</source>
-      <translation>ცალცალკე</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="102"/>
+      <source>Length or Radius of the approach</source>
+      <translation>მიდგომის რადიუსის სიგრძე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="60"/>
-      <source>Climb</source>
-      <translation type="unfinished">Climb</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="108"/>
+      <source>The Style of motion into the Path</source>
+      <translation>ტრაექტორიაზე მოძრაობის სტილი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="61"/>
-      <source>Conventional</source>
-      <translation type="unfinished">Conventional</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="115"/>
+      <source>The Style of motion out of the Path</source>
+      <translation>ტრაექტორიის გარეთ მოძრაობის სტილი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="64"/>
-      <source>Center</source>
-      <translation>ცენტრი</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="124"/>
+      <source>The Mode of Point Radiusoffset or Center</source>
+      <translation type="unfinished">The Mode of Point Radiusoffset or Center</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="65"/>
-      <source>Edge</source>
-      <translation>წიბო</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="135"/>
+      <source>Extends LeadIn distance</source>
+      <translation type="unfinished">Extends LeadIn distance</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="68"/>
-      <source>ZigZag</source>
-      <translation>ზიგზაგი</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="141"/>
+      <source>Extends LeadOut distance</source>
+      <translation type="unfinished">Extends LeadOut distance</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="69"/>
-      <source>Offset</source>
-      <translation>წანაცვლება</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="147"/>
+      <source>Perform plunges with G0</source>
+      <translation type="unfinished">Perform plunges with G0</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="70"/>
-      <source>ZigZagOffset</source>
-      <translation>ზიგზაგის წანაცვლება</translation>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="155"/>
+      <source>Apply LeadInOut to layers within an operation</source>
+      <translation type="unfinished">Apply LeadInOut to layers within an operation</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="71"/>
-      <source>Line</source>
-      <translation>ხაზი</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="110"/>
+      <source>The base object this stock is derived from</source>
+      <translation>ამ ნედლეულის საბაზისო ობიექტი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketBase.py" line="72"/>
-      <source>Grid</source>
-      <translation>ბადე</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="119"/>
+      <source>Extra allowance from part bound box in negative X direction</source>
+      <translation>დამატებითი დაშვება ნაწილის შემომსაზღვრელი ჩარჩოდან უარყოფითი X მიმართულებით</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Pocket3D</name>
     <message>
-      <location filename="../../../PathScripts/PathPocketGui.py" line="52"/>
-      <source>3D Pocket</source>
-      <translation>3D ჯიბე</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="128"/>
+      <source>Extra allowance from part bound box in positive X direction</source>
+      <translation>დამატებითი დაშვება ნაწილის შემომსაზღვრელი ჩარჩოდან დადებითი X მიმართულებით</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketGui.py" line="52"/>
-      <source>Creates a Path 3D Pocket object from a face or faces</source>
-      <translation type="unfinished">Creates a Path 3D Pocket object from a face or faces</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="137"/>
+      <source>Extra allowance from part bound box in negative Y direction</source>
+      <translation>დამატებითი დაშვება ნაწილის შემომსაზღვრელი ჩარჩოდან უარყოფითი Y მიმართულებით</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Pocket_Shape</name>
     <message>
-      <location filename="../../../PathScripts/PathPocketShapeGui.py" line="65"/>
-      <source>Pocket Shape</source>
-      <translation>ჯიბის მოხაზულობა</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="146"/>
+      <source>Extra allowance from part bound box in positive Y direction</source>
+      <translation>დამატებითი დაშვება ნაწილის შემომსაზღვრელი ჩარჩოდან დადებითი Y მიმართულებით</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPocketShapeGui.py" line="65"/>
-      <source>Creates a Path Pocket object from a face or faces</source>
-      <translation type="unfinished">Creates a Path Pocket object from a face or faces</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="155"/>
+      <source>Extra allowance from part bound box in negative Z direction</source>
+      <translation>დამატებითი დაშვება ნაწილის შემომსაზღვრელი ჩარჩოდან უარყოფითი Z მიმართულებით</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Post</name>
     <message>
-      <location filename="../../../PathScripts/PathPost.py" line="184"/>
-      <source>Post Process</source>
-      <translation>პოსტპროცესორი</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="164"/>
+      <source>Extra allowance from part bound box in positive Z direction</source>
+      <translation>დამატებითი დაშვება ნაწილის შემომსაზღვრელი ჩარჩოდან დადებითი Z მიმართულებით</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathPost.py" line="186"/>
-      <source>Post Process the selected Job</source>
-      <translation>მონიშნული ამოცანის პოსტპროცესი</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="170"/>
+      <source>A material for this object</source>
+      <translation>ობიექტის მასალა</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_PreferencesPathDressup</name>
     <message>
-      <location filename="../../../PathScripts/PathPreferencesPathDressup.py" line="39"/>
-      <source>Dressups</source>
-      <translation>შეფუთვები</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="242"/>
+      <source>Length of this stock box</source>
+      <translation>ნედლეულის შემ. ჩარჩოს სიგრძე</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Probe</name>
     <message>
-      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="290"/>
-      <source>Select Probe Point File</source>
-      <translation>არჩიეთ ზონდის წერტილის ფაილი</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="248"/>
+      <source>Width of this stock box</source>
+      <translation>ნედლეულის შემ. ჩარჩოს სიგანე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProbeGui.py" line="91"/>
-      <source>All Files (*.*)</source>
-      <translation>ყველა ფაილი (*.*)</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="254"/>
+      <source>Height of this stock box</source>
+      <translation>ნედლეულის შემ. ჩარჩოს სიმაღლე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProbeGui.py" line="91"/>
-      <source>Select Output File</source>
-      <translation>აირჩიეთ გამოსატანი ფაილი</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="294"/>
+      <source>Radius of this stock cylinder</source>
+      <translation>ნედლეულის ცილინდრის რადიუსი</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProbeGui.py" line="102"/>
-      <source>Probe</source>
-      <translation>სინჯი</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="300"/>
+      <source>Height of this stock cylinder</source>
+      <translation>ნედლეულის ცილინდრის სიმაღლე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathProbeGui.py" line="102"/>
-      <source>Create a Probing Grid from a job stock</source>
-      <translation type="unfinished">Create a Probing Grid from a job stock</translation>
+      <location filename="../../../PathScripts/PathStock.py" line="336"/>
+      <source>Internal representation of stock type</source>
+      <translation>ნედლეულის ტიპის შიდა გამოხატულება</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Profile</name>
     <message>
-      <location filename="../../../PathScripts/PathProfileFacesGui.py" line="45"/>
-      <source>Profile</source>
-      <translation>პროფილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathProfileFacesGui.py" line="45"/>
-      <source>Profile entire model, selected face(s) or selected edge(s)</source>
-      <translation type="unfinished">Profile entire model, selected face(s) or selected edge(s)</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_PropertyBag</name>
-    <message>
-      <location filename="../../../PathScripts/PathPropertyBagGui.py" line="434"/>
-      <source>PropertyBag</source>
-      <translation type="unfinished">PropertyBag</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_Sanity</name>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="107"/>
-      <source>Check the path job for common errors</source>
-      <translation>ტრაექტორიის ამოცანის გავრცელებულ შეცდომებზე შემოწმება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="228"/>
-      <source>Base Object(s)</source>
-      <translation>საბაზისო ობიექტ(ებ)ი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="229"/>
-      <source>Job Sequence</source>
-      <translation>ამოცანების თანამიმდევრობა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="230"/>
-      <source>Job Description</source>
-      <translation>ამოცანის აღწერა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="231"/>
-      <source>Job Type</source>
-      <translation>დავალების ტიპი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="232"/>
-      <source>CAD File Name</source>
-      <translation>CAD ფაილის სახელი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="233"/>
-      <source>Last Save Date</source>
-      <translation>ბოლოს შენახვის თარიღი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="234"/>
-      <source>Customer</source>
-      <translation>შემკვეთი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="235"/>
-      <source>Designer</source>
-      <translation>დიზაინერი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="316"/>
-      <source>Operation</source>
-      <translation>ოპერაცია</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="272"/>
-      <source>Minimum Z Height</source>
-      <translation>მინიმუმ Z სიმაღლე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="273"/>
-      <source>Maximum Z Height</source>
-      <translation>მაქსიმუმ Z სიმაღლე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="274"/>
-      <source>Cycle Time</source>
-      <translation>ციკლის დრო</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="275"/>
-      <source>Coolant</source>
-      <translation>გამაგრილებელი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="276"/>
-      <source>TOTAL JOB</source>
-      <translation>სრული დავალება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="310"/>
-      <source>Tool Number</source>
-      <translation>ხელსაწყოს ნომერი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="311"/>
-      <source>Description</source>
-      <translation>აღწერა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="312"/>
-      <source>Manufacturer</source>
-      <translation>მწარმოებელი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="313"/>
-      <source>Part Number</source>
-      <translation>ნაწილის ნომერი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="314"/>
-      <source>URL</source>
-      <translation>URL</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="315"/>
-      <source>Inspection Notes</source>
-      <translation>შემოწების შენიშვნები</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="317"/>
-      <source>Tool Controller</source>
-      <translation>ხელსაწყოს კონტროლერი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="318"/>
-      <source>Feed Rate</source>
-      <translation>მიწოდების სიჩქარე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="319"/>
-      <source>Spindle Speed</source>
-      <translation>შპინდელის სიჩქარე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="320"/>
-      <source>Tool Shape</source>
-      <translation>ხელსაწყოს ფორმა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="321"/>
-      <source>Tool Diameter</source>
-      <translation>ხელსაწყოს დიამეტრი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="373"/>
-      <source>X Size</source>
-      <translation>X ზომა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="374"/>
-      <source>Y Size</source>
-      <translation>Y ზომა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="375"/>
-      <source>Z Size</source>
-      <translation>Z ზომა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="376"/>
-      <source>Material</source>
-      <translation>მასალა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="390"/>
-      <source>Work Offsets</source>
-      <translation>სამუშაოს წანაცვლებები</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="391"/>
-      <source>Order By</source>
-      <translation>დალაგება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="392"/>
-      <source>Part Datum</source>
-      <translation>ნაწილის თარიღი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="405"/>
-      <source>Gcode File</source>
-      <translation>Gcode-ის ფაილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="406"/>
-      <source>Last Post Process Date</source>
-      <translation>ბოლო პოსტპროცესის თარიღი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="407"/>
-      <source>Stops</source>
-      <translation>გაჩერება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="408"/>
-      <source>Programmer</source>
-      <translation>პროგრამისტი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="409"/>
-      <source>Machine</source>
-      <translation>მანქანა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="410"/>
-      <source>Postprocessor</source>
-      <translation>პოსტპროცესორი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="411"/>
-      <source>Post Processor Flags</source>
-      <translation>პოსტპროცესორის პარამეტრები</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="412"/>
-      <source>File Size (kbs)</source>
-      <translation>ფაილის ზომა (კბ)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="413"/>
-      <source>Line Count</source>
-      <translation>ხაზების რაოდენობა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="427"/>
-      <source>Note</source>
-      <translation>შენიშვნა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="428"/>
-      <source>Operator</source>
-      <translation>ოპერატორი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSanity.py" line="429"/>
-      <source>Date</source>
-      <translation>თარიღი</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_SelectLoop</name>
-    <message>
-      <location filename="../../../PathCommands.py" line="59"/>
-      <source>Finish Selecting Loop</source>
-      <translation>მარყუჟის შექმნის დასრულება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathCommands.py" line="61"/>
-      <source>Complete loop selection from two edges</source>
-      <translation>მონიშნული ორი წიბოს საშუალებით მარყუჟის დასრულება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathCommands.py" line="118"/>
-      <source>Feature Completion</source>
-      <translation>თვისების დასრულება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathCommands.py" line="118"/>
-      <source>Closed loop detection failed.</source>
-      <translation>მარყუჟების ძებნის შეცდომა.</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_SimpleCopy</name>
-    <message>
-      <location filename="../../../PathScripts/PathSimpleCopy.py" line="37"/>
-      <source>Simple Copy</source>
-      <translation>უბრალო ასლი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSimpleCopy.py" line="38"/>
-      <source>Creates a non-parametric copy of another path</source>
-      <translation>სხვა ტრაექტორიის არაპარამეტრული ასლის შექმნა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSimpleCopy.py" line="62"/>
-      <source>Please select exactly one path object</source>
-      <translation>გთხოვთ აირჩიოთ ზუსტად ერთი ტრაექტორიის ობიექტი</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_Simulator</name>
-    <message>
-      <location filename="../../../PathScripts/PathSimulatorGui.py" line="645"/>
-      <source>CAM Simulator</source>
-      <translation>CAM სიმულატორი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSimulatorGui.py" line="647"/>
-      <source>Simulate Path G-Code on stock</source>
-      <translation>ნედლეულზე ტრაექტორიის G-Code-ის სიმულაცია</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_Slot</name>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="108"/>
-      <source>New property added to</source>
-      <translation>ახალი თვისება დაემატა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="110"/>
-      <source>Check default value(s).</source>
-      <translation>ნაგულისხმევი მნიშვნელობების შემოწმება.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="258"/>
-      <source>Line</source>
-      <translation>ხაზი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="259"/>
-      <source>ZigZag</source>
-      <translation>ზიგზაგი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="262"/>
-      <source>Single-pass</source>
-      <translation>ერთი-გავლით</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="263"/>
-      <source>Multi-pass</source>
-      <translation>მრავალგავლადი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="266"/>
-      <source>Start to End</source>
-      <translation>დასაწყისიდან დასასრულამდე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="267"/>
-      <source>Perpendicular</source>
-      <translation type="unfinished">Perpendicular</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="282"/>
-      <source>Center of Mass</source>
-      <translation>მასის ცენტრი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="283"/>
-      <source>Center of BoundBox</source>
-      <translation>შემომსაზღვრელი ჩარჩოს ცენტრი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="287"/>
-      <source>Lowest Point</source>
-      <translation>ყველაზე დაბალი წერტილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="288"/>
-      <source>Highest Point</source>
-      <translation>უმაღლესი წერტილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="277"/>
-      <source>Long Edge</source>
-      <translation>გრძელი წიბო</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="278"/>
-      <source>Short Edge</source>
-      <translation>მოკლე წიბო</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="289"/>
-      <source>Vertex</source>
-      <translation type="unfinished">Vertex</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="607"/>
-      <source>No Base Geometry object in the operation.</source>
-      <translation>ოპერაციაში არ არსებობს საბაზისო გეომეტრიის ობიექტი.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="616"/>
-      <source>Custom points are identical.</source>
-      <translation>ხელით მითითებული წერტილები ერთი და იგივეა.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="623"/>
-      <source>Custom points not at same Z height.</source>
-      <translation>მითითებული წერტილები არ იმყოფებიან ერთი და იგივე Z სიმაღლეზე.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="697"/>
-      <source>No path extensions available for full circles.</source>
-      <translation>ტრაექტორიის გაგრძელება ხელმიუწვდომელია სრული წრეწირებისთვის.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="875"/>
-      <source>operation collides with model.</source>
-      <translation>მოქმედება ეჯახება მოდელს.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="1145"/>
-      <source>Verify slot path start and end points.</source>
-      <translation>სლოტის ტრაექტორიის საწყისი და საბოლოო წერტილების შემოწმება.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="972"/>
-      <source>The selected face is inaccessible.</source>
-      <translation>მონიშნული ზედაპირი ხელმიუწვდომელია.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="1015"/>
-      <source>A single selected face must have four edges minimum.</source>
-      <translation>თითოეულ მონიშნულ ზედაპირს მინიმუმ 4 წიბო უნდა გააჩნდეს.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="1074"/>
-      <source>No parallel edges identified.</source>
-      <translation>პარალელური წიბოები ნაპოვნი არაა.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="1098"/>
-      <source>value error.</source>
-      <translation>მნიშვნელობის შეცდომა.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="1160"/>
-      <source>Current tool larger than arc diameter.</source>
-      <translation>მიმდინარე ხელსაწყო რკალის დიამეტრზე დიდია.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="1266"/>
-      <source>Failed to determine point 1 from</source>
-      <translation>წერტილი 1-ის დადგენის შეცდომა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="1276"/>
-      <source>Failed to determine point 2 from</source>
-      <translation>წერტილი 2-ის დადგენის შეცდომა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="1289"/>
-      <source>Selected geometry not parallel.</source>
-      <translation>არჩეული გეომეტრია პარალელური არაა.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="1408"/>
-      <source>The selected face is not oriented vertically:</source>
-      <translation>მონიშნული ზედაპირი არაა ვერტიკალურად ორიენტირებული:</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlot.py" line="1936"/>
-      <source>Current offset value produces negative radius.</source>
-      <translation>წანაცვლების მიმდინარე მნიშვნელობით რადიუსი უარყოფითი გამოდის.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlotGui.py" line="276"/>
-      <source>Slot</source>
-      <translation>ადგილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSlotGui.py" line="276"/>
-      <source>Create a Slot operation from selected geometry or custom points.</source>
-      <translation type="unfinished">Create a Slot operation from selected geometry or custom points.</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_Stop</name>
-    <message>
-      <location filename="../../../PathScripts/PathStop.py" line="110"/>
-      <source>Stop</source>
-      <translation>გაჩერება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathStop.py" line="111"/>
+      <location filename="../../../PathScripts/PathStop.py" line="42"/>
       <source>Add Optional or Mandatory Stop to the program</source>
       <translation>პროგრამაში აუცილებელი ან არასავალდებული შეჩერების ჩამატება</translation>
     </message>
-  </context>
-  <context>
-    <name>Path_Surface</name>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="449"/>
-      <source>BaseBoundBox</source>
-      <translation>საბაზისო შემომსაზღვრელი ჩარჩო</translation>
+      <location filename="../../../PathScripts/PathHop.py" line="39"/>
+      <source>The object to be reached by this hop</source>
+      <translation>ამ ბილით ობიექტამდე ვერ მიაღწევთ</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="450"/>
-      <source>Stock</source>
-      <translation>ნედლეული</translation>
+      <location filename="../../../PathScripts/PathHop.py" line="45"/>
+      <source>The Z height of the hop</source>
+      <translation>ბიჯის Z სიმაღლე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="453"/>
-      <source>CenterOfMass</source>
-      <translation>მასის ცენტრი</translation>
+      <location filename="../../../PathScripts/PathDeburr.py" line="126"/>
+      <source>The desired width of the chamfer</source>
+      <translation>ნაზოლის სასურველი სიგანე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="454"/>
-      <source>CenterOfBoundBox</source>
-      <translation>მრგვალი ყუთის ცენტრი</translation>
+      <location filename="../../../PathScripts/PathDeburr.py" line="132"/>
+      <source>The additional depth of the tool path</source>
+      <translation>ხელსაწყოს ტრაექტორიის დამატებითი სიღრმე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="455"/>
-      <source>XminYmin</source>
-      <translation>XმინYმინ</translation>
+      <location filename="../../../PathScripts/PathDeburr.py" line="138"/>
+      <source>How to join chamfer segments</source>
+      <translation>როგორ შევაერთოთ კუთხის ნაზოლის სეგმენტები</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="456"/>
-      <source>Custom</source>
-      <translation>მომხმარებლის</translation>
+      <location filename="../../../PathScripts/PathDeburr.py" line="146"/>
+      <source>Direction of Operation</source>
+      <translation>ოპერაციის მიმართულება</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="459"/>
-      <source>Conventional</source>
-      <translation type="unfinished">Conventional</translation>
+      <location filename="../../../PathScripts/PathDeburr.py" line="153"/>
+      <source>Side of Operation</source>
+      <translation>ოპერაციის მხარე</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="460"/>
-      <source>Climb</source>
-      <translation type="unfinished">Climb</translation>
+      <location filename="../../../PathScripts/PathDeburr.py" line="163"/>
+      <source>Select the segment, there the operations starts</source>
+      <translation>ოპერაციის დასაწყებად მონიშნეთ კვეთა</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="463"/>
-      <source>Circular</source>
-      <translation>მრგვალი</translation>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="73"/>
+      <source>The point file from the surface probing.</source>
+      <translation type="unfinished">The point file from the surface probing.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="464"/>
-      <source>CircularZigZag</source>
-      <translation>წრიული ზიგზაგი</translation>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="83"/>
+      <source>Deflection distance for arc interpolation</source>
+      <translation>არეკვლის მანძილი რკალის ინტერპოლაციისთვის</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="465"/>
-      <source>Line</source>
-      <translation>ხაზი</translation>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="92"/>
+      <source>break segments into smaller segments of this length.</source>
+      <translation type="unfinished">break segments into smaller segments of this length.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="466"/>
-      <source>Offset</source>
-      <translation>წანაცვლება</translation>
+      <location filename="../../../PathScripts/PathWaterline.py" line="213"/>
+      <source>Smaller values yield a finer, more accurate the mesh. Smaller values increase processing time a lot.</source>
+      <translation>რაც მცირეა მნიშვნელობა, ბადე მით უფრო ზუსტი და მკაფიო იქნება. მცირე მნიშვნელობები ასევე საგრძნობლად ზრდიან დამუშავების დროს.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="467"/>
-      <source>Spiral</source>
-      <translation>ხვეული</translation>
+      <location filename="../../../PathScripts/PathWaterline.py" line="222"/>
+      <source>Smaller values yield a finer, more accurate the mesh. Smaller values do not increase processing time much.</source>
+      <translation>მცირე მნიშვნელობების შედეგია უფრო ზუსტი ბადე. მცირე მნიშვნელობები გადამუშავების დროს არც ისე ძალიან ზრდიან.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="468"/>
-      <source>ZigZag</source>
-      <translation>ზიგზაგი</translation>
+      <location filename="../../../PathScripts/PathWaterline.py" line="293"/>
+      <source>Select the algorithm to use: OCL Dropcutter*, or Experimental (Not OCL based).</source>
+      <translation>გამოსაყენებელ ალგორითმად აირჩიეთ OCL Dropcutter*-ი ან ექსპერიმენტალური (არა-OCL-ზე ბაზირებული).</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="489"/>
-      <source>X</source>
-      <translation>X</translation>
+      <location filename="../../../PathScripts/PathWaterline.py" line="310"/>
+      <source>Set to clear last layer in a `Multi-pass` operation.</source>
+      <translation type="unfinished">Set to clear last layer in a `Multi-pass` operation.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="490"/>
-      <source>Y</source>
-      <translation>Y</translation>
+      <location filename="../../../PathScripts/PathWaterline.py" line="362"/>
+      <source>Ignore outer waterlines above this height.</source>
+      <translation>მითითებული სიმაღლის ზემოთ გარე წყალხაზის იგნორირება.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="475"/>
-      <source>Collectively</source>
-      <translation>ერთად</translation>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="136"/>
+      <source>Extra offset to apply to the operation. Direction is operation dependent.</source>
+      <translation type="unfinished">Extra offset to apply to the operation. Direction is operation dependent.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="476"/>
-      <source>Individually</source>
-      <translation>ცალცალკე</translation>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="142"/>
+      <source>Start pocketing at center or boundary</source>
+      <translation type="unfinished">Start pocketing at center or boundary</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="479"/>
-      <source>Single-pass</source>
-      <translation>ერთი-გავლით</translation>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="156"/>
+      <source>Angle of the zigzag pattern</source>
+      <translation type="unfinished">Angle of the zigzag pattern</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="480"/>
-      <source>Multi-pass</source>
-      <translation>მრავალგავლადი</translation>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="162"/>
+      <source>Clearing pattern to use</source>
+      <translation>შაბლონის გასუფთავება გამოსაყენებლად</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="483"/>
-      <source>None</source>
-      <translation>არცერთი</translation>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="168"/>
+      <source>Use 3D Sorting of Path</source>
+      <translation>ტრაექტორიის 3D დალაგების გამოყენება</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="484"/>
-      <source>Only</source>
-      <translation>მხოლოდ</translation>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="176"/>
+      <source>Attempts to avoid unnecessary retractions.</source>
+      <translation type="unfinished">Attempts to avoid unnecessary retractions.</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="485"/>
-      <source>First</source>
-      <translation>პირველი</translation>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="185"/>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="245"/>
+      <source>Last Stepover Radius.  If 0, 50% of cutter is used. Tuning this can be used to improve stepover for some shapes</source>
+      <translation type="unfinished">Last Stepover Radius.  If 0, 50% of cutter is used. Tuning this can be used to improve stepover for some shapes</translation>
     </message>
     <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="486"/>
-      <source>Last</source>
-      <translation>ბოლო</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="493"/>
-      <source>Planar</source>
-      <translation>ბრტყელი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSurface.py" line="494"/>
-      <source>Rotational</source>
-      <translation>ბრუნვადი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSurfaceGui.py" line="277"/>
-      <source>3D Surface</source>
-      <translation>3D ზედაპირი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathSurfaceGui.py" line="277"/>
-      <source>Create a 3D Surface Operation from a model</source>
-      <translation>მოდელისგან 3D ზედაპირის ოპერაციის შექმნა</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_ThreadMilling</name>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMillingGui.py" line="254"/>
-      <source>Thread Milling</source>
-      <translation>კუთხვილის ფრეზვა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="192"/>
-      <source>Custom External</source>
-      <translation>ხელით მითითებული გარე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="196"/>
-      <source>Custom Internal</source>
-      <translation>ხელით მითითებული შიდა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="200"/>
-      <source>Imperial External (2A)</source>
-      <translation>იმპერიული გარე (2A)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="204"/>
-      <source>Imperial External (3A)</source>
-      <translation>იმპერიული შიდა (3A)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="208"/>
-      <source>Imperial Internal (2B)</source>
-      <translation>იმპერიული შიდა (2B)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="212"/>
-      <source>Imperial Internal (3B)</source>
-      <translation>იმპერიული შიდა (3B)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="216"/>
-      <source>Metric External (4G6G)</source>
-      <translation>მეტრული გარე (4G6G)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="220"/>
-      <source>Metric External (6G)</source>
-      <translation>გარე მეტრული (6G)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="224"/>
-      <source>Metric Internal (6H)</source>
-      <translation>შიდა მეტრული (6H)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="230"/>
-      <source>LeftHand</source>
-      <translation>მარცხნიდან</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="234"/>
-      <source>RightHand</source>
-      <translation>მარჯვნიდან</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="240"/>
-      <source>Climb</source>
-      <translation type="unfinished">Climb</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathThreadMilling.py" line="244"/>
-      <source>Conventional</source>
-      <translation type="unfinished">Conventional</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_ToolBit</name>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitLibraryGui.py" line="82"/>
-      <source>Choose a writable location for your toolbits</source>
-      <translation>აირჩიეთ თქვენი მჭრელი იარაღის ჩაწერადი ადგილი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitLibraryGui.py" line="789"/>
-      <source>Tooltable JSON (*.fctl)</source>
-      <translation>ხელსაწყოების ცხრილის JSON (*.fctl)</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitLibraryGui.py" line="792"/>
-      <source>Save toolbit library</source>
-      <translation>ხელსაწყოს მჭრელი პირის ბიბლიოთეკის შენახვა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitLibraryGui.py" line="790"/>
-      <source>LinuxCNC tooltable (*.tbl)</source>
-      <translation>LinuxCNC-ის ხელსაწყოების ცხრილი (*.tbl)</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_ToolBitCreate</name>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitCmd.py" line="49"/>
-      <source>Create Tool</source>
-      <translation>ხელსაწყოს შექმნა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitCmd.py" line="50"/>
-      <source>Creates a new ToolBit object</source>
-      <translation>ხელსაწყოს ახალი მჭრელი იარაღის ობიექტის შექმნა</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_ToolBitDock</name>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitLibraryCmd.py" line="48"/>
-      <source>ToolBit Dock</source>
-      <translation>ხელსაწყოების ზოლი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitLibraryCmd.py" line="49"/>
-      <source>Toggle the Toolbit Dock</source>
-      <translation type="unfinished">Toggle the Toolbit Dock</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_ToolBitLibraryOpen</name>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitLibraryCmd.py" line="75"/>
-      <source>ToolBit Library editor</source>
-      <translation>ხელსაწყოს მჭრელი იარაღის ბიბლიოთეკის რედაქტორი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitLibraryCmd.py" line="78"/>
-      <source>Open an editor to manage ToolBit libraries</source>
-      <translation>ხელსაწყოს მჭრელი იარაღის ბიბლიოთეკების რედაქტორის გახსნა</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_ToolBitLoad</name>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitCmd.py" line="140"/>
-      <source>Load Tool</source>
-      <translation>ხელსაწყოს ჩატვირთვა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitCmd.py" line="141"/>
-      <source>Load an existing ToolBit object from a file</source>
-      <translation>არსებული ToolBit ობიექტის ფაილიდან ჩატვირთვა</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_ToolBitSave</name>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitCmd.py" line="75"/>
-      <source>Save Tool</source>
-      <translation>ხელსაწყოს შენახვა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitCmd.py" line="79"/>
-      <source>Save an existing ToolBit object to a file</source>
-      <translation>არსებული ToolBit ობიექტის ფაილში ჩაწერა</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_ToolBitSaveAs</name>
-    <message>
-      <location filename="../../../PathScripts/PathToolBitCmd.py" line="73"/>
-      <source>Save Tool as...</source>
-      <translation>ხელსაწყოს შენახვა როგორც...</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_ToolController</name>
-    <message>
-      <location filename="../../../PathScripts/PathToolControllerGui.py" line="144"/>
-      <source>Add Tool Controller to the Job</source>
-      <translation>ამოცანაში ხელსაწყოს კონტროლერის ჩამატება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolControllerGui.py" line="147"/>
-      <source>Add Tool Controller</source>
-      <translation>ხელსაწყოს კონტროლერის დამატება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="134"/>
-      <source>Forward</source>
-      <translation>წინ</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="135"/>
-      <source>Reverse</source>
-      <translation>რევერსი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolController.py" line="136"/>
-      <source>None</source>
-      <translation>არცერთი</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_ToolTable</name>
-    <message>
-      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="189"/>
-      <source>Open tooltable</source>
-      <translation>ხელსაწყოების ცხრილის გახსნა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="206"/>
-      <source>Save tooltable</source>
-      <translation>ხელსაწყოების ცხრილის შენახვა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="384"/>
-      <source>Rename Tooltable</source>
-      <translation>ხელსაწყოების ცხრილის გადარქმევა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="384"/>
-      <source>Enter Name:</source>
-      <translation>შეიყვანეთ სახელი:</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="423"/>
-      <source>Add New Tool Table</source>
-      <translation>ხელსაწყოების ახალი ცხრილის დამატება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="427"/>
-      <source>Delete Selected Tool Table</source>
-      <translation>მონიშნული ხელსაწყოების ცხრილის წაშლა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="431"/>
-      <source>Rename Selected Tool Table</source>
-      <translation>მონიშნული ხელსაწყოების ცხრილისთვის სახელის გადარქმევა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="503"/>
-      <source>Tool Manager</source>
-      <translation>ხელსაწყოების მმართველი</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_Vcarve</name>
-    <message>
-      <location filename="../../../PathScripts/PathVcarveGui.py" line="161"/>
-      <source>Vcarve</source>
-      <translation>V-ფორმის ამოჭრა</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathVcarveGui.py" line="161"/>
-      <source>Creates a medial line engraving path</source>
-      <translation type="unfinished">Creates a medial line engraving path</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathVcarve.py" line="343"/>
-      <source>Engraver Cutting Edge Angle must be &lt; 180 degrees.</source>
-      <translation type="unfinished">Engraver Cutting Edge Angle must be &lt; 180 degrees.</translation>
-    </message>
-  </context>
-  <context>
-    <name>Path_Waterline</name>
-    <message>
-      <location filename="../../../PathScripts/PathWaterlineGui.py" line="172"/>
-      <source>Waterline</source>
-      <translation>ვათერხაზი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterlineGui.py" line="172"/>
-      <source>Create a Waterline Operation from a model</source>
-      <translation>მოდელისგან წყალხაზის ოპერაციის შექმნა</translation>
-    </message>
-  </context>
-  <context>
-    <name>Workbench</name>
-    <message>
-      <location filename="../../../InitGui.py" line="178"/>
-      <source>Project Setup</source>
-      <translation>პროექტის მორგება</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="179"/>
-      <source>Tool Commands</source>
-      <translation>ხელსაწყოს ბრძანებები</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="180"/>
-      <source>New Operations</source>
-      <translation>ახალი ოპერაციები</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="219"/>
-      <source>Path Modification</source>
-      <translation>ტრაექტორიის ჩასწორება</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="188"/>
-      <source>Helpful Tools</source>
-      <translation>საჭირო ხელსაწყოები</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="238"/>
-      <source>&amp;Path</source>
-      <translation>&amp;ტრაექტორია</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="205"/>
-      <source>Path Dressup</source>
-      <translation>ტრაექტორიის ზღუდარი</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="212"/>
-      <source>Supplemental Commands</source>
-      <translation>დამატებითი ბრძანებები</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="227"/>
-      <source>Specialty Operations</source>
-      <translation type="unfinished">Specialty Operations</translation>
-    </message>
-    <message>
-      <location filename="../../../InitGui.py" line="238"/>
-      <source>Utils</source>
-      <translation>ხელსაწყოები</translation>
-    </message>
-  </context>
-  <context>
-    <name>path_waterline</name>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="39"/>
-      <source>This operation requires OpenCamLib to be installed.</source>
-      <translation>ოპერაციის შესასრულებლად საჭიროა OpenCamLib-ი.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="97"/>
-      <source>OCL Dropcutter</source>
-      <translation>OCL ფრეზირება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="98"/>
-      <source>Experimental</source>
-      <translation>ექსპერიმენტული</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="101"/>
-      <source>BaseBoundBox</source>
-      <translation>საბაზისო შემომსაზღვრელი ჩარჩო</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="102"/>
-      <source>Stock</source>
-      <translation>ნედლეული</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="105"/>
-      <source>CenterOfMass</source>
-      <translation>მასის ცენტრი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="106"/>
-      <source>CenterOfBoundBox</source>
-      <translation>მრგვალი ყუთის ცენტრი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="107"/>
-      <source>XminYmin</source>
-      <translation>XმინYმინ</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="108"/>
-      <source>Custom</source>
-      <translation>მომხმარებლის</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="111"/>
-      <source>Off</source>
-      <translation>გამორთ.</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="125"/>
-      <source>Circular</source>
-      <translation>მრგვალი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="126"/>
-      <source>CircularZigZag</source>
-      <translation>წრიული ზიგზაგი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="127"/>
-      <source>Line</source>
-      <translation>ხაზი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="128"/>
-      <source>Offset</source>
-      <translation>წანაცვლება</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="129"/>
-      <source>Spiral</source>
-      <translation>ხვეული</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="130"/>
-      <source>ZigZag</source>
-      <translation>ზიგზაგი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="120"/>
-      <source>Conventional</source>
-      <translation type="unfinished">Conventional</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="121"/>
-      <source>Climb</source>
-      <translation type="unfinished">Climb</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="124"/>
-      <source>None</source>
-      <translation>არცერთი</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="133"/>
-      <source>Collectively</source>
-      <translation>ერთად</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="134"/>
-      <source>Individually</source>
-      <translation>ცალცალკე</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="137"/>
-      <source>Single-pass</source>
-      <translation>ერთი-გავლით</translation>
-    </message>
-    <message>
-      <location filename="../../../PathScripts/PathWaterline.py" line="138"/>
-      <source>Multi-pass</source>
-      <translation>მრავალგავლადი</translation>
+      <location filename="../../../PathScripts/PathEngrave.py" line="94"/>
+      <source>The vertex index to start the path from</source>
+      <translation>ტრაექტორიის საწყისი წვეროს ინდექსი</translation>
     </message>
   </context>
   <context>
@@ -4073,30 +1966,30 @@ Aborting op creation</source>
   <context>
     <name>Form</name>
     <message>
+      <location filename="../panels/PageOpWaterlineEdit.ui" line="14"/>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="14"/>
+      <location filename="../panels/PageHeightsEdit.ui" line="14"/>
+      <location filename="../panels/PageBaseLocationEdit.ui" line="14"/>
+      <location filename="../panels/PageOpThreadMillingEdit.ui" line="14"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="14"/>
+      <location filename="../panels/PageOpProbeEdit.ui" line="14"/>
+      <location filename="../panels/PageOpPocketExtEdit.ui" line="14"/>
+      <location filename="../panels/PageBaseHoleGeometryEdit.ui" line="14"/>
+      <location filename="../panels/PageOpEngraveEdit.ui" line="14"/>
+      <location filename="../panels/SetupOp.ui" line="14"/>
       <location filename="../panels/DressupPathBoundary.ui" line="14"/>
       <location filename="../panels/PageBaseGeometryEdit.ui" line="20"/>
-      <location filename="../panels/PageBaseHoleGeometryEdit.ui" line="14"/>
-      <location filename="../panels/PageBaseLocationEdit.ui" line="14"/>
       <location filename="../panels/PageDepthsEdit.ui" line="17"/>
-      <location filename="../panels/PageDiametersEdit.ui" line="14"/>
-      <location filename="../panels/PageHeightsEdit.ui" line="14"/>
-      <location filename="../panels/PageOpAdaptiveEdit.ui" line="14"/>
-      <location filename="../panels/PageOpCustomEdit.ui" line="14"/>
-      <location filename="../panels/PageOpDeburrEdit.ui" line="14"/>
-      <location filename="../panels/PageOpDrillingEdit.ui" line="14"/>
-      <location filename="../panels/PageOpEngraveEdit.ui" line="14"/>
-      <location filename="../panels/PageOpHelixEdit.ui" line="14"/>
-      <location filename="../panels/PageOpPocketExtEdit.ui" line="14"/>
-      <location filename="../panels/PageOpPocketFullEdit.ui" line="14"/>
-      <location filename="../panels/PageOpProbeEdit.ui" line="14"/>
-      <location filename="../panels/PageOpProfileFullEdit.ui" line="14"/>
       <location filename="../panels/PageOpSlotEdit.ui" line="14"/>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="14"/>
-      <location filename="../panels/PageOpThreadMillingEdit.ui" line="14"/>
-      <location filename="../panels/PageOpVcarveEdit.ui" line="14"/>
-      <location filename="../panels/PageOpWaterlineEdit.ui" line="14"/>
-      <location filename="../panels/SetupOp.ui" line="14"/>
+      <location filename="../panels/PageOpPocketFullEdit.ui" line="14"/>
+      <location filename="../panels/PageOpCustomEdit.ui" line="14"/>
+      <location filename="../panels/PageOpHelixEdit.ui" line="14"/>
+      <location filename="../panels/PageOpProfileFullEdit.ui" line="14"/>
+      <location filename="../panels/PageOpDeburrEdit.ui" line="14"/>
       <location filename="../panels/ToolEditor.ui" line="14"/>
+      <location filename="../panels/PageOpVcarveEdit.ui" line="14"/>
+      <location filename="../panels/PageOpAdaptiveEdit.ui" line="14"/>
+      <location filename="../panels/PageDiametersEdit.ui" line="14"/>
       <location filename="../preferences/PathDressupHoldingTags.ui" line="14"/>
       <source>Form</source>
       <translation>ფორმა</translation>
@@ -4258,9 +2151,9 @@ Aborting op creation</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;მონიშნული თვისებების ამ ოპერაციის საბაზისო გეომეტრიების სიაში ჩამატება.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageBaseGeometryEdit.ui" line="72"/>
-      <location filename="../panels/PageBaseHoleGeometryEdit.ui" line="45"/>
       <location filename="../panels/PageBaseLocationEdit.ui" line="43"/>
+      <location filename="../panels/PageBaseHoleGeometryEdit.ui" line="45"/>
+      <location filename="../panels/PageBaseGeometryEdit.ui" line="72"/>
       <source>Add</source>
       <translation>დამატება</translation>
     </message>
@@ -4270,10 +2163,10 @@ Aborting op creation</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;მონიშნული ელემენტების ბაზისური გეომეტრიების სიიდან წაშლა. ოპერაცია მათზე აღარ გადატარდება.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageBaseGeometryEdit.ui" line="82"/>
-      <location filename="../panels/PageBaseHoleGeometryEdit.ui" line="55"/>
-      <location filename="../panels/PageBaseLocationEdit.ui" line="53"/>
       <location filename="../panels/PropertyBag.ui" line="48"/>
+      <location filename="../panels/PageBaseLocationEdit.ui" line="53"/>
+      <location filename="../panels/PageBaseHoleGeometryEdit.ui" line="55"/>
+      <location filename="../panels/PageBaseGeometryEdit.ui" line="82"/>
       <source>Remove</source>
       <translation>მოცილება</translation>
     </message>
@@ -4283,8 +2176,8 @@ Aborting op creation</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;საბაზისო გეომეტრიების სიის გასუფთავება.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageBaseGeometryEdit.ui" line="92"/>
       <location filename="../panels/PageOpPocketExtEdit.ui" line="149"/>
+      <location filename="../panels/PageBaseGeometryEdit.ui" line="92"/>
       <source>Clear</source>
       <translation>გასუფთავება</translation>
     </message>
@@ -4393,11 +2286,11 @@ Aborting op creation</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;მონიშნული თვისების Z მნიშვნელობის ოპერაციის StartDepth-ად გამოყენება&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
+      <location filename="../panels/PageOpProbeEdit.ui" line="155"/>
       <location filename="../panels/PageDepthsEdit.ui" line="62"/>
       <location filename="../panels/PageDepthsEdit.ui" line="108"/>
       <location filename="../panels/PageDiametersEdit.ui" line="46"/>
       <location filename="../panels/PageDiametersEdit.ui" line="83"/>
-      <location filename="../panels/PageOpProbeEdit.ui" line="155"/>
       <source>...</source>
       <translation>...</translation>
     </message>
@@ -4463,7 +2356,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageHeightsEdit.ui" line="47"/>
       <source>Clearance Height</source>
-      <translation type="unfinished">Clearance Height</translation>
+      <translation>გაბარიტული სიმაღლე</translation>
     </message>
     <message>
       <location filename="../panels/PageHeightsEdit.ui" line="54"/>
@@ -4471,52 +2364,52 @@ Aborting op creation</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The height where lateral movement of the toolbit is not obstructed by any fixtures or the part / stock material itself.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpCustomEdit.ui" line="35"/>
-      <location filename="../panels/PageOpDrillingEdit.ui" line="35"/>
-      <location filename="../panels/PageOpEngraveEdit.ui" line="29"/>
-      <location filename="../panels/PageOpProbeEdit.ui" line="35"/>
-      <location filename="../panels/PageOpSlotEdit.ui" line="35"/>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="29"/>
-      <location filename="../panels/PageOpVcarveEdit.ui" line="29"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="29"/>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="35"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="29"/>
+      <location filename="../panels/PageOpProbeEdit.ui" line="35"/>
+      <location filename="../panels/PageOpEngraveEdit.ui" line="29"/>
+      <location filename="../panels/PageOpSlotEdit.ui" line="35"/>
+      <location filename="../panels/PageOpCustomEdit.ui" line="35"/>
+      <location filename="../panels/PageOpVcarveEdit.ui" line="29"/>
       <source>ToolController</source>
       <translation>ხელსაწყოს კონტროლერი</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpCustomEdit.ui" line="42"/>
-      <location filename="../panels/PageOpDeburrEdit.ui" line="60"/>
-      <location filename="../panels/PageOpDeburrEdit.ui" line="92"/>
+      <location filename="../panels/PageOpWaterlineEdit.ui" line="36"/>
       <location filename="../panels/PageOpDrillingEdit.ui" line="42"/>
       <location filename="../panels/PageOpDrillingEdit.ui" line="56"/>
-      <location filename="../panels/PageOpEngraveEdit.ui" line="36"/>
-      <location filename="../panels/PageOpEngraveEdit.ui" line="50"/>
-      <location filename="../panels/PageOpHelixEdit.ui" line="36"/>
-      <location filename="../panels/PageOpHelixEdit.ui" line="50"/>
-      <location filename="../panels/PageOpPocketFullEdit.ui" line="36"/>
-      <location filename="../panels/PageOpPocketFullEdit.ui" line="50"/>
-      <location filename="../panels/PageOpProbeEdit.ui" line="42"/>
-      <location filename="../panels/PageOpProfileFullEdit.ui" line="36"/>
-      <location filename="../panels/PageOpProfileFullEdit.ui" line="50"/>
-      <location filename="../panels/PageOpSlotEdit.ui" line="42"/>
       <location filename="../panels/PageOpSurfaceEdit.ui" line="36"/>
       <location filename="../panels/PageOpSurfaceEdit.ui" line="50"/>
+      <location filename="../panels/PageOpProbeEdit.ui" line="42"/>
+      <location filename="../panels/PageOpEngraveEdit.ui" line="36"/>
+      <location filename="../panels/PageOpEngraveEdit.ui" line="50"/>
+      <location filename="../panels/PageOpSlotEdit.ui" line="42"/>
+      <location filename="../panels/PageOpPocketFullEdit.ui" line="36"/>
+      <location filename="../panels/PageOpPocketFullEdit.ui" line="50"/>
+      <location filename="../panels/PageOpCustomEdit.ui" line="42"/>
+      <location filename="../panels/PageOpHelixEdit.ui" line="36"/>
+      <location filename="../panels/PageOpHelixEdit.ui" line="50"/>
+      <location filename="../panels/PageOpProfileFullEdit.ui" line="36"/>
+      <location filename="../panels/PageOpProfileFullEdit.ui" line="50"/>
+      <location filename="../panels/PageOpDeburrEdit.ui" line="60"/>
+      <location filename="../panels/PageOpDeburrEdit.ui" line="92"/>
       <location filename="../panels/PageOpVcarveEdit.ui" line="36"/>
       <location filename="../panels/PageOpVcarveEdit.ui" line="50"/>
-      <location filename="../panels/PageOpWaterlineEdit.ui" line="36"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The tool and its settings to be used for this operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ხელსაწყო და ამ ოპერაციაში გამოყენებული მისი პარამეტრები.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpCustomEdit.ui" line="49"/>
-      <location filename="../panels/PageOpDeburrEdit.ui" line="85"/>
-      <location filename="../panels/PageOpDrillingEdit.ui" line="49"/>
-      <location filename="../panels/PageOpEngraveEdit.ui" line="43"/>
-      <location filename="../panels/PageOpPocketFullEdit.ui" line="43"/>
-      <location filename="../panels/PageOpProfileFullEdit.ui" line="43"/>
-      <location filename="../panels/PageOpSlotEdit.ui" line="52"/>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="43"/>
-      <location filename="../panels/PageOpVcarveEdit.ui" line="43"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="46"/>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="49"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="43"/>
+      <location filename="../panels/PageOpEngraveEdit.ui" line="43"/>
+      <location filename="../panels/PageOpSlotEdit.ui" line="52"/>
+      <location filename="../panels/PageOpPocketFullEdit.ui" line="43"/>
+      <location filename="../panels/PageOpCustomEdit.ui" line="49"/>
+      <location filename="../panels/PageOpProfileFullEdit.ui" line="43"/>
+      <location filename="../panels/PageOpDeburrEdit.ui" line="85"/>
+      <location filename="../panels/PageOpVcarveEdit.ui" line="43"/>
       <location filename="../panels/SetupGlobal.ui" line="241"/>
       <location filename="../panels/SetupGlobal.ui" line="247"/>
       <source>Coolant Mode</source>
@@ -4528,19 +2421,19 @@ Aborting op creation</source>
       <translation>G Gode</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpAdaptiveEdit.ui" line="23"/>
-      <location filename="../panels/PageOpDeburrEdit.ui" line="53"/>
-      <location filename="../panels/PageOpHelixEdit.ui" line="29"/>
-      <location filename="../panels/PageOpPocketFullEdit.ui" line="29"/>
-      <location filename="../panels/PageOpProfileFullEdit.ui" line="29"/>
       <location filename="../panels/PageOpThreadMillingEdit.ui" line="20"/>
+      <location filename="../panels/PageOpPocketFullEdit.ui" line="29"/>
+      <location filename="../panels/PageOpHelixEdit.ui" line="29"/>
+      <location filename="../panels/PageOpProfileFullEdit.ui" line="29"/>
+      <location filename="../panels/PageOpDeburrEdit.ui" line="53"/>
+      <location filename="../panels/PageOpAdaptiveEdit.ui" line="23"/>
       <location filename="../panels/SetupGlobal.ui" line="166"/>
       <source>Tool Controller</source>
       <translation>ხელსაწყოს კონტროლერი</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpAdaptiveEdit.ui" line="33"/>
       <location filename="../panels/PageOpHelixEdit.ui" line="43"/>
+      <location filename="../panels/PageOpAdaptiveEdit.ui" line="33"/>
       <location filename="../panels/SetupGlobal.ui" line="235"/>
       <source>Coolant</source>
       <translation>გამაგრილებელი</translation>
@@ -4548,7 +2441,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="55"/>
       <source>Cut Region</source>
-      <translation type="unfinished">Cut Region</translation>
+      <translation>რეგიონის ამოჭრა</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="62"/>
@@ -4558,7 +2451,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="69"/>
       <source>Operation Type</source>
-      <translation type="unfinished">Operation Type</translation>
+      <translation>ოპერაციის ტიპი</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="76"/>
@@ -4566,8 +2459,8 @@ Aborting op creation</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type of adaptive operation&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpAdaptiveEdit.ui" line="83"/>
       <location filename="../panels/PageOpPocketFullEdit.ui" line="176"/>
+      <location filename="../panels/PageOpAdaptiveEdit.ui" line="83"/>
       <source>Step Over Percent</source>
       <translation type="unfinished">Step Over Percent</translation>
     </message>
@@ -4579,7 +2472,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="112"/>
       <source>Accuracy vs Performance</source>
-      <translation type="unfinished">Accuracy vs Performance</translation>
+      <translation>სიზუსტე vs წარმადობა</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="119"/>
@@ -4589,7 +2482,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="147"/>
       <source>Helix Ramp Angle</source>
-      <translation type="unfinished">Helix Ramp Angle</translation>
+      <translation>სპირალის რამპის კუთხე</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="154"/>
@@ -4599,7 +2492,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="161"/>
       <source>Helix Cone Angle</source>
-      <translation type="unfinished">Helix Cone Angle</translation>
+      <translation>სპირალის კონუსის კუთხე</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="168"/>
@@ -4609,7 +2502,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="175"/>
       <source>Helix Max Diameter</source>
-      <translation type="unfinished">Helix Max Diameter</translation>
+      <translation>სპირალის მაქს. დიამეტრი</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="182"/>
@@ -4619,7 +2512,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="189"/>
       <source>Lift Distance</source>
-      <translation type="unfinished">Lift Distance</translation>
+      <translation>აწევის მანძილი</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="196"/>
@@ -4629,7 +2522,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="203"/>
       <source>Keep Tool Down Ratio</source>
-      <translation type="unfinished">Keep Tool Down Ratio</translation>
+      <translation>ხელსაწყოს დაბლა დაკავების დონე</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="210"/>
@@ -4639,7 +2532,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="217"/>
       <source>Stock to Leave</source>
-      <translation type="unfinished">Stock to Leave</translation>
+      <translation>დასატოვებელი ნედლეული</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="224"/>
@@ -4649,18 +2542,18 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="231"/>
       <source>Force Clearing Inside-out</source>
-      <translation type="unfinished">Force Clearing Inside-out</translation>
+      <translation>შიგნიდან-გარეთ ძალით გასუფთავება</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="238"/>
       <source>Finishing Profile</source>
-      <translation type="unfinished">Finishing Profile</translation>
+      <translation>დამასრულებელი პროფილი</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpAdaptiveEdit.ui" line="245"/>
       <location filename="../panels/PageOpPocketFullEdit.ui" line="235"/>
+      <location filename="../panels/PageOpAdaptiveEdit.ui" line="245"/>
       <source>Use Outline</source>
-      <translation type="unfinished">Use Outline</translation>
+      <translation>კიდის გამოყენება</translation>
     </message>
     <message>
       <location filename="../panels/PageOpAdaptiveEdit.ui" line="255"/>
@@ -4668,10 +2561,10 @@ Aborting op creation</source>
       <translation>გაჩერება</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpDeburrEdit.ui" line="131"/>
+      <location filename="../panels/PageOpThreadMillingEdit.ui" line="167"/>
       <location filename="../panels/PageOpHelixEdit.ui" line="87"/>
       <location filename="../panels/PageOpProfileFullEdit.ui" line="82"/>
-      <location filename="../panels/PageOpThreadMillingEdit.ui" line="167"/>
+      <location filename="../panels/PageOpDeburrEdit.ui" line="131"/>
       <source>Direction</source>
       <translation>მიმართულება</translation>
     </message>
@@ -4681,15 +2574,15 @@ Aborting op creation</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;მიმართულება, რომლითაც პროფილი შესრულდება. საათის, თუ საათის საწინააღმდეგო მიმართულებით.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
+      <location filename="../panels/PageOpHelixEdit.ui" line="98"/>
       <location filename="../panels/PageOpDeburrEdit.ui" line="141"/>
       <location filename="../panels/PageOpDeburrEdit.ui" line="148"/>
-      <location filename="../panels/PageOpHelixEdit.ui" line="98"/>
       <source>CW</source>
       <translation>სმ</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpDeburrEdit.ui" line="153"/>
       <location filename="../panels/PageOpHelixEdit.ui" line="103"/>
+      <location filename="../panels/PageOpDeburrEdit.ui" line="153"/>
       <source>CCW</source>
       <translation>სსს</translation>
     </message>
@@ -4848,7 +2741,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpPocketExtEdit.ui" line="22"/>
       <source>Enable Extensions</source>
-      <translation type="unfinished">Enable Extensions</translation>
+      <translation>გაფართოებების ჩართვა</translation>
     </message>
     <message>
       <location filename="../panels/PageOpPocketExtEdit.ui" line="55"/>
@@ -4868,7 +2761,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpPocketExtEdit.ui" line="68"/>
       <source>Extend Corners</source>
-      <translation type="unfinished">Extend Corners</translation>
+      <translation>კუთხეების დაგრძელება</translation>
     </message>
     <message>
       <location filename="../panels/PageOpPocketExtEdit.ui" line="78"/>
@@ -4991,9 +2884,9 @@ Aborting op creation</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;შაბლონის გადატარების კუთხე.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpPocketFullEdit.ui" line="183"/>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="222"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="172"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="222"/>
+      <location filename="../panels/PageOpPocketFullEdit.ui" line="183"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount by which the tool is laterally displaced on each cycle of the pattern, specified in percent of the tool diameter.&lt;/p&gt;&lt;p&gt;A step over of 100% results in no overlap between two different cycles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount by which the tool is laterally displaced on each cycle of the pattern, specified in percent of the tool diameter.&lt;/p&gt;&lt;p&gt;A step over of 100% results in no overlap between two different cycles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -5013,9 +2906,9 @@ Aborting op creation</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;მიუთითეთ, ეს ოპერაცია საწყის წერტილს იყენებს თუ არა.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="255"/>
       <location filename="../panels/PageOpPocketFullEdit.ui" line="225"/>
       <location filename="../panels/PageOpProfileFullEdit.ui" line="130"/>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="255"/>
       <source>Use Start Point</source>
       <translation>სასტარტო წერტილის გამოყენება</translation>
     </message>
@@ -5037,7 +2930,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/PageOpProbeEdit.ui" line="52"/>
       <source>Probe Grid Points</source>
-      <translation type="unfinished">Probe Grid Points</translation>
+      <translation>ბადის წერტილების ზონდირება</translation>
     </message>
     <message>
       <location filename="../panels/PageOpProbeEdit.ui" line="58"/>
@@ -5093,7 +2986,7 @@ Aborting op creation</source>
       <location filename="../panels/PageOpProfileFullEdit.ui" line="74"/>
       <location filename="../panels/PageOpProfileFullEdit.ui" line="93"/>
       <source>PLACEHOLDER</source>
-      <translation type="unfinished">PLACEHOLDER</translation>
+      <translation>ადგილის დამკავებელი</translation>
     </message>
     <message>
       <location filename="../panels/PageOpProfileFullEdit.ui" line="114"/>
@@ -5246,16 +3139,16 @@ Aborting op creation</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;დადებითი გააგრძელებს ტრაექტორიის ბოლოს, უარყოფითი შეამოკლებს.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSlotEdit.ui" line="345"/>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="91"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="98"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="91"/>
+      <location filename="../panels/PageOpSlotEdit.ui" line="345"/>
       <source>Layer Mode</source>
       <translation>ფენის რეჟიმი</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSlotEdit.ui" line="357"/>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="98"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="110"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="98"/>
+      <location filename="../panels/PageOpSlotEdit.ui" line="357"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Complete the operation in a single pass at depth, or mulitiple passes to final depth.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ოპერაციის სიღრმეზე ერთი გავლის დასრულება. ან აირჩიეთ მრავალი გავლა, სრული სიღრმის მისაღწევად.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -5300,14 +3193,14 @@ Aborting op creation</source>
       <translation>უკუღმა ჭრის მიმართულება</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="63"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="79"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="63"/>
       <source>BoundBox</source>
       <translation>შემომსაზღვრელი ჩარჩო</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="70"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="91"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="70"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the overall boundary for the operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;აირჩიეთ ოპერაციის საერთო საზღვარი.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -5322,14 +3215,14 @@ Aborting op creation</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Planar: Flat, 3D surface scan.  Rotational: 4th-axis rotational scan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="105"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="117"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="105"/>
       <source>Cut Pattern</source>
       <translation>ნიმუშის ამოჭრა</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="112"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="129"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="112"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the geometric clearing pattern to use for the operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the geometric clearing pattern to use for the operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -5384,26 +3277,26 @@ Aborting op creation</source>
       <translation>სიღრმის წანაცვლება</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="205"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="149"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="205"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the Z-axis depth offset from the target surface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;დააყენეთ Z ღერძის სამიზნე ზედაპირთან წანაცვლების მნიშვნელობა.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="215"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="159"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="215"/>
       <source>Step over</source>
       <translation>გადაბიჯება</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="235"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="185"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="235"/>
       <source>Sample interval</source>
       <translation>სინჯის ინტერვალი</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="242"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="192"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="242"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the sampling resolution. Smaller values quickly increase processing time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head&lt;body&gt;&lt;p&gt;/&gt;დააყენეთ სემპლინგის გაფართოება. რაც მცირეა მნიშვნელობა, მით გაიზრდება დამუშავების დროც.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -5413,14 +3306,14 @@ Aborting op creation</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;თუ უთითებთ საწყის წერტილს, ეს ჩართეთ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="262"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="202"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="262"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable optimization of linear paths (co-linear points). Removes unnecessary co-linear points from G-Code output.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable optimization of linear paths (co-linear points). Removes unnecessary co-linear points from G-Code output.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../panels/PageOpSurfaceEdit.ui" line="265"/>
       <location filename="../panels/PageOpWaterlineEdit.ui" line="205"/>
+      <location filename="../panels/PageOpSurfaceEdit.ui" line="265"/>
       <source>Optimize Linear Paths</source>
       <translation>ხაზოვანი ტრაექტორიების ოპტიმიზაცია</translation>
     </message>
@@ -5729,7 +3622,7 @@ Aborting op creation</source>
     <message>
       <location filename="../panels/ToolEditor.ui" line="117"/>
       <source>Point/Tip Angle</source>
-      <translation type="unfinished">Point/Tip Angle</translation>
+      <translation>წერტილის/ბუნიკის კუთხე</translation>
     </message>
     <message>
       <location filename="../panels/ToolEditor.ui" line="124"/>
@@ -6102,6 +3995,318 @@ Aborting op creation</source>
     </message>
   </context>
   <context>
+    <name>Path</name>
+    <message>
+      <location filename="../../../InitGui.py" line="273"/>
+      <source>The currently selected unit schema: 
+     '{}'
+ Does not use 'minutes' for velocity values. 
+ 
+CNC machines require feed rate to be expressed in 
+unit/minute. To ensure correct gcode: 
+Select a minute-based schema in preferences.
+For example:
+    'Metric, Small Parts &amp; CNC'
+    'US Customary'
+    'Imperial Decimal'</source>
+      <translation type="unfinished">The currently selected unit schema: 
+     '{}'
+ Does not use 'minutes' for velocity values. 
+ 
+CNC machines require feed rate to be expressed in 
+unit/minute. To ensure correct gcode: 
+Select a minute-based schema in preferences.
+For example:
+    'Metric, Small Parts &amp; CNC'
+    'US Customary'
+    'Imperial Decimal'</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="275"/>
+      <source>Warning</source>
+      <translation>გაფრთხილება</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="277"/>
+      <source>Ok</source>
+      <translation>დიახ</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="279"/>
+      <source>Don't Show This Anymore</source>
+      <translation>აღარ მაჩვენო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPost.py" line="421"/>
+      <location filename="../../../PathScripts/PathUtilsGui.py" line="93"/>
+      <source>Choose a Path Job</source>
+      <translation>აირჩიეთ ტრაექტორიის ამოცანა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="637"/>
+      <source>No parent job found for operation.</source>
+      <translation type="unfinished">No parent job found for operation.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="643"/>
+      <source>Parent job %s doesn't have a base object</source>
+      <translation type="unfinished">Parent job %s doesn't have a base object</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="789"/>
+      <source>No Tool Controller is selected. We need a tool to build a Path.</source>
+      <translation type="unfinished">No Tool Controller is selected. We need a tool to build a Path.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="803"/>
+      <source>No Tool found or diameter is zero. We need a tool to build a Path.</source>
+      <translation type="unfinished">No Tool found or diameter is zero. We need a tool to build a Path.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="838"/>
+      <source>No Tool Controller selected.</source>
+      <translation>ხელსაწყოს კონტროლერი არჩეული არაა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="841"/>
+      <source>Tool Error</source>
+      <translation>ხელსაწყოს შეცდომა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="854"/>
+      <source>Tool Controller feedrates required to calculate the cycle time.</source>
+      <translation type="unfinished">Tool Controller feedrates required to calculate the cycle time.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="857"/>
+      <source>Feedrate Error</source>
+      <translation>მიწოდების სიჩქარის შეცდომა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="865"/>
+      <source>Add Tool Controller Rapid Speeds on the SetupSheet for more accurate cycle times.</source>
+      <translation type="unfinished">Add Tool Controller Rapid Speeds on the SetupSheet for more accurate cycle times.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="874"/>
+      <source>Cycletime Error</source>
+      <translation>ციკლის დროის შეცდომა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="897"/>
+      <source>Base object %s.%s already in the list</source>
+      <translation>საბაზისო ობიექტი %s.%s უკვე სიაშია</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="910"/>
+      <source>Base object %s.%s rejected by operation</source>
+      <translation type="unfinished">Base object %s.%s rejected by operation</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPreferences.py" line="196"/>
+      <source>Legacy tools are deprecated. They will be removed after version 0.20</source>
+      <translation type="unfinished">Legacy tools are deprecated. They will be removed after version 0.20</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJob.py" line="558"/>
+      <source>This job contains Legacy tools. Legacy tools are deprecated. They will be removed after version 0.20</source>
+      <translation type="unfinished">This job contains Legacy tools. Legacy tools are deprecated. They will be removed after version 0.20</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathCircularHoleBase.py" line="117"/>
+      <source>Hole diameter may be inaccurate due to tessellation on face. Consider selecting hole edge.</source>
+      <translation type="unfinished">Hole diameter may be inaccurate due to tessellation on face. Consider selecting hole edge.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathCircularHoleBase.py" line="151"/>
+      <source>Feature %s.%s cannot be processed as a circular hole - please remove from Base geometry list.</source>
+      <translation type="unfinished">Feature %s.%s cannot be processed as a circular hole - please remove from Base geometry list.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="628"/>
+      <source>Feed(H)</source>
+      <translation>მიწოდება(ჰ)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="632"/>
+      <source>Feed(V)</source>
+      <translation>მიწოდება(ვ)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfileGui.py" line="165"/>
+      <source>Profile</source>
+      <translation>პროფილი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfileGui.py" line="168"/>
+      <source>Profile entire model, selected face(s) or selected edge(s)</source>
+      <translation type="unfinished">Profile entire model, selected face(s) or selected edge(s)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolControllerGui.py" line="117"/>
+      <location filename="../../../PathScripts/PathIconViewProvider.py" line="98"/>
+      <source>Edit</source>
+      <translation>ჩასწორება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocket.py" line="335"/>
+      <source>A planar adaptive start is unavailable. The non-planar will be attempted.</source>
+      <translation type="unfinished">A planar adaptive start is unavailable. The non-planar will be attempted.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocket.py" line="351"/>
+      <location filename="../../../PathScripts/PathPocket.py" line="381"/>
+      <source>The non-planar adaptive start is also unavailable.</source>
+      <translation>არაბრტყელი ადაპტიური სტარტიც ხელმიუწვდომელია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathUtils.py" line="546"/>
+      <source>Legacy Tools not supported</source>
+      <translation>მოძველებული ხელსაწყოების მხარდაჭერა გამორთულია</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathUtils.py" line="550"/>
+      <source>Selected tool is not a drill</source>
+      <translation>არჩეული ხელსაწყო ბურღი არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathUtils.py" line="558"/>
+      <source>Invalid Cutting Edge Angle %.2f, must be &gt;0° and &lt;=180°</source>
+      <translation type="unfinished">Invalid Cutting Edge Angle %.2f, must be &gt;0° and &lt;=180°</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathUtils.py" line="570"/>
+      <source>Cutting Edge Angle (%.2f) results in negative tool tip length</source>
+      <translation type="unfinished">Cutting Edge Angle (%.2f) results in negative tool tip length</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathVcarveGui.py" line="65"/>
+      <location filename="../../../PathScripts/PathEngraveGui.py" line="76"/>
+      <source>%s is not a Base Model object of the job %s</source>
+      <translation type="unfinished">%s is not a Base Model object of the job %s</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathEngraveGui.py" line="83"/>
+      <source>Base shape %s already in the list</source>
+      <translation>საბაზისო მოხაზულობა %s უკვე სიაშია</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDeburr.py" line="185"/>
+      <source>CW</source>
+      <translation>სმ</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDeburr.py" line="186"/>
+      <source>CCW</source>
+      <translation>სსს</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitGui.py" line="200"/>
+      <source>Invalid Filename</source>
+      <translation>ფაილის არასწორი სახელი</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathAreaOp</name>
+    <message>
+      <location filename="../../../PathScripts/PathAreaOp.py" line="122"/>
+      <source>job %s has no Base.</source>
+      <translation>ამოცანა %s-ს ბაზა არ გააჩნია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathAreaOp.py" line="126"/>
+      <source>no job for op %s found.</source>
+      <translation>დავალება ოპისთვის %s ნაპოვნი არაა.</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathArray</name>
+    <message>
+      <location filename="../../../PathScripts/PathArray.py" line="376"/>
+      <source>No base objects for PathArray.</source>
+      <translation>PathArray-ს საბაზისო ობიექტების გარეშე.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathArray.py" line="397"/>
+      <source>Arrays of paths having different tool controllers are handled according to the tool controller of the first path.</source>
+      <translation type="unfinished">Arrays of paths having different tool controllers are handled according to the tool controller of the first path.</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathDeburr</name>
+    <message>
+      <location filename="../../../PathScripts/PathDeburr.py" line="93"/>
+      <source>The selected tool has no CuttingEdgeAngle property. Assuming Endmill
+</source>
+      <translation type="unfinished">The selected tool has no CuttingEdgeAngle property. Assuming Endmill
+</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDeburr.py" line="189"/>
+      <source>Round</source>
+      <translation>მრგვალი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDeburr.py" line="190"/>
+      <source>Miter</source>
+      <translation>ირიბპირა</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathFixture</name>
+    <message>
+      <location filename="../../../PathScripts/PathFixture.py" line="155"/>
+      <source>Fixture</source>
+      <translation>სამაგრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathFixture.py" line="158"/>
+      <source>Creates a Fixture Offset object</source>
+      <translation>სამაგრის წანაცვლების ობიექტის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathGeom</name>
+    <message>
+      <location filename="../../../PathScripts/PathGeom.py" line="175"/>
+      <source>face %s not handled, assuming not vertical</source>
+      <translation type="unfinished">face %s not handled, assuming not vertical</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathGeom.py" line="192"/>
+      <source>edge %s not handled, assuming not vertical</source>
+      <translation type="unfinished">edge %s not handled, assuming not vertical</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathGeom.py" line="196"/>
+      <source>isVertical(%s) not supported</source>
+      <translation>isVertical(%s) მხარდაჭერილი არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathGeom.py" line="227"/>
+      <source>isHorizontal(%s) not supported</source>
+      <translation>isHorizontal(%s) მხარდაჭერილი არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathGeom.py" line="676"/>
+      <source>%s not supported for flipping</source>
+      <translation>%s-ს არ აქვს გადაბრუნების მხარდაჭერა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathGeom.py" line="732"/>
+      <source>Zero working area to process. Check your selection and settings.</source>
+      <translation type="unfinished">Zero working area to process. Check your selection and settings.</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathGui</name>
+    <message>
+      <location filename="../../../PathScripts/PathUtil.py" line="59"/>
+      <source>%s has no property %s (%s))</source>
+      <translation>%s-ს არ გააჩნია თვისება %s (%s))</translation>
+    </message>
+  </context>
+  <context>
     <name>PathGui::DlgProcessorChooser</name>
     <message>
       <location filename="../../DlgProcessorChooser.cpp" line="49"/>
@@ -6175,7 +4380,7 @@ Aborting op creation</source>
     <message>
       <location filename="../../DlgSettingsPathColor.ui" line="196"/>
       <source>Machine extents color</source>
-      <translation type="unfinished">Machine extents color</translation>
+      <translation>მანქანის ზომების ფერი</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsPathColor.ui" line="219"/>
@@ -6286,7 +4491,7 @@ Aborting op creation</source>
     <message>
       <location filename="../preferences/Advanced.ui" line="67"/>
       <source>Suppress Velocity warning</source>
-      <translation type="unfinished">Suppress Velocity warning</translation>
+      <translation>აჩქარების გაფრთხილების მოცილება</translation>
     </message>
     <message>
       <location filename="../preferences/Advanced.ui" line="86"/>
@@ -6338,6 +4543,2454 @@ p, li { white-space: pre-wrap; }
     </message>
   </context>
   <context>
+    <name>PathJob</name>
+    <message>
+      <location filename="../../../PathScripts/PathDressupPathBoundaryGui.py" line="167"/>
+      <source>Unsupported stock object %s</source>
+      <translation>ნედლეულის მხაარდაუჭერელი ობექტი %s</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupPathBoundaryGui.py" line="183"/>
+      <source>Unsupported stock type %s (%d)</source>
+      <translation>ნედლეულის მხარდაუჭერელი ტიპი %s (%d)</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathOp</name>
+    <message>
+      <location filename="../../../PathScripts/PathArray.py" line="142"/>
+      <location filename="../../../PathScripts/PathArray.py" line="205"/>
+      <source>Make False, to prevent operation from generating code</source>
+      <translation>გამორთეთ ოპერაციისთვის კოდის გენერაციის ხელის შესაშლელად</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="191"/>
+      <source>Edit</source>
+      <translation>ჩასწორება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="496"/>
+      <source>Base Geometry</source>
+      <translation>ბაზური გეომეტრია</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="560"/>
+      <source>Vertexes are not supported</source>
+      <translation>წვეროები მხარდაჭერილი არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="567"/>
+      <source>Edges are not supported</source>
+      <translation>წიბოები მხარდაჭერილი არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="574"/>
+      <source>Faces are not supported</source>
+      <translation>ზედაპირები მხარდაჭერილი არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="641"/>
+      <source>Mulitiple operations are labeled as</source>
+      <translation>ოპერაციების ჯგუფი მონიშნულია, როგორც</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="718"/>
+      <source>Base Location</source>
+      <translation>ბაზური მდებარეობა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="837"/>
+      <source>Heights</source>
+      <translation>სიმაღლეები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="915"/>
+      <source>FinalDepth cannot be modified for this operation.
+If it is necessary to set the FinalDepth manually please select a different operation.</source>
+      <translation type="unfinished">FinalDepth cannot be modified for this operation.
+If it is necessary to set the FinalDepth manually please select a different operation.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="938"/>
+      <source>Depths</source>
+      <translation>სიღრმეები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="1043"/>
+      <source>Diameters</source>
+      <translation>დიამეტრები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="1075"/>
+      <source>AreaOp Operation</source>
+      <translation>ოპერაცია AreaOp</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="1140"/>
+      <source>Operation</source>
+      <translation>ოპერაცია</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="1207"/>
+      <source>Uncreate AreaOp Operation</source>
+      <translation type="unfinished">Uncreate AreaOp Operation</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="1346"/>
+      <location filename="../../../PathScripts/PathOpGui.py" line="1347"/>
+      <source>Pick Start Point</source>
+      <translation>აირჩიეთ საწყისი წერტილი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="1390"/>
+      <source>No suitable tool controller found.
+Aborting op creation</source>
+      <translation>ხელსაწყოს შესატყვისი კონტროლერი ნაპოვნი არაა.
+ოპის შექმნა გაუქმებულია</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOpGui.py" line="1394"/>
+      <source>No tool controller, aborting op creation</source>
+      <translation>ხელსაწყოს კონტროლერი ნაპოვნი არაა. ოპის შექმნა შეჩერებულია</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathPlane</name>
+    <message>
+      <location filename="../../../PathScripts/PathPlane.py" line="117"/>
+      <source>Selection Plane</source>
+      <translation>სიბრტყის არჩევა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPlane.py" line="120"/>
+      <source>Create a Selection Plane object</source>
+      <translation>მონიშნული სიბრტყის ობიექტის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathPocket</name>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBaseGui.py" line="81"/>
+      <source>Pass Extension</source>
+      <translation>გამოტოვება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBaseGui.py" line="87"/>
+      <source>The distance the facing operation will extend beyond the boundary shape.</source>
+      <translation type="unfinished">The distance the facing operation will extend beyond the boundary shape.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocket.py" line="193"/>
+      <source>Final depth set below ZMin of face(s) selected.</source>
+      <translation>საბოლოო სიღრმე მონიშნული ზედაპირ(ებ)-ზე ZMin-ზე ნაკლებია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathFeatureExtensionsGui.py" line="180"/>
+      <source>Normal</source>
+      <translation>ნორმალური</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathFeatureExtensionsGui.py" line="181"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathFeatureExtensionsGui.py" line="182"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathProfile</name>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="197"/>
+      <source>CW</source>
+      <translation>სმ</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="198"/>
+      <source>CCW</source>
+      <translation>სსს</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="201"/>
+      <source>Collectively</source>
+      <translation>ერთად</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="202"/>
+      <source>Individually</source>
+      <translation>ცალცალკე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="205"/>
+      <source>Round</source>
+      <translation>მრგვალი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="206"/>
+      <source>Square</source>
+      <translation>კვადრატი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="207"/>
+      <source>Miter</source>
+      <translation>ირიბპირა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathHelix.py" line="76"/>
+      <location filename="../../../PathScripts/PathProfile.py" line="210"/>
+      <source>Outside</source>
+      <translation>გარედან</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathHelix.py" line="77"/>
+      <location filename="../../../PathScripts/PathProfile.py" line="211"/>
+      <source>Inside</source>
+      <translation>შიგნით</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="383"/>
+      <source>The selected edge(s) are inaccessible. If multiple, re-ordering selection might work.</source>
+      <translation type="unfinished">The selected edge(s) are inaccessible. If multiple, re-ordering selection might work.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="489"/>
+      <source>Unable to create path for face(s).</source>
+      <translation>ტრაექტორიის შექმნა ზედაპირ(ებ)-ისთვის შეუძლებელია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfile.py" line="638"/>
+      <source>Check edge selection and Final Depth requirements for profiling open edge(s).</source>
+      <translation>ღია წიბოების პროფილირებისთვის წიბოს არჩევანისა და საბოლოო სიღრმის მოთხოვნების შემოწმება.</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathStock</name>
+    <message>
+      <location filename="../../../PathScripts/PathStock.py" line="90"/>
+      <source>Invalid base object %s - no shape found</source>
+      <translation type="unfinished">Invalid base object %s - no shape found</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathStock.py" line="597"/>
+      <source>Unsupported stock type named {}</source>
+      <translation>ნედლეულის მხარდაუჭერელი ტიპი სახელით {}</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathStock.py" line="605"/>
+      <source>Unsupported PathStock template version {}</source>
+      <translation>PathStock-ის შაბლონის მხარდაუჭერელი ვერსია {}</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathSurface</name>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="43"/>
+      <source>This operation requires OpenCamLib to be installed.</source>
+      <translation>ოპერაციის შესასრულებლად საჭიროა OpenCamLib-ი.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="560"/>
+      <source>The GeometryTolerance for this Job is 0.0.</source>
+      <translation>ამ დავალების GeometryTolerance 0.0-ის ტოლია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="563"/>
+      <source>Initializing LinearDeflection to 0.001 mm.</source>
+      <translation>LinearDeflection-ის საწყისი მნიშვნელობაა 0.0001 მმ.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="786"/>
+      <source>No JOB</source>
+      <translation>დავალებები არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="811"/>
+      <source>Canceling 3D Surface operation. Error creating OCL cutter.</source>
+      <translation>3D ზედაპირის ოპერაციის გაუქმება. შეცდომა OCL მჭრელის შექმნისას.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="1042"/>
+      <source>operation time is</source>
+      <translation>ოპერაციის დრო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="1047"/>
+      <source>Canceled 3D Surface operation.</source>
+      <translation>ოპერაცია 3D ზედაპირზე გაუქმებულია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="1147"/>
+      <source>No profile geometry shape returned.</source>
+      <translation>პროფილის გეომეტრიის მოხაზულობის მიღების შეცდომა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="1154"/>
+      <source>No profile path geometry returned.</source>
+      <translation>პროფილის ტრაექტორიის გეომეტრის მიღების შეცდომა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="1169"/>
+      <source>No clearing shape returned.</source>
+      <translation>გაწმენდის ფორმა არ დაბრუნებულა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="1177"/>
+      <source>No clearing path geometry returned.</source>
+      <translation>გასუფთავების ტრაექტორიის გეომეტრიის მიღების შეცდომა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="1197"/>
+      <source>No scan data to convert to Gcode.</source>
+      <translation type="unfinished">No scan data to convert to Gcode.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="2768"/>
+      <source>Failed to identify tool for operation.</source>
+      <translation>ამ ოპერაციის ხელსაწყოს გამოცნობის შეცდომა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="2780"/>
+      <source>Failed to map selected tool to an OCL tool type.</source>
+      <translation type="unfinished">Failed to map selected tool to an OCL tool type.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="2794"/>
+      <source>Failed to translate active tool to OCL tool type.</source>
+      <translation>აქტიური ხელსაწყოს OCL ხელსაწყოს ტიპად გარდაქმნის შეცდომა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="2806"/>
+      <source>OCL tool not available. Cannot determine is cutter has tilt available.</source>
+      <translation type="unfinished">OCL tool not available. Cannot determine is cutter has tilt available.</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathSurfaceSupport</name>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="97"/>
+      <source>Shape appears to not be horizontal planar.</source>
+      <translation>მოხაზულობა არ წარმოადგენს ჰორიზონტალურ სიბრტყეს.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="122"/>
+      <source>Cannot calculate the Center Of Mass.</source>
+      <translation>მასის ცენტრის გამოთვლა შეუძლებელია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="127"/>
+      <source>Using Center of Boundbox instead.</source>
+      <translation>ვიყენებ შემომსაზღვრელი ჩარჩოს ცენტრს ამის მაგიერ.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="509"/>
+      <source>Face selection is unavailable for Rotational scans.</source>
+      <translation>ბრუნვადი სკანირებისთვის ზედაპირის მონიშვნა ხელმიუწვდომელია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="512"/>
+      <source>Ignoring selected faces.</source>
+      <translation>მონიშნული ზედაპირების იგნორი.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="614"/>
+      <source>Failed to pre-process base as a whole.</source>
+      <translation>ბაზის როგორც მთლიანის დამუშავების შეცდომა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="2419"/>
+      <source>Failed to identify a horizontal cross-section for Face</source>
+      <translation>ზედაპირის ჰორიზონტალური კვეთის ამოცნობის შეცდომა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceSupport.py" line="2655"/>
+      <source>Diameter dimension missing from ToolBit shape.</source>
+      <translation>ხელსაწყოს მონახაზში დიამეტრის ზომა აკლია.</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathToolBit</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitGui.py" line="119"/>
+      <source>Toolbit cannot be edited: Shapefile not found</source>
+      <translation>ხელსაწყოს იარაღის მჭრელი იარაღის ჩასწორება შეუძლებელია: Shapefile ვერ ვიპოვე</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathToolLibraryManager</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="142"/>
+      <source>Tooltable JSON (*.json)</source>
+      <translation>ხელსაწყოების ცხრილის JSON (*.json)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="143"/>
+      <source>Tooltable XML (*.xml)</source>
+      <translation>ხელსაწყოების ცხრილის XML (*.xml)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="146"/>
+      <source>HeeksCAD tooltable (*.tooltable)</source>
+      <translation>HeeksCAD-ის ხელსაწყოების ცხრილი (*.tooltable)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="150"/>
+      <source>LinuxCNC tooltable (*.tbl)</source>
+      <translation>LinuxCNC-ის ხელსაწყოების ცხრილი (*.tbl)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="220"/>
+      <source>Tool Table Same Name</source>
+      <translation>ხელსაწყოების ცხრილის გამეორებადი სახელი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="223"/>
+      <source>Tool Table Name Exists</source>
+      <translation>ხელსაწყოების ცხრილის სახელი უკვე არსებობს</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="283"/>
+      <source>Unsupported Path tooltable template version %s</source>
+      <translation>ტრაექტორიის ხელსაწყოების ცხრილის შაბლონის მხარდაუჭერელი ვერსია %s</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryManager.py" line="298"/>
+      <source>Unsupported Path tooltable</source>
+      <translation>ტრაექტორიის ხელსაწყოების ცხრილი მხარდაუჭერელია</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathVcarve</name>
+    <message>
+      <location filename="../../../PathScripts/PathVcarve.py" line="377"/>
+      <source>The Job Base Object has no engraveable element. Engraving operation will produce no output.</source>
+      <translation type="unfinished">The Job Base Object has no engraveable element. Engraving operation will produce no output.</translation>
+    </message>
+  </context>
+  <context>
+    <name>PathWaterline</name>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="188"/>
+      <source>New property added to</source>
+      <translation>ახალი თვისება დაემატა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="190"/>
+      <source>Check default value(s).</source>
+      <translation>ნაგულისხმევი მნიშვნელობების შემოწმება.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="508"/>
+      <source>The GeometryTolerance for this Job is 0.0.</source>
+      <translation>ამ დავალების GeometryTolerance 0.0-ის ტოლია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="511"/>
+      <source>Initializing LinearDeflection to 0.0001 mm.</source>
+      <translation>LinearDeflection-ის საწყისი მნიშვნელობაა 0.0001 მმ.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="649"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="657"/>
+      <source>Sample interval limits are 0.0001 to 25.4 millimeters.</source>
+      <translation type="unfinished">Sample interval limits are 0.0001 to 25.4 millimeters.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="666"/>
+      <source>Cut pattern angle limits are +-360 degrees.</source>
+      <translation type="unfinished">Cut pattern angle limits are +-360 degrees.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="673"/>
+      <source>Cut pattern angle limits are +- 360 degrees.</source>
+      <translation type="unfinished">Cut pattern angle limits are +- 360 degrees.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="689"/>
+      <source>AvoidLastX_Faces: Only zero or positive values permitted.</source>
+      <translation>AvoidLastX_Faces: დასაშვებია მხოლოდ ნულოვანი ან დადებითი მნიშვნელობები.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="697"/>
+      <source>AvoidLastX_Faces: Avoid last X faces count limited to 100.</source>
+      <translation>AvoidLastX_Faces: თავიდან ასაცილებელი ბოლო X ზედაპირების უდიდესი რიცხვი 100-ის ტოლია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="771"/>
+      <source>No JOB</source>
+      <translation>დავალებები არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="796"/>
+      <source>Canceling Waterline operation. Error creating OCL cutter.</source>
+      <translation>წყალხაზის ოპერაციის გაუქმება. შეცდომა OCL მჭრელის შექმნისას.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="1041"/>
+      <source>operation time is</source>
+      <translation>ოპერაციის დრო</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_3dTools</name>
+    <message>
+      <location filename="../../../InitGui.py" line="171"/>
+      <source>3D Operations</source>
+      <translation>3D ოპერაციები</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Adaptive</name>
+    <message>
+      <location filename="../../../PathScripts/PathAdaptiveGui.py" line="142"/>
+      <source>Adaptive</source>
+      <translation>ადაპტაციური</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathAdaptiveGui.py" line="143"/>
+      <source>Adaptive clearing and profiling</source>
+      <translation>ადაპტიური გაწმენდა და პროფილირება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="915"/>
+      <source>Outside</source>
+      <translation>გარედან</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="916"/>
+      <source>Inside</source>
+      <translation>შიგნით</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="919"/>
+      <source>Clearing</source>
+      <translation>გასუფთავება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathAdaptive.py" line="920"/>
+      <source>Profiling</source>
+      <translation>პროფილირება</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Array</name>
+    <message>
+      <location filename="../../../PathScripts/PathArray.py" line="512"/>
+      <source>Array</source>
+      <translation>მასივი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathArray.py" line="515"/>
+      <source>Creates an array from selected path(s)</source>
+      <translation>მონიშნული ტრაექტორი(ებ)-ისგან მასივის შექმნა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathArray.py" line="536"/>
+      <source>Arrays can be created only from Path operations.</source>
+      <translation>მასივების შექმნა მხოლოდ ტრაექტორიის ოპერაციებითაა შესაძლებელი.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Comment</name>
+    <message>
+      <location filename="../../../PathScripts/PathComment.py" line="103"/>
+      <source>Comment</source>
+      <translation>კომენტარი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathComment.py" line="106"/>
+      <source>Add a Comment to your CNC program</source>
+      <translation>თქვენს CNC პროგრამაში კომენტარის ჩამატება</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Copy</name>
+    <message>
+      <location filename="../../../PathScripts/PathCopy.py" line="91"/>
+      <source>Copy</source>
+      <translation>კოპირება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathCopy.py" line="94"/>
+      <source>Creates a linked copy of another path</source>
+      <translation>სხვა ტრაექტორიაზე მიბმული ასლის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Custom</name>
+    <message>
+      <location filename="../../../PathScripts/PathCustomGui.py" line="72"/>
+      <source>Custom</source>
+      <translation>მომხმარებლის</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathCustomGui.py" line="73"/>
+      <source>Create custom gcode snippet</source>
+      <translation>მომხმარებლის gcode-ის ფრაგმენტის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Deburr</name>
+    <message>
+      <location filename="../../../PathScripts/PathDeburrGui.py" line="145"/>
+      <source>Deburr</source>
+      <translation>დებური</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDeburrGui.py" line="148"/>
+      <source>Creates a Deburr Path along Edges or around Faces</source>
+      <translation type="unfinished">Creates a Deburr Path along Edges or around Faces</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Dressup</name>
+    <message>
+      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="287"/>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="369"/>
+      <source>Please select one path object
+</source>
+      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი
+</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="292"/>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="374"/>
+      <source>The selected object is not a path
+</source>
+      <translation>მონიშნული ობიექტი მისამართი არაა
+</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="297"/>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="379"/>
+      <source>Please select a Path object</source>
+      <translation>აირჩიეთ ტრაექტორიის ობიექტი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_DressupAxisMap</name>
+    <message>
+      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="266"/>
+      <source>Axis Map Dress-up</source>
+      <translation>ღერძების რუკის ზღუდარი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupAxisMap.py" line="270"/>
+      <source>Remap one axis to another.</source>
+      <translation>ერთი ღერძის მეორეზე მიბმა.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_DressupDogbone</name>
+    <message>
+      <location filename="../../../PathScripts/PathDressupDogbone.py" line="1365"/>
+      <source>Dogbone Dress-up</source>
+      <translation>კუთხის გარშემო შემოჭრის ზღუდარი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupDogbone.py" line="1369"/>
+      <source>Creates a Dogbone Dress-up object from a selected path</source>
+      <translation type="unfinished">Creates a Dogbone Dress-up object from a selected path</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupDogbone.py" line="1385"/>
+      <source>Please select one path object</source>
+      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupDogbone.py" line="1392"/>
+      <source>The selected object is not a path</source>
+      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_DressupDragKnife</name>
+    <message>
+      <location filename="../../../PathScripts/PathDressupDragknife.py" line="604"/>
+      <source>DragKnife Dress-up</source>
+      <translation>დანის ტექნიკური ზღუდარი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupDragknife.py" line="608"/>
+      <source>Modifies a path to add dragknife corner actions</source>
+      <translation>ტრაექტორიის ჩასწორება დანის კუთხის მოქმედებების დასამატებლად</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupDragknife.py" line="625"/>
+      <source>Please select one path object</source>
+      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupDragknife.py" line="631"/>
+      <source>The selected object is not a path</source>
+      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupDragknife.py" line="637"/>
+      <source>Please select a Path object</source>
+      <translation>აირჩიეთ ტრაექტორიის ობიექტი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_DressupLeadInOut</name>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="44"/>
+      <source>Dressup</source>
+      <translation>შეფუთვა</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="82"/>
+      <source>LeadIn</source>
+      <translation type="unfinished">LeadIn</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="97"/>
+      <source>Enable LeadIn</source>
+      <translation type="unfinished">Enable LeadIn</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="106"/>
+      <source>Extend In:</source>
+      <translation>გაფართოება:</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="127"/>
+      <source>Style In:</source>
+      <translation>შეყვანის სტილი:</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="162"/>
+      <source>LeadOut</source>
+      <translation type="unfinished">LeadOut</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="177"/>
+      <source>Enable LeadOut</source>
+      <translation type="unfinished">Enable LeadOut</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="186"/>
+      <source>Extend Out:</source>
+      <translation>გარეთ გაფართოება:</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="207"/>
+      <source>Style Out:</source>
+      <translation>გამომავალი სტილი:</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="242"/>
+      <source>Length / Radius:</source>
+      <translation>სიგრძე / რადიუსი:</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="269"/>
+      <source>Radius / Center:</source>
+      <translation>რადიუსი / ცენტრი:</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="296"/>
+      <source>Keep Tool Down</source>
+      <translation>ხელსაწყოს დაბლა დაკავება</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="303"/>
+      <source>Rapid Plunge</source>
+      <translation>სწრაფი ჩაყვინთვა</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="314"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Apply Lead In/Out on all layers&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Apply Lead In/Out on all layers&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="317"/>
+      <source>Include Layers</source>
+      <translation>ფენების ჩათვლით</translation>
+    </message>
+    <message>
+      <location filename="../panels/DressUpLeadInOutEdit.ui" line="324"/>
+      <source>Use Machine CRC</source>
+      <translation>მანქანური CRC-ის გამოყენება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="60"/>
+      <source>Arc</source>
+      <translation>რკალი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="61"/>
+      <source>Tangent</source>
+      <translation>მხები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="62"/>
+      <source>Perpendicular</source>
+      <translation type="unfinished">Perpendicular</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="127"/>
+      <source>Radius</source>
+      <translation>რადიუსი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="128"/>
+      <source>Center</source>
+      <translation>ცენტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="191"/>
+      <source>Length/Radius positive not Null</source>
+      <translation>სიგრძე/რადიუსი უნდა იყოს ნულზე მეტი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="709"/>
+      <source>LeadInOut Dressup</source>
+      <translation type="unfinished">LeadInOut Dressup</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="713"/>
+      <source>Creates a Cutter Radius Compensation G41/G42 Entry Dressup object from a selected path</source>
+      <translation type="unfinished">Creates a Cutter Radius Compensation G41/G42 Entry Dressup object from a selected path</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="728"/>
+      <source>Please select one path object</source>
+      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="735"/>
+      <source>The selected object is not a path</source>
+      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupLeadInOut.py" line="741"/>
+      <source>Please select a Profile object</source>
+      <translation>გთხოვთ, აირჩიეთ პროფილის ტიპის ობიექტი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_DressupPathBoundary</name>
+    <message>
+      <location filename="../../../PathScripts/PathDressupPathBoundaryGui.py" line="265"/>
+      <source>Boundary Dress-up</source>
+      <translation>საზღვრის ზღუდარი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupPathBoundaryGui.py" line="269"/>
+      <source>Creates a Path Boundary Dress-up object from a selected path</source>
+      <translation type="unfinished">Creates a Path Boundary Dress-up object from a selected path</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupPathBoundaryGui.py" line="285"/>
+      <source>Please select one path object</source>
+      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupPathBoundary.py" line="306"/>
+      <source>The selected object is not a path</source>
+      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_DressupRampEntry</name>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="133"/>
+      <source>RampMethod1</source>
+      <translation>RampMethod1</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="134"/>
+      <source>RampMethod2</source>
+      <translation>RampMethod2</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="135"/>
+      <source>RampMethod3</source>
+      <translation>RampMethod3</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="136"/>
+      <source>Helix</source>
+      <translation>სპირალები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="140"/>
+      <source>Horizontal Feed Rate</source>
+      <translation>ჰორიზონტალური მიწოდების სიჩქარე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="144"/>
+      <source>Vertical Feed Rate</source>
+      <translation>ვერტიკალური მიწოდების სიჩქარე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="148"/>
+      <source>Ramp Feed Rate</source>
+      <translation>რამპის მიწოდების სიჩქარე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="151"/>
+      <source>Custom</source>
+      <translation>მომხმარებლის</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="902"/>
+      <source>RampEntry Dress-up</source>
+      <translation type="unfinished">RampEntry Dress-up</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="906"/>
+      <source>Creates a Ramp Entry Dress-up object from a selected path</source>
+      <translation type="unfinished">Creates a Ramp Entry Dress-up object from a selected path</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="922"/>
+      <source>Please select one path object</source>
+      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="929"/>
+      <source>The selected object is not a path</source>
+      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupRampEntry.py" line="935"/>
+      <source>Please select a Profile object</source>
+      <translation>გთხოვთ, აირჩიეთ პროფილის ტიპის ობიექტი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_DressupTag</name>
+    <message>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="202"/>
+      <source>No Base object found.</source>
+      <translation>საბაზისო ობიექტები ნაპოვნი არაა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="207"/>
+      <source>Base is not a Path::Feature object.</source>
+      <translation>ბაზა არ წარმოადგენს Path::Feature ობიექტს.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="212"/>
+      <source>Base doesn't have a Path to dress-up.</source>
+      <translation>ზღუდარის დასადებად ბაზისს ტრაექტორია არ გააჩნია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="215"/>
+      <source>Base Path is empty.</source>
+      <translation>საბაზისო ტრაექტორია ცარიელია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="1378"/>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="302"/>
+      <source>The selected object is not a path</source>
+      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="1383"/>
+      <location filename="../../../PathScripts/PathDressupTag.py" line="307"/>
+      <source>Please select a Profile object</source>
+      <translation>გთხოვთ, აირჩიეთ პროფილის ტიპის ობიექტი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupTagGui.py" line="566"/>
+      <source>Tag Dress-up</source>
+      <translation>ჭდის ზღუდარი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupTagGui.py" line="569"/>
+      <source>Creates a Tag Dress-up object from a selected path</source>
+      <translation>მონიშნული ტრაექტორიიდან ჭდის ზღუდარის ობიექტის შექმნა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupTagGui.py" line="584"/>
+      <source>Please select one path object</source>
+      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupTagPreferences.py" line="95"/>
+      <source>Holding Tag</source>
+      <translation type="unfinished">Holding Tag</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupHoldingTags.py" line="1324"/>
+      <source>Cannot insert holding tags for this path - please select a Profile path</source>
+      <translation type="unfinished">Cannot insert holding tags for this path - please select a Profile path</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_DressupZCorrect</name>
+    <message>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="348"/>
+      <source>Z Depth Correction Dress-up</source>
+      <translation>Z-ის სიღრმის გასწორების ზღუდარი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="352"/>
+      <source>Use Probe Map to correct Z depth</source>
+      <translation>ზონდის რუკის გამოყენება Z-ის სიღრმის ჩასასწორებლად</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Drilling</name>
+    <message>
+      <location filename="../../../PathScripts/PathDrilling.py" line="71"/>
+      <source>G99</source>
+      <translation>G99</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDrilling.py" line="72"/>
+      <source>G98</source>
+      <translation>G98</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDrilling.py" line="75"/>
+      <source>None</source>
+      <translation>არცერთი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDrilling.py" line="76"/>
+      <source>Drill Tip</source>
+      <translation>ბურღის წვერი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDrilling.py" line="77"/>
+      <source>2x Drill Tip</source>
+      <translation>2x ბურღის წვერი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDrillingGui.py" line="158"/>
+      <source>Drilling</source>
+      <translation>ბურღვა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDrillingGui.py" line="162"/>
+      <source>Creates a Path Drilling object from a features of a base object</source>
+      <translation type="unfinished">Creates a Path Drilling object from a features of a base object</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Engrave</name>
+    <message>
+      <location filename="../../../PathScripts/PathEngraveGui.py" line="172"/>
+      <source>Engrave</source>
+      <translation>ამოტვიფრვა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathEngraveGui.py" line="175"/>
+      <source>Creates an Engraving Path around a Draft ShapeString</source>
+      <translation type="unfinished">Creates an Engraving Path around a Draft ShapeString</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_EngraveTools</name>
+    <message>
+      <location filename="../../../InitGui.py" line="147"/>
+      <source>Engraving Operations</source>
+      <translation>ტვიფვრის ოპერაციები</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ExportTemplate</name>
+    <message>
+      <location filename="../../../PathScripts/PathJobCmd.py" line="103"/>
+      <source>Export Template</source>
+      <translation>შაბლონის გატანა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobCmd.py" line="107"/>
+      <source>Exports Path Job as a template to be used for other jobs</source>
+      <translation>ტრაექტორიის დავალების შაბლონად გატანა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Gcode_pre</name>
+    <message>
+      <location filename="../../../PathScripts/post/gcode_pre.py" line="226"/>
+      <source>No active document</source>
+      <translation>აქტიური დოკუმენტის გარეშე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/post/gcode_pre.py" line="229"/>
+      <source>No job object</source>
+      <translation>დავალების ობიექტის გარეშე</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Helix</name>
+    <message>
+      <location filename="../../../PathScripts/PathHelixGui.py" line="112"/>
+      <source>Helix</source>
+      <translation>სპირალები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathHelixGui.py" line="115"/>
+      <source>Creates a Path Helix object from a features of a base object</source>
+      <translation>საბაზისო ობიექტის თვისებებიდან სპირალური ტრაექტორიის შექმნა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathHelix.py" line="72"/>
+      <source>CW</source>
+      <translation>სმ</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathHelix.py" line="73"/>
+      <source>CCW</source>
+      <translation>სსს</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Hop</name>
+    <message>
+      <location filename="../../../PathScripts/PathHop.py" line="101"/>
+      <source>Hop</source>
+      <translation>ბიჯი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathHop.py" line="102"/>
+      <source>Creates a Path Hop object</source>
+      <translation>ტრაექტორიის ბიჯის ობიექტის შექმნა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathHop.py" line="118"/>
+      <source>Please select one path object</source>
+      <translation>გთხოვთ აირჩიოთ ერთი ტრაექტორიის ობიექტი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathHop.py" line="123"/>
+      <source>The selected object is not a path</source>
+      <translation>მონიშნული ობიექტი ტრაექტორია არაა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Inspect</name>
+    <message>
+      <location filename="../../../PathScripts/PathInspect.py" line="137"/>
+      <source>&lt;b&gt;Note&lt;/b&gt;: This dialog shows Path Commands in FreeCAD base units (mm/s). 
+ Values will be converted to the desired unit during post-processing.</source>
+      <translation type="unfinished">&lt;b&gt;Note&lt;/b&gt;: This dialog shows Path Commands in FreeCAD base units (mm/s). 
+ Values will be converted to the desired unit during post-processing.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathInspect.py" line="260"/>
+      <source>Inspect Path Commands</source>
+      <translation>ტრაექტორიის ბრძანებების გადახედვა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathInspect.py" line="264"/>
+      <source>Inspects the contents of a Path object</source>
+      <translation>ტრაექტორიის ობიექტის შემცველობის გადამოწმება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathInspect.py" line="277"/>
+      <location filename="../../../PathScripts/PathInspect.py" line="283"/>
+      <source>Please select exactly one path object</source>
+      <translation>გთხოვთ აირჩიოთ ზუსტად ერთი ტრაექტორიის ობიექტი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Job</name>
+    <message>
+      <location filename="../../../PathScripts/PathJob.py" line="257"/>
+      <source>Fixture</source>
+      <translation>სამაგრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJob.py" line="258"/>
+      <source>Tool</source>
+      <translation>ხელსაწყო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJob.py" line="259"/>
+      <source>Operation</source>
+      <translation>ოპერაცია</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJob.py" line="262"/>
+      <location filename="../../../PathScripts/PathJobDlg.py" line="62"/>
+      <source>2D</source>
+      <translation>2D</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJob.py" line="263"/>
+      <source>2.5D</source>
+      <translation>2.5D</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJob.py" line="264"/>
+      <source>Lathe</source>
+      <translation>დაზგა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJob.py" line="265"/>
+      <source>Multiaxis</source>
+      <translation>მრავალღერძიანი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="286"/>
+      <source>Edit</source>
+      <translation>ჩასწორება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="529"/>
+      <source>Stock not a cylinder!</source>
+      <translation>ნედლეული ცილინდი არაა!</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="912"/>
+      <source>Select Output File</source>
+      <translation>აირჩიეთ გამოსატანი ფაილი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="914"/>
+      <source>All Files (*.*)</source>
+      <translation>ყველა ფაილი (*.*)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="1300"/>
+      <source>Unsupported stock object %s</source>
+      <translation>ნედლეულის მხაარდაუჭერელი ობექტი %s</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="1316"/>
+      <source>Unsupported stock type %s (%d)</source>
+      <translation>ნედლეულის მხარდაუჭერელი ტიპი %s (%d)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="1407"/>
+      <source>Model Selection</source>
+      <translation>მოდელის არჩევა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="1595"/>
+      <source>Warning</source>
+      <translation>გაფრთხილება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="1596"/>
+      <source>Please add one.</source>
+      <translation>დაამატეთ.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="1597"/>
+      <source>Ok</source>
+      <translation>დიახ</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="1599"/>
+      <source>Add</source>
+      <translation>დამატება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="1610"/>
+      <source>This job has no base model.</source>
+      <translation>დავალებას საბაზისო მოდელი არ გააჩნია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobGui.py" line="1617"/>
+      <source>This job has no tool.</source>
+      <translation>დავალებას ხელსაწყო არ გააჩნია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobDlg.py" line="61"/>
+      <source>Solids</source>
+      <translation>მასივები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobDlg.py" line="63"/>
+      <source>Jobs</source>
+      <translation>დავალებები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobDlg.py" line="331"/>
+      <source>Base -/+ %.2f/%.2f %.2f/%.2f %.2f/%.2f</source>
+      <translation>ბაზისი -/+ %.2f/%.2f %.2f/%.2f %.2f/%.2f</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobDlg.py" line="341"/>
+      <source>Box: %.2f x %.2f x %.2f</source>
+      <translation>შემ. ჩარჩო %.2f x %.2f x %.2f</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobDlg.py" line="356"/>
+      <source>Unsupported stock type</source>
+      <translation>ნედლეულის მხარდაუჭერელი ტიპი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobCmd.py" line="59"/>
+      <source>Job</source>
+      <translation>დავალება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathJobCmd.py" line="61"/>
+      <source>Creates a Path Job object</source>
+      <translation>ტრაექტორიის ამოცანის ობიექტის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Job:</name>
+    <message>
+      <location filename="../../../PathScripts/PathJobDlg.py" line="347"/>
+      <source>Cylinder: %.2f x %.2f</source>
+      <translation>ცილინდრი: %.2f %.2f-ზე</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_MillFace</name>
+    <message>
+      <location filename="../../../PathScripts/PathMillFaceGui.py" line="76"/>
+      <source>Face</source>
+      <translation>სიბრტყე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathMillFaceGui.py" line="79"/>
+      <source>Create a Facing Operation from a model or face</source>
+      <translation type="unfinished">Create a Facing Operation from a model or face</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_OpActiveToggle</name>
+    <message>
+      <location filename="../../../PathCommands.py" line="151"/>
+      <location filename="../../../PathCommands.py" line="155"/>
+      <source>Toggle the Active State of the Operation</source>
+      <translation>ოპერაციის აქტიური მდგომარეობის ჩართ/გამორთ</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Operation</name>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="380"/>
+      <source>None</source>
+      <translation>არცერთი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="381"/>
+      <source>Flood</source>
+      <translation>გადავსება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathOp.py" line="382"/>
+      <source>Mist</source>
+      <translation>ბურუსი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_OperationCopy</name>
+    <message>
+      <location filename="../../../PathCommands.py" line="194"/>
+      <location filename="../../../PathCommands.py" line="197"/>
+      <source>Copy the operation in the job</source>
+      <translation>ოპერაციის ამოცანაში კოპირება</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Pocket</name>
+    <message>
+      <location filename="../../../PathScripts/PathPocket.py" line="119"/>
+      <source>Collectively</source>
+      <translation>ერთად</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocket.py" line="120"/>
+      <source>Individually</source>
+      <translation>ცალცალკე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathMillFace.py" line="69"/>
+      <source>Boundbox</source>
+      <translation>შემომსაზღვრელი ჩარჩო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathMillFace.py" line="70"/>
+      <source>Face Region</source>
+      <translation>ზედაპირის რეგიონი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathMillFace.py" line="71"/>
+      <source>Perimeter</source>
+      <translation>პერიმეტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathMillFace.py" line="72"/>
+      <source>Stock</source>
+      <translation>ნედლეული</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="60"/>
+      <source>Climb</source>
+      <translation type="unfinished">Climb</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="61"/>
+      <source>Conventional</source>
+      <translation type="unfinished">Conventional</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="64"/>
+      <source>Center</source>
+      <translation>ცენტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="65"/>
+      <source>Edge</source>
+      <translation>წიბო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="68"/>
+      <source>ZigZag</source>
+      <translation>ზიგზაგი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="69"/>
+      <source>Offset</source>
+      <translation>წანაცვლება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="70"/>
+      <source>ZigZagOffset</source>
+      <translation>ზიგზაგის წანაცვლება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="71"/>
+      <source>Line</source>
+      <translation>ხაზი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketBase.py" line="72"/>
+      <source>Grid</source>
+      <translation>ბადე</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Pocket3D</name>
+    <message>
+      <location filename="../../../PathScripts/PathPocketGui.py" line="57"/>
+      <source>3D Pocket</source>
+      <translation>3D ჯიბე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketGui.py" line="60"/>
+      <source>Creates a Path 3D Pocket object from a face or faces</source>
+      <translation type="unfinished">Creates a Path 3D Pocket object from a face or faces</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Pocket_Shape</name>
+    <message>
+      <location filename="../../../PathScripts/PathPocketShapeGui.py" line="70"/>
+      <source>Pocket Shape</source>
+      <translation>ჯიბის მოხაზულობა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPocketShapeGui.py" line="73"/>
+      <source>Creates a Path Pocket object from a face or faces</source>
+      <translation type="unfinished">Creates a Path Pocket object from a face or faces</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Post</name>
+    <message>
+      <location filename="../../../PathScripts/PathPost.py" line="184"/>
+      <source>Post Process</source>
+      <translation>პოსტპროცესორი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPost.py" line="186"/>
+      <source>Post Process the selected Job</source>
+      <translation>მონიშნული ამოცანის პოსტპროცესი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_PreferencesPathDressup</name>
+    <message>
+      <location filename="../../../PathScripts/PathPreferencesPathDressup.py" line="39"/>
+      <source>Dressups</source>
+      <translation>შეფუთვები</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Probe</name>
+    <message>
+      <location filename="../../../PathScripts/PathProbeGui.py" line="93"/>
+      <source>Select Output File</source>
+      <translation>აირჩიეთ გამოსატანი ფაილი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="294"/>
+      <location filename="../../../PathScripts/PathProbeGui.py" line="95"/>
+      <source>All Files (*.*)</source>
+      <translation>ყველა ფაილი (*.*)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProbeGui.py" line="107"/>
+      <source>Probe</source>
+      <translation>სინჯი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProbeGui.py" line="108"/>
+      <source>Create a Probing Grid from a job stock</source>
+      <translation type="unfinished">Create a Probing Grid from a job stock</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathDressupZCorrect.py" line="292"/>
+      <source>Select Probe Point File</source>
+      <translation>არჩიეთ ზონდის წერტილის ფაილი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Profile</name>
+    <message>
+      <location filename="../../../PathScripts/PathProfileEdgesGui.py" line="50"/>
+      <location filename="../../../PathScripts/PathProfileContourGui.py" line="48"/>
+      <location filename="../../../PathScripts/PathProfileFacesGui.py" line="50"/>
+      <source>Profile</source>
+      <translation>პროფილი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathProfileEdgesGui.py" line="53"/>
+      <location filename="../../../PathScripts/PathProfileContourGui.py" line="51"/>
+      <location filename="../../../PathScripts/PathProfileFacesGui.py" line="53"/>
+      <source>Profile entire model, selected face(s) or selected edge(s)</source>
+      <translation type="unfinished">Profile entire model, selected face(s) or selected edge(s)</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_PropertyBag</name>
+    <message>
+      <location filename="../../../PathScripts/PathPropertyBagGui.py" line="434"/>
+      <source>PropertyBag</source>
+      <translation type="unfinished">PropertyBag</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathPropertyBagGui.py" line="438"/>
+      <source>Creates an object which can be used to store reference properties.</source>
+      <translation>ქმნს ობიექტს, რომელიც შეიძლება გამოიყენოთ ბმების თვისებების შესანახად.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Sanity</name>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="105"/>
+      <location filename="../../../PathScripts/PathSanity.py" line="109"/>
+      <source>Check the path job for common errors</source>
+      <translation>ტრაექტორიის ამოცანის გავრცელებულ შეცდომებზე შემოწმება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="229"/>
+      <source>Base Object(s)</source>
+      <translation>საბაზისო ობიექტ(ებ)ი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="230"/>
+      <source>Job Sequence</source>
+      <translation>ამოცანების თანამიმდევრობა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="231"/>
+      <source>Job Description</source>
+      <translation>ამოცანის აღწერა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="232"/>
+      <source>Job Type</source>
+      <translation>დავალების ტიპი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="233"/>
+      <source>CAD File Name</source>
+      <translation>CAD ფაილის სახელი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="234"/>
+      <source>Last Save Date</source>
+      <translation>ბოლოს შენახვის თარიღი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="235"/>
+      <source>Customer</source>
+      <translation>შემკვეთი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="237"/>
+      <source>Designer</source>
+      <translation>დიზაინერი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="272"/>
+      <location filename="../../../PathScripts/PathSanity.py" line="317"/>
+      <source>Operation</source>
+      <translation>ოპერაცია</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="273"/>
+      <source>Minimum Z Height</source>
+      <translation>მინიმუმ Z სიმაღლე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="274"/>
+      <source>Maximum Z Height</source>
+      <translation>მაქსიმუმ Z სიმაღლე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="275"/>
+      <source>Cycle Time</source>
+      <translation>ციკლის დრო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="276"/>
+      <source>Coolant</source>
+      <translation>გამაგრილებელი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="278"/>
+      <source>TOTAL JOB</source>
+      <translation>სრული დავალება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="311"/>
+      <source>Tool Number</source>
+      <translation>ხელსაწყოს ნომერი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="312"/>
+      <source>Description</source>
+      <translation>აღწერა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="313"/>
+      <source>Manufacturer</source>
+      <translation>მწარმოებელი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="314"/>
+      <source>Part Number</source>
+      <translation>ნაწილის ნომერი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="315"/>
+      <source>URL</source>
+      <translation>URL</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="316"/>
+      <source>Inspection Notes</source>
+      <translation>შემოწების შენიშვნები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="318"/>
+      <source>Tool Controller</source>
+      <translation>ხელსაწყოს კონტროლერი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="319"/>
+      <source>Feed Rate</source>
+      <translation>მიწოდების სიჩქარე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="320"/>
+      <source>Spindle Speed</source>
+      <translation>შპინდელის სიჩქარე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="321"/>
+      <source>Tool Shape</source>
+      <translation>ხელსაწყოს ფორმა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="323"/>
+      <source>Tool Diameter</source>
+      <translation>ხელსაწყოს დიამეტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="374"/>
+      <source>X Size</source>
+      <translation>X ზომა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="375"/>
+      <source>Y Size</source>
+      <translation>Y ზომა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="376"/>
+      <source>Z Size</source>
+      <translation>Z ზომა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="378"/>
+      <source>Material</source>
+      <translation>მასალა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="391"/>
+      <source>Work Offsets</source>
+      <translation>სამუშაოს წანაცვლებები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="392"/>
+      <source>Order By</source>
+      <translation>დალაგება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="394"/>
+      <source>Part Datum</source>
+      <translation>ნაწილის თარიღი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="406"/>
+      <source>Gcode File</source>
+      <translation>Gcode-ის ფაილი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="407"/>
+      <source>Last Post Process Date</source>
+      <translation>ბოლო პოსტპროცესის თარიღი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="408"/>
+      <source>Stops</source>
+      <translation>გაჩერება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="409"/>
+      <source>Programmer</source>
+      <translation>პროგრამისტი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="410"/>
+      <source>Machine</source>
+      <translation>მანქანა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="411"/>
+      <source>Postprocessor</source>
+      <translation>პოსტპროცესორი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="412"/>
+      <source>Post Processor Flags</source>
+      <translation>პოსტპროცესორის პარამეტრები</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="413"/>
+      <source>File Size (kbs)</source>
+      <translation>ფაილის ზომა (კბ)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="415"/>
+      <source>Line Count</source>
+      <translation>ხაზების რაოდენობა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="428"/>
+      <source>Note</source>
+      <translation>შენიშვნა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="429"/>
+      <source>Operator</source>
+      <translation>ოპერატორი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSanity.py" line="431"/>
+      <source>Date</source>
+      <translation>თარიღი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_SelectLoop</name>
+    <message>
+      <location filename="../../../PathCommands.py" line="59"/>
+      <source>Finish Selecting Loop</source>
+      <extracomment>int = field(default=None)</extracomment>
+      <translation>მარყუჟის შექმნის დასრულება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathCommands.py" line="63"/>
+      <source>Complete loop selection from two edges</source>
+      <translation>მონიშნული ორი წიბოს საშუალებით მარყუჟის დასრულება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathCommands.py" line="120"/>
+      <source>Feature Completion</source>
+      <translation>თვისების დასრულება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathCommands.py" line="121"/>
+      <source>Closed loop detection failed.</source>
+      <translation>მარყუჟების ძებნის შეცდომა.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_SimpleCopy</name>
+    <message>
+      <location filename="../../../PathScripts/PathSimpleCopy.py" line="37"/>
+      <source>Simple Copy</source>
+      <translation>უბრალო ასლი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSimpleCopy.py" line="40"/>
+      <source>Creates a non-parametric copy of another path</source>
+      <translation>სხვა ტრაექტორიის არაპარამეტრული ასლის შექმნა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSimpleCopy.py" line="58"/>
+      <location filename="../../../PathScripts/PathSimpleCopy.py" line="64"/>
+      <source>Please select exactly one path object</source>
+      <translation>გთხოვთ აირჩიოთ ზუსტად ერთი ტრაექტორიის ობიექტი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Simulator</name>
+    <message>
+      <location filename="../../../PathScripts/PathSimulatorGui.py" line="645"/>
+      <source>CAM Simulator</source>
+      <translation>CAM სიმულატორი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSimulatorGui.py" line="649"/>
+      <source>Simulate Path G-Code on stock</source>
+      <translation>ნედლეულზე ტრაექტორიის G-Code-ის სიმულაცია</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Slot</name>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="109"/>
+      <source>New property added to</source>
+      <translation>ახალი თვისება დაემატა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="111"/>
+      <source>Check default value(s).</source>
+      <translation>ნაგულისხმევი მნიშვნელობების შემოწმება.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="258"/>
+      <source>Line</source>
+      <translation>ხაზი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="259"/>
+      <source>ZigZag</source>
+      <translation>ზიგზაგი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="262"/>
+      <source>Single-pass</source>
+      <translation>ერთი-გავლით</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="263"/>
+      <source>Multi-pass</source>
+      <translation>მრავალგავლადი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="266"/>
+      <source>Start to End</source>
+      <translation>დასაწყისიდან დასასრულამდე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="267"/>
+      <source>Perpendicular</source>
+      <translation type="unfinished">Perpendicular</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="270"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="282"/>
+      <source>Center of Mass</source>
+      <translation>მასის ცენტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="272"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="284"/>
+      <source>Center of BoundBox</source>
+      <translation>შემომსაზღვრელი ჩარჩოს ცენტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="275"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="287"/>
+      <source>Lowest Point</source>
+      <translation>ყველაზე დაბალი წერტილი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="276"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="288"/>
+      <source>Highest Point</source>
+      <translation>უმაღლესი წერტილი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="277"/>
+      <source>Long Edge</source>
+      <translation>გრძელი წიბო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="278"/>
+      <source>Short Edge</source>
+      <translation>მოკლე წიბო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="279"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="289"/>
+      <source>Vertex</source>
+      <translation type="unfinished">Vertex</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="608"/>
+      <source>No Base Geometry object in the operation.</source>
+      <translation>ოპერაციაში არ არსებობს საბაზისო გეომეტრიის ობიექტი.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="617"/>
+      <source>Custom points are identical.</source>
+      <translation>ხელით მითითებული წერტილები ერთი და იგივეა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="624"/>
+      <source>Custom points not at same Z height.</source>
+      <translation>მითითებული წერტილები არ იმყოფებიან ერთი და იგივე Z სიმაღლეზე.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="682"/>
+      <source>Current Extend Radius value produces negative arc radius.</source>
+      <translation type="unfinished">Current Extend Radius value produces negative arc radius.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="700"/>
+      <source>No path extensions available for full circles.</source>
+      <translation>ტრაექტორიის გაგრძელება ხელმიუწვდომელია სრული წრეწირებისთვის.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="728"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="876"/>
+      <source>operation collides with model.</source>
+      <translation>მოქმედება ეჯახება მოდელს.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="841"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="1146"/>
+      <source>Verify slot path start and end points.</source>
+      <translation>სლოტის ტრაექტორიის საწყისი და საბოლოო წერტილების შემოწმება.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="973"/>
+      <source>The selected face is inaccessible.</source>
+      <translation>მონიშნული ზედაპირი ხელმიუწვდომელია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="992"/>
+      <source>Only a vertex selected. Add another feature to the Base Geometry.</source>
+      <translation type="unfinished">Only a vertex selected. Add another feature to the Base Geometry.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="1018"/>
+      <source>A single selected face must have four edges minimum.</source>
+      <translation>თითოეულ მონიშნულ ზედაპირს მინიმუმ 4 წიბო უნდა გააჩნდეს.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="1075"/>
+      <source>No parallel edges identified.</source>
+      <translation>პარალელური წიბოები ნაპოვნი არაა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="1099"/>
+      <source>value error.</source>
+      <translation>მნიშვნელობის შეცდომა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="1161"/>
+      <source>Current tool larger than arc diameter.</source>
+      <translation>მიმდინარე ხელსაწყო რკალის დიამეტრზე დიდია.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="1248"/>
+      <source>Failed, slot from edge only accepts lines, arcs and circles.</source>
+      <translation type="unfinished">Failed, slot from edge only accepts lines, arcs and circles.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="1267"/>
+      <source>Failed to determine point 1 from</source>
+      <translation>წერტილი 1-ის დადგენის შეცდომა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="1277"/>
+      <source>Failed to determine point 2 from</source>
+      <translation>წერტილი 2-ის დადგენის შეცდომა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="1290"/>
+      <source>Selected geometry not parallel.</source>
+      <translation>არჩეული გეომეტრია პარალელური არაა.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="1411"/>
+      <source>The selected face is not oriented vertically:</source>
+      <translation>მონიშნული ზედაპირი არაა ვერტიკალურად ორიენტირებული:</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlot.py" line="1925"/>
+      <location filename="../../../PathScripts/PathSlot.py" line="1939"/>
+      <source>Current offset value produces negative radius.</source>
+      <translation>წანაცვლების მიმდინარე მნიშვნელობით რადიუსი უარყოფითი გამოდის.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlotGui.py" line="281"/>
+      <source>Slot</source>
+      <translation>ადგილი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSlotGui.py" line="284"/>
+      <source>Create a Slot operation from selected geometry or custom points.</source>
+      <translation type="unfinished">Create a Slot operation from selected geometry or custom points.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Stop</name>
+    <message>
+      <location filename="../../../PathScripts/PathStop.py" line="110"/>
+      <source>Stop</source>
+      <translation>გაჩერება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathStop.py" line="113"/>
+      <source>Add Optional or Mandatory Stop to the program</source>
+      <translation>პროგრამაში აუცილებელი ან არასავალდებული შეჩერების ჩამატება</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Surface</name>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="449"/>
+      <source>BaseBoundBox</source>
+      <translation>საბაზისო შემომსაზღვრელი ჩარჩო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="450"/>
+      <source>Stock</source>
+      <translation>ნედლეული</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="453"/>
+      <source>CenterOfMass</source>
+      <translation>მასის ცენტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="454"/>
+      <source>CenterOfBoundBox</source>
+      <translation>მრგვალი ყუთის ცენტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="455"/>
+      <source>XminYmin</source>
+      <translation>XმინYმინ</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="456"/>
+      <source>Custom</source>
+      <translation>მომხმარებლის</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="459"/>
+      <source>Conventional</source>
+      <translation type="unfinished">Conventional</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="460"/>
+      <source>Climb</source>
+      <translation type="unfinished">Climb</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="463"/>
+      <source>Circular</source>
+      <translation>მრგვალი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="464"/>
+      <source>CircularZigZag</source>
+      <translation>წრიული ზიგზაგი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="465"/>
+      <source>Line</source>
+      <translation>ხაზი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="466"/>
+      <source>Offset</source>
+      <translation>წანაცვლება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="467"/>
+      <source>Spiral</source>
+      <translation>ხვეული</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="468"/>
+      <source>ZigZag</source>
+      <translation>ზიგზაგი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="471"/>
+      <location filename="../../../PathScripts/PathSurface.py" line="489"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="472"/>
+      <location filename="../../../PathScripts/PathSurface.py" line="490"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="475"/>
+      <source>Collectively</source>
+      <translation>ერთად</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="476"/>
+      <source>Individually</source>
+      <translation>ცალცალკე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="479"/>
+      <source>Single-pass</source>
+      <translation>ერთი-გავლით</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="480"/>
+      <source>Multi-pass</source>
+      <translation>მრავალგავლადი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="483"/>
+      <source>None</source>
+      <translation>არცერთი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="484"/>
+      <source>Only</source>
+      <translation>მხოლოდ</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="485"/>
+      <source>First</source>
+      <translation>პირველი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="486"/>
+      <source>Last</source>
+      <translation>ბოლო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="493"/>
+      <source>Planar</source>
+      <translation>ბრტყელი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurface.py" line="494"/>
+      <source>Rotational</source>
+      <translation>ბრუნვადი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceGui.py" line="282"/>
+      <source>3D Surface</source>
+      <translation>3D ზედაპირი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathSurfaceGui.py" line="285"/>
+      <source>Create a 3D Surface Operation from a model</source>
+      <translation>მოდელისგან 3D ზედაპირის ოპერაციის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ThreadMilling</name>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMillingGui.py" line="259"/>
+      <source>Thread Milling</source>
+      <translation>კუთხვილის ფრეზვა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMillingGui.py" line="263"/>
+      <source>Creates a Path Thread Milling operation from features of a base object</source>
+      <translation type="unfinished">Creates a Path Thread Milling operation from features of a base object</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="193"/>
+      <source>Custom External</source>
+      <translation>ხელით მითითებული გარე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="197"/>
+      <source>Custom Internal</source>
+      <translation>ხელით მითითებული შიდა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="201"/>
+      <source>Imperial External (2A)</source>
+      <translation>იმპერიული გარე (2A)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="205"/>
+      <source>Imperial External (3A)</source>
+      <translation>იმპერიული შიდა (3A)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="209"/>
+      <source>Imperial Internal (2B)</source>
+      <translation>იმპერიული შიდა (2B)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="213"/>
+      <source>Imperial Internal (3B)</source>
+      <translation>იმპერიული შიდა (3B)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="217"/>
+      <source>Metric External (4G6G)</source>
+      <translation>მეტრული გარე (4G6G)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="221"/>
+      <source>Metric External (6G)</source>
+      <translation>გარე მეტრული (6G)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="225"/>
+      <source>Metric Internal (6H)</source>
+      <translation>შიდა მეტრული (6H)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="231"/>
+      <source>LeftHand</source>
+      <translation>მარცხნიდან</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="235"/>
+      <source>RightHand</source>
+      <translation>მარჯვნიდან</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="241"/>
+      <source>Climb</source>
+      <translation type="unfinished">Climb</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathThreadMilling.py" line="245"/>
+      <source>Conventional</source>
+      <translation type="unfinished">Conventional</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ToolBit</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitLibraryGui.py" line="83"/>
+      <source>Choose a writable location for your toolbits</source>
+      <translation>აირჩიეთ თქვენი მჭრელი იარაღის ჩაწერადი ადგილი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitLibraryGui.py" line="663"/>
+      <location filename="../../../PathScripts/PathToolBitLibraryGui.py" line="790"/>
+      <source>Tooltable JSON (*.fctl)</source>
+      <translation>ხელსაწყოების ცხრილის JSON (*.fctl)</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitLibraryGui.py" line="665"/>
+      <location filename="../../../PathScripts/PathToolBitLibraryGui.py" line="794"/>
+      <source>Save toolbit library</source>
+      <translation>ხელსაწყოს მჭრელი პირის ბიბლიოთეკის შენახვა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitLibraryGui.py" line="792"/>
+      <source>LinuxCNC tooltable (*.tbl)</source>
+      <translation>LinuxCNC-ის ხელსაწყოების ცხრილი (*.tbl)</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ToolBitCreate</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitCmd.py" line="49"/>
+      <source>Create Tool</source>
+      <translation>ხელსაწყოს შექმნა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitCmd.py" line="52"/>
+      <source>Creates a new ToolBit object</source>
+      <translation>ხელსაწყოს ახალი მჭრელი იარაღის ობიექტის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ToolBitDock</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitLibraryCmd.py" line="48"/>
+      <source>ToolBit Dock</source>
+      <translation>ხელსაწყოების ზოლი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitLibraryCmd.py" line="49"/>
+      <source>Toggle the Toolbit Dock</source>
+      <translation>ხელსაწყოების პანელის გადართვა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ToolBitLibraryOpen</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitLibraryCmd.py" line="77"/>
+      <source>ToolBit Library editor</source>
+      <translation>ხელსაწყოს მჭრელი იარაღის ბიბლიოთეკის რედაქტორი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitLibraryCmd.py" line="80"/>
+      <source>Open an editor to manage ToolBit libraries</source>
+      <translation>ხელსაწყოს მჭრელი იარაღის ბიბლიოთეკების რედაქტორის გახსნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ToolBitLoad</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitCmd.py" line="140"/>
+      <source>Load Tool</source>
+      <translation>ხელსაწყოს ჩატვირთვა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitCmd.py" line="143"/>
+      <source>Load an existing ToolBit object from a file</source>
+      <translation>არსებული ToolBit ობიექტის ფაილიდან ჩატვირთვა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ToolBitSave</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitCmd.py" line="76"/>
+      <source>Save Tool</source>
+      <translation>ხელსაწყოს შენახვა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitCmd.py" line="81"/>
+      <source>Save an existing ToolBit object to a file</source>
+      <translation>არსებული ToolBit ობიექტის ფაილში ჩაწერა</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ToolBitSaveAs</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolBitCmd.py" line="74"/>
+      <source>Save Tool as...</source>
+      <translation>ხელსაწყოს შენახვა როგორც...</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ToolController</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolController.py" line="134"/>
+      <source>Forward</source>
+      <translation>წინ</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolController.py" line="135"/>
+      <source>Reverse</source>
+      <translation>რევერსი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolController.py" line="136"/>
+      <source>None</source>
+      <translation>არცერთი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolControllerGui.py" line="146"/>
+      <source>Add Tool Controller to the Job</source>
+      <translation>ამოცანაში ხელსაწყოს კონტროლერის ჩამატება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolControllerGui.py" line="147"/>
+      <source>Add Tool Controller</source>
+      <translation>ხელსაწყოს კონტროლერის დამატება</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_ToolTable</name>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="191"/>
+      <source>Open tooltable</source>
+      <translation>ხელსაწყოების ცხრილის გახსნა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="208"/>
+      <source>Save tooltable</source>
+      <translation>ხელსაწყოების ცხრილის შენახვა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="386"/>
+      <source>Rename Tooltable</source>
+      <translation>ხელსაწყოების ცხრილის გადარქმევა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="387"/>
+      <source>Enter Name:</source>
+      <translation>შეიყვანეთ სახელი:</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="425"/>
+      <source>Add New Tool Table</source>
+      <translation>ხელსაწყოების ახალი ცხრილის დამატება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="429"/>
+      <source>Delete Selected Tool Table</source>
+      <translation>მონიშნული ხელსაწყოების ცხრილის წაშლა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="433"/>
+      <source>Rename Selected Tool Table</source>
+      <translation>მონიშნული ხელსაწყოების ცხრილისთვის სახელის გადარქმევა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="501"/>
+      <location filename="../../../PathScripts/PathToolLibraryEditor.py" line="503"/>
+      <source>Tool Manager</source>
+      <translation>ხელსაწყოების მმართველი</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Vcarve</name>
+    <message>
+      <location filename="../../../PathScripts/PathVcarve.py" line="340"/>
+      <source>VCarve requires an engraving cutter with CuttingEdgeAngle</source>
+      <translation type="unfinished">VCarve requires an engraving cutter with CuttingEdgeAngle</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathVcarve.py" line="347"/>
+      <source>Engraver Cutting Edge Angle must be &lt; 180 degrees.</source>
+      <translation type="unfinished">Engraver Cutting Edge Angle must be &lt; 180 degrees.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathVcarveGui.py" line="166"/>
+      <source>Vcarve</source>
+      <translation>V-ფორმის ამოჭრა</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathVcarveGui.py" line="167"/>
+      <source>Creates a medial line engraving path</source>
+      <translation type="unfinished">Creates a medial line engraving path</translation>
+    </message>
+  </context>
+  <context>
+    <name>Path_Waterline</name>
+    <message>
+      <location filename="../../../PathScripts/PathWaterlineGui.py" line="177"/>
+      <source>Waterline</source>
+      <translation>ვათერხაზი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterlineGui.py" line="178"/>
+      <source>Create a Waterline Operation from a model</source>
+      <translation>მოდელისგან წყალხაზის ოპერაციის შექმნა</translation>
+    </message>
+  </context>
+  <context>
     <name>TaskDlgPathCompound</name>
     <message>
       <location filename="../../TaskDlgPathCompound.ui" line="14"/>
@@ -6358,8 +7011,8 @@ p, li { white-space: pre-wrap; }
       <translation>ღერძების რუკის ზღუდარი</translation>
     </message>
     <message>
-      <location filename="../panels/AxisMapEdit.ui" line="20"/>
       <location filename="../panels/HoldingTagsEdit.ui" line="80"/>
+      <location filename="../panels/AxisMapEdit.ui" line="20"/>
       <source>Radius</source>
       <translation>რადიუსი</translation>
     </message>
@@ -6414,8 +7067,8 @@ p, li { white-space: pre-wrap; }
       <translation>ძაღლისძვალები</translation>
     </message>
     <message>
-      <location filename="../panels/DogboneEdit.ui" line="35"/>
       <location filename="../panels/ZCorrectEdit.ui" line="35"/>
+      <location filename="../panels/DogboneEdit.ui" line="35"/>
       <source>Dressup</source>
       <translation>შეფუთვა</translation>
     </message>
@@ -6713,7 +7366,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../panels/SurfaceEdit.ui" line="228"/>
       <source>Clearance Height</source>
-      <translation type="unfinished">Clearance Height</translation>
+      <translation>გაბარიტული სიმაღლე</translation>
     </message>
     <message>
       <location filename="../panels/SurfaceEdit.ui" line="248"/>
@@ -6758,7 +7411,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../panels/ZCorrectEdit.ui" line="41"/>
       <source>Probe Points File</source>
-      <translation type="unfinished">Probe Points File</translation>
+      <translation>წერტილების ფაილის ზონდირება</translation>
     </message>
     <message>
       <location filename="../panels/ZCorrectEdit.ui" line="47"/>
@@ -6929,7 +7582,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../panels/ToolBitEditor.ui" line="131"/>
       <source>Point/Tip Angle</source>
-      <translation type="unfinished">Point/Tip Angle</translation>
+      <translation>წერტილის/ბუნიკის კუთხე</translation>
     </message>
     <message>
       <location filename="../panels/ToolBitEditor.ui" line="138"/>
@@ -7056,6 +7709,67 @@ p, li { white-space: pre-wrap; }
       <location filename="../panels/ToolBitSelector.ui" line="104"/>
       <source>Add To Job</source>
       <translation>დავალებაში ჩამატება</translation>
+    </message>
+  </context>
+  <context>
+    <name>Workbench</name>
+    <message>
+      <location filename="../../../InitGui.py" line="178"/>
+      <source>Project Setup</source>
+      <translation>პროექტის მორგება</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="179"/>
+      <source>Tool Commands</source>
+      <translation>ხელსაწყოს ბრძანებები</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="181"/>
+      <source>New Operations</source>
+      <translation>ახალი ოპერაციები</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="185"/>
+      <location filename="../../../InitGui.py" line="222"/>
+      <source>Path Modification</source>
+      <translation>ტრაექტორიის ჩასწორება</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="189"/>
+      <source>Helpful Tools</source>
+      <translation>საჭირო ხელსაწყოები</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="193"/>
+      <location filename="../../../InitGui.py" line="207"/>
+      <location filename="../../../InitGui.py" line="214"/>
+      <location filename="../../../InitGui.py" line="221"/>
+      <location filename="../../../InitGui.py" line="229"/>
+      <location filename="../../../InitGui.py" line="235"/>
+      <location filename="../../../InitGui.py" line="237"/>
+      <location filename="../../../InitGui.py" line="240"/>
+      <source>&amp;Path</source>
+      <translation>&amp;ტრაექტორია</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="208"/>
+      <source>Path Dressup</source>
+      <translation>ტრაექტორიის ზღუდარი</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="215"/>
+      <source>Supplemental Commands</source>
+      <translation>დამატებითი ბრძანებები</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="230"/>
+      <source>Specialty Operations</source>
+      <translation>სპეციალური ოპერაციები</translation>
+    </message>
+    <message>
+      <location filename="../../../InitGui.py" line="241"/>
+      <source>Utils</source>
+      <translation>ხელსაწყოები</translation>
     </message>
   </context>
   <context>
@@ -7592,6 +8306,130 @@ p, li { white-space: pre-wrap; }
       <location filename="../panels/PathEdit.ui" line="1492"/>
       <source>Op Defaults</source>
       <translation>ოპ. მნიშვნელობები</translation>
+    </message>
+  </context>
+  <context>
+    <name>path_waterline</name>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="42"/>
+      <source>This operation requires OpenCamLib to be installed.</source>
+      <translation>ოპერაციის შესასრულებლად საჭიროა OpenCamLib-ი.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="97"/>
+      <source>OCL Dropcutter</source>
+      <translation>OCL ფრეზირება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="98"/>
+      <source>Experimental</source>
+      <translation>ექსპერიმენტული</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="101"/>
+      <source>BaseBoundBox</source>
+      <translation>საბაზისო შემომსაზღვრელი ჩარჩო</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="102"/>
+      <source>Stock</source>
+      <translation>ნედლეული</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="105"/>
+      <source>CenterOfMass</source>
+      <translation>მასის ცენტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="106"/>
+      <source>CenterOfBoundBox</source>
+      <translation>მრგვალი ყუთის ცენტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="107"/>
+      <source>XminYmin</source>
+      <translation>XმინYმინ</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="108"/>
+      <source>Custom</source>
+      <translation>მომხმარებლის</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="111"/>
+      <source>Off</source>
+      <translation>გამორთ.</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="112"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="125"/>
+      <source>Circular</source>
+      <translation>მრგვალი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="113"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="126"/>
+      <source>CircularZigZag</source>
+      <translation>წრიული ზიგზაგი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="114"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="127"/>
+      <source>Line</source>
+      <translation>ხაზი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="115"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="128"/>
+      <source>Offset</source>
+      <translation>წანაცვლება</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="116"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="129"/>
+      <source>Spiral</source>
+      <translation>ხვეული</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="117"/>
+      <location filename="../../../PathScripts/PathWaterline.py" line="130"/>
+      <source>ZigZag</source>
+      <translation>ზიგზაგი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="120"/>
+      <source>Conventional</source>
+      <translation type="unfinished">Conventional</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="121"/>
+      <source>Climb</source>
+      <translation type="unfinished">Climb</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="124"/>
+      <source>None</source>
+      <translation>არცერთი</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="133"/>
+      <source>Collectively</source>
+      <translation>ერთად</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="134"/>
+      <source>Individually</source>
+      <translation>ცალცალკე</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="137"/>
+      <source>Single-pass</source>
+      <translation>ერთი-გავლით</translation>
+    </message>
+    <message>
+      <location filename="../../../PathScripts/PathWaterline.py" line="138"/>
+      <source>Multi-pass</source>
+      <translation>მრავალგავლადი</translation>
     </message>
   </context>
 </TS>

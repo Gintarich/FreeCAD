@@ -272,7 +272,7 @@ private:
             proj.projectToMesh(shape, maxDist, polylines);
 
             Py::List list;
-            for (auto it : polylines) {
+            for (const auto& it : polylines) {
                 Py::List poly;
                 for (auto jt : it.points) {
                     Py::Vector v(jt);
@@ -304,7 +304,7 @@ private:
             std::vector<MeshProjection::PolyLine> polylines;
             proj.projectParallelToMesh(shape, dir, polylines);
             Py::List list;
-            for (auto it : polylines) {
+            for (const auto& it : polylines) {
                 Py::List poly;
                 for (auto jt : it.points) {
                     Py::Vector v(jt);
@@ -354,7 +354,7 @@ private:
             proj.projectParallelToMesh(polylinesIn, dir, polylines);
 
             Py::List list;
-            for (auto it : polylines) {
+            for (const auto& it : polylines) {
                 Py::List poly;
                 for (auto jt : it.points) {
                     Py::Vector v(jt);
@@ -495,8 +495,8 @@ private:
             mesher.setDeflection(lindeflection);
             mesher.setAngularDeflection(angdeflection);
             mesher.setRegular(true);
-            mesher.setRelative(PyObject_IsTrue(relative) ? true : false);
-            mesher.setSegments(PyObject_IsTrue(segment) ? true : false);
+            mesher.setRelative(Base::asBoolean(relative));
+            mesher.setSegments(Base::asBoolean(segment));
             if (groupColors) {
                 Py::Sequence list(groupColors);
                 std::vector<uint32_t> colors;

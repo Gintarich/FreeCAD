@@ -60,7 +60,11 @@ PyObjectBase::PyObjectBase(void* p,PyTypeObject *T)
   , baseProxy(nullptr)
   , attrDict(nullptr)
 {
+#if PY_VERSION_HEX < 0x030b0000
     Py_TYPE(this) = T;
+#else
+    this->ob_type = T;
+#endif
     _Py_NewReference(this);
 #ifdef FC_LOGPYOBJECTS
     Base::Console().Log("PyO+: %s (%p)\n",T->tp_name, this);
@@ -103,7 +107,7 @@ static void
 PyBaseProxy_dealloc(PyObject* self)
 {
     /* Clear weakrefs first before calling any destructors */
-    if (reinterpret_cast<PyBaseProxy*>(self)->weakreflist != nullptr)
+    if (reinterpret_cast<PyBaseProxy*>(self)->weakreflist)
         PyObject_ClearWeakRefs(self);
     Py_TYPE(self)->tp_free(self);
 }
@@ -349,7 +353,7 @@ int PyObjectBase::__setattro(PyObject *obj, PyObject *attro, PyObject *value)
 
     //Hint: In general we don't allow to delete attributes (i.e. value=0). However, if we want to allow
     //we must check then in _setattr() of all subclasses whether value is 0.
-    if ( value==nullptr ) {
+    if (!value) {
         PyErr_Format(PyExc_AttributeError, "Cannot delete attribute: '%s'", attr);
         return -1;
     }
@@ -409,7 +413,7 @@ PyObject *PyObjectBase::_getattr(const char *attr)
         // As fallback solution use Python's default method to get generic attributes
         PyObject *w, *res;
         w = PyUnicode_InternFromString(attr);
-        if (w != nullptr) {
+        if (w) {
             res = PyObject_GenericGetAttr(this, w);
             Py_XDECREF(w);
             return res;
@@ -429,7 +433,7 @@ int PyObjectBase::_setattr(const char *attr, PyObject *value)
     PyObject *w;
     // As fallback solution use Python's default method to get generic attributes
     w = PyUnicode_InternFromString(attr); // new reference
-    if (w != nullptr) {
+    if (w) {
         // call methods from tp_getset if defined
         int res = PyObject_GenericSetAttr(this, w, value);
         Py_DECREF(w);

@@ -300,7 +300,7 @@ bool SweepWidget::accept()
         topoShape = Part::Feature::getTopoShape(docobj);
         if (!topoShape.isNull()) {
             for (std::vector<std::string>::const_iterator it = subnames.begin(); it != subnames.end(); ++it) {
-                subShapes.push_back(topoShape.getSubShape(subnames[0].c_str()));
+                subShapes.push_back(Part::Feature::getTopoShape(docobj, subnames[0].c_str(), true /*need element*/));
             }
             for (std::vector<Part::TopoShape>::iterator it = subShapes.begin(); it != subShapes.end(); ++it) {
                 TopoDS_Shape dsShape = (*it).getShape();
@@ -359,11 +359,11 @@ bool SweepWidget::accept()
             "App.getDocument('%5').ActiveObject.Solid=%3\n"
             "App.getDocument('%5').ActiveObject.Frenet=%4\n"
             )
-            .arg(list)
-            .arg(QLatin1String(selection.c_str()))
-            .arg(solid)
-            .arg(frenet)
-            .arg(QString::fromLatin1(d->document.c_str()));
+            .arg(list,
+                 QLatin1String(selection.c_str()),
+                 solid,
+                 frenet,
+                 QString::fromLatin1(d->document.c_str()));
 
         Gui::Document* doc = Gui::Application::Instance->getDocument(d->document.c_str());
         if (!doc)

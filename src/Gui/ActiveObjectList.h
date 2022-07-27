@@ -27,7 +27,9 @@
 #define GUI_ActiveObjectList_H
 
 #include <map>
+#include <string>
 #include <Gui/TreeItemMode.h>
+#include <FCGlobal.h>
 
 
 namespace App {

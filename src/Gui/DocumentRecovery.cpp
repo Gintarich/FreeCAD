@@ -157,7 +157,7 @@ public:
         QString label;
         QString fileName;
         QString tooltip;
-        Status status;
+        Status status = Unknown;
     };
     Ui_DocumentRecovery ui;
     bool recovered;
@@ -553,7 +553,7 @@ void DocumentRecovery::on_buttonCleanup_clicked()
 
     DocumentRecoveryHandler handler;
     handler.checkForPreviousCrashes(std::bind(&DocumentRecovery::cleanup, this, sp::_1, sp::_2, sp::_3));
-    DlgCheckableMessageBox::showMessage(tr("Transient deleted"), tr("Transient directories deleted."));
+    DlgCheckableMessageBox::showMessage(tr("Delete"), tr("Transient directories deleted."));
     reject();
 }
 
@@ -723,7 +723,7 @@ void DocumentRecoveryCleaner::subtractFiles(QStringList& files)
 void DocumentRecoveryCleaner::subtractDirs(QFileInfoList& dirs)
 {
     if (!ignoreDirs.isEmpty() && !dirs.isEmpty()) {
-        for (const auto& it : ignoreDirs) {
+        for (const auto& it : qAsConst(ignoreDirs)) {
             dirs.removeOne(it);
         }
     }

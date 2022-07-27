@@ -46,19 +46,20 @@
 
 #include "Rez.h"
 #include "ZVALUE.h"
+#include "QGSPage.h"
 #include "DrawGuiUtil.h"
 #include "QGIView.h"
 #include "QGTracker.h"
 
 using namespace TechDrawGui;
 
-QGTracker::QGTracker(QGraphicsScene* inScene, TrackerMode m):
+QGTracker::QGTracker(QGSPage* inScene, TrackerMode m):
     m_sleep(false),
     m_qgParent(nullptr),
     m_lastClick(QPointF(FLT_MAX,FLT_MAX))
 {
     setTrackerMode(m);
-    if (inScene != nullptr) {
+    if (inScene) {
         inScene->addItem(this);
     } else {
         throw Base::ValueError("QGT::QGT() - passed scene is NULL\n");
@@ -320,13 +321,13 @@ void QGTracker::getPickedQGIV(QPointF pos)
     QGraphicsView* ourView = views.front();  //only 1 view / 1 scene / 1 mdipage
     QTransform viewXForm = ourView->transform();
     QGraphicsItem* pickedItem = scene()->itemAt(pos,viewXForm);
-    if (pickedItem != nullptr) {
+    if (pickedItem) {
         QGraphicsItem* topItem = pickedItem->topLevelItem();
         if (topItem != pickedItem) {
             pickedItem = topItem;
         }                               //pickedItem sb a QGIV
         QGIView* qgParent = dynamic_cast<QGIView*>(pickedItem);
-        if (qgParent != nullptr) {
+        if (qgParent) {
             m_qgParent = qgParent;
         }
     }

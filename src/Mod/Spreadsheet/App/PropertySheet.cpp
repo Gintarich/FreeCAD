@@ -28,7 +28,6 @@
 #include <boost/range/adaptor/map.hpp>
 #include <boost/range/algorithm/copy.hpp>
 #include <boost/assign.hpp>
-#include <boost_bind_bind.hpp>
 #include <boost/regex.hpp>
 #include <Base/Console.h>
 #include <App/Document.h>
@@ -127,7 +126,7 @@ bool PropertySheet::isValidAlias(const std::string &candidate)
     boost::cmatch cm;
 
     /* Check if it is used before */
-    if (getValueFromAlias(candidate) != nullptr)
+    if (getValueFromAlias(candidate))
         return false;
 
     /* Check to make sure it doesn't clash with a predefined unit */
@@ -143,7 +142,7 @@ bool PropertySheet::isValidAlias(const std::string &candidate)
             const boost::sub_match<const char *> rowstr = cm[2];
 
             // A valid cell address?
-            if (App::validRow(rowstr.str()) >= 0 && App::validColumn(colstr.str()) >= 0)
+            if (App::validRow(rowstr.str()) >= 0 && App::validColumn(colstr.str()))
                 return false;
         }
         return true;
@@ -579,14 +578,14 @@ Cell * PropertySheet::nonNullCellAt(CellAddress address)
 void PropertySheet::setContent(CellAddress address, const char *value)
 {
     Cell * cell = nonNullCellAt(address);
-    assert(cell != nullptr);
+    assert(cell);
     cell->setContent(value);
 }
 
 void PropertySheet::setAlignment(CellAddress address, int _alignment)
 {
     Cell * cell = nonNullCellAt(address);
-    assert(cell != nullptr);
+    assert(cell);
     if (cell->address != address) //Reject alignment change for merged cell except top-left one
         return;
     cell->setAlignment(_alignment);
@@ -595,28 +594,28 @@ void PropertySheet::setAlignment(CellAddress address, int _alignment)
 void PropertySheet::setStyle(CellAddress address, const std::set<std::string> &_style)
 {
     Cell * cell = nonNullCellAt(address);
-    assert(cell != nullptr);
+    assert(cell);
     cell->setStyle(_style);
 }
 
 void PropertySheet::setForeground(CellAddress address, const App::Color &color)
 {
     Cell * cell = nonNullCellAt(address);
-    assert(cell != nullptr);
+    assert(cell);
     cell->setForeground(color);
 }
 
 void PropertySheet::setBackground(CellAddress address, const App::Color &color)
 {
     Cell * cell = nonNullCellAt(address);
-    assert(cell != nullptr);
+    assert(cell);
     cell->setBackground(color);
 }
 
 void PropertySheet::setDisplayUnit(CellAddress address, const std::string &unit)
 {
     Cell * cell = nonNullCellAt(address);
-    assert(cell != nullptr);
+    assert(cell);
     cell->setDisplayUnit(unit);
 }
 
@@ -628,7 +627,7 @@ void PropertySheet::setAlias(CellAddress address, const std::string &alias)
 
     const Cell * aliasedCell = getValueFromAlias(alias);
     Cell * cell = nonNullCellAt(address);
-    assert(cell != nullptr);
+    assert(cell);
 
     if(aliasedCell == cell)
         return;
@@ -672,14 +671,14 @@ void PropertySheet::setAlias(CellAddress address, const std::string &alias)
 void PropertySheet::setComputedUnit(CellAddress address, const Base::Unit &unit)
 {
     Cell * cell = nonNullCellAt(address);
-    assert(cell != nullptr);
+    assert(cell);
     cell->setComputedUnit(unit);
 }
 
 void PropertySheet::setSpans(CellAddress address, int rows, int columns)
 {
     Cell * cell = nonNullCellAt(address);
-    assert(cell != nullptr);
+    assert(cell);
     cell->setSpans(rows, columns);
 }
 
@@ -1134,7 +1133,7 @@ void PropertySheet::addDependencies(CellAddress key)
 
     const Expression * expression = cell->getExpression();
 
-    if (expression == nullptr)
+    if (!expression)
         return;
 
     for(auto &var : expression->getIdentifiers()) {
@@ -1766,8 +1765,11 @@ bool PropertySheet::isBindingPath(const ObjectIdentifier &path,
     return true;
 }
 
-PropertySheet::BindingType PropertySheet::getBinding(
-        const Range &range, ExpressionPtr *pStart, ExpressionPtr *pEnd) const
+PropertySheet::BindingType
+PropertySheet::getBinding(const Range &range,
+                          ExpressionPtr *pStart,
+                          ExpressionPtr *pEnd,
+                          App::ObjectIdentifier *pTarget) const
 {
     if(!owner)
         return BindingNone;
@@ -1791,6 +1793,10 @@ PropertySheet::BindingType PropertySheet::getBinding(
             }
 
             if(expr->getFunction() == FunctionExpression::TUPLE && expr->getArgs().size()==3) {
+                if (pTarget) {
+                    if (auto e = Base::freecad_dynamic_cast<VariableExpression>(expr->getArgs()[0]))
+                        *pTarget = e->getPath();
+                }
                 if(pStart)
                     pStart->reset(expr->getArgs()[1]->copy());
                 if(pEnd)
@@ -1837,71 +1843,123 @@ void PropertySheet::setPathValue(const ObjectIdentifier &path, const boost::any 
             App::CellAddress targetTo = other->getCellAddress(
                 Py::Object(seq[2].ptr()).as_string().c_str(), false);
 
-            App::Range range(from,to);
-            App::Range rangeTarget(targetFrom,targetTo);
-
-            std::string expr(href?"href(":"");
+            std::string expr(href?"hiddenref(":"");
             if(other != this) {
                 if(otherOwner->getDocument() == owner->getDocument())
-                    expr = otherOwner->getNameInDocument();
+                    expr += otherOwner->getNameInDocument();
                 else
-                    expr = otherOwner->getFullName();
+                    expr += otherOwner->getFullName();
             }
             expr += ".";
             std::size_t exprSize = expr.size();
 
-            do {
-                CellAddress target(*rangeTarget);
-                CellAddress source(*range);
-                if(other == this && source.row() >= targetFrom.row()
-                        && source.row() <= targetTo.row()
-                        && source.col() >= targetFrom.col()
-                        && source.col() <= targetTo.col())
-                    continue;
+            auto normalize = [](CellAddress &from, CellAddress &to) {
+                if (from.row() > to.row()) {
+                    int tmp = from.row();
+                    from.setRow(to.row());
+                    to.setRow(tmp);
+                }
+                if (from.col() > to.col()) {
+                    int tmp = from.col();
+                    from.setCol(to.col());
+                    to.setCol(tmp);
+                }
+            };
 
-                Cell *dst = other->getValue(target);
-                Cell *src = getValue(source);
-                if(!dst) {
-                    if(src) {
+            normalize(from, to);
+            normalize(targetFrom, targetTo);
+            App::Range totalRange(from, to);
+            std::set<CellAddress> touched;
+
+            while(from.row() <= to.row()
+                    && from.col() <= to.col()
+                    && targetFrom.row() <= targetTo.row()
+                    && targetFrom.col() <= targetTo.col())
+            {
+                App::Range range(from, to);
+                App::Range rangeTarget(targetFrom, targetTo);
+                int rowCount = std::min(range.rowCount(), rangeTarget.rowCount());
+                int colCount = std::min(range.colCount(), rangeTarget.colCount());
+                if (rowCount == range.rowCount())
+                    from.setCol(from.col() + colCount);
+                else if (colCount == range.colCount())
+                    from.setRow(from.row() + rowCount);
+                if (rowCount == rangeTarget.rowCount())
+                    targetFrom.setCol(targetFrom.col() + colCount);
+                else if (colCount == rangeTarget.colCount())
+                    targetFrom.setRow(targetFrom.row() + rowCount);
+
+                range = App::Range(range.from().row(),
+                                   range.from().col(),
+                                   range.from().row()+rowCount-1,
+                                   range.from().col()+colCount-1);
+                rangeTarget = App::Range(rangeTarget.from().row(),
+                                         rangeTarget.from().col(),
+                                         rangeTarget.from().row()+rowCount-1,
+                                         rangeTarget.from().col()+colCount-1);
+                do {
+                    CellAddress target(*rangeTarget);
+                    CellAddress source(*range);
+                    if(other == this && source.row() >= rangeTarget.from().row()
+                            && source.row() <= rangeTarget.to().row()
+                            && source.col() >= rangeTarget.from().col()
+                            && source.col() <= rangeTarget.to().col())
+                        continue;
+
+                    Cell *dst = other->getValue(target);
+                    Cell *src = getValue(source);
+                    if(!dst || !dst->getExpression())
+                        continue;
+
+                    touched.insert(source);
+
+                    if(!src) {
                         signaller.aboutToChange();
-                        owner->clear(source);
-                        owner->cellUpdated(source);
+                        src = createCell(source);
                     }
-                    continue;
-                }
 
-                if(!src) {
-                    signaller.aboutToChange();
-                    src = createCell(source);
-                }
+                    std::string alias;
+                    if(this!=other && dst->getAlias(alias)) {
+                        auto *oldCell = getValueFromAlias(alias);
+                        if(oldCell && oldCell!=dst) {
+                            signaller.aboutToChange();
+                            oldCell->setAlias("");
+                        }
+                        std::string oldAlias;
+                        if(!src->getAlias(oldAlias) || oldAlias!=alias) {
+                            signaller.aboutToChange();
+                            setAlias(source,alias);
+                        }
+                    }
 
-                std::string alias;
-                if(this!=other && dst->getAlias(alias)) {
-                    auto *oldCell = getValueFromAlias(alias);
-                    if(oldCell && oldCell!=dst) {
+                    expr.resize(exprSize);
+                    expr += rangeTarget.address();
+                    if(href)
+                        expr += ")";
+                    auto e = App::ExpressionPtr(App::Expression::parse(owner,expr));
+                    auto e2 = src->getExpression();
+                    if(!e2 || !e->isSame(*e2,false)) {
                         signaller.aboutToChange();
-                        oldCell->setAlias("");
+                        src->setExpression(std::move(e));
                     }
-                    std::string oldAlias;
-                    if(!src->getAlias(oldAlias) || oldAlias!=alias) {
+
+                } while(range.next() && rangeTarget.next());
+            }
+
+            if (totalRange.size() != (int)touched.size()) {
+                do {
+                    CellAddress addr(*totalRange);
+                    if (touched.count(addr))
+                        continue;
+                    Cell *src = getValue(addr);
+                    if (src && src->getExpression()) {
                         signaller.aboutToChange();
-                        setAlias(source,alias);
+                        src->setExpression(nullptr);
                     }
-                }
+                } while(totalRange.next());
+            }
 
-                expr.resize(exprSize);
-                expr += rangeTarget.address();
-                if(href)
-                    expr += ")";
-                auto e = App::ExpressionPtr(App::Expression::parse(owner,expr));
-                auto e2 = src->getExpression();
-                if(!e2 || !e->isSame(*e2,false)) {
-                    signaller.aboutToChange();
-                    src->setExpression(std::move(e));
-                }
-
-            } while(range.next() && rangeTarget.next());
-            owner->rangeUpdated(range);
+            owner->rangeUpdated(totalRange);
             signaller.tryInvoke();
             return;
         }
@@ -1915,4 +1973,9 @@ const boost::any PropertySheet::getPathValue(const App::ObjectIdentifier & path)
     if(isBindingPath(path))
         return boost::any();
     return path.getValue();
+}
+
+bool PropertySheet::hasSpan() const
+{
+    return !mergedCells.empty();
 }

@@ -47,7 +47,7 @@ ImageBase::~ImageBase()
 ImageBase::ImageBase(const ImageBase &rhs)
 {
 	// Do the copy
-    if (rhs._owner == true)
+    if (rhs._owner)
     {
         // rhs is the owner - do a deep copy
         _pPixelData = nullptr;
@@ -76,7 +76,7 @@ ImageBase & ImageBase::operator=(const ImageBase &rhs)
 	clear();
 
 	// Do the copy
-    if (rhs._owner == true)
+    if (rhs._owner)
     {
         // rhs is the owner - do a deep copy
         _owner = false; // avoids a superfluous delete
@@ -102,7 +102,7 @@ ImageBase & ImageBase::operator=(const ImageBase &rhs)
 void ImageBase::clear()
 {
     // If object is the owner of the data then delete the allocated memory
-    if (_owner == true)
+    if (_owner)
     {
         delete [] _pPixelData;
         _pPixelData = nullptr;
@@ -201,7 +201,7 @@ int ImageBase::_setColorFormat(int format, unsigned short numSigBitsPerSample)
 int ImageBase::_allocate()
 {
     // Check that pixel data pointer is null
-    if (_pPixelData != nullptr)
+    if (_pPixelData)
         return -1;
 
     // Allocate the space needed to store the pixel data
@@ -283,7 +283,7 @@ int ImageBase::pointTo(void* pSrcPixelData, unsigned long width, unsigned long h
     _pPixelData = (unsigned char *)pSrcPixelData;
 
     // Flag ownership
-    if (takeOwnership == true)
+    if (takeOwnership)
         _owner = true;
     else
         _owner = false;
@@ -296,7 +296,7 @@ int ImageBase::pointTo(void* pSrcPixelData, unsigned long width, unsigned long h
 // if there is no image data
 int ImageBase::getSample(int x, int y, unsigned short sampleIndex, double &value)
 {
-    if ((_pPixelData == nullptr) || 
+    if ((!_pPixelData) || 
         (sampleIndex >= _numSamples) ||
         (x < 0) || (x >= (int)_width) || 
         (y < 0) || (y >= (int)_height))

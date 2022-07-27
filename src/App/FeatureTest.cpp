@@ -22,12 +22,16 @@
 
 
 #include "PreCompiled.h"
+#ifndef _PreComp_
+#include <boost/core/ignore_unused.hpp>
+#endif
 
 #include <Base/Exception.h>
 #include <Base/Unit.h>
 
 #include "FeatureTest.h"
 #include "Material.h"
+#include "Range.h"
 
 #ifdef _MSC_VER
 #pragma warning( disable : 4700 )
@@ -100,17 +104,12 @@ FeatureTest::FeatureTest()
   ADD_PROPERTY_TYPE(TypeTransient,(4711),group,Prop_Transient ,"An example property which has the type 'Transient'"  );
   ADD_PROPERTY_TYPE(TypeNoRecompute,(4711),group,Prop_NoRecompute,"An example property which has the type 'NoRecompute'");
   ADD_PROPERTY_TYPE(TypeAll     ,(4711),group,(App::PropertyType) (Prop_Output|Prop_ReadOnly |Prop_Hidden ),
-      "An example property which has the types 'Output', 'ReadOnly', and 'Hidden'");
+      "An example property which has the types 'Output', 'ReadOnly' and 'Hidden'");
 
   ADD_PROPERTY(QuantityLength,(1.0));
   QuantityLength.setUnit(Base::Unit::Length);
   ADD_PROPERTY(QuantityOther,(5.0));
   QuantityOther.setUnit(Base::Unit(-3,1));
-  //ADD_PROPERTY(QuantityMass,(1.0));
-  //QuantityMass.setUnit(Base::Unit::Mass);
-  //ADD_PROPERTY(QuantityAngle,(1.0));
-  //QuantityAngle.setUnit(Base::Unit::Angle);
-
 }
 
 FeatureTest::~FeatureTest()
@@ -118,38 +117,47 @@ FeatureTest::~FeatureTest()
 
 }
 
-short FeatureTest::mustExecute(void) const
+short FeatureTest::mustExecute() const
 {
     return DocumentObject::mustExecute();
 }
 
-DocumentObjectExecReturn *FeatureTest::execute(void)
+DocumentObjectExecReturn *FeatureTest::execute()
 {
-    /*
-doc=App.newDocument()
-obj=doc.addObject("App::FeatureTest")
+    // Enum handling
+    Enumeration enumObj1 = Enum.getEnum();
+    enumObj1.setValue(7, false);
+    enumObj1.setValue(4, true);
 
-obj.ExceptionType=0 # good
-doc.recompute()
+    Enumeration enumObj2 = Enum.getEnum();
+    enumObj2.setValue(4, true);
 
-obj.ExceptionType=1 # unknown exception
-doc.recompute()
+    Enumeration enumObj3(enumObj2);
+    const char* val = enumObj3.getCStr();
+    enumObj3.isValue(val);
+    enumObj3.getEnumVector();
 
-obj.ExceptionType=2 # Runtime error
-doc.recompute()
+    Enumeration enumObj4("Single item");
+    enumObj4.setEnums(enums);
+    boost::ignore_unused(enumObj4 == enumObj2);
+    enumObj4.setEnums(nullptr);
+    enumObj4 = enumObj2;
+    boost::ignore_unused(enumObj4 == enumObj4.getCStr());
 
-obj.ExceptionType=3 # segfault
-doc.recompute()
+    Enumeration enumObj5(enums, enums[3]);
+    enumObj5.isValue(enums[2]);
+    enumObj5.isValue(enums[3]);
+    enumObj5.contains(enums[1]);
 
-obj.ExceptionType=4 # segfault
-doc.recompute()
+    Enumeration enumObj6;
+    enumObj6.setEnums(enums);
+    enumObj6.setValue(enums[1]);
+    std::vector<std::string> list;
+    list.emplace_back("Hello");
+    list.emplace_back("World");
+    enumObj6.setEnums(list);
+    enumObj6.setValue(list.back());
 
-obj.ExceptionType=5 # int division by zero
-doc.recompute()
-
-obj.ExceptionType=6 # float division by zero
-doc.recompute()
-     */
     int *i=nullptr,j;
     float f;
     void *s;
@@ -162,15 +170,7 @@ doc.recompute()
         case 0: break;
         case 1: throw std::runtime_error("Test Exception");
         case 2: throw Base::RuntimeError("FeatureTestException::execute(): Testexception");
-#if 0 // only allow these error types on purpose
-        case 3: *i=0;printf("%i",*i);break;                 // seg-fault
-        case 4: t = nullptr; break;                         // seg-fault
-        case 5: j=0; printf("%i",1/j); break;               // int division by zero
-        case 6: f=0.0; printf("%f",1/f); break;             // float division by zero
-        case 7: s = malloc(3600000000ul); free(s); break;   // out-of-memory
-#else
         default: (void)i; (void)j; (void)f; (void)s; (void)t; break;
-#endif
     }
 
     ExecCount.setValue(ExecCount.getValue() + 1);
@@ -180,6 +180,7 @@ doc.recompute()
     return DocumentObject::StdReturn;
 }
 
+// ----------------------------------------------------------------------------
 
 PROPERTY_SOURCE(App::FeatureTestException, App::FeatureTest)
 
@@ -189,10 +190,28 @@ FeatureTestException::FeatureTestException()
     ADD_PROPERTY(ExceptionType,(Base::Exception::getClassTypeId().getKey())  );
 }
 
-DocumentObjectExecReturn *FeatureTestException::execute(void)
+DocumentObjectExecReturn *FeatureTestException::execute()
 {
     //ExceptionType;
     throw Base::RuntimeError("FeatureTestException::execute(): Testexception  ;-)");
 
+    return nullptr;
+}
+
+// ----------------------------------------------------------------------------
+
+PROPERTY_SOURCE(App::FeatureTestColumn, App::DocumentObject)
+
+
+FeatureTestColumn::FeatureTestColumn()
+{
+    ADD_PROPERTY_TYPE(Column, ("A"), "Test", App::Prop_None, "");
+    ADD_PROPERTY_TYPE(Silent, (false), "Test", App::Prop_None, "");
+    ADD_PROPERTY_TYPE(Value, (0L), "Test", App::Prop_Output, "");
+}
+
+DocumentObjectExecReturn *FeatureTestColumn::execute()
+{
+    Value.setValue(decodeColumn(Column.getStrValue(), Silent.getValue()));
     return nullptr;
 }

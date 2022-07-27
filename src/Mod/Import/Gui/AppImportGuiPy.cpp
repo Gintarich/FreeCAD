@@ -71,11 +71,7 @@
 # include <XSControl_TransferReader.hxx>
 # include <XSControl_WorkSession.hxx>
 
-#if OCC_VERSION_HEX >= 0x060500
 # include <TDataXtd_Shape.hxx>
-# else
-# include <TDataStd_Shape.hxx>
-# endif
 #if OCC_VERSION_HEX >= 0x070500
 # include <Message_ProgressRange.hxx>
 # include <RWGltf_CafWriter.hxx>
@@ -182,7 +178,7 @@ void OCAFBrowser::load(const TDF_Label& label, QTreeWidgetItem* item, const QStr
 
     Handle(TDataStd_Name) name;
     if (label.FindAttribute(TDataStd_Name::GetID(),name)) {
-        QString text = QString::fromLatin1("%1 %2").arg(s).arg(QString::fromUtf8(toString(name->Get()).c_str()));
+        QString text = QString::fromLatin1("%1 %2").arg(s, QString::fromUtf8(toString(name->Get()).c_str()));
         item->setText(0, text);
     }
 
@@ -404,8 +400,9 @@ private:
         PyObject *useLinkGroup = Py_None;
         int mode = -1;
         static char* kwd_list[] = {"name","docName","importHidden","merge","useLinkGroup","mode",nullptr};
-        if(!PyArg_ParseTupleAndKeywords(args.ptr(), kwds.ptr(), "et|sOOOi", 
-                    kwd_list,"utf-8",&Name,&DocName,&importHidden,&merge,&useLinkGroup,&mode))
+        if (!PyArg_ParseTupleAndKeywords(args.ptr(), kwds.ptr(), "et|sO!O!O!i",
+                    kwd_list,"utf-8",&Name,&DocName,&PyBool_Type,&importHidden,&PyBool_Type,&merge,
+                    &PyBool_Type,&useLinkGroup,&mode))
             throw Py::Exception();
 
         std::string Utf8Name = std::string(Name);
@@ -426,10 +423,7 @@ private:
 
             Handle(XCAFApp_Application) hApp = XCAFApp_Application::GetApplication();
             Handle(TDocStd_Document) hDoc;
-            bool optionReadShapeCompoundMode = true;
             hApp->NewDocument(TCollection_ExtendedString("MDTV-CAF"), hDoc);
-            ParameterGrp::handle hGrp = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/Mod/Import/hSTEP");
-            optionReadShapeCompoundMode = hGrp->GetBool("ReadShapeCompoundMode", optionReadShapeCompoundMode);
             ImportOCAFExt ocaf(hDoc, pcDoc, file.fileNamePure());
             FC_TIME_INIT(t);
             FC_DURATION_DECL_INIT2(d1,d2);
@@ -517,12 +511,12 @@ private:
             }
 
             FC_DURATION_PLUS(d1,t);
-            if(merge!=Py_None)
-                ocaf.setMerge(PyObject_IsTrue(merge));
-            if(importHidden!=Py_None)
-                ocaf.setImportHiddenObject(PyObject_IsTrue(importHidden));
-            if(useLinkGroup!=Py_None)
-                ocaf.setUseLinkGroup(PyObject_IsTrue(useLinkGroup));
+            if (merge != Py_None)
+                ocaf.setMerge(Base::asBoolean(merge));
+            if (importHidden != Py_None)
+                ocaf.setImportHiddenObject(Base::asBoolean(importHidden));
+            if (useLinkGroup != Py_None)
+                ocaf.setUseLinkGroup(Base::asBoolean(useLinkGroup));
             ocaf.setMode(mode);
             auto ret = ocaf.loadShapes();
             hApp->Close(hDoc);
@@ -567,8 +561,8 @@ private:
         PyObject *legacy = Py_None;
         PyObject *keepPlacement = Py_None;
         static char* kwd_list[] = {"obj", "name", "exportHidden", "legacy", "keepPlacement",nullptr};
-        if(!PyArg_ParseTupleAndKeywords(args.ptr(), kwds.ptr(), "Oet|OOO",
-                    kwd_list,&object,"utf-8",&Name,&exportHidden,&legacy,&keepPlacement))
+        if (!PyArg_ParseTupleAndKeywords(args.ptr(), kwds.ptr(), "Oet|O!O!O!",
+                    kwd_list,&object,"utf-8",&Name,&PyBool_Type,&exportHidden,&PyBool_Type,&legacy,&PyBool_Type,&keepPlacement))
             throw Py::Exception();
 
         std::string Utf8Name = std::string(Name);
@@ -588,18 +582,17 @@ private:
                     objs.push_back(static_cast<App::DocumentObjectPy*>(item)->getDocumentObjectPtr());
             }
 
-            if(legacy == Py_None) {
-                auto hGrp = App::GetApplication().GetParameterGroupByPath(
-                        "User parameter:BaseApp/Preferences/Mod/Import");
-                legacy = hGrp->GetBool("ExportLegacy",false)?Py_True:Py_False;
+            if (legacy == Py_None) {
+                Part::ImportExportSettings settings;
+                legacy = settings.getExportLegacy() ? Py_True : Py_False;
             }
 
             Import::ExportOCAF2 ocaf(hDoc, &getShapeColors);
-            if(!PyObject_IsTrue(legacy) || !ocaf.canFallback(objs)) {
-                if(exportHidden!=Py_None)
-                    ocaf.setExportHiddenObject(PyObject_IsTrue(exportHidden));
-                if(keepPlacement!=Py_None)
-                    ocaf.setKeepPlacement(PyObject_IsTrue(keepPlacement));
+            if (!Base::asBoolean(legacy) || !ocaf.canFallback(objs)) {
+                if (exportHidden != Py_None)
+                    ocaf.setExportHiddenObject(Base::asBoolean(exportHidden));
+                if (keepPlacement != Py_None)
+                    ocaf.setKeepPlacement(Base::asBoolean(keepPlacement));
                 ocaf.exportObjects(objs);
             }
             else {
@@ -643,11 +636,8 @@ private:
                 writer.Transfer(hDoc, STEPControl_AsIs);
 
                 // edit STEP header
-#if OCC_VERSION_HEX >= 0x060500
                 APIHeaderSection_MakeHeader makeHeader(writer.ChangeWriter().Model());
-#else
-                APIHeaderSection_MakeHeader makeHeader(writer.Writer().Model());
-#endif
+
                 Base::Reference<ParameterGrp> hGrp = App::GetApplication().GetUserParameter()
                     .GetGroup("BaseApp")->GetGroup("Preferences")->GetGroup("Mod/Part")->GetGroup("STEP");
 

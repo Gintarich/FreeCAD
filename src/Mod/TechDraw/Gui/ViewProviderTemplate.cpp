@@ -43,6 +43,7 @@
 #include "QGITemplate.h"
 #include "QGISVGTemplate.h"
 #include "QGVPage.h"
+#include "QGSPage.h"
 #include "MDIViewPage.h"
 #include "TemplateTextField.h"
 #include "ViewProviderPage.h"
@@ -91,9 +92,10 @@ void ViewProviderTemplate::updateData(const App::Property* prop)
         auto t = static_cast<TechDraw::DrawSVGTemplate*>(getTemplate());
         if (prop == &(t->Template)) {
             MDIViewPage* mdi = getMDIViewPage();
-            if (mdi != nullptr) {
+            if (mdi) {
                 mdi->attachTemplate(t);
                 mdi->viewAll();
+                mdi->getViewProviderPage()->setGrid();
             }
        }
     }
@@ -122,7 +124,7 @@ void ViewProviderTemplate::onChanged(const App::Property *prop)
 void ViewProviderTemplate::show(void)
 {
     QGITemplate* qTemplate = getQTemplate();
-    if (qTemplate != nullptr) {
+    if (qTemplate) {
         qTemplate->show();
     }
 
@@ -132,7 +134,7 @@ void ViewProviderTemplate::show(void)
 void ViewProviderTemplate::hide(void)
 {
     QGITemplate* qTemplate = getQTemplate();
-    if (qTemplate != nullptr) {
+    if (qTemplate) {
         qTemplate->hide();
     }
     
@@ -146,15 +148,14 @@ bool ViewProviderTemplate::isShow(void) const
 
 QGITemplate* ViewProviderTemplate::getQTemplate(void)
 {
-    QGITemplate *result = nullptr;
     TechDraw::DrawTemplate* dt = getTemplate();
     if (dt) {
         MDIViewPage* mdi = getMDIViewPage();
-        if (mdi != nullptr) {
-            result = mdi->getQGVPage()->getTemplate();
+        if (mdi) {
+            return mdi->getQGSPage()->getTemplate();
         }
     }
-    return result;
+    return nullptr;
 }
 
 void ViewProviderTemplate::setMarkers(bool state)
@@ -162,7 +163,7 @@ void ViewProviderTemplate::setMarkers(bool state)
 //    Base::Console().Message("VPT::setMarkers(%d)\n",state);
     QGITemplate* qTemplate = getQTemplate();
     QGISVGTemplate* qSvgTemplate = dynamic_cast<QGISVGTemplate*> (qTemplate);
-    if (qSvgTemplate != nullptr) {
+    if (qSvgTemplate) {
         std::vector<TemplateTextField *> textFields = qSvgTemplate->getTextFields();
         for (auto& t:textFields) {
             if (state) {
@@ -206,15 +207,14 @@ bool ViewProviderTemplate::onDelete(const std::vector<std::string> &)
 
 MDIViewPage* ViewProviderTemplate::getMDIViewPage(void) const
 {
-    MDIViewPage* myMdi = nullptr;
     auto t = getTemplate();
     auto page = t->getParentPage();
     Gui::ViewProvider* vp = Gui::Application::Instance->getDocument(t->getDocument())->getViewProvider(page);
     TechDrawGui::ViewProviderPage* dvp = dynamic_cast<TechDrawGui::ViewProviderPage*>(vp);
     if (dvp) {
-        myMdi = dvp->getMDIViewPage();
+        return dvp->getMDIViewPage();
     }
-    return myMdi;
+    return nullptr;
 }
 
 Gui::MDIView *ViewProviderTemplate::getMDIView() const

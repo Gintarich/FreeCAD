@@ -20,9 +20,9 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
+#include <BRep_Builder.hxx>
 #include <BRep_Tool.hxx>
 #include <TopExp.hxx>
 #include <TopoDS.hxx>
@@ -33,7 +33,9 @@
 
 #include <App/Document.h>
 #include <Base/Exception.h>
+
 #include "FeatureDressUp.h"
+
 
 using namespace PartDesign;
 
@@ -58,7 +60,7 @@ short DressUp::mustExecute() const
 {
     if (Base.getValue() && Base.getValue()->isTouched())
         return 1;
-    return PartDesign::Feature::mustExecute();
+    return PartDesign::FeatureAddSub::mustExecute();
 }
 
 void DressUp::positionByBaseFeature(void)

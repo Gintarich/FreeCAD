@@ -20,58 +20,51 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 
 #ifndef _PreComp_
 # include <sstream>
-# include <gp_Trsf.hxx>
-# include <gp_Ax1.hxx>
-# include <BRepBuilderAPI_MakeShape.hxx>
+# include <Bnd_Box.hxx>
+# include <BRepAdaptor_Curve.hxx>
 # include <BRepAlgoAPI_Fuse.hxx>
 # include <BRepAlgoAPI_Common.hxx>
-# include <TopTools_ListIteratorOfListOfShape.hxx>
-# include <TopExp.hxx>
-# include <TopExp_Explorer.hxx>
-# include <TopTools_IndexedMapOfShape.hxx>
+# include <BRepBndLib.hxx>
+# include <BRepBuilderAPI_MakeShape.hxx>
+# include <BRepExtrema_DistShapeShape.hxx>
+# include <BRepGProp.hxx>
+# include <BRepIntCurveSurface_Inter.hxx>
+# include <gce_MakeDir.hxx>
+# include <gce_MakeLin.hxx>
+# include <gp_Ax1.hxx>
+# include <gp_Dir.hxx>
+# include <gp_Trsf.hxx>
+# include <GProp_GProps.hxx>
+# include <IntCurveSurface_IntersectionPoint.hxx>
+# include <Precision.hxx>
 # include <Standard_Failure.hxx>
 # include <Standard_Version.hxx>
-# include <TopoDS_Face.hxx>
-# include <gp_Dir.hxx>
-# include <gp_Pln.hxx> // for Precision::Confusion()
-# include <Bnd_Box.hxx>
-# include <BRepBndLib.hxx>
-# include <BRepExtrema_DistShapeShape.hxx>
-# include <BRepAdaptor_Curve.hxx>
+# include <TopExp.hxx>
+# include <TopExp_Explorer.hxx>
 # include <TopoDS.hxx>
-# include <GProp_GProps.hxx>
-# include <BRepGProp.hxx>
-# include <gce_MakeLin.hxx>
-# include <BRepIntCurveSurface_Inter.hxx>
-# include <IntCurveSurface_IntersectionPoint.hxx>
-# include <gce_MakeDir.hxx>
+# include <TopTools_IndexedMapOfShape.hxx>
+# include <TopTools_ListIteratorOfListOfShape.hxx>
 #endif
 
-#include <boost/algorithm/string/predicate.hpp>
-#include <boost_bind_bind.hpp>
-#include <Base/Console.h>
-#include <Base/Writer.h>
-#include <Base/Reader.h>
-#include <Base/Exception.h>
-#include <Base/FileInfo.h>
-#include <Base/Stream.h>
-#include <Base/Placement.h>
-#include <Base/Rotation.h>
 #include <App/Application.h>
-#include <App/FeaturePythonPyImp.h>
 #include <App/Document.h>
+#include <App/FeaturePythonPyImp.h>
 #include <App/Link.h>
 #include <App/GeoFeatureGroupExtension.h>
+#include <Base/Exception.h>
+#include <Base/Placement.h>
+#include <Base/Rotation.h>
+#include <Base/Stream.h>
 
-#include "PartPyCXX.h"
 #include "PartFeature.h"
 #include "PartFeaturePy.h"
+#include "PartPyCXX.h"
 #include "TopoShapePy.h"
+
 
 using namespace Part;
 namespace bp = boost::placeholders;
@@ -189,12 +182,10 @@ App::DocumentObject *Feature::getSubObject(const char *subname,
         // instance or do simply nothing. For now the error message is degraded to a log message.
         std::ostringstream str;
         Standard_CString msg = e.GetMessageString();
-#if OCC_VERSION_HEX >= 0x070000
+
         // Avoid name mangling
         str << e.DynamicType()->get_type_name() << " ";
-#else
-        str << typeid(e).name() << " ";
-#endif
+
         if (msg) {str << msg;}
         else     {str << "No OCCT Exception Message";}
         str << ": " << getFullName();
@@ -240,7 +231,7 @@ struct ShapeCache {
             return;
         if(strcmp(propName,"Shape")==0 
                 || strcmp(propName,"Group")==0 
-                || strstr(propName,"Touched")!=nullptr)
+                || strstr(propName,"Touched"))
             slotClear(obj);
     }
 
@@ -542,14 +533,12 @@ void Feature::onChanged(const App::Property* prop)
 {
     // if the placement has changed apply the change to the point data as well
     if (prop == &this->Placement) {
-        TopoShape& shape = const_cast<TopoShape&>(this->Shape.getShape());
-        shape.setTransform(this->Placement.getValue().toMatrix());
+        this->Shape.setTransform(this->Placement.getValue().toMatrix());
     }
     // if the point data has changed check and adjust the transformation as well
     else if (prop == &this->Shape) {
         if (this->isRecomputing()) {
-            TopoShape& shape = const_cast<TopoShape&>(this->Shape.getShape());
-            shape.setTransform(this->Placement.getValue().toMatrix());
+            this->Shape.setTransform(this->Placement.getValue().toMatrix());
         }
         else {
             Base::Placement p;

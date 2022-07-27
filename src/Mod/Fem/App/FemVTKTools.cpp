@@ -53,6 +53,7 @@
 # include <vtkRectilinearGrid.h>
 # include <vtkUnstructuredGrid.h>
 # include <vtkXMLUnstructuredGridReader.h>
+# include <vtkXMLPUnstructuredGridReader.h>
 # include <vtkXMLUnstructuredGridWriter.h>
 # include <vtkPointData.h>
 # include <vtkCellData.h>
@@ -126,7 +127,7 @@ void FemVTKTools::importVTKMesh(vtkSmartPointer<vtkDataSet> dataset, FemMesh* me
     vtkSmartPointer<vtkIdList> idlist= vtkSmartPointer<vtkIdList>::New();
 
     //Now fill the SMESH datastructure
-    SMESH_Mesh* smesh = const_cast<SMESH_Mesh*>(mesh->getSMesh());
+    SMESH_Mesh* smesh = mesh->getSMesh();
     SMESHDS_Mesh* meshds = smesh->GetMeshDS();
     meshds->ClearMesh();
 
@@ -209,6 +210,14 @@ FemMesh* FemVTKTools::readVTKMesh(const char* filename, FemMesh* mesh)
     if(f.hasExtension("vtu"))
     {
         vtkSmartPointer<vtkDataSet> dataset  = readVTKFile<vtkXMLUnstructuredGridReader>(filename);
+        if (!dataset.Get()) {
+            Base::Console().Error("Failed to load file %s\n", filename);
+            return nullptr;
+        }
+        importVTKMesh(dataset, mesh);
+    }
+    else if (f.hasExtension("pvtu")) {
+        vtkSmartPointer<vtkDataSet> dataset = readVTKFile<vtkXMLPUnstructuredGridReader>(filename);
         if (!dataset.Get()) {
             Base::Console().Error("Failed to load file %s\n", filename);
             return nullptr;
@@ -446,8 +455,8 @@ void FemVTKTools::exportVTKMesh(const FemMesh* mesh, vtkSmartPointer<vtkUnstruct
 {
 
     Base::Console().Log("Start: VTK mesh builder ======================\n");
-    SMESH_Mesh* smesh = const_cast<SMESH_Mesh*>(mesh->getSMesh());
-    SMESHDS_Mesh* meshDS = smesh->GetMeshDS();
+    const SMESH_Mesh* smesh = mesh->getSMesh();
+    const SMESHDS_Mesh* meshDS = smesh->GetMeshDS();
 
     // nodes
     Base::Console().Log("  Start: VTK mesh builder nodes.\n");
@@ -691,7 +700,7 @@ std::map<std::string, std::string> _getFreeCADMechResultVectorProperties() {
 // some scalar list are not needed on VTK file export but they are needed for internal VTK pipeline
 // TODO some filter to only export the needed values to VTK file but have all in FreeCAD VTK pipline
 std::map<std::string, std::string> _getFreeCADMechResultScalarProperties() {
-    // see src/Mod/Fem/femobjects/_FemResultMechanical
+    // see src/Mod/Fem/femobjects/result_mechanical.py
     // App::PropertyFloatList will be a list of scalars in vtk
     std::map<std::string, std::string> resFCScalProp;
     resFCScalProp["DisplacementLengths"] = "Displacement Magnitude";  // can be plotted in Paraview as THE DISPLACEMENT MAGNITUDE
@@ -717,9 +726,9 @@ std::map<std::string, std::string> _getFreeCADMechResultScalarProperties() {
     // thus TODO they might not be exported to external file format (first I need to know how to generate them in paraview)
     // but there are needed anyway because the pipline in FreeCAD needs the principal stress values
     // https://forum.freecadweb.org/viewtopic.php?f=18&t=33106&p=416006#p412800
-    resFCScalProp["PrincipalMax"] = "Major Principal Stress";
-    resFCScalProp["PrincipalMed"] = "Intermediate Principal Stress";
-    resFCScalProp["PrincipalMin"] = "Minor Principal Stress";
+    resFCScalProp["PrincipalMax"] = "Major Principal Stress";       // can be plotted in Paraview as THE MAJOR PRINCIPAL STRESS MAGNITUDE
+    resFCScalProp["PrincipalMed"] = "Intermediate Principal Stress";// can be plotted in Paraview as THE INTERMEDIATE PRINCIPAL STRESS MAGNITUDE
+    resFCScalProp["PrincipalMin"] = "Minor Principal Stress";       // can be plotted in Paraview as THE MINOR PRINCIPAL STRESS MAGNITUDE
     resFCScalProp["vonMises"] = "von Mises Stress";
     resFCScalProp["Temperature"] = "Temperature";
     resFCScalProp["MohrCoulomb"] = "MohrCoulomb";
@@ -834,8 +843,8 @@ void FemVTKTools::exportFreeCADResult(const App::DocumentObject* result, vtkSmar
         Base::Console().Error("Result object does not correctly link to mesh");
         return;
     }
-    SMESH_Mesh* smesh = const_cast<SMESH_Mesh*>(static_cast<FemMeshObject*>(meshObj)->FemMesh.getValue().getSMesh());
-    SMESHDS_Mesh* meshDS = smesh->GetMeshDS();
+    const SMESH_Mesh* smesh = static_cast<FemMeshObject*>(meshObj)->FemMesh.getValue().getSMesh();
+    const SMESHDS_Mesh* meshDS = smesh->GetMeshDS();
 
     // all result object meshes are in mm therefore for e.g. length outputs like
     // displacement we must divide by 1000
@@ -912,7 +921,6 @@ void FemVTKTools::exportFreeCADResult(const App::DocumentObject* result, vtkSmar
             }
 
             if ((it->first.compare("MaxShear") == 0)
-                || (it->first.compare("MaxShear") == 0)
                 || (it->first.compare("NodeStressXX") == 0)
                 || (it->first.compare("NodeStressXY") == 0)
                 || (it->first.compare("NodeStressXZ") == 0)

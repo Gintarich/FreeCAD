@@ -131,9 +131,9 @@ void ViewProviderBody::setupContextMenu(QMenu* menu, QObject* receiver, const ch
     Q_UNUSED(member);
     Gui::ActionFunction* func = new Gui::ActionFunction(menu);
     QAction* act = menu->addAction(tr("Toggle active body"));
-    func->trigger(act, boost::bind(&ViewProviderBody::doubleClicked, this));
+    func->trigger(act, std::bind(&ViewProviderBody::doubleClicked, this));
 
-    Gui::ViewProviderGeometryObject::setupContextMenu(menu, receiver, member);
+    Gui::ViewProviderGeometryObject::setupContextMenu(menu, receiver, member); // clazy:exclude=skipped-base-method
 }
 
 bool ViewProviderBody::doubleClicked(void)
@@ -227,11 +227,22 @@ void ViewProviderBody::updateData(const App::Property* prop)
                 static_cast<PartDesignGui::ViewProvider*>(vp)->setTipIcon(feature == tip);
             }
         }
+
+        if (tip)
+            copyColorsfromTip(tip);
     }
 
     PartGui::ViewProviderPart::updateData(prop);
 }
 
+void ViewProviderBody::copyColorsfromTip(App::DocumentObject* tip) {
+    // update DiffuseColor
+    Gui::ViewProvider* vptip = Gui::Application::Instance->getViewProvider(tip);
+    if (vptip && vptip->isDerivedFrom(PartGui::ViewProviderPartExt::getClassTypeId())) {
+        auto colors = static_cast<PartGui::ViewProviderPartExt*>(vptip)->DiffuseColor.getValues();
+        this->DiffuseColor.setValues(colors);
+    }
+}
 
 void ViewProviderBody::slotChangedObjectApp ( const App::DocumentObject& obj, const App::Property& prop ) {
 
@@ -466,7 +477,7 @@ bool ViewProviderBody::canDropObject(App::DocumentObject* obj) const
 
     App::Part *actPart = PartDesignGui::getActivePart();
     App::Part* partOfBaseFeature = App::Part::getPartOfObject(obj);
-    if (partOfBaseFeature != nullptr && partOfBaseFeature != actPart)
+    if (partOfBaseFeature && partOfBaseFeature != actPart)
         return false;
 
     return true;
@@ -494,7 +505,7 @@ void ViewProviderBody::dropObject(App::DocumentObject* obj)
             e.ReportException();
         }
     }
-    else if (body->BaseFeature.getValue() == nullptr) {
+    else if (!body->BaseFeature.getValue()) {
         body->BaseFeature.setValue(obj);
     }
 

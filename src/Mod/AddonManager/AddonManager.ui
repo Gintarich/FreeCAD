@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
-    <widget class="QWidget" name="contentPlaceholder">
+    <widget class="QWidget" name="contentPlaceholder" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
        <horstretch>0</horstretch>
@@ -86,7 +86,7 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>labelStatusInfo</string>
+        <string notr="true">labelStatusInfo</string>
        </property>
       </widget>
      </item>
@@ -118,6 +118,19 @@
       <widget class="QPushButton" name="buttonCheckForUpdates">
        <property name="text">
         <string>Check for updates</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonUpdateDependencies">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="toolTip">
+        <string>View and update Python package dependencies</string>
+       </property>
+       <property name="text">
+        <string>Update dependencies</string>
        </property>
       </widget>
      </item>

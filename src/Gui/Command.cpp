@@ -42,6 +42,7 @@
 #include <Base/Console.h>
 #include <Base/Exception.h>
 #include <Base/Interpreter.h>
+#include <Base/PyObjectBase.h>
 #include <Base/Tools.h>
 
 #include "Command.h"
@@ -497,7 +498,8 @@ void Command::testActive(void)
     Gui::ActionGroup* pcAction = qobject_cast<Gui::ActionGroup*>(_pcAction);
     if(pcAction) {
         Gui::CommandManager &rcCmdMgr = Gui::Application::Instance->commandManager();
-        for(auto action : pcAction->actions()) {
+        const auto actions = pcAction->actions();
+        for(auto action : actions) {
             auto name = action->property("CommandName").toByteArray();
             if(!name.size())
                 continue;
@@ -657,8 +659,15 @@ void Command::printPyCaller() {
     if(!frame)
         return;
     int line = PyFrame_GetLineNumber(frame);
+#if PY_VERSION_HEX < 0x030b0000
     const char *file = PyUnicode_AsUTF8(frame->f_code->co_filename);
     printCaller(file?file:"<no file>",line);
+#else
+    PyCodeObject* code = PyFrame_GetCode(frame);
+    const char* file = PyUnicode_AsUTF8(code->co_filename);
+    printCaller(file?file:"<no file>",line);
+    Py_DECREF(code);
+#endif
 }
 
 void Command::printCaller(const char *file, int line) {
@@ -1061,6 +1070,7 @@ void GroupCommand::activated(int iMsg)
 }
 
 void GroupCommand::languageChange() {
+    Command::languageChange();
     if (_pcAction)
         setup(_pcAction);
 }
@@ -1069,18 +1079,17 @@ void GroupCommand::setup(Action *pcAction) {
 
     pcAction->setText(QCoreApplication::translate(className(), getMenuText()));
 
+    // The tooltip for the group is the tooltip of the active tool (that is, the tool that will
+    // be activated when the main portion of the button is clicked).
     int idx = pcAction->property("defaultAction").toInt();
     if(idx>=0 && idx<(int)cmds.size() && cmds[idx].first) {
         auto cmd = cmds[idx].first;
         pcAction->setIcon(BitmapFactory().iconFromTheme(cmd->getPixmap()));
         pcAction->setChecked(cmd->getAction()->isChecked(),true);
         const char *context = dynamic_cast<PythonCommand*>(cmd) ? cmd->getName() : cmd->className();
-        const char *tooltip = cmd->getToolTipText();
-        const char *statustip = cmd->getStatusTip();
-        if (!statustip || '\0' == *statustip)
-            statustip = tooltip;
-        recreateTooltip(context, pcAction);
-        pcAction->setStatusTip(QCoreApplication::translate(context,statustip));
+        cmd->recreateTooltip(context, cmd->getAction());
+        pcAction->setToolTip(cmd->getAction()->toolTip());
+        pcAction->setStatusTip(cmd->getAction()->statusTip());
     }
 }
 
@@ -1427,7 +1436,7 @@ bool PythonCommand::isChecked() const
     }
 
     if (PyBool_Check(item)) {
-        return PyObject_IsTrue(item) ? true : false;
+        return Base::asBoolean(item);
     }
     else {
         throw Base::ValueError("PythonCommand::isChecked(): Method GetResources() of the Python "
@@ -1505,14 +1514,6 @@ void PythonGroupCommand::activated(int iMsg)
             }
         }
 
-        // It is better to let ActionGroup::onActivated() to handle icon and
-        // text change. The net effect is that the GUI won't change by user
-        // inovking command through runCommandByName()
-#if 0
-        // Since the default icon is reset when enabling/disabling the command we have
-        // to explicitly set the icon of the used command.
-        pcAction->setIcon(a[iMsg]->icon());
-#endif
     }
     catch(Py::Exception&) {
         Base::PyGILStateLocker lock;
@@ -1719,7 +1720,7 @@ bool PythonGroupCommand::isExclusive() const
     }
 
     if (PyBool_Check(item)) {
-        return PyObject_IsTrue(item) ? true : false;
+        return Base::asBoolean(item);
     }
     else {
         throw Base::TypeError("PythonGroupCommand::isExclusive(): Method GetResources() of the Python "
@@ -1735,7 +1736,7 @@ bool PythonGroupCommand::hasDropDownMenu() const
     }
 
     if (PyBool_Check(item)) {
-        return PyObject_IsTrue(item) ? true : false;
+        return Base::asBoolean(item);
     }
     else {
         throw Base::TypeError("PythonGroupCommand::hasDropDownMenu(): Method GetResources() of the Python "

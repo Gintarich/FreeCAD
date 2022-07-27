@@ -20,13 +20,13 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
 # include <fcntl.h>
+# include <sstream>
 # include <BRep_Builder.hxx>
-# include <TopTools_HSequenceOfShape.hxx>
-# include <STEPControl_Writer.hxx>
+# include <Interface_Static.hxx>
+# include <Quantity_Color.hxx>
 # include <STEPControl_Reader.hxx>
 # include <StepData_StepModel.hxx>
 # include <TopoDS.hxx>
@@ -35,52 +35,233 @@
 # include <TopoDS_Solid.hxx>
 # include <TopoDS_Compound.hxx>
 # include <TopExp_Explorer.hxx>
-# include <sstream>
 # include <Standard_Version.hxx>
-# include <XSControl_WorkSession.hxx>
-# include <XSControl_TransferReader.hxx>
-# include <XSControl_WorkSession.hxx>
-# include <XSControl_TransferReader.hxx>
 # include <Transfer_TransientProcess.hxx>
-# include <STEPConstruct_Styles.hxx>
-# include <TColStd_HSequenceOfTransient.hxx>
-# include <STEPConstruct.hxx>
-# include <StepVisual_StyledItem.hxx>
-# include <StepShape_ShapeRepresentation.hxx>
-# include <StepVisual_PresentationStyleByContext.hxx>
-# include <StepVisual_StyleContextSelect.hxx>
-# include <StepVisual_PresentationStyleByContext.hxx>
-# include <Interface_EntityIterator.hxx>
-# include <StepRepr_RepresentedDefinition.hxx>
-# include <StepShape_ShapeDefinitionRepresentation.hxx>
-# include <StepRepr_CharacterizedDefinition.hxx>
-# include <StepRepr_ProductDefinitionShape.hxx>
-# include <StepRepr_AssemblyComponentUsage.hxx>
-# include <StepRepr_AssemblyComponentUsage.hxx>
-# include <StepRepr_SpecifiedHigherUsageOccurrence.hxx>
-# include <Quantity_Color.hxx>
-# include <TCollection_ExtendedString.hxx>
-# include <StepBasic_Product.hxx>
-# include <StepBasic_Product.hxx>
-# include <StepBasic_ProductDefinition.hxx>
-# include <StepBasic_ProductDefinition.hxx>
-# include <StepBasic_ProductDefinitionFormation.hxx>
+# include <XSControl_TransferReader.hxx>
+# include <XSControl_WorkSession.hxx>
 #endif
 
-# include <StepElement_AnalysisItemWithinRepresentation.hxx>
-# include <StepVisual_AnnotationCurveOccurrence.hxx>
+#include <StepElement_AnalysisItemWithinRepresentation.hxx>
+#include <StepVisual_AnnotationCurveOccurrence.hxx>
 
-#include <Base/Console.h>
-#include <Base/Sequencer.h>
 #include <App/Application.h>
 #include <App/Document.h>
+#include <Base/Console.h>
 
 #include "ImportStep.h"
+#include "encodeFilename.h"
 #include "PartFeature.h"
 #include "ProgressIndicator.h"
-#include "encodeFilename.h"
+
 
 using namespace Part;
+
+
+void ImportExportSettings::initialize()
+{
+    // set the user-defined settings
+    Base::Reference<ParameterGrp> hGrp = App::GetApplication().GetUserParameter()
+        .GetGroup("BaseApp")->GetGroup("Preferences")->GetGroup("Mod/Part");
+    initGeneral(hGrp);
+    initSTEP(hGrp);
+    initIGES(hGrp);
+}
+
+void ImportExportSettings::initGeneral(Base::Reference<ParameterGrp> hGrp)
+{
+    // General
+    Base::Reference<ParameterGrp> hGenGrp = hGrp->GetGroup("General");
+    // http://www.opencascade.org/org/forum/thread_20801/
+    // read.surfacecurve.mode:
+    // A preference for the computation of curves in an entity which has both 2D and 3D representation.
+    // Each TopoDS_Edge in TopoDS_Face must have a 3D and 2D curve that references the surface.
+    // If both 2D and 3D representation of the entity are present, the computation of these curves depends on
+    // the following values of parameter:
+    // 0: "Default" - no preference, both curves are taken
+    // 3: "3DUse_Preferred" - 3D curves are used to rebuild 2D ones
+    // Additional modes for IGES
+    //  2: "2DUse_Preferred" - the 2D is used to rebuild the 3D in case of their inconsistency
+    // -2: "2DUse_Forced" - the 2D is always used to rebuild the 3D (even if 2D is present in the file)
+    // -3: "3DUse_Forced" - the 3D is always used to rebuild the 2D (even if 2D is present in the file)
+    int readsurfacecurve = hGenGrp->GetInt("ReadSurfaceCurveMode", 0);
+    Interface_Static::SetIVal("read.surfacecurve.mode", readsurfacecurve);
+
+    // write.surfacecurve.mode (STEP-only):
+    // This parameter indicates whether parametric curves (curves in parametric space of surface) should be
+    // written into the STEP file. This parameter can be set to Off in order to minimize the size of the resulting
+    // STEP file.
+    // Off (0) : writes STEP files without pcurves. This mode decreases the size of the resulting file.
+    // On (1) : (default) writes pcurves to STEP file
+    int writesurfacecurve = hGenGrp->GetInt("WriteSurfaceCurveMode", 0);
+    Interface_Static::SetIVal("write.surfacecurve.mode", writesurfacecurve);
+}
+
+void ImportExportSettings::initIGES(Base::Reference<ParameterGrp> hGrp)
+{
+    //IGES handling
+    Base::Reference<ParameterGrp> hIgesGrp = hGrp->GetGroup("IGES");
+    int value = Interface_Static::IVal("write.iges.brep.mode");
+    bool brep = hIgesGrp->GetBool("BrepMode", value > 0);
+    Interface_Static::SetIVal("write.iges.brep.mode",brep ? 1 : 0);
+    Interface_Static::SetCVal("write.iges.header.company", hIgesGrp->GetASCII("Company").c_str());
+    Interface_Static::SetCVal("write.iges.header.author", hIgesGrp->GetASCII("Author").c_str());
+    Interface_Static::SetCVal("write.iges.header.product", hIgesGrp->GetASCII("Product",
+       Interface_Static::CVal("write.iges.header.product")).c_str());
+
+    int unitIges = hIgesGrp->GetInt("Unit", 0);
+    switch (unitIges) {
+        case 1:
+            Interface_Static::SetCVal("write.iges.unit","M");
+            break;
+        case 2:
+            Interface_Static::SetCVal("write.iges.unit","INCH");
+            break;
+        default:
+            Interface_Static::SetCVal("write.iges.unit","MM");
+            break;
+    }
+}
+
+void ImportExportSettings::initSTEP(Base::Reference<ParameterGrp> hGrp)
+{
+    //STEP handling
+    Base::Reference<ParameterGrp> hStepGrp = hGrp->GetGroup("STEP");
+    int unitStep = hStepGrp->GetInt("Unit", 0);
+    switch (unitStep) {
+        case 1:
+            Interface_Static::SetCVal("write.step.unit","M");
+            break;
+        case 2:
+            Interface_Static::SetCVal("write.step.unit","INCH");
+            break;
+        default:
+            Interface_Static::SetCVal("write.step.unit","MM");
+            break;
+    }
+
+    std::string ap = hStepGrp->GetASCII("Scheme", Interface_Static::CVal("write.step.schema"));
+    Interface_Static::SetCVal("write.step.schema", ap.c_str());
+    Interface_Static::SetCVal("write.step.product.name", hStepGrp->GetASCII("Product",
+       Interface_Static::CVal("write.step.product.name")).c_str());
+}
+
+ImportExportSettings::ImportExportSettings()
+{
+    pGroup = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/Mod/Import");
+}
+
+void ImportExportSettings::setReadShapeCompoundMode(bool on)
+{
+    auto grp = pGroup->GetGroup("hSTEP");
+    grp->SetBool("ReadShapeCompoundMode", on);
+}
+
+bool ImportExportSettings::getReadShapeCompoundMode() const
+{
+    auto grp = pGroup->GetGroup("hSTEP");
+    return grp->GetBool("ReadShapeCompoundMode", true);
+}
+
+void ImportExportSettings::setExportHiddenObject(bool on)
+{
+    pGroup->SetBool("ExportHiddenObject", on);
+}
+
+bool ImportExportSettings::getExportHiddenObject() const
+{
+    return pGroup->GetBool("ExportHiddenObject", true);
+}
+
+void ImportExportSettings::setImportHiddenObject(bool on)
+{
+    pGroup->SetBool("ImportHiddenObject", on);
+}
+
+bool ImportExportSettings::getImportHiddenObject() const
+{
+    return pGroup->GetBool("ImportHiddenObject", false);
+}
+
+void ImportExportSettings::setExportLegacy(bool on)
+{
+    pGroup->SetBool("ExportLegacy", on);
+}
+
+bool ImportExportSettings::getExportLegacy() const
+{
+    return pGroup->GetBool("ExportLegacy", false);
+}
+
+void ImportExportSettings::setExportKeepPlacement(bool on)
+{
+    pGroup->SetBool("ExportKeepPlacement", on);
+}
+
+bool ImportExportSettings::getExportKeepPlacement() const
+{
+    return pGroup->GetBool("ExportKeepPlacement", false);
+}
+
+void ImportExportSettings::setUseLinkGroup(bool on)
+{
+    pGroup->SetBool("UseLinkGroup", on);
+}
+
+bool ImportExportSettings::getUseLinkGroup() const
+{
+    return pGroup->GetBool("UseLinkGroup", false);
+}
+
+void ImportExportSettings::setUseBaseName(bool on)
+{
+    pGroup->SetBool("UseBaseName", on);
+}
+
+bool ImportExportSettings::getUseBaseName() const
+{
+    return pGroup->GetBool("UseBaseName", false);
+}
+
+void ImportExportSettings::setReduceObjects(bool on)
+{
+    pGroup->SetBool("ReduceObjects", on);
+}
+
+bool ImportExportSettings::getReduceObjects() const
+{
+    return pGroup->GetBool("ReduceObjects", false);
+}
+
+void ImportExportSettings::setExpandCompound(bool on)
+{
+    pGroup->SetBool("ExpandCompound", on);
+}
+
+bool ImportExportSettings::getExpandCompound() const
+{
+    return pGroup->GetBool("ExpandCompound", false);
+}
+
+void ImportExportSettings::setShowProgress(bool on)
+{
+    pGroup->SetBool("ShowProgress", on);
+}
+
+bool ImportExportSettings::getShowProgress() const
+{
+    return pGroup->GetBool("ShowProgress", false);
+}
+
+void ImportExportSettings::setImportMode(ImportExportSettings::ImportMode mode)
+{
+    pGroup->SetInt("ImportMode", static_cast<long>(mode));
+}
+
+ImportExportSettings::ImportMode ImportExportSettings::getImportMode() const
+{
+    return static_cast<ImportExportSettings::ImportMode>(pGroup->GetInt("ImportMode", 0));
+}
+
 
 namespace Part {
 bool ReadColors (const Handle(XSControl_WorkSession) &WS, std::map<int, Quantity_Color>& hash_col);
@@ -243,222 +424,16 @@ int Part::ImportStepParts(App::Document *pcDoc, const char* Name)
     return 0;
 }
 
-#if OCC_VERSION_HEX < 0x070000
-static void findStyledSR (const Handle(StepVisual_StyledItem) &style,
-                          Handle(StepShape_ShapeRepresentation)& aSR)
-{
-    // search Shape Representation for component styled item
-    for (Standard_Integer j=1; j <= style->NbStyles(); j++) {
-        Handle(StepVisual_PresentationStyleByContext) PSA =
-            Handle(StepVisual_PresentationStyleByContext)::DownCast(style->StylesValue ( j ));
-        if (PSA.IsNull())
-            continue;
-        StepVisual_StyleContextSelect aStyleCntxSlct = PSA->StyleContext();
-        Handle(StepShape_ShapeRepresentation) aCurrentSR =
-            Handle(StepShape_ShapeRepresentation)::DownCast(aStyleCntxSlct.Representation());
-        if (aCurrentSR.IsNull())
-            continue;
-        aSR = aCurrentSR;
-            break;
-    }
-}
-#endif
 
 bool Part::ReadColors (const Handle(XSControl_WorkSession) &WS, std::map<int, Quantity_Color>& hash_col)
 {
-#if OCC_VERSION_HEX >= 0x070000
     (void)WS;
     (void)hash_col;
     return Standard_False;
-#else
-    STEPConstruct_Styles Styles (WS);
-    if (!Styles.LoadStyles()) {
-#ifdef FC_DEBUG
-        std::cout << "Warning: no styles are found in the model" << std::endl;
-#endif
-        return Standard_False;
-    }
-    // searching for invisible items in the model
-    Handle(TColStd_HSequenceOfTransient) aHSeqOfInvisStyle = new TColStd_HSequenceOfTransient;
-    Styles.LoadInvisStyles( aHSeqOfInvisStyle );
-
-    // parse and search for color attributes
-    Standard_Integer nb = Styles.NbStyles();
-    for (Standard_Integer i=1; i <= nb; i++) {
-        Handle(StepVisual_StyledItem) style = Styles.Style (i);
-        if (style.IsNull()) continue;
-
-        Standard_Boolean IsVisible = Standard_True;
-        // check the visibility of styled item.
-        for (Standard_Integer si = 1; si <= aHSeqOfInvisStyle->Length(); si++) {
-            if (style != aHSeqOfInvisStyle->Value(si))
-                continue;
-            // found that current style is invisible.
-#ifdef FC_DEBUG
-            std::cout << "Warning: item No " << i << "(" << style->Item()->DynamicType()->Name() << ") is invisible" << std::endl;
-#endif
-            IsVisible = Standard_False;
-            break;
-        }
-
-        Handle(StepVisual_Colour) SurfCol, BoundCol, CurveCol;
-        // check if it is component style
-        Standard_Boolean IsComponent = Standard_False;
-        if (!Styles.GetColors (style, SurfCol, BoundCol, CurveCol, IsComponent) && IsVisible)
-            continue;
-
-        // find shape
-        TopoDS_Shape S = STEPConstruct::FindShape(Styles.TransientProcess(), style->Item());
-        //TopAbs_ShapeEnum type = S.ShapeType();
-        Standard_Boolean isSkipSHUOstyle = Standard_False;
-        // take shape with real location.
-        while (IsComponent) {
-            // take SR of NAUO
-            Handle(StepShape_ShapeRepresentation) aSR;
-            findStyledSR(style, aSR);
-            // search for SR along model
-            if (aSR.IsNull())
-                break;
-//          Handle(Interface_InterfaceModel) Model = WS->Model();
-            Handle(XSControl_TransferReader) TR = WS->TransferReader();
-            Handle(Transfer_TransientProcess) TP = TR->TransientProcess();
-            Interface_EntityIterator subs = WS->HGraph()->Graph().Sharings( aSR );
-            Handle(StepShape_ShapeDefinitionRepresentation) aSDR;
-            for (subs.Start(); subs.More(); subs.Next()) {
-                aSDR = Handle(StepShape_ShapeDefinitionRepresentation)::DownCast(subs.Value());
-                if (aSDR.IsNull())
-                    continue;
-                StepRepr_RepresentedDefinition aPDSselect = aSDR->Definition();
-                Handle(StepRepr_ProductDefinitionShape) PDS =
-                    Handle(StepRepr_ProductDefinitionShape)::DownCast(aPDSselect.PropertyDefinition());
-                if (PDS.IsNull())
-                    continue;
-                StepRepr_CharacterizedDefinition aCharDef = PDS->Definition();
-
-                Handle(StepRepr_AssemblyComponentUsage) ACU =
-                    Handle(StepRepr_AssemblyComponentUsage)::DownCast(aCharDef.ProductDefinitionRelationship());
-                // PTV 10.02.2003 skip styled item that refer to SHUO
-                if (ACU->IsKind(STANDARD_TYPE(StepRepr_SpecifiedHigherUsageOccurrence))) {
-                    isSkipSHUOstyle = Standard_True;
-                    break;
-                }
-                Handle(StepRepr_NextAssemblyUsageOccurrence) NAUO =
-                    Handle(StepRepr_NextAssemblyUsageOccurrence)::DownCast(ACU);
-                if (NAUO.IsNull())
-                    continue;
-
-                TopoDS_Shape aSh;
-                // PTV 10.02.2003 to find component of assembly CORRECTLY
-                STEPConstruct_Tool Tool( WS );
-//              Handle(Transfer_Binder) binder = TP->Find(NAUO);
-//              if (binder.IsNull() || ! binder->HasResult())
-//                  continue;
-//              aSh = TransferBRep::ShapeResult ( TP, binder );
-                if (!aSh.IsNull()) {
-                    S = aSh;
-                    break;
-                }
-            }
-            break;
-        }
-        if (isSkipSHUOstyle)
-            continue; // skip styled item which refer to SHUO
-
-        if ( S.IsNull() ) {
-#ifdef FC_DEBUG
-            std::cout << "Warning: item No " << i << "(" << style->Item()->DynamicType()->Name() << ") is not mapped to shape" << std::endl;
-#endif
-            continue;
-        }
-
-        if (!SurfCol.IsNull()) {
-            Quantity_Color col;
-            Styles.DecodeColor (SurfCol, col);
-            //Base::Console().Message("%d: (%.2f,%.2f,%.2f)\n",col.Name(),col.Red(),col.Green(),col.Blue());
-            hash_col[S.HashCode(INT_MAX)] = col;
-        }
-        if (!BoundCol.IsNull()) {
-            Quantity_Color col;
-            Styles.DecodeColor (BoundCol, col);
-            //Base::Console().Message("%d: (%.2f,%.2f,%.2f)\n",col.Name(),col.Red(),col.Green(),col.Blue());
-            hash_col[S.HashCode(INT_MAX)] = col;
-        }
-        if (!CurveCol.IsNull()) {
-            Quantity_Color col;
-            Styles.DecodeColor (CurveCol, col);
-            //Base::Console().Message("%d: (%.2f,%.2f,%.2f)\n",col.Name(),col.Red(),col.Green(),col.Blue());
-            hash_col[S.HashCode(INT_MAX)] = col;
-        }
-        if (!IsVisible) {
-            // sets the invisibility for shape.
-        }
-    }
-
-    return Standard_True;
-#endif
 }
 
 bool Part::ReadNames (const Handle(XSControl_WorkSession) &WS)
 {
-#if OCC_VERSION_HEX >= 0x070000
     (void)WS;
     return Standard_False;
-#else
-    // get starting data
-    Handle(Interface_InterfaceModel) Model = WS->Model();
-    Handle(XSControl_TransferReader) TR = WS->TransferReader();
-    Handle(Transfer_TransientProcess) TP = TR->TransientProcess();
-
-    STEPConstruct_Tool Tool ( WS );
-
-    // iterate on model to find all SDRs and CDSRs
-    Standard_Integer nb = Model->NbEntities();
-    Handle(Standard_Type) tNAUO = STANDARD_TYPE(StepRepr_NextAssemblyUsageOccurrence);
-    Handle(Standard_Type) tPD  = STANDARD_TYPE(StepBasic_ProductDefinition);
-    Handle(TCollection_HAsciiString) name;
-    for (Standard_Integer i = 1; i <= nb; i++) {
-        Handle(Standard_Transient) enti = Model->Value(i);
-
-        // get description of NAUO
-        if (enti->DynamicType() == tNAUO) {
-            Handle(StepRepr_NextAssemblyUsageOccurrence) NAUO =
-                Handle(StepRepr_NextAssemblyUsageOccurrence)::DownCast(enti);
-            if (NAUO.IsNull()) continue;
-            Interface_EntityIterator subs = WS->Graph().Sharings(NAUO);
-            for (subs.Start(); subs.More(); subs.Next()) {
-                Handle(StepRepr_ProductDefinitionShape) PDS =
-                    Handle(StepRepr_ProductDefinitionShape)::DownCast(subs.Value());
-                if (PDS.IsNull()) continue;
-                Handle(StepBasic_ProductDefinitionRelationship) PDR = PDS->Definition().ProductDefinitionRelationship();
-                if (PDR.IsNull()) continue;
-                if (PDR->HasDescription() &&
-                    PDR->Description()->Length() >0 ) name = PDR->Description();
-                else if (PDR->Name()->Length() >0) name = PDR->Name();
-                else name = PDR->Id();
-            }
-
-            // find proper label
-            TCollection_ExtendedString str ( name->String() );
-            Base::Console().Message("Name: %s\n",name->String().ToCString());
-        }
-
-        // for PD get name of associated product
-        if (enti->DynamicType() == tPD) {
-            Handle(StepBasic_ProductDefinition) PD =
-                Handle(StepBasic_ProductDefinition)::DownCast(enti);
-            if (PD.IsNull()) continue;
-            Handle(StepBasic_Product) Prod = PD->Formation()->OfProduct();
-            if (Prod->Name()->UsefullLength()>0) name = Prod->Name();
-            else name = Prod->Id();
-
-            TCollection_ExtendedString str ( name->String() );
-            Base::Console().Message("Name: %s\n",name->String().ToCString());
-        }
-        // set a name to the document
-        //TCollection_ExtendedString str ( name->String() );
-        //TDataStd_Name::Set ( L, str );
-    }
-
-    return Standard_True;
-#endif
 }

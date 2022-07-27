@@ -20,35 +20,21 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
 # include <gp_Dir2d.hxx>
 # include <gp_Pnt2d.hxx>
-# include <gp_Vec2d.hxx>
-# include <gp_Trsf2d.hxx>
 # include <gp_Trsf.hxx>
-# include <Geom2d_Geometry.hxx>
-# include <Geom2d_Curve.hxx>
-# include <Precision.hxx>
-# include <Standard_Failure.hxx>
+# include <gp_Trsf2d.hxx>
+# include <gp_Vec2d.hxx>
 #endif
 
 #include <Base/GeometryPyCXX.h>
-#include <Base/Matrix.h>
-#include <Base/MatrixPy.h>
-#include <Base/Tools2D.h>
-#include <Base/Rotation.h>
-#include <Base/Placement.h>
-#include <Base/PlacementPy.h>
 
-#include <Mod/Part/App/OCCError.h>
-#include <Mod/Part/App/Geometry2d.h>
-#include <Mod/Part/App/Geom2d/Geometry2dPy.h>
-#include <Mod/Part/App/Geom2d/Geometry2dPy.cpp>
+#include "Geom2d/Geometry2dPy.h"
+#include "Geom2d/Geometry2dPy.cpp"
+#include "OCCError.h"
 
-#include <Mod/Part/App/TopoShape.h>
-#include <Mod/Part/App/TopoShapePy.h>
 
 using namespace Part;
 
@@ -143,13 +129,7 @@ PyObject* Geometry2dPy::transform(PyObject *args)
     double a23 = static_cast<double>(Py::Float(list.getItem(5)));
 
     gp_Trsf mat;
-    mat.SetValues(a11, a12, 0, a13,
-                  a21, a22, 0, a23,
-                  0  ,   0, 1,   0
-#if OCC_VERSION_HEX < 0x060800
-                  , 0.00001,0.00001
-#endif
-                ); //precision was removed in OCCT CR0025194
+    mat.SetValues(a11, a12, 0, a13, a21, a22, 0, a23, 0, 0, 1, 0);
     gp_Trsf2d trf(mat);
 
     getGeometry2dPtr()->handle()->Transform(trf);

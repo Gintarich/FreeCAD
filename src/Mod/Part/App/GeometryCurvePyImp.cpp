@@ -25,56 +25,52 @@
 
 #ifndef _PreComp_
 # include <sstream>
+
 # include <BRepBuilderAPI_MakeEdge.hxx>
-# include <gp_Dir.hxx>
-# include <gp_Vec.hxx>
-# include <gp_Pln.hxx>
-# include <gp_Quaternion.hxx>
-# include <GCPnts_UniformAbscissa.hxx>
-# include <GCPnts_UniformDeflection.hxx>
-# include <GCPnts_TangentialDeflection.hxx>
+# include <GCPnts_AbscissaPoint.hxx>
 # include <GCPnts_QuasiUniformAbscissa.hxx>
 # include <GCPnts_QuasiUniformDeflection.hxx>
-# include <GCPnts_AbscissaPoint.hxx>
-# include <Geom2dAPI_InterCurveCurve.hxx>
-# include <GeomAPI.hxx>
-# include <Geom_Geometry.hxx>
+# include <GCPnts_TangentialDeflection.hxx>
+# include <GCPnts_UniformAbscissa.hxx>
+# include <GCPnts_UniformDeflection.hxx>
+# include <Geom_BSplineSurface.hxx>
 # include <Geom_Curve.hxx>
+# include <Geom_Geometry.hxx>
 # include <Geom_Plane.hxx>
+# include <Geom_RectangularTrimmedSurface.hxx>
 # include <Geom_Surface.hxx>
+# include <Geom2dAPI_InterCurveCurve.hxx>
 # include <GeomAdaptor_Curve.hxx>
+# include <GeomAPI.hxx>
+# include <GeomAPI_IntCS.hxx>
+# include <GeomAPI_ProjectPointOnCurve.hxx>
+# include <GeomConvert_ApproxCurve.hxx>
 # include <GeomFill.hxx>
 # include <GeomLProp.hxx>
 # include <GeomLProp_CLProps.hxx>
-# include <Geom_RectangularTrimmedSurface.hxx>
-# include <Geom_BSplineSurface.hxx>
-# include <Precision.hxx>
-# include <GeomAPI_ProjectPointOnCurve.hxx>
-# include <GeomConvert_ApproxCurve.hxx>
-# include <Standard_Failure.hxx>
-# include <Standard_NullValue.hxx>
-# include <ShapeConstruct_Curve.hxx>
-# include <GeomAPI_IntCS.hxx>
-# include <GeomAPI_ExtremaCurveCurve.hxx>
+# include <gp_Dir.hxx>
+# include <gp_Pln.hxx>
+# include <gp_Quaternion.hxx>
+# include <gp_Vec.hxx>
 # include <IntRes2d_IntersectionSegment.hxx>
+# include <Precision.hxx>
+# include <Standard_Failure.hxx>
 #endif
 
 #include <Base/GeometryPyCXX.h>
 #include <Base/VectorPy.h>
 
-#include "Geometry.h"
 #include "GeometryCurvePy.h"
 #include "GeometryCurvePy.cpp"
-#include "RectangularTrimmedSurfacePy.h"
+#include "BSplineCurvePy.h"
 #include "BSplineSurfacePy.h"
 #include "PlanePy.h"
 #include "PointPy.h"
-#include "BSplineCurvePy.h"
-
+#include "RectangularTrimmedSurfacePy.h"
 #include "OCCError.h"
 #include "TopoShape.h"
-#include "TopoShapePy.h"
 #include "TopoShapeEdgePy.h"
+
 
 namespace Part {
 extern const Py::Object makeGeometryCurvePy(const Handle(Geom_Curve)& c);
@@ -556,6 +552,74 @@ PyObject* GeometryCurvePy::normal(PyObject *args)
     return nullptr;
 }
 
+PyObject* GeometryCurvePy::projectPoint(PyObject *args, PyObject* kwds)
+{
+    PyObject* v;
+    const char* meth = "NearestPoint";
+    static char *kwlist[] = {"Point", "Method", nullptr};
+    if (!PyArg_ParseTupleAndKeywords(args, kwds, "O!|s", kwlist,
+        &Base::VectorPy::Type, &v, &meth))
+        return nullptr;
+
+    try {
+        Base::Vector3d vec = Py::Vector(v, false).toVector();
+        gp_Pnt pnt(vec.x, vec.y, vec.z);
+        std::string method = meth;
+
+        Handle(Geom_Geometry) geom = getGeometryPtr()->handle();
+        Handle(Geom_Curve) curve = Handle(Geom_Curve)::DownCast(geom);
+
+        GeomAPI_ProjectPointOnCurve proj(pnt, curve);
+        if (method == "NearestPoint") {
+            pnt = proj.NearestPoint();
+            vec.Set(pnt.X(), pnt.Y(), pnt.Z());
+            return new Base::VectorPy(vec);
+        }
+        else if (method == "LowerDistance") {
+            Py::Float dist(proj.LowerDistance());
+            return Py::new_reference_to(dist);
+        }
+        else if (method == "LowerDistanceParameter") {
+            Py::Float par(proj.LowerDistanceParameter());
+            return Py::new_reference_to(par);
+        }
+        else if (method == "Distance") {
+            Standard_Integer num = proj.NbPoints();
+            Py::List list;
+            for (Standard_Integer i=1; i <= num; i++) {
+                list.append(Py::Float(proj.Distance(i)));
+            }
+            return Py::new_reference_to(list);
+        }
+        else if (method == "Parameter") {
+            Standard_Integer num = proj.NbPoints();
+            Py::List list;
+            for (Standard_Integer i=1; i <= num; i++) {
+                list.append(Py::Float(proj.Parameter(i)));
+            }
+            return Py::new_reference_to(list);
+        }
+        else if (method == "Point") {
+            Standard_Integer num = proj.NbPoints();
+            Py::List list;
+            for (Standard_Integer i=1; i <= num; i++) {
+                gp_Pnt pnt = proj.Point(i);
+                Base::Vector3d vec(pnt.X(), pnt.Y(), pnt.Z());
+                list.append(Py::Vector(vec));
+            }
+            return Py::new_reference_to(list);
+        }
+        else {
+            PyErr_SetString(PartExceptionOCCError, "Unsupported method");
+            return nullptr;
+        }
+    }
+    catch (Standard_Failure& e) {
+        PyErr_SetString(PartExceptionOCCError, e.GetMessageString());
+        return nullptr;
+    }
+}
+
 PyObject* GeometryCurvePy::curvature(PyObject *args)
 {
     Handle(Geom_Geometry) g = getGeometryPtr()->handle();
@@ -861,8 +925,8 @@ PyObject* GeometryCurvePy::continuityWith(PyObject *args)
     if (u2 < 0.0)
         u2 = c2->FirstParameter();
 
-    Standard_Boolean r1 = PyObject_IsTrue(rev1) ? Standard_True : Standard_False;
-    Standard_Boolean r2 = PyObject_IsTrue(rev2) ? Standard_True : Standard_False;
+    Standard_Boolean r1 = Base::asBoolean(rev1);
+    Standard_Boolean r2 = Base::asBoolean(rev2);
 
     try {
         if (!c1.IsNull() && !c2.IsNull()) {

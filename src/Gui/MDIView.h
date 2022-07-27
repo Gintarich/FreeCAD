@@ -36,6 +36,7 @@ QT_END_NAMESPACE
 namespace Gui
 {
 class Document;
+class MainWindow;
 class ViewProvider;
 class ViewProviderDocumentObject;
 
@@ -165,7 +166,7 @@ protected Q_SLOTS:
      * whenever the window state of the active view changes.
      * The default implementation does nothing.
      */
-    virtual void windowStateChanged(MDIView*);
+    virtual void windowStateChanged(Gui::MDIView*);
 
 protected:
     void closeEvent(QCloseEvent *e);
@@ -182,6 +183,8 @@ private:
     ActiveObjectList ActiveObjects;
     typedef boost::signals2::connection Connection;
     Connection connectDelObject; //remove active object upon delete.
+
+    friend class MainWindow;
 };
 
 } // namespace Gui

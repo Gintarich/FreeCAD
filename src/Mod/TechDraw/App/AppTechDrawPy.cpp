@@ -60,7 +60,7 @@
 #include <Mod/Part/App/TopoShapeCompoundPy.h>
 #include <Mod/Part/App/OCCError.h>
 
-#include <Mod/Import/App/ImpExpDxf.h>
+#include <Mod/Import/App/dxf/ImpExpDxf.h>
 
 #include "DrawProjectSplit.h"
 #include "DrawViewPart.h"
@@ -119,7 +119,7 @@ void copy(Py::Dict sourceRange, OutputIt targetIt)
   string key;
   string value;
 
-  for (auto keyPy : sourceRange.keys()) {
+  for (const auto& keyPy : sourceRange.keys()) {
     key = Py::String(keyPy);
     value = Py::String(sourceRange[keyPy]);
     *targetIt = {key, value};
@@ -556,7 +556,7 @@ private:
         if (dvp->isDerivedFrom(TechDraw::DrawProjGroupItem::getClassTypeId())) {
             TechDraw::DrawProjGroupItem* dpgi = static_cast<TechDraw::DrawProjGroupItem*>(dvp);
             TechDraw::DrawProjGroup*      dpg = dpgi->getPGroup();
-            if (dpg != nullptr) {
+            if (dpg) {
                 offX = dpg->X.getValue();
                 offY = dpg->Y.getValue();
             }
@@ -608,6 +608,20 @@ private:
         }
         if (dvp->SeamHidden.getValue()) {
             s = TechDraw::mirrorShape(go->getHidSeam());
+            mkTrf.Perform(s);
+            s = mkTrf.Shape();
+            writer.exportShape(s);
+        }
+        //add the cosmetic edges also
+        std::vector<TechDraw::BaseGeomPtr> geoms = dvp->getEdgeGeometry();
+        std::vector<TopoDS_Edge> cosmeticEdges;
+        for (auto& g: geoms) {
+            if (g->hlrVisible && g->cosmetic) {
+                cosmeticEdges.push_back(g->occEdge);
+            }
+        }
+        if (!cosmeticEdges.empty()) {
+            s = TechDraw::mirrorShape(DrawUtil::vectorToCompound(cosmeticEdges));
             mkTrf.Perform(s);
             s = mkTrf.Shape();
             writer.exportShape(s);
@@ -696,7 +710,7 @@ private:
                     } else if (v->isDerivedFrom(TechDraw::DrawViewDimension::getClassTypeId())) {
                         DrawViewDimension* dvd = static_cast<TechDraw::DrawViewDimension*>(v);
                         TechDraw::DrawViewPart* dvp = dvd->getViewPart();
-                        if (dvp == nullptr) {
+                        if (!dvp) {
                             continue;
                         }
                         double grandParentX = 0.0;
@@ -704,7 +718,7 @@ private:
                         if (dvp->isDerivedFrom(TechDraw::DrawProjGroupItem::getClassTypeId())) {
                             TechDraw::DrawProjGroupItem* dpgi = static_cast<TechDraw::DrawProjGroupItem*>(dvp);
                             TechDraw::DrawProjGroup* dpg = dpgi->getPGroup();
-                            if (dpg == nullptr) {
+                            if (!dpg) {
                                 continue;
                             }
                             grandParentX = dpg->X.getValue();
@@ -768,26 +782,23 @@ private:
                         } else if (dvd->Type.isValue("Radius")) {
                             Base::Vector3d textLocn(dvd->X.getValue() + parentX, dvd->Y.getValue() + parentY, 0.0);
                             arcPoints pts = dvd->getArcPoints();
+                            pointPair arrowPts = dvd->getArrowPositions();
                             Base::Vector3d center = pts.center;
                             center.y = -center.y;
-                            Base::Vector3d arcPoint = pts.onCurve.first;
-                            arcPoint.y = -arcPoint.y;
                             center = center + parentPos;
-                            arcPoint = arcPoint + parentPos;
+                            Base::Vector3d lineDir = (arrowPts.first - arrowPts.second).Normalize();
+                            Base::Vector3d arcPoint = center + lineDir * pts.radius;
                             writer.exportRadialDim(center, textLocn, arcPoint, dimText);
                         } else if(dvd->Type.isValue("Diameter")){
                             Base::Vector3d textLocn(dvd->X.getValue() + parentX, dvd->Y.getValue() + parentY, 0.0);
                             arcPoints pts = dvd->getArcPoints();
+                            pointPair arrowPts = dvd->getArrowPositions();
                             Base::Vector3d center = pts.center;
                             center.y = -center.y;
-                            double radius = pts.radius;
-                            Base::Vector3d lineDir = (textLocn - center).Normalize();
-                            Base::Vector3d end1 = center + lineDir * radius;
-                            end1.y = -end1.y;
-                            Base::Vector3d end2 = center - lineDir * radius;
-                            end2.y = -end2.y;
-                            end1 = end1 + parentPos;
-                            end2 = end2 + parentPos;
+                            center = center + parentPos;
+                            Base::Vector3d lineDir = (arrowPts.first - arrowPts.second).Normalize();
+                            Base::Vector3d end1 = center + lineDir * pts.radius;
+                            Base::Vector3d end2 = center - lineDir * pts.radius;
                             writer.exportDiametricDim(textLocn, end1, end2, dimText);
                         }
                    }

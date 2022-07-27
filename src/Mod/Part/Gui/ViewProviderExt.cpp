@@ -840,7 +840,7 @@ void ViewProviderPartExt::reload()
 void ViewProviderPartExt::updateData(const App::Property* prop)
 {
     const char *propName = prop->getName();
-    if (propName && (strcmp(propName, "Shape") == 0 || strstr(propName, "Touched") != nullptr)) {
+    if (propName && (strcmp(propName, "Shape") == 0 || strstr(propName, "Touched"))) {
         // calculate the visual only if visible
         if (isUpdateForced() || Visibility.getValue())
             updateVisual();
@@ -950,12 +950,9 @@ void ViewProviderPartExt::updateVisual()
             deflection = Precision::Confusion();
 
         // create or use the mesh on the data structure
-#if OCC_VERSION_HEX >= 0x060600
         Standard_Real AngDeflectionRads = AngularDeflection.getValue() / 180.0 * M_PI;
         BRepMesh_IncrementalMesh(cShape, deflection, Standard_False, AngDeflectionRads, Standard_True);
-#else
-        BRepMesh_IncrementalMesh(cShape, deflection);
-#endif
+
         // We must reset the location here because the transformation data
         // are set in the placement property
         TopLoc_Location aLoc;

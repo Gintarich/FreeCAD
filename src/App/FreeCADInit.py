@@ -111,7 +111,8 @@ def InitApplications():
     AddPath = FreeCAD.ConfigGet("AdditionalModulePaths").split(";")
     HomeMod = FreeCAD.getUserAppDataDir()+"Mod"
     HomeMod = os.path.realpath(HomeMod)
-    MacroDir = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Macro").GetString("MacroPath")
+    MacroStd = App.getUserMacroDir(False)
+    MacroDir = App.getUserMacroDir(True)
     MacroMod = os.path.realpath(MacroDir+"/Mod")
     SystemWideMacroDir = FreeCAD.getHomePath()+'Macro'
     SystemWideMacroDir = os.path.realpath(SystemWideMacroDir)
@@ -278,6 +279,7 @@ def InitApplications():
     for i in path:
         Log("   " + i + "\n")
     # add MacroDir to path (RFE #0000504)
+    sys.path.append(MacroStd)
     sys.path.append(MacroDir)
     # add SystemWideMacroDir to path
     sys.path.append(SystemWideMacroDir)
@@ -308,12 +310,6 @@ try:
 except ImportError:
     FreeCAD.Console.PrintError("\n\nSeems the python standard libs are not installed, bailing out!\n\n")
     raise
-
-# Backward compatibility to Py2
-import sys
-if sys.version_info.major < 3:
-    import time
-    time.process_time = time.clock
 
 class FCADLogger(object):
     '''Convenient class for tagged logging.

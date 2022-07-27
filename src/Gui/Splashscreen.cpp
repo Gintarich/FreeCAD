@@ -686,9 +686,9 @@ void AboutDialog::on_copyButton_clicked()
     QString minor  = QString::fromLatin1(config["BuildVersionMinor"].c_str());
     QString build  = QString::fromLatin1(config["BuildRevision"].c_str());
 
-    QString deskEnv = QProcessEnvironment::systemEnvironment().value(QStringLiteral("XDG_CURRENT_DESKTOP"),QStringLiteral(""));
-    QString deskSess = QProcessEnvironment::systemEnvironment().value(QStringLiteral("DESKTOP_SESSION"),QStringLiteral(""));
-    QString deskInfo = QStringLiteral("");
+    QString deskEnv = QProcessEnvironment::systemEnvironment().value(QStringLiteral("XDG_CURRENT_DESKTOP"), QString());
+    QString deskSess = QProcessEnvironment::systemEnvironment().value(QStringLiteral("DESKTOP_SESSION"), QString());
+    QString deskInfo;
 
     if ( !(deskEnv.isEmpty() && deskSess.isEmpty()) ) {
         if ( deskEnv.isEmpty() || deskSess.isEmpty() )
@@ -704,6 +704,9 @@ void AboutDialog::on_copyButton_clicked()
     char *appimage = getenv("APPIMAGE");
     if (appimage)
         str << " AppImage";
+    char* snap = getenv("SNAP_REVISION");
+    if (snap)
+        str << " Snap " << snap;
     str << '\n';
 
 #if defined(_DEBUG) || defined(DEBUG)
@@ -725,6 +728,7 @@ void AboutDialog::on_copyButton_clicked()
     str << "Python " << PY_VERSION << ", ";
     str << "Qt " << QT_VERSION_STR << ", ";
     str << "Coin " << COIN_VERSION << ", ";
+    str << "Vtk " << FC_VTK_VERSION << ", ";
 #if defined(HAVE_OCC_VERSION)
     str << "OCC "
         << OCC_VERSION_MAJOR << "."

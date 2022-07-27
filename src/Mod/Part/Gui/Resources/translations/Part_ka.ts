@@ -196,7 +196,7 @@
       <location filename="../../AttacherTexts.cpp" line="284"/>
       <source>Center of osculating circle of an edge. Optional vertex link defines where.</source>
       <comment>AttachmentPoint mode tooltip</comment>
-      <translation type="unfinished">Center of osculating circle of an edge. Optional vertex link defines where.</translation>
+      <translation>წიბოს შემხები წრეწირის ცენტრი. წვეროს არასავალდებულო ბმულ განსაზღვრავს, სად.</translation>
     </message>
     <message>
       <location filename="../../AttacherTexts.cpp" line="286"/>
@@ -314,7 +314,7 @@
       <location filename="../../AttacherTexts.cpp" line="212"/>
       <source>Line that is an axis of osculating circle of curved edge. Optional vertex defines where.</source>
       <comment>AttachmentLine mode tooltip</comment>
-      <translation type="unfinished">Line that is an axis of osculating circle of curved edge. Optional vertex defines where.</translation>
+      <translation>წრფე, რომელიც მრუდი წიბოს შემხები წრეწირის ღერძს წარმოადგენს. არასავალდებულო წვერო მიუთითებს, სად.</translation>
     </message>
     <message>
       <location filename="../../AttacherTexts.cpp" line="214"/>
@@ -638,7 +638,7 @@
       <location filename="../../AttacherTexts.cpp" line="158"/>
       <source>Align to plane to osculating circle of an edge. Origin is aligned to point of curvature. Optional vertex link defines where.</source>
       <comment>AttachmentPlane mode tooltip</comment>
-      <translation type="unfinished">Align to plane to osculating circle of an edge. Origin is aligned to point of curvature. Optional vertex link defines where.</translation>
+      <translation>სიბრტყის წიბოს შემხებ წრეწირთან სწორება. საწყისი წერტილი მრუდის წერტილთან გასწორდება. არასავალდებულო წვერო მუთითებს, სად.</translation>
     </message>
     <message>
       <location filename="../../AttacherTexts.cpp" line="160"/>
@@ -650,7 +650,7 @@
       <location filename="../../AttacherTexts.cpp" line="161"/>
       <source>Plane is perpendicular to edge, and Y axis is matched with axis of osculating circle. Optional vertex link defines where.</source>
       <comment>AttachmentPlane mode tooltip</comment>
-      <translation type="unfinished">Plane is perpendicular to edge, and Y axis is matched with axis of osculating circle. Optional vertex link defines where.</translation>
+      <translation>სიბრტყე წიბოს მართობულია და Y ღერძი შემხები წრეწირის ღერძთანაა გასწორებული. წვეროს არასავალდებულო ბმული განსაზღვრავს, სად.</translation>
     </message>
     <message>
       <location filename="../../AttacherTexts.cpp" line="163"/>
@@ -674,7 +674,7 @@
       <location filename="../../AttacherTexts.cpp" line="167"/>
       <source>Plane will pass through first two vertices, and perpendicular to plane that passes through three vertices.</source>
       <comment>AttachmentPlane mode tooltip</comment>
-      <translation type="unfinished">Plane will pass through first two vertices, and perpendicular to plane that passes through three vertices.</translation>
+      <translation>სიბრტყე პირველ ორ წვეროზე გაივლის და მართობული იქნება იმ სიბრტყის, რომელიც სამ წვეროზე გადის.</translation>
     </message>
     <message>
       <location filename="../../AttacherTexts.cpp" line="169"/>
@@ -686,7 +686,7 @@
       <location filename="../../AttacherTexts.cpp" line="170"/>
       <source>Specialty mode for folding polyhedra. Select 4 edges in order: foldable edge, fold line, other fold line, other foldable edge. Plane will be aligned to folding the first edge.</source>
       <comment>AttachmentPlane mode tooltip</comment>
-      <translation type="unfinished">Specialty mode for folding polyhedra. Select 4 edges in order: foldable edge, fold line, other fold line, other foldable edge. Plane will be aligned to folding the first edge.</translation>
+      <translation>მრავალკუთხედის დაკეცვის სპეციალური რეჟიმი. აირჩიეთ 4 წიბო შემდეგი თანამიმდევრობით: კეცვადი წიბო, გაკეცვის ხაზი, მეორე გაკეცვის ხაზი და მეორე კეცვადი წიბო. სიბრტყე პირველი წიბოს გაკეცვასთან გასწორდება.</translation>
     </message>
     <message>
       <location filename="../../AttacherTexts.cpp" line="172"/>
@@ -835,7 +835,7 @@
       <location filename="../../AttacherTexts.cpp" line="83"/>
       <source>Align XY plane to osculating circle of an edge. Optional vertex link defines where.</source>
       <comment>Attachment3D mode tooltip</comment>
-      <translation type="unfinished">Align XY plane to osculating circle of an edge. Optional vertex link defines where.</translation>
+      <translation>XY სიბრტყის წიბოს შემხებ წრეწირთან სწორება. წვეროს არასავალდებულო ბმული განსაზღვრავს, სად.</translation>
     </message>
     <message>
       <location filename="../../AttacherTexts.cpp" line="85"/>
@@ -847,7 +847,7 @@
       <location filename="../../AttacherTexts.cpp" line="86"/>
       <source>Align Y' axis to match axis of osculating circle of an edge. Optional vertex link defines where.</source>
       <comment>Attachment3D mode tooltip</comment>
-      <translation type="unfinished">Align Y' axis to match axis of osculating circle of an edge. Optional vertex link defines where.</translation>
+      <translation>Y' ღერძის წიბოს მხები წრეწირის ღერთან სწორება. წვეროს არასავალდებულ ბმული განსაზღვრავს, სად.</translation>
     </message>
     <message>
       <location filename="../../AttacherTexts.cpp" line="88"/>
@@ -871,7 +871,7 @@
       <location filename="../../AttacherTexts.cpp" line="92"/>
       <source>Align XZ plane to pass through 3 points; X axis will pass through two first points.</source>
       <comment>Attachment3D mode tooltip</comment>
-      <translation type="unfinished">Align XZ plane to pass through 3 points; X axis will pass through two first points.</translation>
+      <translation>გაასწორეთ XZ სიბრტყე ისე, რომ 3 წერტილზე გაიაროს. X ღერძი პირველ ორ წერტილზე გაივლის.</translation>
     </message>
     <message>
       <location filename="../../AttacherTexts.cpp" line="94"/>
@@ -883,7 +883,7 @@
       <location filename="../../AttacherTexts.cpp" line="95"/>
       <source>Specialty mode for folding polyhedra. Select 4 edges in order: foldable edge, fold line, other fold line, other foldable edge. XY plane will be aligned to folding the first edge.</source>
       <comment>Attachment3D mode tooltip</comment>
-      <translation type="unfinished">Specialty mode for folding polyhedra. Select 4 edges in order: foldable edge, fold line, other fold line, other foldable edge. XY plane will be aligned to folding the first edge.</translation>
+      <translation>მრავალკუთხედის დაკეცვის სპეციალური რეჟიმი. აირჩიეთ 4 წიბო შემდეგი თანამიმდევრობით: კეცვადი წიბო, გაკეცვის ხზი, მეორე გაკეცვის ხაზი და მეორე კეცვადი წიბო. XY სიბრყე პირველი წიბოს გაკეცვასთან გასწორდება.</translation>
     </message>
     <message>
       <location filename="../../AttacherTexts.cpp" line="97"/>
@@ -1030,6 +1030,111 @@
       <source>Match origin with first Vertex. Align vertical and horizontal plane axes towards vertex/along line.</source>
       <comment>Attachment3D mode tooltip</comment>
       <translation>წყაროს პირველ წვეროსთან დამთხვევა. ვერტიკალური და ჰორიზონტალური სიბრტყეების ღერძის სწორება წვეროსკენ/ხაზის გასწვრივ.</translation>
+    </message>
+  </context>
+  <context>
+    <name>AttachmentEditor</name>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="87"/>
+      <source>No object named {}</source>
+      <translation>ობიექტი სახელით {} არ არსებობს</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="91"/>
+      <source>Failed to parse link (more than one colon encountered)</source>
+      <translation>ბმულის დამუშავება შეუძლებელია (ნაპოვნია ერთზე მეტი სვეტი)</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="204"/>
+      <source>Object {} is neither movable nor attachable, can't edit attachment</source>
+      <translation>ობიექტი {} არც გადატანადია, არც მიმაგრებადი. მიმაგრების ჩასწორება შეუძლებელია</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="214"/>
+      <source>{} is not attachable. You can still use attachment editor dialog to align the object, but the attachment won't be parametric.</source>
+      <translation>{} მიმაგრებადი არაა. ობიექტის გასასწორებლად შეგიძლიათ გამოიყენოთ მიმაგრებების რედაქტორი, მაგრამ ის პარამეტრული მაინც არ იქნება.</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="215"/>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="228"/>
+      <source>Attachment</source>
+      <translation>მიმაგრება</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="217"/>
+      <source>Continue</source>
+      <translation>გაგრძელება</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="272"/>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="317"/>
+      <source>Edit attachment of {}</source>
+      <translation>{}-ის მიმაგრების ჩასწორება</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="362"/>
+      <source>Ignored. Can't attach object to itself!</source>
+      <translation>იგნორი. ობიექტი თავის თავს ვერ მიებმება!</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="365"/>
+      <source>{} depends on object being attached, can't use it for attachment</source>
+      <translation>{} დამოკიდებულია მიმაგრებად ობიექტზე. თვითონ მას ვერ მივამაგრებ</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="505"/>
+      <source>{} (add {})</source>
+      <translation>{} (დაამატეთ {})</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="507"/>
+      <source>{} (add more references)</source>
+      <translation>{} (დაამატეთ მეტი ბმა)</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="537"/>
+      <source>Reference combinations:</source>
+      <translation>ბმის კომბინაციები:</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="553"/>
+      <source>Reference{}</source>
+      <translation>ბმა{}</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="558"/>
+      <source>Selecting...</source>
+      <translation>მონიშვნა...</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="582"/>
+      <source>Failed to resolve links. {}</source>
+      <translation>ბმულების გადაწყვეტის შეცდომა. {}</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="590"/>
+      <source>Not attached</source>
+      <translation>არაა მიმაგრებული</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="593"/>
+      <source>Attached with mode {}</source>
+      <translation>მიბმულია რეჟიმში {}</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="599"/>
+      <source>Error: {}</source>
+      <translation>შეცდომა: {}</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="602"/>
+      <source>Attachment Offset (in local coordinates):</source>
+      <translation>მიმაგრების წანაცვლება (ლოკალური კოორდინატები):</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/TaskAttachmentEditor.py" line="605"/>
+      <source>Attachment Offset (inactive - not attached):</source>
+      <translation>მიმაგრების წანაცვლება (არააქტიური - არაფერია მიმაგრებული):</translation>
     </message>
   </context>
   <context>
@@ -2056,12 +2161,12 @@ of projection.</source>
     <message>
       <location filename="../../Command.cpp" line="2538"/>
       <source>Persistent section cut</source>
-      <translation type="unfinished">Persistent section cut</translation>
+      <translation>მუდმივი კვეთა</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="2539"/>
       <source>Creates a persistent section cut of visible part objects</source>
-      <translation type="unfinished">Creates a persistent section cut of visible part objects</translation>
+      <translation>ხილული ნაწილი ობიექტების მუდმივი კვეთის შექმნა</translation>
     </message>
   </context>
   <context>
@@ -2646,7 +2751,7 @@ Note: The placement is expressed in local space of object being attached.</sourc
   <context>
     <name>PartGui::DlgChamferEdges</name>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="1042"/>
+      <location filename="../../DlgFilletEdges.cpp" line="1044"/>
       <source>Chamfer Edges</source>
       <translation>კუთხის ნაზოლიის წიბოები</translation>
     </message>
@@ -2743,8 +2848,8 @@ Note: The placement is expressed in local space of object being attached.</sourc
       <location filename="../../DlgExtrusion.ui" line="204"/>
       <source>Length to extrude along direction (can be negative).
 If both lengths are zero, magnitude of direction is used.</source>
-      <translation type="unfinished">Length to extrude along direction (can be negative).
-If both lengths are zero, magnitude of direction is used.</translation>
+      <translation>ტრაექტორიის გასწვრივ გამოწნეხვის სიგრძე (შეიძლება იყოს უარყოფითიც).
+თუ ორივე სიგრძე ნულოვიანია, გამოყენებული იქნება ტრაექტორიის სიდიდე.</translation>
     </message>
     <message>
       <location filename="../../DlgExtrusion.ui" line="224"/>
@@ -2754,7 +2859,7 @@ If both lengths are zero, magnitude of direction is used.</translation>
     <message>
       <location filename="../../DlgExtrusion.ui" line="243"/>
       <source>Length to extrude against the direction (can be negative).</source>
-      <translation type="unfinished">Length to extrude against the direction (can be negative).</translation>
+      <translation>მიმართულების წინააღმდეგ გამოწნეხვის სიგრძე (შეიძლება იყოს უარყოფითიც).</translation>
     </message>
     <message>
       <location filename="../../DlgExtrusion.ui" line="262"/>
@@ -2769,22 +2874,22 @@ If both lengths are zero, magnitude of direction is used.</translation>
     <message>
       <location filename="../../DlgExtrusion.ui" line="277"/>
       <source>Taper angle along</source>
-      <translation type="unfinished">Taper angle along</translation>
+      <translation>სპირალის კუთხის გასწვრივ</translation>
     </message>
     <message>
       <location filename="../../DlgExtrusion.ui" line="290"/>
       <source>Taper (draft) angle along extrusion direction</source>
-      <translation type="unfinished">Taper (draft) angle along extrusion direction</translation>
+      <translation>კონუსის (მონახაზი) კუთხე გამოწნევის მიმართულების გასწვრივ</translation>
     </message>
     <message>
       <location filename="../../DlgExtrusion.ui" line="306"/>
       <source>Taper angle against</source>
-      <translation type="unfinished">Taper angle against</translation>
+      <translation>სპირალის კუთხის საპირისპიროდ</translation>
     </message>
     <message>
       <location filename="../../DlgExtrusion.ui" line="319"/>
       <source>Taper (draft) angle against extrusion direction</source>
-      <translation type="unfinished">Taper (draft) angle against extrusion direction</translation>
+      <translation>კონუსის (მონახაზი) კუთხე გამოწნევის მიმართულების საწინააღმდეგოდ</translation>
     </message>
     <message>
       <location filename="../../DlgExtrusion.ui" line="337"/>
@@ -2799,7 +2904,7 @@ If both lengths are zero, magnitude of direction is used.</translation>
     <message>
       <location filename="../../DlgExtrusion.ui" line="360"/>
       <source>Select shape(s) that should be extruded</source>
-      <translation type="unfinished">Select shape(s) that should be extruded</translation>
+      <translation>მონიშნეთ გამოსაწნეხი მოხაზულობები</translation>
     </message>
     <message>
       <location filename="../../DlgExtrusion.ui" line="373"/>
@@ -2892,6 +2997,7 @@ If both lengths are zero, magnitude of direction is used.</translation>
     </message>
     <message>
       <location filename="../../DlgFilletEdges.ui" line="51"/>
+      <location filename="../../DlgFilletEdges.cpp" line="276"/>
       <source>Fillet Parameter</source>
       <translation>მომრგვალების პარამეტრები</translation>
     </message>
@@ -2942,90 +3048,95 @@ If both lengths are zero, magnitude of direction is used.</translation>
     </message>
     <message>
       <location filename="../../DlgFilletEdges.cpp" line="266"/>
+      <source>Chamfer Parameter</source>
+      <translation>კუთხის ნაზოლის მორგება</translation>
+    </message>
+    <message>
+      <location filename="../../DlgFilletEdges.cpp" line="267"/>
       <source>Length:</source>
       <translation type="unfinished">Length:</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="267"/>
+      <location filename="../../DlgFilletEdges.cpp" line="268"/>
       <source>Constant Length</source>
       <translation>მუდმივი სიგრძე</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="268"/>
+      <location filename="../../DlgFilletEdges.cpp" line="269"/>
       <source>Variable Length</source>
       <translation>ცვლადი სიგრძე</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="270"/>
+      <location filename="../../DlgFilletEdges.cpp" line="271"/>
       <source>Edges to chamfer</source>
       <translation>წიბოებიდან ნაზოლამდე</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="271"/>
-      <location filename="../../DlgFilletEdges.cpp" line="839"/>
+      <location filename="../../DlgFilletEdges.cpp" line="272"/>
+      <location filename="../../DlgFilletEdges.cpp" line="841"/>
       <source>Start length</source>
       <translation>საწყისი სიგრძე</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="272"/>
+      <location filename="../../DlgFilletEdges.cpp" line="273"/>
       <source>End length</source>
       <translation>საბოლოო სიგრძე</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="275"/>
+      <location filename="../../DlgFilletEdges.cpp" line="277"/>
       <source>Edges to fillet</source>
       <translation>მოსამრგვალებელი წიბოები</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="276"/>
-      <location filename="../../DlgFilletEdges.cpp" line="841"/>
+      <location filename="../../DlgFilletEdges.cpp" line="278"/>
+      <location filename="../../DlgFilletEdges.cpp" line="843"/>
       <source>Start radius</source>
       <translation>საწყისი რადიუსი</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="277"/>
+      <location filename="../../DlgFilletEdges.cpp" line="279"/>
       <source>End radius</source>
       <translation>საბოლოო რადიუსი</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="688"/>
-      <location filename="../../DlgFilletEdges.cpp" line="748"/>
+      <location filename="../../DlgFilletEdges.cpp" line="690"/>
+      <location filename="../../DlgFilletEdges.cpp" line="750"/>
       <source>Edge%1</source>
       <translation>წიბო%1</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="831"/>
+      <location filename="../../DlgFilletEdges.cpp" line="833"/>
       <source>Length</source>
       <translation>სიგრძე</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="833"/>
+      <location filename="../../DlgFilletEdges.cpp" line="835"/>
       <source>Radius</source>
       <translation>რადიუსი</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="887"/>
+      <location filename="../../DlgFilletEdges.cpp" line="889"/>
       <source>No shape selected</source>
       <translation>მოხაზულობა მონიშნული არაა</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="888"/>
+      <location filename="../../DlgFilletEdges.cpp" line="890"/>
       <source>No valid shape is selected.
 Please select a valid shape in the drop-down box first.</source>
       <translation>მონიშნულია არასწორი მოხაზულობა.
 ჯერ ჩამოსაშლელი სიიდან აირჩიეთ სწორი მოხაზულობა.</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="939"/>
+      <location filename="../../DlgFilletEdges.cpp" line="941"/>
       <source>No edge selected</source>
       <translation>წიბო მონიშნული არაა</translation>
     </message>
     <message>
-      <location filename="../../DlgFilletEdges.cpp" line="940"/>
+      <location filename="../../DlgFilletEdges.cpp" line="942"/>
       <source>No edge entity is checked to fillet.
 Please check one or more edge entities first.</source>
-      <translation type="unfinished">No edge entity is checked to fillet.
-Please check one or more edge entities first.</translation>
+      <translation>მოსამრგვალებელი წიბო არჩეული არაა.
+ჯერ აირჩიეთ ერთი ან მეტი წიბო.</translation>
     </message>
   </context>
   <context>
@@ -3078,7 +3189,7 @@ Please check one or more edge entities first.</translation>
     <message>
       <location filename="../../DlgImportExportIges.ui" line="84"/>
       <source>Solids will be exported as manifold solid B-Rep object, shells as shell</source>
-      <translation type="unfinished">Solids will be exported as manifold solid B-Rep object, shells as shell</translation>
+      <translation>მყარი სხეულები გატანილი იქნება, როგორც მყარი ერთგვაროვან B-Rep ობიექტი, გარსები კი როგორც გარსი</translation>
     </message>
     <message>
       <location filename="../../DlgImportExportIges.ui" line="87"/>
@@ -3166,7 +3277,7 @@ Please check one or more edge entities first.</translation>
     <message>
       <location filename="../../DlgImportExportStep.ui" line="72"/>
       <source>Uncheck this to skip invisible object when exporting, which is useful for CADs that do not support invisibility STEP styling.</source>
-      <translation type="unfinished">Uncheck this to skip invisible object when exporting, which is useful for CADs that do not support invisibility STEP styling.</translation>
+      <translation>გამორთეთ გატანინსას უხილავი ობიექტების გამოსატოვებლად. გამოგადგებათ იმ CAD-ებისთვის, რომლებსაც STEP სტილებში უხილვადობის მხარდაჭერა არ გააჩნიათ.</translation>
     </message>
     <message>
       <location filename="../../DlgImportExportStep.ui" line="75"/>
@@ -3179,10 +3290,10 @@ Please check one or more edge entities first.</translation>
 a single object. Please note that when import back the STEP file, the
 placement will be encoded into the shape geometry, instead of keeping
 it inside the Placement property.</source>
-      <translation type="unfinished">Check this option to keep the placement information when exporting
-a single object. Please note that when import back the STEP file, the
-placement will be encoded into the shape geometry, instead of keeping
-it inside the Placement property.</translation>
+      <translation>ჩართეთ ეს პარამეტრი ერთი ობიექტის გატანისას მისი მდებარეობის 
+ინფორმაციის შესანარჩუნებლად. დაიმახსოვრეთ, რომ როცა 
+STEP ფაილის უკან შემოტანას დააპირებთ, მდებარეობის გეომეტრიის 
+მაგიერ მდებარეობა მონახაზის გეომეტრიაში იქნება კოდირებული.</translation>
     </message>
     <message>
       <location filename="../../DlgImportExportStep.ui" line="94"/>
@@ -3265,7 +3376,7 @@ during file reading (slower but higher details).</source>
     <message>
       <location filename="../../DlgImportExportStep.ui" line="267"/>
       <source>Do not use instance name. Useful for some legacy STEP file with non-meaningful auto generated instance names.</source>
-      <translation type="unfinished">Do not use instance name. Useful for some legacy STEP file with non-meaningful auto generated instance names.</translation>
+      <translation>არ გამოიყენოთ გაშვებული ასლის სახელი. გამოსადეგია ზოგიერთ მოძველებულ STEP ფაილებთან, რომლებსაც უაზრო ავტომატურად გენერირებული გაშვებული ასლის სახელები აქვთ.</translation>
     </message>
     <message>
       <location filename="../../DlgImportExportStep.ui" line="270"/>
@@ -4016,7 +4127,7 @@ the size of the resulting STEP file.</source>
     <message>
       <location filename="../../DlgRevolution.ui" line="315"/>
       <source>If checked, revolution will extend forwards and backwards by half the angle.</source>
-      <translation type="unfinished">If checked, revolution will extend forwards and backwards by half the angle.</translation>
+      <translation>თუ ჩართულია, შემობრუნება წინ და უკან ნახევარი კუთხით გაფართოვდება.</translation>
     </message>
     <message>
       <location filename="../../DlgRevolution.ui" line="318"/>
@@ -4337,8 +4448,8 @@ will be used or black.</source>
       <location filename="../../Location.ui" line="106"/>
       <source>Use custom vector for pad direction otherwise
 the sketch plane's normal vector will be used</source>
-      <translation type="unfinished">Use custom vector for pad direction otherwise
-the sketch plane's normal vector will be used</translation>
+      <translation>საყრდენი ფილის მიმართულებისთვის გამოიყენეთ ხელით მითითებული ვექტორი.
+წინააღმდეგ შემთხვევაში იქნება გამოყენებული ესკიზის სიბრტყის ნორმალის ვექტორი</translation>
     </message>
     <message>
       <location filename="../../Location.ui" line="110"/>
@@ -4513,12 +4624,12 @@ the sketch plane's normal vector will be used</translation>
     <message>
       <location filename="../../SectionCutting.ui" line="20"/>
       <source>Permanent Section Cutting</source>
-      <translation type="unfinished">Permanent Section Cutting</translation>
+      <translation>სამუდამო კვეთა</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="32"/>
       <source>Cutting X</source>
-      <translation type="unfinished">Cutting X</translation>
+      <translation>X-ის ამოჭრა</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="44"/>
@@ -4537,22 +4648,22 @@ the sketch plane's normal vector will be used</translation>
     <message>
       <location filename="../../SectionCutting.ui" line="106"/>
       <source>Cutting Y</source>
-      <translation type="unfinished">Cutting Y</translation>
+      <translation>Y-ის ამოჭრა</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="174"/>
       <source>Cutting Z</source>
-      <translation type="unfinished">Cutting Z</translation>
+      <translation>Z-ის ამოჭრა</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="242"/>
       <source>Cut face</source>
-      <translation type="unfinished">Cut face</translation>
+      <translation>ზედაპირის გაკვეთა</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="254"/>
       <source>Color of cut face</source>
-      <translation type="unfinished">Color of cut face</translation>
+      <translation>ამოჭრილი ზედაპირის ფერი</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="257"/>
@@ -4561,12 +4672,12 @@ the sketch plane's normal vector will be used</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="302"/>
-      <source>If checked, the color and transpareny
+      <source>If checked, the color and transparency
 will be taken from the cut objects.
 Works only if all objects have the same values.</source>
-      <translation type="unfinished">If checked, the color and transpareny
-will be taken from the cut objects.
-Works only if all objects have the same values.</translation>
+      <translation>თუ ჩართულია, ფერი და გამჭვირვალობა აღებული 
+იქნება ამოჭრილი ობიექტებიდან. მუშაობს მხოლოდ 
+მაშინ, თუ ყველა ობიექტს იგივე მნიშვნელობები აქვს.</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="307"/>
@@ -4576,7 +4687,7 @@ Works only if all objects have the same values.</translation>
     <message>
       <location filename="../../SectionCutting.ui" line="329"/>
       <source>Transparency of cut face</source>
-      <translation type="unfinished">Transparency of cut face</translation>
+      <translation>ამოჭრილი ზედაპირის გამჭვირვალობა</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="332"/>
@@ -4586,34 +4697,34 @@ Works only if all objects have the same values.</translation>
     <message>
       <location filename="../../SectionCutting.ui" line="342"/>
       <source>0 %</source>
-      <translation type="unfinished">0 %</translation>
+      <translation>0 %</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="361"/>
       <source>Refreshes the list of visible objects</source>
-      <translation type="unfinished">Refreshes the list of visible objects</translation>
+      <translation>ხილული ობიექტების სიის განახლება</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="364"/>
       <source>Refresh view</source>
-      <translation type="unfinished">Refresh view</translation>
+      <translation>ხედის განახლება</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="394"/>
       <source>When the dialog is closed,
 only created cuts will be visible</source>
-      <translation type="unfinished">When the dialog is closed,
-only created cuts will be visible</translation>
+      <translation>როცა ეს ფანჯარა დაიხურება,
+ხილული მხოლოდ შექმნილი ჭრები იქნება</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.ui" line="398"/>
       <source>Keep only cuts visible when closing</source>
-      <translation type="unfinished">Keep only cuts visible when closing</translation>
+      <translation>დახურვისას ხილულად მხოლოდ ამონაჭრების დატოვება</translation>
     </message>
     <message>
       <location filename="../../SectionCutting.cpp" line="399"/>
       <source>Sliders are disabled for assemblies</source>
-      <translation type="unfinished">Sliders are disabled for assemblies</translation>
+      <translation>ანაწყობებისთვის ჩოჩიები გამორთულია</translation>
     </message>
   </context>
   <context>
@@ -4692,12 +4803,12 @@ only created cuts will be visible</translation>
     <message>
       <location filename="../../ShapeFromMesh.ui" line="14"/>
       <source>Shape from mesh</source>
-      <translation type="unfinished">Shape from mesh</translation>
+      <translation>მოხაზულობა ბადიდან</translation>
     </message>
     <message>
       <location filename="../../ShapeFromMesh.ui" line="20"/>
       <source>Sew shape</source>
-      <translation type="unfinished">Sew shape</translation>
+      <translation>მონახაზის გაკერვა</translation>
     </message>
     <message>
       <location filename="../../ShapeFromMesh.ui" line="32"/>
@@ -4735,7 +4846,7 @@ only created cuts will be visible</translation>
     <message>
       <location filename="../../TaskSweep.cpp" line="338"/>
       <source>Select one or more edges from a single object.</source>
-      <translation type="unfinished">Select one or more edges from a single object.</translation>
+      <translation>მონიშნეთ ერთი ობიექტის ერთი ან მეტი წიბო.</translation>
     </message>
     <message>
       <location filename="../../TaskSweep.cpp" line="345"/>
@@ -5012,9 +5123,7 @@ Default: false</source>
       <source>Extra boolean operations check that can sometimes find errors that
 the standard BRep geometry check misses. These errors do not always 
 mean the checked object is unusable.  Default: false</source>
-      <translation type="unfinished">Extra boolean operations check that can sometimes find errors that
-the standard BRep geometry check misses. These errors do not always 
-mean the checked object is unusable.  Default: false</translation>
+      <translation>დამატებით ბულევურ შემოწმებას ხანდახან შეუძლია იპოვოს შეცდომები, რომელიც სტანდარტულ BRep გეომეტრიის შემოწმებამ გამოტოვა. ეს შეცდომები ყოველთვის არ ნიშნავს, რომ შემოწმებული ობიექტის გამოყენება შეუძლებელია. ნაგულისხმები მნიშვნელობა: არა</translation>
     </message>
     <message>
       <location filename="../../TaskCheckGeometry.cpp" line="1056"/>
@@ -5473,17 +5582,85 @@ in the 3D view for the sweep path.</source>
     </message>
   </context>
   <context>
+    <name>Part_CompoundFilter</name>
+    <message>
+      <location filename="../../../CompoundTools/_CommandCompoundFilter.py" line="51"/>
+      <source>Compound Filter</source>
+      <translation>გადაბმის ფილტრი</translation>
+    </message>
+    <message>
+      <location filename="../../../CompoundTools/_CommandCompoundFilter.py" line="61"/>
+      <source>Filter out objects from a selected compound by characteristics like volume,
+area, or length, or by choosing specific items.
+If a second object is selected, it will be used as reference, for example,
+for collision or distance filtering.</source>
+      <translation>შერჩეული ნაერთებიდან ობიექტების გაფილტვრა ისეთი მახასიათებლებით, როგორიცაა მოცულობა,
+ფართობი, ან სიგრძე, ან კონკრეტული ნივთების არჩევით.
+თუ არჩეულია მეორე ობიექტი, ის გამოყენებული იქნება როგორც მითითება, მაგალითად,
+შეჯახების ან მანძილის გაფილტვრისთვის.</translation>
+    </message>
+    <message>
+      <location filename="../../../CompoundTools/_CommandCompoundFilter.py" line="70"/>
+      <source>First select a shape that is a compound. If a second object is selected (optional) it will be treated as a stencil.</source>
+      <translation>ჯერ აირჩიეთ მოხაზულობა, რომელიც გადაბმას წარმოადგენს. თუ მონიშნულია მეორე ობიექტიც (არასავალდებულოა), შაბლონად იქნება აღქმული.</translation>
+    </message>
+    <message>
+      <location filename="../../../CompoundTools/_CommandCompoundFilter.py" line="71"/>
+      <location filename="../../../CompoundTools/_CommandCompoundFilter.py" line="112"/>
+      <source>Bad selection</source>
+      <translation>არასწორი მონიშნული</translation>
+    </message>
+    <message>
+      <location filename="../../../CompoundTools/_CommandCompoundFilter.py" line="110"/>
+      <source>Computing the result failed with an error:</source>
+      <translation>შედეგის გამოთვლა დასრულდა შეცდომით:</translation>
+    </message>
+    <message>
+      <location filename="../../../CompoundTools/_CommandCompoundFilter.py" line="111"/>
+      <source>Click 'Continue' to create the feature anyway, or 'Abort' to cancel.</source>
+      <translation>დააწექით "გაგრძელება"-ს თვისების მაინც შესაქმნელად, ან "შეწყვეტა"-ს, გაუქმებისთვის.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Part_EditAttachment</name>
+    <message>
+      <location filename="../../../AttachmentEditor/Commands.py" line="79"/>
+      <source>Attachment...</source>
+      <translation>მიერთება...</translation>
+    </message>
+    <message>
+      <location filename="../../../AttachmentEditor/Commands.py" line="83"/>
+      <source>Edit attachment of selected object.</source>
+      <translation>მონიშნულ ობიექტზე მიმაგრებულის ჩასწორება.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Part_ExplodeCompound</name>
+    <message>
+      <location filename="../../../CompoundTools/_CommandExplodeCompound.py" line="50"/>
+      <source>Explode compound</source>
+      <translation>შეკრულის დაშლა</translation>
+    </message>
+    <message>
+      <location filename="../../../CompoundTools/_CommandExplodeCompound.py" line="56"/>
+      <source>Split up a compound of shapes into separate objects.
+It will create a 'Compound Filter' for each shape.</source>
+      <translation>გადაბმული მოხაზულობების ცალკეულ ობიექტებად დაშლა.
+თითოეული მოხაზულობისთვის შეიქმნება 'გადაბმის ფილტრი'.</translation>
+    </message>
+    <message>
+      <location filename="../../../CompoundTools/_CommandExplodeCompound.py" line="62"/>
+      <source>First select a shape that is a compound.</source>
+      <translation>ჯერ აირჩიეთ მოხაზულობა, რომელიც გადაბმაა.</translation>
+    </message>
+    <message>
+      <location filename="../../../CompoundTools/_CommandExplodeCompound.py" line="63"/>
+      <source>Bad selection</source>
+      <translation>არასწორი მონიშნული</translation>
+    </message>
+  </context>
+  <context>
     <name>Part_FaceMaker</name>
-    <message>
-      <location filename="../../../App/FaceMaker.cpp" line="171"/>
-      <source>Simple</source>
-      <translation>მარტივი</translation>
-    </message>
-    <message>
-      <location filename="../../../App/FaceMaker.cpp" line="176"/>
-      <source>Makes separate plane face from every wire independently. No support for holes; wires can be on different planes.</source>
-      <translation>თითოეული პოლიხაზისგან სიბრტყის ზედაპირის ცალცალკე შექმნა. არ გააჩნია ხვრელების მხარდაჭერა. პოლიხაზები შეიძლება სხვადასხვა სიბრტყეებზე იყოს.</translation>
-    </message>
     <message>
       <location filename="../../../App/FaceMakerBullseye.cpp" line="59"/>
       <source>Bull's-eye facemaker</source>
@@ -5493,6 +5670,16 @@ in the 3D view for the sweep path.</source>
       <location filename="../../../App/FaceMakerBullseye.cpp" line="64"/>
       <source>Supports making planar faces with holes with islands.</source>
       <translation>გააჩნია კუნძულიანი ხვრელების მქონე ბრტყელი ზედაპირების შექმნის შესაძლებლობა.</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FaceMaker.cpp" line="171"/>
+      <source>Simple</source>
+      <translation>მარტივი</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FaceMaker.cpp" line="176"/>
+      <source>Makes separate plane face from every wire independently. No support for holes; wires can be on different planes.</source>
+      <translation>თითოეული პოლიხაზისგან სიბრტყის ზედაპირის ცალცალკე შექმნა. არ გააჩნია ხვრელების მხარდაჭერა. პოლიხაზები შეიძლება სხვადასხვა სიბრტყეებზე იყოს.</translation>
     </message>
     <message>
       <location filename="../../../App/FaceMakerCheese.cpp" line="247"/>
@@ -5507,7 +5694,7 @@ in the 3D view for the sweep path.</source>
     <message>
       <location filename="../../../App/FeatureExtrusion.cpp" line="339"/>
       <source>Part Extrude facemaker</source>
-      <translation type="unfinished">Part Extrude facemaker</translation>
+      <translation>ნაწილის გამოწნეხვის ზედაპირი</translation>
     </message>
     <message>
       <location filename="../../../App/FeatureExtrusion.cpp" line="344"/>
@@ -5516,10 +5703,213 @@ in the 3D view for the sweep path.</source>
     </message>
   </context>
   <context>
+    <name>Part_JoinConnect</name>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="186"/>
+      <source>Connect objects</source>
+      <translation>ობიექტების შეერთება</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="191"/>
+      <source>Fuses objects, taking care to preserve voids.</source>
+      <translation>ობიექტების შეერთება, მათში არსებული სიცარიელეების შენარჩუნებით.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Part_JoinCutout</name>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="376"/>
+      <source>Cutout for object</source>
+      <translation>ობიექტის ამოკვეთა</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="381"/>
+      <source>Makes a cutout in one object to fit another object.</source>
+      <translation>ობიექტიდან სხვა ობიექტში ჩატევადი ფორმის ამოჭრა.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Part_JoinEmbed</name>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="282"/>
+      <source>Embed object</source>
+      <translation>ობიექტის ჩაშენება</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="287"/>
+      <source>Fuses one object into another, taking care to preserve voids.</source>
+      <translation>ერთი ობიექტის მეორესთან შეერთება, მათში არსებული სიცარიელეების შენარჩუნებით.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Part_JoinFeatures</name>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="78"/>
+      <source>Computing the result failed with an error:</source>
+      <translation>შედეგის გამოთვლა დასრულდა შეცდომით:</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="79"/>
+      <source>Click 'Continue' to create the feature anyway, or 'Abort' to cancel.</source>
+      <translation>დააწექით "გაგრძელება"-ს თვისების მაინც შესაქმნელად, ან "შეწყვეტა"-ს, გაუქმებისთვის.</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="80"/>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="199"/>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="295"/>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="389"/>
+      <source>Bad selection</source>
+      <translation>არასწორი მონიშნული</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="82"/>
+      <source>Continue</source>
+      <translation>გაგრძელება</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="198"/>
+      <source>Select at least two objects, or one or more compounds</source>
+      <translation>აირჩიეთ ორი ან მეტი ობიექტი, ან ერთი ან მეტი გადაბმა</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="294"/>
+      <source>Select base object, then the object to embed, and then invoke this tool.</source>
+      <translation>აირჩიეთ საბაზისო და ჩასადგმელი ობიექტები და მხოლოდ შემდეგ გამოიძახეთ ეს ბრძანება.</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/JoinFeatures.py" line="388"/>
+      <source>Select the object to make a cutout in, then the object that should fit into the cutout, and then invoke this tool.</source>
+      <translation>შექმენთ ამოსაჭრელი ობიექტი, ობიექტი, რომელიც ამ ამოჭრილში უნდა ჩაეტიოს და მხოლოდ შემდეგ გამოიძახეთ ეს ხელსაწყო.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Part_SplitFeatures</name>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="159"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="302"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="496"/>
+      <location filename="../../../CompoundTools/_CommandCompoundFilter.py" line="114"/>
+      <source>Continue</source>
+      <translation>გაგრძელება</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="155"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="298"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="492"/>
+      <source>Computing the result failed with an error:</source>
+      <translation>შედეგის გამოთვლა დასრულდა შეცდომით:</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="156"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="299"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="493"/>
+      <source>Click 'Continue' to create the feature anyway, or 'Abort' to cancel.</source>
+      <translation>დააწექით "გაგრძელება"-ს თვისების მაინც შესაქმნელად, ან "შეწყვეტა"-ს, გაუქმებისთვის.</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="157"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="199"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="300"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="354"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="385"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="494"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="535"/>
+      <source>Bad selection</source>
+      <translation>არასწორი მონიშნული</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="180"/>
+      <source>Boolean fragments</source>
+      <translation>ლოგიკური ფრაგმენტები</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="189"/>
+      <source>Create a 'Boolean Fragments' object from two or more selected objects,
+or from the shapes inside a compound.
+This is a boolean union which is then sliced at the intersections
+of the original shapes.
+A 'Compound Filter' can be used to extract the individual slices.</source>
+      <translation>'ბულევური ფრაგმენტების' შექმნა ორი ან მეტი მონიშნული ობიექტისგან 
+ან გადაბმის შიგნით არსებული მოხაზულობებისგან.
+წარმოადგენს ბულევურ გაერთიანებას, რომელიც შემდეგ ჩაიჭრება საწყისი მოხაზულობების
+კვეთებზე.
+ სათითაო ჩამონაჭერის მისაღებად 'გადაბმის ფილტრი' შეგიძლიათ გამოიყენოთ.</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="198"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="534"/>
+      <source>Select at least two objects, or one or more compounds. If only one compound is selected, the compounded shapes will be intersected between each other (otherwise, compounds with self-intersections are invalid).</source>
+      <translation>აირჩიეთ სულ ცოტა ორი ობიექტი ან ერთი ან მეტი გადაბმა. თუ არჩეულია მხოლოდ ერთი გადაბმა, მოხდება გადაბმული მოხაზულობების ურთიერთკვეთა (სხვა ყველა ვარიანტში ურთერთკვეთადი გადაბმები არასწორია).</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="337"/>
+      <source>Slice to compound</source>
+      <translation>გადაბმის ჩაჭრა</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="344"/>
+      <source>Slice a selected object by using other objects as cutting tools.
+The resulting pieces will be stored in a compound.
+A 'Compound Filter' can be used to extract the individual slices.</source>
+      <translation>მონიშნული ობიექტის ჩაჭრა სხვა ობიქტების, როგორც მჭრელი ხელსაწყოების გამოყენებით.
+მიღებული ნაწილები როგორც გადაბმა, ისე შეინახება.
+სათითაო ჩაჭრების მისაღებად 'გადაბმის ფილტრი' შეგიძლიათ გამოიყენოთ.</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="353"/>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="384"/>
+      <source>Select at least two objects. The first one is the object to be sliced; the rest are objects to slice with.</source>
+      <translation>საჭიროა სულ ცოტა ორი ობიექტი. პირველი ობიექტი გაიკვეთება დანარჩენი ობიექტებით.</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="369"/>
+      <source>Slice apart</source>
+      <translation>ნაწილებად ჩაჭრა</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="375"/>
+      <source>Slice a selected object by other objects, and split it apart.
+It will create a 'Compound Filter' for each slice.</source>
+      <translation>მონიშნული ობიექტების სხვა ობიექტებით ჩამოჭრა და მისი დაყოფა.
+თითოეულ ჩამონაჭერი საკუთარ 'გადაბმის ფილტრს' შექმნის.</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="517"/>
+      <source>Boolean XOR</source>
+      <translation>ბულევური XOR</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="525"/>
+      <source>Perform an 'exclusive OR' boolean operation with two or more selected objects,
+or with the shapes inside a compound.
+This means the overlapping volumes of the shapes will be removed.
+A 'Compound Filter' can be used to extract the remaining pieces.</source>
+      <translation>'გამომრიცხავი ან' ტიპის ბულევური ოპერაციის ჩატარება ორ ან მეტ მონიშნულ ობიექტზე,
+ან გადაბმის შიგნით არსებულ მოხაზულობებზე.
+ეს ასევე ნიშნავს, რომ წაიშლება მოხაზულობის გადაფარვადი სივრცეები.
+დარჩენილი ნაწილების მისაღებად შეგიძლიათ 'გადაბმის ფილტრი' გამოიყენოთ.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Part_Tube</name>
+    <message>
+      <location filename="../../../BasicShapes/CommandShapes.py" line="44"/>
+      <source>Create tube</source>
+      <translation>მილის შექმნა</translation>
+    </message>
+    <message>
+      <location filename="../../../BasicShapes/CommandShapes.py" line="50"/>
+      <source>Creates a tube</source>
+      <translation>მილის შექმნა</translation>
+    </message>
+  </context>
+  <context>
     <name>QObject</name>
     <message>
-      <location filename="../../ViewProvider.cpp" line="50"/>
+      <location filename="../../../BasicShapes/ViewProviderShapes.py" line="47"/>
+      <location filename="../../../BasicShapes/ViewProviderShapes.py" line="54"/>
       <location filename="../../ViewProviderPrimitive.cpp" line="66"/>
+      <location filename="../../ViewProvider.cpp" line="50"/>
       <source>Edit %1</source>
       <translation>ჩასწორება %1</translation>
     </message>
@@ -5571,12 +5961,12 @@ Do you want to continue?</source>
     <message>
       <location filename="../../Command.cpp" line="409"/>
       <source>Select two shapes or more, please. Or, select one compound containing two or more shapes to compute common between.</source>
-      <translation type="unfinished">Select two shapes or more, please. Or, select one compound containing two or more shapes to compute common between.</translation>
+      <translation>კვეთის გამოსათვლელად აირჩიეთ ორი მოხაზულობა ან აირჩიეთ ერთი გადაბმა, რომელიც ორ ან მეტ მოხაზულობას შეიცავს.</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="509"/>
       <source>Select two shapes or more, please. Or, select one compound containing two or more shapes to be fused.</source>
-      <translation type="unfinished">Select two shapes or more, please. Or, select one compound containing two or more shapes to be fused.</translation>
+      <translation>მონიშნეთ ორი ან მეტი მოხაზულობა, ან აირჩიეთ ერთი გადაბმა, რომელიც ორ ან მეტ მოხაზულობას შეიცავს, მათ შესარწყმელად.</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="928"/>
@@ -5605,20 +5995,20 @@ Do you want to continue?</source>
       <translation>მიბმა არჩეული არაა</translation>
     </message>
     <message>
-      <location filename="../../TaskAttacher.cpp" line="82"/>
       <location filename="../../TaskCheckGeometry.cpp" line="86"/>
+      <location filename="../../TaskAttacher.cpp" line="82"/>
       <source>Face</source>
       <translation>სიბრტყე</translation>
     </message>
     <message>
-      <location filename="../../TaskAttacher.cpp" line="85"/>
       <location filename="../../TaskCheckGeometry.cpp" line="88"/>
+      <location filename="../../TaskAttacher.cpp" line="85"/>
       <source>Edge</source>
       <translation>წიბო</translation>
     </message>
     <message>
-      <location filename="../../TaskAttacher.cpp" line="88"/>
       <location filename="../../TaskCheckGeometry.cpp" line="89"/>
+      <location filename="../../TaskAttacher.cpp" line="88"/>
       <source>Vertex</source>
       <translation type="unfinished">Vertex</translation>
     </message>
@@ -5899,34 +6289,39 @@ Do you want to continue?</source>
       <translation>არასწორი</translation>
     </message>
     <message>
-      <location filename="../../TaskDimension.cpp" line="632"/>
-      <location filename="../../TaskDimension.cpp" line="1770"/>
+      <location filename="../../TaskDimension.cpp" line="638"/>
+      <location filename="../../TaskDimension.cpp" line="1776"/>
       <source>Selections</source>
       <translation>მონიშნულები</translation>
     </message>
     <message>
-      <location filename="../../TaskDimension.cpp" line="639"/>
-      <location filename="../../TaskDimension.cpp" line="1777"/>
+      <location filename="../../TaskDimension.cpp" line="645"/>
+      <location filename="../../TaskDimension.cpp" line="1783"/>
       <source>Control</source>
       <translation type="unfinished">Control</translation>
     </message>
     <message>
-      <location filename="../../TaskDimension.cpp" line="1482"/>
+      <location filename="../../TaskDimension.cpp" line="1404"/>
+      <source>Selection </source>
+      <translation>მონიშნული </translation>
+    </message>
+    <message>
+      <location filename="../../TaskDimension.cpp" line="1488"/>
       <source>Reset selection</source>
       <translation>მონიშნულის გასუფთავება</translation>
     </message>
     <message>
-      <location filename="../../TaskDimension.cpp" line="1486"/>
+      <location filename="../../TaskDimension.cpp" line="1492"/>
       <source>Toggle direct dimensions</source>
       <translation>პირდაპირი ზომების ჩართ/გამორთ</translation>
     </message>
     <message>
-      <location filename="../../TaskDimension.cpp" line="1491"/>
+      <location filename="../../TaskDimension.cpp" line="1497"/>
       <source>Toggle orthogonal dimensions</source>
       <translation>ორთოგონალური ზომების ჩართ/გამორთ</translation>
     </message>
     <message>
-      <location filename="../../TaskDimension.cpp" line="1496"/>
+      <location filename="../../TaskDimension.cpp" line="1502"/>
       <source>Clear all dimensions</source>
       <translation>ყველა ზომის გასუფთავება</translation>
     </message>
@@ -5969,6 +6364,11 @@ Do you want to continue?</source>
       <location filename="../../ViewProviderAttachExtension.cpp" line="118"/>
       <source>Attachment editor</source>
       <translation>მიბმულის რედაქტორი</translation>
+    </message>
+    <message>
+      <location filename="../../../BasicShapes/CommandShapes.py" line="52"/>
+      <source>Create tube</source>
+      <translation>მილის შექმნა</translation>
     </message>
   </context>
   <context>
@@ -6022,6 +6422,16 @@ Do you want to continue?</source>
       <location filename="../../Workbench.cpp" line="42"/>
       <source>Compound</source>
       <translation>გადაბმა</translation>
+    </message>
+    <message>
+      <location filename="../../Workbench.cpp" line="43"/>
+      <source>Create a copy</source>
+      <translation>ასლის შექმნა</translation>
+    </message>
+    <message>
+      <location filename="../../Workbench.cpp" line="44"/>
+      <source>Measure</source>
+      <translation>საზომი</translation>
     </message>
   </context>
 </TS>

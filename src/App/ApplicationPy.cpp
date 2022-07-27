@@ -243,14 +243,14 @@ PyObject* Application::sOpenDocument(PyObject * /*self*/, PyObject *args, PyObje
     char* Name;
     PyObject *hidden = Py_False;
     static char *kwlist[] = {"name","hidden",nullptr};
-    if (!PyArg_ParseTupleAndKeywords(args, kwd, "et|O", kwlist,
-                "utf-8", &Name, &hidden))
+    if (!PyArg_ParseTupleAndKeywords(args, kwd, "et|O!", kwlist,
+                "utf-8", &Name, &PyBool_Type, &hidden))
         return nullptr;
     std::string EncodedName = std::string(Name);
     PyMem_Free(Name);
     try {
         // return new document
-        return (GetApplication().openDocument(EncodedName.c_str(),!PyObject_IsTrue(hidden))->getPyObject());
+        return (GetApplication().openDocument(EncodedName.c_str(), !Base::asBoolean(hidden))->getPyObject());
     }
     catch (const Base::Exception& e) {
         PyErr_SetString(PyExc_IOError, e.what());
@@ -270,14 +270,12 @@ PyObject* Application::sNewDocument(PyObject * /*self*/, PyObject *args, PyObjec
     PyObject *hidden = Py_False;
     PyObject *temp = Py_False;
     static char *kwlist[] = {"name","label","hidden","temp",nullptr};
-    if (!PyArg_ParseTupleAndKeywords(args, kwd, "|etetOO", kwlist,
-                "utf-8", &docName, "utf-8", &usrName, &hidden, &temp))
+    if (!PyArg_ParseTupleAndKeywords(args, kwd, "|etetO!O!", kwlist,
+                "utf-8", &docName, "utf-8", &usrName, &PyBool_Type, &hidden, &PyBool_Type, &temp))
         return nullptr;
 
     PY_TRY {
-        App::Document* doc = GetApplication().newDocument(docName, usrName,
-                                                          !PyObject_IsTrue(hidden),
-                                                          PyObject_IsTrue(temp));
+        App::Document* doc = GetApplication().newDocument(docName, usrName, !Base::asBoolean(hidden), Base::asBoolean(temp));
         PyMem_Free(docName);
         PyMem_Free(usrName);
         return doc->getPyObject();
@@ -317,7 +315,7 @@ PyObject* Application::sCloseDocument(PyObject * /*self*/, PyObject *args)
         return nullptr;
     }
 
-    if (GetApplication().closeDocument(pstr) == false) {
+    if (!GetApplication().closeDocument(pstr)) {
         PyErr_Format(PyExc_RuntimeError, "Closing the document '%s' failed", pstr);
         return nullptr;
     }
@@ -333,7 +331,7 @@ PyObject* Application::sSaveDocument(PyObject * /*self*/, PyObject *args)
 
     Document* doc = GetApplication().getDocument(pDoc);
     if ( doc ) {
-        if ( doc->save() == false ) {
+        if (!doc->save()) {
             PyErr_Format(Base::PyExc_FC_GeneralError, "Cannot save document '%s'", pDoc);
             return nullptr;
         }
@@ -345,25 +343,7 @@ PyObject* Application::sSaveDocument(PyObject * /*self*/, PyObject *args)
 
     Py_Return;
 }
-#if 0
-PyObject* Application::sSaveDocumentAs(PyObject * /*self*/, PyObject *args)
-{
-    char *pDoc, *pFileName;
-    if (!PyArg_ParseTuple(args, "ss", &pDoc, &pFileName))
-        return nullptr;
 
-    Document* doc = GetApplication().getDocument(pDoc);
-    if (doc) {
-        doc->saveAs( pFileName );
-    }
-    else {
-        PyErr_Format(PyExc_NameError, "Unknown document '%s'", pDoc);
-        return NULL;
-    }
-
-    Py_Return;
-}
-#endif
 PyObject* Application::sActiveDocument(PyObject * /*self*/, PyObject *args)
 {
     if (!PyArg_ParseTuple(args, ""))
@@ -701,7 +681,7 @@ PyObject* Application::sGetUserMacroPath(PyObject * /*self*/, PyObject *args)
         return nullptr;
 
     std::string macroDir = Application::getUserMacroDir();
-    if (PyObject_IsTrue(actual)) {
+    if (Base::asBoolean(actual)) {
         macroDir = App::GetApplication().
             GetParameterGroupByPath("User parameter:BaseApp/Preferences/Macro")
             ->GetASCII("MacroPath",macroDir.c_str());
@@ -732,7 +712,7 @@ PyObject* Application::sGetHomePath(PyObject * /*self*/, PyObject *args)
 PyObject* Application::sListDocuments(PyObject * /*self*/, PyObject *args)
 {
     PyObject *sort = Py_False;
-    if (!PyArg_ParseTuple(args, "|O",&sort))
+    if (!PyArg_ParseTuple(args, "|O!", &PyBool_Type, &sort))
         return nullptr;
     PY_TRY {
         PyObject *pDict = PyDict_New();
@@ -740,7 +720,7 @@ PyObject* Application::sListDocuments(PyObject * /*self*/, PyObject *args)
         Base::PyObjectBase* pValue;
 
         std::vector<Document*> docs = GetApplication().getDocuments();;
-        if(PyObject_IsTrue(sort))
+        if (Base::asBoolean(sort))
             docs = Document::getDependentDocuments(docs,true);
 
         for (auto doc : docs) {
@@ -845,21 +825,6 @@ PyObject *Application::sGetLogLevel(PyObject * /*self*/, PyObject *args)
         }
         // For performance reason, we only output integer value
         return Py_BuildValue("i",Base::Console().LogLevel(l));
-
-        // switch(l) {
-        // case FC_LOGLEVEL_LOG:
-        //     return Py_BuildValue("s","Log");
-        // case FC_LOGLEVEL_WARN:
-        //     return Py_BuildValue("s","Warning");
-        // case FC_LOGLEVEL_ERR:
-        //     return Py_BuildValue("s","Error");
-        // case FC_LOGLEVEL_MSG:
-        //     return Py_BuildValue("s","Message");
-        // case FC_LOGLEVEL_TRACE:
-        //     return Py_BuildValue("s","Trace");
-        // default:
-        //     return Py_BuildValue("i",l);
-        // }
     } PY_CATCH;
 }
 
@@ -942,11 +907,11 @@ PyObject *Application::sSetActiveTransaction(PyObject * /*self*/, PyObject *args
 {
     char *name;
     PyObject *persist = Py_False;
-    if (!PyArg_ParseTuple(args, "s|O", &name,&persist))
+    if (!PyArg_ParseTuple(args, "s|O!", &name, &PyBool_Type, &persist))
         return nullptr;
 
     PY_TRY {
-        Py::Int ret(GetApplication().setActiveTransaction(name,PyObject_IsTrue(persist)));
+        Py::Int ret(GetApplication().setActiveTransaction(name, Base::asBoolean(persist)));
         return Py::new_reference_to(ret);
     }PY_CATCH;
 }
@@ -972,11 +937,11 @@ PyObject *Application::sCloseActiveTransaction(PyObject * /*self*/, PyObject *ar
 {
     PyObject *abort = Py_False;
     int id = 0;
-    if (!PyArg_ParseTuple(args, "|Oi", &abort,&id))
+    if (!PyArg_ParseTuple(args, "|O!i", &PyBool_Type, &abort,&id))
         return nullptr;
 
     PY_TRY {
-        GetApplication().closeActiveTransaction(PyObject_IsTrue(abort),id);
+        GetApplication().closeActiveTransaction(Base::asBoolean(abort), id);
         Py_Return;
     } PY_CATCH;
 }

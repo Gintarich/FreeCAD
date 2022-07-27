@@ -20,46 +20,40 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
 # include <Approx_Curve3d.hxx>
-# include <ShapeAlgo_AlgoContainer.hxx>
 # include <BRepAdaptor_CompCurve.hxx>
 # include <BRepBuilderAPI_FindPlane.hxx>
 # include <BRepBuilderAPI_MakeWire.hxx>
+# include <BRepGProp.hxx>
 # include <BRepOffsetAPI_MakeOffset.hxx>
 # include <BRepTools_WireExplorer.hxx>
+# include <GProp_GProps.hxx>
+# include <GProp_PrincipalProps.hxx>
+# include <GCPnts_QuasiUniformAbscissa.hxx>
+# include <GCPnts_QuasiUniformDeflection.hxx>
+# include <GCPnts_TangentialDeflection.hxx>
+# include <GCPnts_UniformAbscissa.hxx>
+# include <GCPnts_UniformDeflection.hxx>
 # include <Precision.hxx>
+# include <ShapeAlgo_AlgoContainer.hxx>
 # include <ShapeFix_Wire.hxx>
 # include <TopExp.hxx>
 # include <TopoDS.hxx>
 # include <TopoDS_Wire.hxx>
-# include <gp_Ax1.hxx>
-# include <BRepGProp.hxx>
-# include <GProp_GProps.hxx>
-# include <GProp_PrincipalProps.hxx>
-# include <GCPnts_UniformAbscissa.hxx>
-# include <GCPnts_UniformDeflection.hxx>
-# include <GCPnts_TangentialDeflection.hxx>
-# include <GCPnts_QuasiUniformAbscissa.hxx>
-# include <GCPnts_QuasiUniformDeflection.hxx>
 #endif
 #include <BRepOffsetAPI_MakeEvolved.hxx>
 
-#include <Base/VectorPy.h>
 #include <Base/GeometryPyCXX.h>
 
-#include "TopoShape.h"
 #include <Mod/Part/App/BSplineCurvePy.h>
-#include <Mod/Part/App/TopoShapeShellPy.h>
 #include <Mod/Part/App/TopoShapeFacePy.h>
-#include <Mod/Part/App/TopoShapeEdgePy.h>
 #include <Mod/Part/App/TopoShapeWirePy.h>
 #include <Mod/Part/App/TopoShapeWirePy.cpp>
-#include <Mod/Part/App/TopoShapeVertexPy.h>
 #include "OCCError.h"
 #include "Tools.h"
+
 
 using namespace Part;
 
@@ -293,9 +287,7 @@ PyObject* TopoShapeWirePy::makePipeShell(PyObject *args)
                 }
             }
             TopoDS_Shape shape = this->getTopoShapePtr()->makePipeShell(sections,
-                PyObject_IsTrue(make_solid) ? Standard_True : Standard_False,
-                PyObject_IsTrue(is_Frenet)  ? Standard_True : Standard_False,
-                transition);
+                Base::asBoolean(make_solid), Base::asBoolean(is_Frenet), transition);
             return new TopoShapePy(new TopoShape(shape));
         }
         catch (Standard_Failure& e) {
@@ -355,9 +347,9 @@ PyObject* TopoShapeWirePy::makeEvolved(PyObject *args, PyObject *kwds)
 
     try {
         BRepOffsetAPI_MakeEvolved evolved(spine, profile, joinType,
-                                          PyObject_IsTrue(AxeProf) ? Standard_True : Standard_False,
-                                          PyObject_IsTrue(Solid) ? Standard_True : Standard_False,
-                                          PyObject_IsTrue(ProfOnSpine) ? Standard_True : Standard_False,
+                                          Base::asBoolean(AxeProf),
+                                          Base::asBoolean(Solid),
+                                          Base::asBoolean(ProfOnSpine),
                                           Tolerance);
         TopoDS_Shape shape = evolved.Shape();
         return Py::new_reference_to(shape2pyshape(shape));

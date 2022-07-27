@@ -22,7 +22,6 @@
 
 #include "PreCompiled.h"
 #ifndef _PreComp_
-#include <boost_bind_bind.hpp>
 #include <boost/graph/topological_sort.hpp>
 #include <boost_graph_reverse_graph.hpp>
 #include <memory>
@@ -1096,7 +1095,7 @@ void Model::contextMenuEvent(QGraphicsSceneContextMenuEvent* event)
 
 void Model::onRenameSlot()
 {
-  assert(proxy == nullptr);
+  assert(!proxy);
   std::vector<Gui::DAG::Vertex> selections = getAllSelected();
   assert(selections.size() == 1);
   

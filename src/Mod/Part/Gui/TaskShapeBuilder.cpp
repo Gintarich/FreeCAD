@@ -36,6 +36,7 @@
 #include "ViewProviderExt.h"
 #include "ui_TaskShapeBuilder.h"
 #include "TaskShapeBuilder.h"
+#include "BoxSelection.h"
 
 #include <Gui/Application.h>
 #include <Gui/BitmapFactory.h>
@@ -96,6 +97,7 @@ public:
     Ui_TaskShapeBuilder ui;
     QButtonGroup bg;
     ShapeSelection* gate;
+    BoxSelection selection;
     Private()
     {
         Gui::Command::runCommand(Gui::Command::App, "from FreeCAD import Base");
@@ -202,6 +204,23 @@ void ShapeBuilderWidget::on_createButton_clicked()
     }
 }
 
+void ShapeBuilderWidget::on_selectButton_clicked()
+{
+    int id = d->bg.checkedId();
+    if (id == 0 || id == 2) {
+        d->selection.start(TopAbs_VERTEX);
+    }
+    else if (id == 1 || id == 3) {
+        d->selection.start(TopAbs_EDGE);
+    }
+    else if (id == 4) {
+        d->selection.start(TopAbs_FACE);
+    }
+    else {
+        QMessageBox::warning(this, tr("Unsupported"), tr("Box selection for shells is not supported"));
+    }
+}
+
 void ShapeBuilderWidget::createEdgeFromVertex()
 {
     Gui::SelectionFilter vertexFilter  ("SELECT Part::Feature SUBELEMENT Vertex COUNT 2");
@@ -236,7 +255,7 @@ void ShapeBuilderWidget::createEdgeFromVertex()
         "if _.isNull(): raise RuntimeError('Failed to create edge')\n"
         "App.ActiveDocument.addObject('Part::Feature','Edge').Shape=_\n"
         "del _\n"
-    ).arg(elements[0]).arg(elements[1]);
+    ).arg(elements[0], elements[1]);
 
     try {
         Gui::Application::Instance->activeDocument()->openCommand(QT_TRANSLATE_NOOP("Command", "Edge"));

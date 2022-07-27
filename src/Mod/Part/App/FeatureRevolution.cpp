@@ -20,23 +20,19 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
-# include <gp_Ax1.hxx>
-# include <TopoDS.hxx>
 # include <BRepAdaptor_Curve.hxx>
-# include <gp_Lin.hxx>
+# include <gp_Ax1.hxx>
 # include <gp_Circ.hxx>
+# include <gp_Lin.hxx>
 # include <TopExp_Explorer.hxx>
+# include <TopoDS.hxx>
 #endif
 
-
 #include "FeatureRevolution.h"
-#include <Base/Tools.h>
-#include <Base/Exception.h>
-#include <App/Application.h>
 #include "FaceMaker.h"
+
 
 using namespace Part;
 
@@ -94,7 +90,7 @@ bool Revolution::fetchAxisLink(const App::PropertyLinkSub &axisLink,
 
     TopoDS_Shape axEdge;
     if (axisLink.getSubValues().size() > 0  &&  axisLink.getSubValues()[0].length() > 0){
-        axEdge = Feature::getTopoShape(linked).getSubShape(axisLink.getSubValues()[0].c_str());
+        axEdge = Feature::getTopoShape(linked, axisLink.getSubValues()[0].c_str(), true /*need element*/).getShape();
     } else {
         axEdge = Feature::getShape(linked);
     }

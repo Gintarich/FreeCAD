@@ -37,7 +37,7 @@ WorkbenchManager* WorkbenchManager::_instance = nullptr;
 
 WorkbenchManager* WorkbenchManager::instance()
 {
-    if (_instance == nullptr)
+    if (!_instance)
         _instance = new WorkbenchManager;
     return _instance;
 }
@@ -71,23 +71,17 @@ Workbench* WorkbenchManager::createWorkbench (const std::string& name, const std
 
     if (!wb) {
         // try to create an instance now
-        Base::BaseClass* base = static_cast<Base::BaseClass*>
-            (Base::Type::createInstanceByName(className.c_str(),false));
-        if (base) {
-            if (!base->getTypeId().isDerivedFrom(Gui::Workbench::getClassTypeId())) {
-                delete base;
-                std::stringstream str;
-                str << "'" << className << "' not a workbench type" << std::ends;
-                throw Base::TypeError(str.str());
-            }
-
-            wb = static_cast<Workbench*>(base);
-            wb->setName(name);
-            _workbenches[name] = wb;
+        Base::Type type = Base::Type::getTypeIfDerivedFrom(className.c_str(), Workbench::getClassTypeId(), false);
+        wb = static_cast<Workbench*>(type.createInstance());
+        // createInstance could return a null pointer
+        if (!wb) {
+            std::stringstream str;
+            str << "'" << className << "' not a workbench type" << std::ends;
+            throw Base::TypeError(str.str());
         }
-        else
-            Base::Console().Log("WorkbenchManager::createWorkbench(): Can not create "
-                "Workbench instance with type: %s\n",className.c_str());
+
+        wb->setName(name);
+        _workbenches[name] = wb;
     }
 
     return wb;

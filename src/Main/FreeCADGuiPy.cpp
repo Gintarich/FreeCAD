@@ -101,7 +101,7 @@ FreeCADGui_showMainWindow(PyObject * /*self*/, PyObject *args)
 
     static bool thr = false;
     if (!qApp) {
-        if (PyObject_IsTrue(inThread) && !thr) {
+        if (Base::asBoolean(inThread) && !thr) {
             thr = true;
             std::thread t([]() {
                 static int argc = 0;
@@ -194,11 +194,6 @@ FreeCADGui_setupWithoutGUI(PyObject * /*self*/, PyObject *args)
         _isSetupWithoutGui = true;
         Q_UNUSED(app);
     }
-    else {
-        PyErr_SetString(PyExc_RuntimeError, "FreeCADGui already initialized");
-        return nullptr;
-    }
-
     if (!SoDB::isInitialized()) {
         // init the Inventor subsystem
         SoDB::init();

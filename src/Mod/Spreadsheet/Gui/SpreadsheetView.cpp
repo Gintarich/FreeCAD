@@ -43,7 +43,6 @@
 #include <App/PropertyStandard.h>
 #include <App/Range.h>
 #include <Base/Tools.h>
-#include <boost_bind_bind.hpp>
 #include <Gui/MainWindow.h>
 #include <Gui/Application.h>
 #include <Gui/Command.h>
@@ -134,7 +133,9 @@ SheetView::SheetView(Gui::Document *pcDocument, App::DocumentObject *docObj, QWi
 SheetView::~SheetView()
 {
     Gui::Application::Instance->detachView(this);
-    //delete delegate;
+    delete ui;
+    delete model;
+    delete delegate;
 }
 
 bool SheetView::onMsg(const char *pMsg, const char **)
@@ -582,7 +583,7 @@ Py::Object SheetViewPy::getattr(const char * attr)
     if (name == "__dict__" || name == "__class__") {
         Py::Dict dict_self(BaseType::getattr("__dict__"));
         Py::Dict dict_base(base.getattr("__dict__"));
-        for (auto it : dict_base) {
+        for (const auto& it : dict_base) {
             dict_self.setItem(it.first, it.second);
         }
         return dict_self;

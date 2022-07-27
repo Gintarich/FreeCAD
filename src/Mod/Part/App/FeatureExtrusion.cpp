@@ -20,11 +20,10 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
-# include <BRepAdaptor_Surface.hxx>
 # include <BRepAdaptor_Curve.hxx>
+# include <BRepAdaptor_Surface.hxx>
 # include <BRepBuilderAPI_Copy.hxx>
 # include <BRepBuilderAPI_MakeWire.hxx>
 # include <BRepLib_FindSurface.hxx>
@@ -39,7 +38,6 @@
 #endif
 
 #include <Base/Exception.h>
-#include <Base/Tools.h>
 
 #include "FeatureExtrusion.h"
 #include "ExtrusionHelper.h"
@@ -100,7 +98,7 @@ bool Extrusion::fetchAxisLink(const App::PropertyLinkSub& axisLink, Base::Vector
 
     TopoDS_Shape axEdge;
     if (axisLink.getSubValues().size() > 0 && axisLink.getSubValues()[0].length() > 0) {
-        axEdge = Feature::getTopoShape(linked).getSubShape(axisLink.getSubValues()[0].c_str());
+        axEdge = Feature::getTopoShape(linked, axisLink.getSubValues()[0].c_str(), true /*need element*/).getShape();
     }
     else {
         axEdge = Feature::getShape(linked);

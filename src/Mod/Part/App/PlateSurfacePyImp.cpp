@@ -20,25 +20,23 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
-# include <GeomPlate_MakeApprox.hxx>
-# include <GeomPlate_Surface.hxx>
 # include <GeomPlate_BuildPlateSurface.hxx>
+# include <GeomPlate_MakeApprox.hxx>
 # include <GeomPlate_PointConstraint.hxx>
-# include <GeomPlate_CurveConstraint.hxx>
+# include <GeomPlate_Surface.hxx>
 #endif
 
 #include <Base/GeometryPyCXX.h>
 #include <Base/VectorPy.h>
 #include <Base/Vector3D.h>
 
-#include "OCCError.h"
-#include "Geometry.h"
 #include "PlateSurfacePy.h"
 #include "PlateSurfacePy.cpp"
 #include "BSplineSurfacePy.h"
+#include "OCCError.h"
+
 
 using namespace Part;
 
@@ -96,7 +94,7 @@ int PlateSurfacePy::PyInit(PyObject* args, PyObject* kwds)
 
     try {
         GeomPlate_BuildPlateSurface buildPlate(Degree, NbPtsOnCur, NbIter, Tol2d, Tol3d, TolAng, TolCurv,
-            PyObject_IsTrue(Anisotropie) ? Standard_True : Standard_False);
+            Base::asBoolean(Anisotropie));
         if (!surf.IsNull()) {
             buildPlate.LoadInitSurface(surf);
 

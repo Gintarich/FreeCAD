@@ -32,11 +32,12 @@
 
 #include "ZVALUE.h"
 #include "TemplateTextField.h"
+#include "QGSPage.h"
 #include "QGITemplate.h"
 
 using namespace TechDrawGui;
 
-QGITemplate::QGITemplate(QGraphicsScene *scene) : QGraphicsItemGroup(),
+QGITemplate::QGITemplate(QGSPage *scene) : QGraphicsItemGroup(),
     pageTemplate(nullptr)
 {
     setHandlesChildEvents(false);
@@ -58,7 +59,7 @@ QVariant QGITemplate::itemChange(GraphicsItemChange change, const QVariant &valu
 
 void QGITemplate::setTemplate(TechDraw::DrawTemplate *obj)
 {
-    if(obj == nullptr)
+    if (!obj)
         return;
 
     pageTemplate = obj;

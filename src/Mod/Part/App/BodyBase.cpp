@@ -20,21 +20,15 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
-#ifndef _PreComp_
-#endif
 
-#include <Mod/Part/App/BodyBasePy.h>
-#include <App/Application.h>
 #include <App/Document.h>
-#include <Base/Placement.h>
 
 #include "BodyBase.h"
+#include "BodyBasePy.h"
 
 
 namespace Part {
-
 
 PROPERTY_SOURCE_WITH_EXTENSIONS(Part::BodyBase, Part::Feature)
 
@@ -51,7 +45,7 @@ BodyBase::BodyBase()
 BodyBase* BodyBase::findBodyOf(const App::DocumentObject* f)
 {
     App::Document* doc = f->getDocument();
-    if (doc != nullptr) {
+    if (doc) {
         std::vector<App::DocumentObject*> bodies = doc->getObjectsOfType(BodyBase::getClassTypeId());
         for (std::vector<App::DocumentObject*>::const_iterator b = bodies.begin(); b != bodies.end(); b++) {
             BodyBase* body = static_cast<BodyBase*>(*b);

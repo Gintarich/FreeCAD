@@ -78,7 +78,7 @@ PyObject* SketchObjectPy::addGeometry(PyObject *args)
             isConstruction=false;
     }
     else {
-        isConstruction = PyObject_IsTrue(construction) ? true : false;
+        isConstruction = Base::asBoolean(construction);
     }
 
     if (PyObject_TypeCheck(pcObj, &(Part::GeometryPy::Type))) {
@@ -301,7 +301,7 @@ PyObject* SketchObjectPy::setConstruction(PyObject *args)
     if (!PyArg_ParseTuple(args, "iO!", &Index, &PyBool_Type, &Mode))
         return nullptr;
 
-    if (this->getSketchObjectPtr()->setConstruction(Index, PyObject_IsTrue(Mode) ? true : false)) {
+    if (this->getSketchObjectPtr()->setConstruction(Index, Base::asBoolean(Mode))) {
         std::stringstream str;
         str << "Not able to set construction mode of a geometry with the given index: " << Index;
         PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -503,7 +503,7 @@ PyObject* SketchObjectPy::carbonCopy(PyObject *args)
     }
 
     // add the external
-    if (skObj->carbonCopy(Obj, PyObject_IsTrue(construction) ? true : false) < 0) {
+    if (skObj->carbonCopy(Obj, Base::asBoolean(construction)) < 0) {
         std::stringstream str;
         str << "Not able to add the requested geometry";
         PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -788,7 +788,7 @@ PyObject* SketchObjectPy::setDriving(PyObject *args)
     if (!PyArg_ParseTuple(args, "iO!", &constrid, &PyBool_Type, &driving))
         return nullptr;
 
-    if (this->getSketchObjectPtr()->setDriving(constrid, PyObject_IsTrue(driving) ? true : false)) {
+    if (this->getSketchObjectPtr()->setDriving(constrid, Base::asBoolean(driving))) {
         std::stringstream str;
         str << "Not able set Driving/reference for constraint with the given index: " << constrid;
         PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -805,7 +805,7 @@ PyObject* SketchObjectPy::setDatumsDriving(PyObject *args)
     if (!PyArg_ParseTuple(args, "O!", &PyBool_Type, &driving))
         return nullptr;
 
-    if (this->getSketchObjectPtr()->setDatumsDriving(PyObject_IsTrue(driving) ? true : false)) {
+    if (this->getSketchObjectPtr()->setDatumsDriving(Base::asBoolean(driving))) {
         std::stringstream str;
         str << "Not able set all dimensionals driving/reference";
         PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -883,7 +883,7 @@ PyObject* SketchObjectPy::setVirtualSpace(PyObject *args)
         }
 
         try {
-            int ret = this->getSketchObjectPtr()->setVirtualSpace(constrIds, PyObject_IsTrue(invirtualspace) ? true : false);
+            int ret = this->getSketchObjectPtr()->setVirtualSpace(constrIds, Base::asBoolean(invirtualspace));
 
             if(ret == -1)
                 throw Py::TypeError("Impossible to set virtual space!");
@@ -896,7 +896,7 @@ PyObject* SketchObjectPy::setVirtualSpace(PyObject *args)
         Py_Return;
     }
     else if(PyLong_Check(id_or_ids)) {
-        if (this->getSketchObjectPtr()->setVirtualSpace(PyLong_AsLong(id_or_ids), PyObject_IsTrue(invirtualspace) ? true : false)) {
+        if (this->getSketchObjectPtr()->setVirtualSpace(PyLong_AsLong(id_or_ids), Base::asBoolean(invirtualspace))) {
             std::stringstream str;
             str << "Not able set virtual space for constraint with the given index: " << PyLong_AsLong(id_or_ids);
             PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -953,7 +953,7 @@ PyObject* SketchObjectPy::setActive(PyObject *args)
     if (!PyArg_ParseTuple(args, "iO!", &constrid, &PyBool_Type, &isactive))
         return nullptr;
 
-    if (this->getSketchObjectPtr()->setActive(constrid, PyObject_IsTrue(isactive) ? true : false)) {
+    if (this->getSketchObjectPtr()->setActive(constrid, Base::asBoolean(isactive))) {
         std::stringstream str;
         str << "Not able set active/disabled status for constraint with the given index: " << constrid;
         PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -1080,7 +1080,7 @@ PyObject* SketchObjectPy::fillet(PyObject *args)
         Base::Vector3d v1 = static_cast<Base::VectorPy*>(pcObj1)->value();
         Base::Vector3d v2 = static_cast<Base::VectorPy*>(pcObj2)->value();
 
-        if (this->getSketchObjectPtr()->fillet(geoId1, geoId2, v1, v2, radius, trim, PyObject_IsTrue(createCorner))) {
+        if (this->getSketchObjectPtr()->fillet(geoId1, geoId2, v1, v2, radius, trim, Base::asBoolean(createCorner))) {
             std::stringstream str;
             str << "Not able to fillet curves with ids : (" << geoId1 << ", " << geoId2 << ") and points (" << v1.x << ", " << v1.y << ", " << v1.z << ") & "
             << "(" << v2.x << ", " << v2.y << ", " << v2.z << ")";
@@ -1094,7 +1094,7 @@ PyObject* SketchObjectPy::fillet(PyObject *args)
     // Point, radius
     if (PyArg_ParseTuple(args, "iid|iO!", &geoId1, &posId1, &radius, &trim, &PyBool_Type, &createCorner)) {
         if (this->getSketchObjectPtr()->fillet(geoId1, (Sketcher::PointPos) posId1, radius, trim,
-              PyObject_IsTrue(createCorner))) {
+              Base::asBoolean(createCorner))) {
             std::stringstream str;
             str << "Not able to fillet point with ( geoId: " << geoId1 << ", PointPos: " << posId1 << " )";
             PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -1227,7 +1227,7 @@ PyObject* SketchObjectPy::addCopy(PyObject *args)
         }
 
         try {
-            int ret = this->getSketchObjectPtr()->addCopy(geoIdList, vect, false, PyObject_IsTrue(clone) ? true : false) + 1;
+            int ret = this->getSketchObjectPtr()->addCopy(geoIdList, vect, false, Base::asBoolean(clone)) + 1;
 
             if(ret == -1)
                 throw Py::TypeError("Copy operation unsuccessful!");
@@ -1304,8 +1304,8 @@ PyObject* SketchObjectPy::addRectangularArray(PyObject *args)
         }
 
         try {
-            int ret = this->getSketchObjectPtr()->addCopy(geoIdList,vect, false, PyObject_IsTrue(clone) ? true : false,
-                                                        rows, cols, PyObject_IsTrue(constraindisplacement) ? true : false, perpscale) + 1;
+            int ret = this->getSketchObjectPtr()->addCopy(geoIdList,vect, false, Base::asBoolean(clone),
+                                                        rows, cols, Base::asBoolean(constraindisplacement), perpscale) + 1;
 
             if(ret == -1)
                 throw Py::TypeError("Copy operation unsuccessful!");
@@ -1492,7 +1492,7 @@ PyObject* SketchObjectPy::convertToNURBS(PyObject *args)
     if (!PyArg_ParseTuple(args, "i", &GeoId))
         return nullptr;
 
-    if (this->getSketchObjectPtr()->convertToNURBS(GeoId)==false) {
+    if (!this->getSketchObjectPtr()->convertToNURBS(GeoId)) {
         std::stringstream str;
         str << "Object does not support NURBS conversion: " << GeoId;
         PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -1510,7 +1510,7 @@ PyObject* SketchObjectPy::increaseBSplineDegree(PyObject *args)
     if (!PyArg_ParseTuple(args, "i|i", &GeoId, &incr))
         return nullptr;
 
-    if (this->getSketchObjectPtr()->increaseBSplineDegree(GeoId, incr)==false) {
+    if (!this->getSketchObjectPtr()->increaseBSplineDegree(GeoId, incr)) {
         std::stringstream str;
         str << "Degree increase failed for: " << GeoId;
         PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -1541,7 +1541,7 @@ PyObject* SketchObjectPy::modifyBSplineKnotMultiplicity(PyObject *args)
     if (!PyArg_ParseTuple(args, "ii|i", &GeoId, &knotIndex, &multiplicity))
         return nullptr;
 
-    if (this->getSketchObjectPtr()->modifyBSplineKnotMultiplicity(GeoId, knotIndex, multiplicity)==false) {
+    if (!this->getSketchObjectPtr()->modifyBSplineKnotMultiplicity(GeoId, knotIndex, multiplicity)) {
         std::stringstream str;
         str << "Multiplicity modification failed for: " << GeoId;
         PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -1560,7 +1560,7 @@ PyObject* SketchObjectPy::insertBSplineKnot(PyObject *args)
     if (!PyArg_ParseTuple(args, "id|i", &GeoId, &knotParam, &multiplicity))
         return nullptr;
 
-    if (this->getSketchObjectPtr()->insertBSplineKnot(GeoId, knotParam, multiplicity)==false) {
+    if (!this->getSketchObjectPtr()->insertBSplineKnot(GeoId, knotParam, multiplicity)) {
         std::stringstream str;
         str << "Knot insertion failed for: " << GeoId;
         PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -1580,7 +1580,7 @@ PyObject* SketchObjectPy::autoconstraint(PyObject *args)
     if (!PyArg_ParseTuple(args, "|ddO!", &precision, &angleprecision, &PyBool_Type, &includeconstruction))
         return nullptr;
 
-    if (this->getSketchObjectPtr()->autoConstraint(precision, angleprecision, PyObject_IsTrue(includeconstruction) ? true : false)) {
+    if (this->getSketchObjectPtr()->autoConstraint(precision, angleprecision, Base::asBoolean(includeconstruction))) {
         std::stringstream str;
         str << "Unable to autoconstraint";
         PyErr_SetString(PyExc_ValueError, str.str().c_str());
@@ -1598,7 +1598,7 @@ PyObject* SketchObjectPy::detectMissingPointOnPointConstraints(PyObject *args)
     if (!PyArg_ParseTuple(args, "|dO!", &precision, &PyBool_Type, &includeconstruction))
         return nullptr;
 
-    return Py::new_reference_to(Py::Long(this->getSketchObjectPtr()->detectMissingPointOnPointConstraints(precision, PyObject_IsTrue(includeconstruction) ? true : false)));
+    return Py::new_reference_to(Py::Long(this->getSketchObjectPtr()->detectMissingPointOnPointConstraints(precision, Base::asBoolean(includeconstruction))));
 }
 
 PyObject* SketchObjectPy::detectMissingVerticalHorizontalConstraints(PyObject *args)
@@ -1641,7 +1641,7 @@ PyObject* SketchObjectPy::makeMissingPointOnPointCoincident(PyObject *args)
     if (!PyArg_ParseTuple(args, "|O!", &PyBool_Type, &onebyone))
         return nullptr;
 
-    this->getSketchObjectPtr()->makeMissingPointOnPointCoincident(PyObject_IsTrue(onebyone) ? true : false);
+    this->getSketchObjectPtr()->makeMissingPointOnPointCoincident(Base::asBoolean(onebyone));
 
     Py_Return;
 }
@@ -1653,7 +1653,7 @@ PyObject* SketchObjectPy::makeMissingVerticalHorizontal(PyObject *args)
     if (!PyArg_ParseTuple(args, "|O!", &PyBool_Type, &onebyone))
         return nullptr;
 
-    this->getSketchObjectPtr()->makeMissingVerticalHorizontal(PyObject_IsTrue(onebyone) ? true : false);
+    this->getSketchObjectPtr()->makeMissingVerticalHorizontal(Base::asBoolean(onebyone));
 
     Py_Return;
 }
@@ -1665,7 +1665,7 @@ PyObject* SketchObjectPy::makeMissingEquality(PyObject *args)
     if (!PyArg_ParseTuple(args, "|O!", &PyBool_Type, &onebyone))
         return nullptr;
 
-    this->getSketchObjectPtr()->makeMissingEquality(PyObject_IsTrue(onebyone) ? true : false);
+    this->getSketchObjectPtr()->makeMissingEquality(Base::asBoolean(onebyone));
 
     Py_Return;
 }
@@ -1677,7 +1677,7 @@ PyObject* SketchObjectPy::autoRemoveRedundants(PyObject *args)
     if (!PyArg_ParseTuple(args, "|O!", &PyBool_Type, &updategeo))
         return nullptr;
 
-    this->getSketchObjectPtr()->autoRemoveRedundants(PyObject_IsTrue(updategeo) ? true : false);
+    this->getSketchObjectPtr()->autoRemoveRedundants(Base::asBoolean(updategeo));
 
     Py_Return;
 }
@@ -1708,7 +1708,7 @@ void SketchObjectPy::setMissingPointOnPointConstraints(Py::List arg)
         return (checkitem(t,i,0)?Sketcher::PointPos::none:(checkitem(t,i,1)?Sketcher::PointPos::start:(checkitem(t,i,2)?Sketcher::PointPos::end:Sketcher::PointPos::mid)));
     };
 
-    for (auto ti : arg) {
+    for (const auto& ti : arg) {
         Py::Tuple t(ti);
         ConstraintIds c;
         c.First = (long)Py::Long(t.getItem(0));
@@ -1749,7 +1749,7 @@ void SketchObjectPy::setMissingVerticalHorizontalConstraints(Py::List arg)
         return (checkitem(t,i,0)?Sketcher::PointPos::none:(checkitem(t,i,1)?Sketcher::PointPos::start:(checkitem(t,i,2)?Sketcher::PointPos::end:Sketcher::PointPos::mid)));
     };
 
-    for (auto ti : arg) {
+    for (const auto& ti : arg) {
         Py::Tuple t(ti);
         ConstraintIds c;
         c.First = (long)Py::Long(t.getItem(0));
@@ -1789,7 +1789,7 @@ void SketchObjectPy::setMissingLineEqualityConstraints(Py::List arg)
         return (checkitem(t,i,0)?Sketcher::PointPos::none:(checkitem(t,i,1)?Sketcher::PointPos::start:(checkitem(t,i,2)?Sketcher::PointPos::end:Sketcher::PointPos::mid)));
     };
 
-    for (auto ti : arg) {
+    for (const auto& ti : arg) {
         Py::Tuple t(ti);
         ConstraintIds c;
         c.First = (long)Py::Long(t.getItem(0));
@@ -1829,7 +1829,7 @@ void SketchObjectPy::setMissingRadiusConstraints(Py::List arg)
         return (checkitem(t,i,0)?Sketcher::PointPos::none:(checkitem(t,i,1)?Sketcher::PointPos::start:(checkitem(t,i,2)?Sketcher::PointPos::end:Sketcher::PointPos::mid)));
     };
 
-    for (auto ti : arg) {
+    for (const auto& ti : arg) {
         Py::Tuple t(ti);
         ConstraintIds c;
         c.First = (long)Py::Long(t.getItem(0));

@@ -79,8 +79,8 @@ protected:
 class GuiExport UnsignedValidator : public QValidator
 {
     Q_OBJECT
-    Q_PROPERTY( uint bottom READ bottom WRITE setBottom )
-    Q_PROPERTY( uint top READ top WRITE setTop )
+    Q_PROPERTY( uint bottom READ bottom WRITE setBottom ) // clazy:exclude=qproperty-without-notify
+    Q_PROPERTY( uint top READ top WRITE setTop ) // clazy:exclude=qproperty-without-notify
 
 public:
     UnsignedValidator( QObject * parent );
@@ -134,7 +134,7 @@ public:
     void paintEvent(QPaintEvent *event);
 
 Q_SIGNALS:
-    void valueChanged( uint value );
+    void valueChanged( uint value ); // clazy:exclude=overloaded-signal
 
 public Q_SLOTS:
     void setValue( uint value );

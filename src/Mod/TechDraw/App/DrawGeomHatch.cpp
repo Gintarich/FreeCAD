@@ -70,6 +70,7 @@
 
 #include "HatchLine.h"
 #include "DrawUtil.h"
+#include "Preferences.h"
 #include "Geometry.h"
 #include "DrawPage.h"
 #include "DrawViewPart.h"
@@ -122,15 +123,13 @@ void DrawGeomHatch::onChanged(const App::Property* prop)
             DrawGeomHatch::execute();
         }
         App::Document* doc = getDocument();
-        if ((prop == &FilePattern) &&
-            (doc != nullptr) ) {
+        if ((prop == &FilePattern) && doc) {
             if (!FilePattern.isEmpty()) {
                 replacePatIncluded(FilePattern.getValue());
                 DrawGeomHatch::execute();         //remake the line sets
             }
         }
-        if ((prop == &NamePattern) &&
-                (doc != nullptr)) {
+        if ((prop == &NamePattern) && doc) {
             DrawGeomHatch::execute();            //remake the line sets
         }
     } else {
@@ -165,7 +164,7 @@ App::DocumentObjectExecReturn *DrawGeomHatch::execute(void)
 //    Base::Console().Message("DGH::execute()\n");
     makeLineSets();
     DrawViewPart* parent = getSourceView();
-    if (parent != nullptr) {
+    if (parent) {
         parent->requestPaint();
     }
     return App::DocumentObject::StdReturn;
@@ -333,7 +332,7 @@ std::vector<LineSet> DrawGeomHatch::getTrimmedLines(DrawViewPart* source,
         int i = 0;
         for (auto& e: resultEdges) {
             TechDraw::BaseGeomPtr base = BaseGeom::baseFactory(e);
-            if (base == nullptr) {
+            if (!base) {
                 Base::Console().Log("FAIL - DGH::getTrimmedLines - baseFactory failed for edge: %d\n",i);
                 throw Base::ValueError("DGH::getTrimmedLines - baseFactory failed");
             }
@@ -482,7 +481,7 @@ std::vector<LineSet> DrawGeomHatch::getFaceOverlay(int fdx)
         int i = 0;
         for (auto& e: candidates) {
             TechDraw::BaseGeomPtr base = BaseGeom::baseFactory(e);
-            if (base == nullptr) {
+            if (!base) {
                 Base::Console().Log("FAIL - DGH::getFaceOverlay - baseFactory failed for edge: %d\n",i);
                 throw Base::ValueError("DGH::getFaceOverlay - baseFactory failed");
             }
@@ -607,7 +606,7 @@ void DrawGeomHatch::unsetupObject(void)
 //    Base::Console().Message("DGH::unsetupObject() - status: %lu  removing: %d \n", getStatus(), isRemoving());
     App::DocumentObject* source = Source.getValue();
     DrawView* dv = dynamic_cast<DrawView*>(source);
-    if (dv != nullptr) {
+    if (dv) {
         dv->requestPaint();
     }
     App::DocumentObject::unsetupObject();
@@ -615,19 +614,7 @@ void DrawGeomHatch::unsetupObject(void)
 
 std::string DrawGeomHatch::prefGeomHatchFile(void)
 {
-    Base::Reference<ParameterGrp> hGrp = App::GetApplication().GetUserParameter()
-        .GetGroup("BaseApp")->GetGroup("Preferences")->GetGroup("Mod/TechDraw/PAT");
-
-    std::string defaultDir = App::Application::getResourceDir() + "Mod/TechDraw/PAT/";
-    std::string defaultFileName = defaultDir + "FCPAT.pat";
-    std::string prefHatchFile = hGrp->GetASCII("FilePattern", defaultFileName.c_str());
-    std::string result = prefHatchFile;
-    Base::FileInfo fi(result);
-    if (!fi.isReadable()) {
-        result = defaultFileName;
-        Base::Console().Warning("Pat Hatch File: %s is not readable\n", prefHatchFile.c_str());
-    }
-    return result;
+    return Preferences::patFile();
 }
 
 std::string DrawGeomHatch::prefGeomHatchName()

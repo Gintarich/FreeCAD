@@ -28,6 +28,7 @@
 #include <Mod/Part/App/TopoShapePy.h>
 #include "ProjectionAlgos.h"
 #include <Base/Console.h>
+#include <Base/Interpreter.h>
 #include <Base/VectorPy.h>
 #include <boost/regex.hpp>
 
@@ -58,7 +59,7 @@ namespace Drawing {
     string key;
     string value;
 
-    for (auto keyPy : sourceRange.keys()) {
+    for (const auto& keyPy : sourceRange.keys()) {
       key = Py::String(keyPy);
       value = Py::String(sourceRange[keyPy]);
       *targetIt = {key, value};

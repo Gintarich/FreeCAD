@@ -31,7 +31,6 @@
 # include <QString>
 # include <QImage>
 # include <QPixmap>
-# include <boost_bind_bind.hpp>
 #endif
 
 #include "TaskSketcherElements.h"
@@ -174,8 +173,6 @@ void ElementView::contextMenuEvent (QContextMenuEvent* event)
 
     menu.addSeparator();
 
-    CONTEXT_ITEM("Sketcher_CloseShape","Close Shape","Sketcher_CloseShape",doCloseShape,true)
-    CONTEXT_ITEM("Sketcher_ConnectLines","Connect","Sketcher_ConnectLines",doConnect,true)
     CONTEXT_ITEM("Sketcher_SelectConstraints","Select Constraints","Sketcher_SelectConstraints",doSelectConstraints,true)
     CONTEXT_ITEM("Sketcher_SelectOrigin","Select Origin","Sketcher_SelectOrigin",doSelectOrigin,false)
     CONTEXT_ITEM("Sketcher_SelectHorizontalAxis","Select Horizontal Axis","Sketcher_SelectHorizontalAxis",doSelectHAxis,false)
@@ -214,8 +211,6 @@ CONTEXT_MEMBER_DEF("Sketcher_ConstrainAngle",doAngleConstraint)
 
 CONTEXT_MEMBER_DEF("Sketcher_ToggleConstruction",doToggleConstruction)
 
-CONTEXT_MEMBER_DEF("Sketcher_CloseShape",doCloseShape)
-CONTEXT_MEMBER_DEF("Sketcher_ConnectLines",doConnect)
 CONTEXT_MEMBER_DEF("Sketcher_SelectConstraints",doSelectConstraints)
 CONTEXT_MEMBER_DEF("Sketcher_SelectOrigin",doSelectOrigin)
 CONTEXT_MEMBER_DEF("Sketcher_SelectHorizontalAxis",doSelectHAxis)
@@ -245,7 +240,7 @@ void ElementView::keyPressEvent(QKeyEvent * event)
     {
       case Qt::Key_Z:
         // signal
-        onFilterShortcutPressed();
+        Q_EMIT onFilterShortcutPressed();
         break;
       default:
         QListWidget::keyPressEvent( event );
@@ -281,7 +276,7 @@ TaskSketcherElements::TaskSketcherElements(ViewProviderSketch *sketchView)
     QString zKey = QString::fromLatin1("Z");
     ui->Explanation->setText(tr("<html><head/><body><p>&quot;%1&quot;: multiple selection</p>"
                                 "<p>&quot;%2&quot;: switch to next valid type</p></body></html>")
-                             .arg(cmdKey).arg(zKey));
+                             .arg(cmdKey, zKey));
     ui->listWidgetElements->setSelectionMode(QAbstractItemView::ExtendedSelection);
     ui->listWidgetElements->setEditTriggers(QListWidget::NoEditTriggers);
     ui->listWidgetElements->setMouseTracking(true);
@@ -475,7 +470,7 @@ void TaskSketcherElements::on_listWidgetElements_itemSelectionChanged(void)
     bool multipleconsecutiveselection=false; // shift type of selection in listWidget
 
     if (!inhibitSelectionUpdate) {
-        if(itf!=nullptr) {
+        if (itf) {
             switch(element){
             case 0:
                 itf->isLineSelected=!itf->isLineSelected;
@@ -519,7 +514,7 @@ void TaskSketcherElements::on_listWidgetElements_itemSelectionChanged(void)
     for (int i=0;i<ui->listWidgetElements->count(); i++) {
         ElementItem * ite=static_cast<ElementItem*>(ui->listWidgetElements->item(i));
 
-        if(multipleselection==false && multipleconsecutiveselection==false && ite!=itf) {
+        if(!multipleselection && !multipleconsecutiveselection && ite != itf) {
             ite->isLineSelected=false;
             ite->isStartingPointSelected=false;
             ite->isEndPointSelected=false;
@@ -1133,7 +1128,7 @@ TaskSketcherElements::MultIcon::MultIcon(const char* name)
 {
     int hue, sat, val, alp;
     Normal = Gui::BitmapFactory().iconFromTheme(name);
-    QImage imgConstr(Normal.pixmap(Normal.availableSizes()[0]).toImage());
+    QImage imgConstr(Normal.pixmap(qAsConst(Normal).availableSizes()[0]).toImage());
     QImage imgExt(imgConstr);
 
     for(int ix=0 ; ix<imgConstr.width() ; ix++) {

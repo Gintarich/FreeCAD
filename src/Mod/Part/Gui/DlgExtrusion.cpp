@@ -81,7 +81,7 @@ public:
             return false;
         }
         try {
-            TopoDS_Shape sub = part.getSubShape(sSubName);
+            TopoDS_Shape sub = Part::Feature::getTopoShape(pObj, sSubName, true /*need element*/).getShape();
             if (!sub.IsNull() && sub.ShapeType() == TopAbs_EDGE) {
                 const TopoDS_Edge& edge = TopoDS::Edge(sub);
                 BRepAdaptor_Curve adapt(edge);
@@ -702,7 +702,7 @@ void DlgExtrusion::writeParametersToFeature(App::DocumentObject &feature, App::D
     App::PropertyLinkSub lnk;
     this->getAxisLink(lnk);
     std::stringstream linkstr;
-    if(lnk.getValue() == nullptr){
+    if (!lnk.getValue()) {
         linkstr << "None";
     } else {
         linkstr << "(App.getDocument(\"" << lnk.getValue()->getDocument()->getName() <<"\")." << lnk.getValue()->getNameInDocument();

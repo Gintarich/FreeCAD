@@ -22,9 +22,11 @@
 
 import unittest
 
-from TDTest.DHatchTest import DHatchTest
+from TDTest.DrawHatchTest import DrawHatchTest  # noqa: F401
+from TDTest.DrawViewAnnotationTest import DrawViewAnnotationTest  # noqa: F401
+from TDTest.DrawViewImageTest import DrawViewImageTest  # noqa: F401
+from TDTest.DrawViewSymbolTest import DrawViewSymbolTest  # noqa: F401
 from TDTest.DProjGroupTest import DProjGroupTest
-from TDTest.DVAnnoSymImageTest import DVAnnoSymImageTest
 from TDTest.DVDimensionTest import DVDimensionTest
 from TDTest.DVPartTest import DVPartTest
 from TDTest.DVSectionTest import DVSectionTest
@@ -43,22 +45,6 @@ class TechDrawTestCases(unittest.TestCase):
             print("TD DrawViewPart test passed")
         else:
             print("TD DrawViewPart test failed")
-
-    def testHatchCase(self):
-        print("starting TD DrawHatch test")
-        rc = DHatchTest()
-        if rc:
-            print("TD DrawHatch test passed")
-        else:
-            print("TD DrawHatch test failed")
-
-    def testAnnoSymImageCase(self):
-        print("starting TD DrawAnno/Sym/Image test")
-        rc = DVAnnoSymImageTest()
-        if rc:
-            print("TD DrawAnno/Sym/Image test passed")
-        else:
-            print("TD DrawAnno/Sym/Image test failed")
 
     def testProjGroupCase(self):
         print("starting TD DrawProjGroup test")

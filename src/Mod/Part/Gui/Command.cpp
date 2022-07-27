@@ -784,11 +784,7 @@ void CmdPartCompSplitFeatures::languageChange()
 bool CmdPartCompSplitFeatures::isActive(void)
 {
     if (getActiveGuiDocument())
-#if OCC_VERSION_HEX < 0x060900
-        return false;
-#else
         return true;
-#endif
     else
         return false;
 }
@@ -1206,8 +1202,8 @@ void CmdPartMakeSolid::activated(int iMsg)
                     "__o__.Shape=__s__\n"
                     "del __s__, __o__"
                     )
-                    .arg(QLatin1String((*it)->getNameInDocument()))
-                    .arg(QLatin1String((*it)->Label.getValue()));
+                    .arg(QLatin1String((*it)->getNameInDocument()),
+                         QLatin1String((*it)->Label.getValue()));
             }
             else if (type == TopAbs_SHELL) {
                 str = QString::fromLatin1(
@@ -1218,8 +1214,8 @@ void CmdPartMakeSolid::activated(int iMsg)
                     "__o__.Shape=__s__\n"
                     "del __s__, __o__"
                     )
-                    .arg(QLatin1String((*it)->getNameInDocument()))
-                    .arg(QLatin1String((*it)->Label.getValue()));
+                    .arg(QLatin1String((*it)->getNameInDocument()),
+                         QLatin1String((*it)->Label.getValue()));
             }
             else {
                 Base::Console().Message("%s is ignored because it is neither a shell nor a compound.\n",
@@ -2108,11 +2104,11 @@ void CmdPartRuledSurface::activated(int iMsg)
             }
             if (ok && subnames1.size() <= 2) {
                 if (subnames1.size() >= 1) {
-                    curve1 = shape1.getSubShape(subnames1[0].c_str());
+                    curve1 = Part::Feature::getTopoShape(docobj1, subnames1[0].c_str(), true /*need element*/).getShape();
                     link1 = subnames1[0];
                 }
                 if (subnames1.size() == 2) {
-                    curve2 = shape1.getSubShape(subnames1[1].c_str());
+                    curve2 = Part::Feature::getTopoShape(docobj1, subnames1[1].c_str(), true /*need element*/).getShape();
                     link2 = subnames1[1];
                 }
                 if (subnames1.size() == 0) {
@@ -2132,7 +2128,7 @@ void CmdPartRuledSurface::activated(int iMsg)
                 ok = false;
             }
             if (ok && subnames2.size() == 1) {
-                curve2 = shape2.getSubShape(subnames2[0].c_str());
+                curve2 = Part::Feature::getTopoShape(docobj2, subnames2[0].c_str(), true /*need element*/).getShape();
                 link2 = subnames2[0];
             } else {
                 if (subnames2.size() == 0) {
@@ -2484,7 +2480,8 @@ void CmdBoxSelection::activated(int iMsg)
 {
     Q_UNUSED(iMsg);
     PartGui::BoxSelection* sel = new PartGui::BoxSelection();
-    sel->start();
+    sel->setAutoDelete(true);
+    sel->start(TopAbs_FACE);
 }
 
 bool CmdBoxSelection::isActive(void)

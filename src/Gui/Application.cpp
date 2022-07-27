@@ -77,6 +77,7 @@
 #include "MDIViewPy.h"
 #include "SoFCDB.h"
 #include "Selection.h"
+#include "SoFCOffscreenRenderer.h"
 #include "SplitView3DInventor.h"
 #include "TaskView/TaskView.h"
 #include "TaskView/TaskDialogPython.h"
@@ -267,7 +268,7 @@ FreeCADGui_exportSubgraph(PyObject * /*self*/, PyObject *args)
     void* ptr = nullptr;
     try {
         Base::Interpreter().convertSWIGPointerObj("pivy.coin", "SoNode *", proxy, &ptr, 0);
-        SoNode* node = reinterpret_cast<SoNode*>(ptr);
+        SoNode* node = static_cast<SoNode*>(ptr);
         if (node) {
             std::string formatStr(format);
             std::string buffer;
@@ -359,14 +360,6 @@ Application::Application(bool GUIenabled)
             throw Base::RuntimeError("Invalid system settings");
         }
 #endif
-#if 0 // QuantitySpinBox and InputField try to handle the group separator now
-        // http://forum.freecadweb.org/viewtopic.php?f=10&t=6910
-        // A workaround is to disable the group separator for double-to-string conversion, i.e.
-        // setting the flag 'OmitGroupSeparator'.
-        QLocale loc;
-        loc.setNumberOptions(QLocale::OmitGroupSeparator);
-        QLocale::setDefault(loc);
-#endif
 
         // setting up Python binding
         Base::PyGILStateLocker lock;
@@ -450,12 +443,16 @@ Application::Application(bool GUIenabled)
     for (; meth->ml_name != nullptr; meth++) {
         PyObject *descr;
         descr = PyCFunction_NewEx(meth,nullptr,nullptr);
-        if (descr == nullptr)
+        if (!descr)
             break;
         if (PyDict_SetItemString(dict, meth->ml_name, descr) != 0)
             break;
         Py_DECREF(descr);
     }
+
+    SoQtOffscreenRendererPy::init_type();
+    Base::Interpreter().addType(SoQtOffscreenRendererPy::type_object(),
+        module,"SoQtOffscreenRenderer");
 
     App::Application::Config()["COIN_VERSION"] = COIN_VERSION;
 
@@ -495,25 +492,8 @@ Application::~Application()
     WidgetFactorySupplier::destruct();
     BitmapFactoryInst::destruct();
 
-#if 0
-    // we must run the garbage collector before shutting down the SoDB
-    // subsystem because we may reference some class objects of them in Python
-    Base::Interpreter().cleanupSWIG("SoBase *");
-    // finish also Inventor subsystem
-    SoFCDB::finish();
-
-#if (COIN_MAJOR_VERSION >= 2) && (COIN_MINOR_VERSION >= 4)
-    SoDB::finish();
-#elif (COIN_MAJOR_VERSION >= 3)
-    SoDB::finish();
-#else
-    SoDB::cleanup();
-#endif
-#endif
-    {
     Base::PyGILStateLocker lock;
     Py_DECREF(_pcWorkbenchDictionary);
-    }
 
     // save macros
     try {
@@ -522,7 +502,6 @@ Application::~Application()
     catch (const Base::Exception& e) {
         std::cerr << "Saving macros failed: " << e.what() << std::endl;
     }
-    //App::GetApplication().Detach(this);
 
     delete d;
     Instance = nullptr;
@@ -546,12 +525,12 @@ void Application::open(const char* FileName, const char* Module)
     // in case of an automatically created empty document at startup
     App::Document* act = App::GetApplication().getActiveDocument();
     Gui::Document* gui = this->getDocument(act);
-    if (act && act->countObjects() == 0 && gui && gui->isModified() == false){
+    if (act && act->countObjects() == 0 && gui && !gui->isModified()){
         Command::doCommand(Command::App, "App.closeDocument('%s')", act->getName());
         qApp->processEvents(); // an update is needed otherwise the new view isn't shown
     }
 
-    if (Module != nullptr) {
+    if (Module) {
         try {
             if (File.hasExtension("FCStd")) {
                 bool handled = false;
@@ -613,7 +592,7 @@ void Application::importFrom(const char* FileName, const char* DocName, const ch
     string unicodepath = Base::Tools::escapedUnicodeFromUtf8(File.filePath().c_str());
     unicodepath = Base::Tools::escapeEncodeFilename(unicodepath);
 
-    if (Module != nullptr) {
+    if (Module) {
         try {
             // issue module loading
             Command::doCommand(Command::App, "import %s", Module);
@@ -704,7 +683,7 @@ void Application::exportTo(const char* FileName, const char* DocName, const char
     string unicodepath = Base::Tools::escapedUnicodeFromUtf8(File.filePath().c_str());
     unicodepath = Base::Tools::escapeEncodeFilename(unicodepath);
 
-    if (Module != nullptr) {
+    if (Module) {
         try {
             std::vector<App::DocumentObject*> sel = Gui::Selection().getObjectsOfType
                 (App::DocumentObject::getClassTypeId(),DocName);
@@ -2410,7 +2389,7 @@ void Application::setStyleSheet(const QString& qssFile, bool tiledBackground)
     // appear incorrect due to an outdated cache.
     // See https://doc.qt.io/qt-5/qstyle.html#unpolish-1
     // See https://forum.freecadweb.org/viewtopic.php?f=17&t=50783
-    if (d->startingUp == false) {
+    if (!d->startingUp) {
         if (mdi->style())
             mdi->style()->unpolish(qApp);
     }

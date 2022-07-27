@@ -78,6 +78,7 @@
 #include <Mod/TechDraw/App/Geometry.h>
 #include <Mod/TechDraw/App/ArrowPropEnum.h>
 
+#include "QGSPage.h"
 #include "QGVPage.h"
 #include "MDIViewPage.h"
 #include "ViewProviderPage.h"
@@ -127,8 +128,7 @@ TechDraw::DrawPage* DrawGuiUtil::findPage(Gui::Command* cmd)
             Gui::MDIView* mv = w->activeWindow();
             MDIViewPage* mvp = dynamic_cast<MDIViewPage*>(mv);
             if (mvp) {
-                QString windowTitle = mvp->windowTitle();
-                QGVPage* qp = mvp->getQGVPage();
+                QGSPage* qp = mvp->getQGSPage();
                 page = qp->getDrawPage();
             }
             else {
@@ -180,7 +180,7 @@ bool DrawGuiUtil::isDraftObject(App::DocumentObject* obj)
     bool result = false;
     App::PropertyPythonObject* proxy = dynamic_cast<App::PropertyPythonObject*>(obj->getPropertyByName("Proxy"));
 
-    if (proxy != nullptr) {
+    if (proxy) {
         //if no proxy, can not be Draft obj
         //if has proxy, might be Draft obj
         std::stringstream ss;
@@ -212,7 +212,7 @@ bool DrawGuiUtil::isArchObject(App::DocumentObject* obj)
     bool result = false;
     App::PropertyPythonObject* proxy = dynamic_cast<App::PropertyPythonObject*>(obj->getPropertyByName("Proxy"));
 
-    if (proxy != nullptr) {
+    if (proxy) {
         //if no proxy, can not be Arch obj
         //if has proxy, might be Arch obj
         Py::Object proxyObj = proxy->getValue();
@@ -242,7 +242,7 @@ bool DrawGuiUtil::isArchSection(App::DocumentObject* obj)
     bool result = false;
     App::PropertyPythonObject* proxy = dynamic_cast<App::PropertyPythonObject*>(obj->getPropertyByName("Proxy"));
 
-    if (proxy != nullptr) {
+    if (proxy) {
         //if no proxy, can not be Arch obj
         //if has proxy, might be Arch obj
         Py::Object proxyObj = proxy->getValue();

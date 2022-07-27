@@ -1794,7 +1794,7 @@ std::list<AdaptiveOutput> Adaptive2d::Execute(const DPaths &stockPaths, const DP
 		if (opType == OperationType::otClearingOutside)
 		{
 			// add stock paths, with overshooting
-			for (auto p : stockOvershoot)
+			for (const auto& p : stockOvershoot)
 				inputPaths.push_back(p);
 		}
 		else if (opType == OperationType::otClearingInside)
@@ -2630,7 +2630,7 @@ void Adaptive2d::ProcessPolyNode(Paths boundPaths, Paths toolBoundPaths)
 
 	if (!forceInsideOut && FindEntryPointOutside(progressPaths, toolBoundPaths, boundPaths, cleared, entryPoint, toolPos, toolDir))
 	{
-		if (Orientation(engageBounds[0]) == false)
+		if (!Orientation(engageBounds[0]))
 			ReversePath(engageBounds[0]);
 		// add initial offset of cleared area to engage paths
 		Paths outsideEngage;
@@ -2639,7 +2639,7 @@ void Adaptive2d::ProcessPolyNode(Paths boundPaths, Paths toolBoundPaths)
 		clipof.Execute(outsideEngage, toolRadiusScaled - stepOverFactor * toolRadiusScaled);
 		CleanPolygons(outsideEngage);
 		ReversePaths(outsideEngage);
-		for (auto p : outsideEngage)
+		for (const auto& p : outsideEngage)
 			engageBounds.push_back(p);
 		outsideEntry = true;
 	}

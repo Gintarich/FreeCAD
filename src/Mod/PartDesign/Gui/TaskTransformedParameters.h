@@ -66,7 +66,7 @@ public:
      */
     ComboLinks(QComboBox &combo);
     ComboLinks() {_combo = nullptr; doc = nullptr;}
-    void setCombo(QComboBox &combo) {assert(_combo == nullptr); this->_combo = &combo; _combo->clear();}
+    void setCombo(QComboBox &combo) {assert(!_combo); this->_combo = &combo; _combo->clear();}
 
     /**
      * @brief addLink adds an item to the combo. Doesn't check for duplicates.
@@ -156,7 +156,7 @@ public:
         return transactionID;
     }
 
-protected Q_SLOTS:
+protected:
     /**
      * Returns the base transformation view provider
      * For stand alone features it will be view provider associated with this object
@@ -171,6 +171,7 @@ protected Q_SLOTS:
      */
     PartDesign::Transformed *getTopTransformedObject () const;
 
+protected Q_SLOTS:
     /// Connect the subTask OK button to the MultiTransform task
     virtual void onSubTaskButtonOK() {}
     void onButtonAddFeature(const bool checked);

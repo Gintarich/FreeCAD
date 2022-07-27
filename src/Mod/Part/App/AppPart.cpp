@@ -27,106 +27,48 @@
 # include <IGESControl_Controller.hxx>
 # include <STEPControl_Controller.hxx>
 # include <Standard_Version.hxx>
-# include <OSD.hxx>
 #endif
 
+#include <App/Application.h>
 #include <Base/Console.h>
+#include <Base/ExceptionFactory.h>
 #include <Base/Interpreter.h>
 #include <Base/Parameter.h>
-#include <Base/ExceptionFactory.h>
 
-#include <App/Application.h>
-
-#include "Mod/Part/App/ArcOfCirclePy.h"
-#include "Mod/Part/App/ArcOfConicPy.h"
-#include "Mod/Part/App/ArcOfEllipsePy.h"
-#include "Mod/Part/App/ArcOfHyperbolaPy.h"
-#include "Mod/Part/App/ArcOfParabolaPy.h"
-#include "Mod/Part/App/ArcPy.h"
-#include "Mod/Part/App/AttachEnginePy.h"
-#include "Mod/Part/App/BezierCurvePy.h"
-#include "Mod/Part/App/BezierSurfacePy.h"
-#include <Mod/Part/App/BRepFeat/MakePrismPy.h>
-#include "Mod/Part/App/BRepOffsetAPI_MakeFillingPy.h"
-#include "Mod/Part/App/BRepOffsetAPI_MakePipeShellPy.h"
-#include "Mod/Part/App/BSplineCurvePy.h"
-#include "Mod/Part/App/BSplineSurfacePy.h"
-#include "Mod/Part/App/CirclePy.h"
-#include "Mod/Part/App/ConePy.h"
-#include "Mod/Part/App/ConicPy.h"
-#include "Mod/Part/App/CylinderPy.h"
-#include "Mod/Part/App/EllipsePy.h"
-#include "Mod/Part/App/GeometryBoolExtensionPy.h"
-#include "Mod/Part/App/GeometryDoubleExtensionPy.h"
-#include "Mod/Part/App/GeometryIntExtensionPy.h"
-#include "Mod/Part/App/GeometryStringExtensionPy.h"
-#include <Mod/Part/App/Geom2d/ArcOfCircle2dPy.h>
-#include <Mod/Part/App/Geom2d/ArcOfConic2dPy.h>
-#include <Mod/Part/App/Geom2d/ArcOfEllipse2dPy.h>
-#include <Mod/Part/App/Geom2d/ArcOfHyperbola2dPy.h>
-#include <Mod/Part/App/Geom2d/ArcOfParabola2dPy.h>
-#include <Mod/Part/App/Geom2d/BezierCurve2dPy.h>
-#include <Mod/Part/App/Geom2d/BSplineCurve2dPy.h>
-#include <Mod/Part/App/Geom2d/Circle2dPy.h>
-#include <Mod/Part/App/Geom2d/Conic2dPy.h>
-#include <Mod/Part/App/Geom2d/Curve2dPy.h>
-#include <Mod/Part/App/Geom2d/Ellipse2dPy.h>
-#include <Mod/Part/App/Geom2d/Geometry2dPy.h>
-#include <Mod/Part/App/Geom2d/Hyperbola2dPy.h>
-#include <Mod/Part/App/Geom2d/Line2dSegmentPy.h>
-#include <Mod/Part/App/Geom2d/Line2dPy.h>
-#include <Mod/Part/App/Geom2d/OffsetCurve2dPy.h>
-#include <Mod/Part/App/Geom2d/Parabola2dPy.h>
-#include <Mod/Part/App/GeomPlate/BuildPlateSurfacePy.h>
-#include <Mod/Part/App/GeomPlate/CurveConstraintPy.h>
-#include <Mod/Part/App/GeomPlate/PointConstraintPy.h>
-#include <Mod/Part/App/HLRBRep/HLRBRep_AlgoPy.h>
-#include <Mod/Part/App/HLRBRep/HLRBRep_PolyAlgoPy.h>
-#include <Mod/Part/App/HLRBRep/HLRToShapePy.h>
-#include <Mod/Part/App/HLRBRep/PolyHLRToShapePy.h>
-#include "Mod/Part/App/HyperbolaPy.h"
-#include "Mod/Part/App/LinePy.h"
-#include "Mod/Part/App/LineSegmentPy.h"
-#include "Mod/Part/App/OffsetCurvePy.h"
-#include "Mod/Part/App/OffsetSurfacePy.h"
-#include "Mod/Part/App/ParabolaPy.h"
-#include "Mod/Part/App/PartFeaturePy.h"
-#include "Mod/Part/App/PlateSurfacePy.h"
-#include "Mod/Part/App/PlanePy.h"
-#include "Mod/Part/App/PointPy.h"
-#include <Mod/Part/App/PrecisionPy.h>
-#include "Mod/Part/App/RectangularTrimmedSurfacePy.h"
-#include <Mod/Part/App/ShapeUpgrade/UnifySameDomainPy.h>
-#include "Mod/Part/App/SpherePy.h"
-#include "Mod/Part/App/SurfaceOfExtrusionPy.h"
-#include "Mod/Part/App/SurfaceOfRevolutionPy.h"
-#include "Mod/Part/App/ToroidPy.h"
-#include "Mod/Part/App/TopoShapeCompoundPy.h"
-#include "Mod/Part/App/TopoShapeCompSolidPy.h"
-#include "Mod/Part/App/TopoShapeEdgePy.h"
-#include "Mod/Part/App/TopoShapeFacePy.h"
-#include "Mod/Part/App/TopoShapeWirePy.h"
-#include "Mod/Part/App/TopoShapePy.h"
-#include "Mod/Part/App/TopoShapeSolidPy.h"
-#include "Mod/Part/App/TopoShapeVertexPy.h"
-#include "Mod/Part/App/TopoShapeShellPy.h"
-
+#include "ArcOfCirclePy.h"
+#include "ArcOfConicPy.h"
+#include "ArcOfEllipsePy.h"
+#include "ArcOfHyperbolaPy.h"
+#include "ArcOfParabolaPy.h"
+#include "ArcPy.h"
 #include "Attacher.h"
 #include "AttachExtension.h"
+#include "AttachEnginePy.h"
+#include "BezierCurvePy.h"
+#include "BezierSurfacePy.h"
 #include "BodyBase.h"
 #include "BodyBasePy.h"
+#include "BRepOffsetAPI_MakeFillingPy.h"
+#include "BRepOffsetAPI_MakePipeShellPy.h"
+#include "BSplineCurvePy.h"
+#include "BSplineSurfacePy.h"
+#include "CirclePy.h"
+#include "ConePy.h"
+#include "ConicPy.h"
+#include "CustomFeature.h"
+#include "CylinderPy.h"
 #include "DatumFeature.h"
+#include "EllipsePy.h"
 #include "FaceMaker.h"
 #include "FaceMakerBullseye.h"
 #include "FaceMakerCheese.h"
 #include "FeatureChamfer.h"
 #include "FeatureCompound.h"
-#include "FeatureGeometrySet.h"
-#include "FeatureFace.h"
 #include "FeatureExtrusion.h"
+#include "FeatureFace.h"
 #include "FeatureFillet.h"
+#include "FeatureGeometrySet.h"
 #include "FeatureMirroring.h"
-#include "FeatureRevolution.h"
 #include "FeatureOffset.h"
 #include "FeaturePartBoolean.h"
 #include "FeaturePartBox.h"
@@ -141,19 +83,103 @@
 #include "FeaturePartPolygon.h"
 #include "FeaturePartSection.h"
 #include "FeaturePartSpline.h"
-#include "PrimitiveFeature.h"
-#include "PartFeatures.h"
+#include "FeatureRevolution.h"
+#include "Geometry.h"
+#include "Geometry2d.h"
+#include "GeometryBoolExtensionPy.h"
+#include "GeometryDefaultExtension.h"
+#include "GeometryDoubleExtensionPy.h"
+#include "GeometryExtension.h"
+#include "GeometryIntExtensionPy.h"
+#include "GeometryMigrationExtension.h"
+#include "GeometryStringExtensionPy.h"
+#include "HyperbolaPy.h"
+#include "ImportStep.h"
+#include "LinePy.h"
+#include "LineSegmentPy.h"
+#include "OffsetCurvePy.h"
+#include "OffsetSurfacePy.h"
+#include "ParabolaPy.h"
 #include "Part2DObject.h"
 #include "Part2DObjectPy.h"
-#include "CustomFeature.h"
-#include "Geometry.h"
-#include "GeometryDefaultExtension.h"
-#include "GeometryExtension.h"
-#include "GeometryMigrationExtension.h"
-#include "Geometry2d.h"
+#include "PartFeaturePy.h"
+#include "PartFeatures.h"
+#include "PlanePy.h"
+#include "PlateSurfacePy.h"
+#include "PointPy.h"
+#include "PrecisionPy.h"
+#include "PrimitiveFeature.h"
+#include "RectangularTrimmedSurfacePy.h"
+#include "SpherePy.h"
+#include "SurfaceOfExtrusionPy.h"
+#include "SurfaceOfRevolutionPy.h"
+#include "TopoShapeCompoundPy.h"
+#include "TopoShapeCompSolidPy.h"
+#include "TopoShapeEdgePy.h"
+#include "TopoShapeFacePy.h"
+#include "TopoShapePy.h"
+#include "TopoShapeShellPy.h"
+#include "TopoShapeSolidPy.h"
+#include "TopoShapeVertexPy.h"
+#include "TopoShapeWirePy.h"
+#include "ToroidPy.h"
 #include "OCCError.h"
 #include "PrismExtension.h"
 #include "PropertyGeometryList.h"
+
+#include <BRepFeat/MakePrismPy.h>
+
+#include <ChFi2d/ChFi2d_AnaFilletAlgoPy.h>
+#include <ChFi2d/ChFi2d_ChamferAPIPy.h>
+#include <ChFi2d/ChFi2d_FilletAlgoPy.h>
+#include <ChFi2d/ChFi2d_FilletAPIPy.h>
+
+#include <Geom2d/ArcOfCircle2dPy.h>
+#include <Geom2d/ArcOfConic2dPy.h>
+#include <Geom2d/ArcOfEllipse2dPy.h>
+#include <Geom2d/ArcOfHyperbola2dPy.h>
+#include <Geom2d/ArcOfParabola2dPy.h>
+#include <Geom2d/BezierCurve2dPy.h>
+#include <Geom2d/BSplineCurve2dPy.h>
+#include <Geom2d/Circle2dPy.h>
+#include <Geom2d/Conic2dPy.h>
+#include <Geom2d/Curve2dPy.h>
+#include <Geom2d/Ellipse2dPy.h>
+#include <Geom2d/Geometry2dPy.h>
+#include <Geom2d/Hyperbola2dPy.h>
+#include <Geom2d/Line2dPy.h>
+#include <Geom2d/Line2dSegmentPy.h>
+#include <Geom2d/OffsetCurve2dPy.h>
+#include <Geom2d/Parabola2dPy.h>
+
+#include <GeomPlate/BuildPlateSurfacePy.h>
+#include <GeomPlate/CurveConstraintPy.h>
+#include <GeomPlate/PointConstraintPy.h>
+
+#include <HLRBRep/HLRBRep_AlgoPy.h>
+#include <HLRBRep/HLRBRep_PolyAlgoPy.h>
+#include <HLRBRep/HLRToShapePy.h>
+#include <HLRBRep/PolyHLRToShapePy.h>
+
+#include <ShapeFix/ShapeFix_EdgeConnectPy.h>
+#include <ShapeFix/ShapeFix_EdgePy.h>
+#include <ShapeFix/ShapeFix_FaceConnectPy.h>
+#include <ShapeFix/ShapeFix_FacePy.h>
+#include <ShapeFix/ShapeFix_FreeBoundsPy.h>
+#include <ShapeFix/ShapeFix_FixSmallFacePy.h>
+#include <ShapeFix/ShapeFix_FixSmallSolidPy.h>
+#include <ShapeFix/ShapeFix_RootPy.h>
+#include <ShapeFix/ShapeFix_ShapePy.h>
+#include <ShapeFix/ShapeFix_ShapeTolerancePy.h>
+#include <ShapeFix/ShapeFix_ShellPy.h>
+#include <ShapeFix/ShapeFix_SolidPy.h>
+#include <ShapeFix/ShapeFix_SplitCommonVertexPy.h>
+#include <ShapeFix/ShapeFix_SplitToolPy.h>
+#include <ShapeFix/ShapeFix_WireframePy.h>
+#include <ShapeFix/ShapeFix_WirePy.h>
+#include <ShapeFix/ShapeFix_WireVertexPy.h>
+
+#include <ShapeUpgrade/UnifySameDomainPy.h>
 
 
 namespace Part {
@@ -333,9 +359,36 @@ PyMOD_INIT_FUNC(Part)
     Base::Interpreter().addType(&Part::CurveConstraintPy::Type, geomPlate, "CurveConstraint");
     Base::Interpreter().addType(&Part::PointConstraintPy::Type, geomPlate, "PointConstraint");
 
+    // ShapeFix sub-module
+    PyObject* shapeFix(module.getAttr("ShapeFix").ptr());
+    Base::Interpreter().addType(&Part::ShapeFix_RootPy::Type, shapeFix, "Root");
+    Base::Interpreter().addType(&Part::ShapeFix_EdgePy::Type, shapeFix, "Edge");
+    Base::Interpreter().addType(&Part::ShapeFix_FacePy::Type, shapeFix, "Face");
+    Base::Interpreter().addType(&Part::ShapeFix_ShapePy::Type, shapeFix, "Shape");
+    Base::Interpreter().addType(&Part::ShapeFix_ShellPy::Type, shapeFix, "Shell");
+    Base::Interpreter().addType(&Part::ShapeFix_SolidPy::Type, shapeFix, "Solid");
+    Base::Interpreter().addType(&Part::ShapeFix_WirePy::Type, shapeFix, "Wire");
+    Base::Interpreter().addType(&Part::ShapeFix_WireframePy::Type, shapeFix, "Wireframe");
+    Base::Interpreter().addType(&Part::ShapeFix_WireVertexPy::Type, shapeFix, "WireVertex");
+    Base::Interpreter().addType(&Part::ShapeFix_EdgeConnectPy::Type, shapeFix, "EdgeConnect");
+    Base::Interpreter().addType(&Part::ShapeFix_FaceConnectPy::Type, shapeFix, "FaceConnect");
+    Base::Interpreter().addType(&Part::ShapeFix_FixSmallFacePy::Type, shapeFix, "FixSmallFace");
+    Base::Interpreter().addType(&Part::ShapeFix_FixSmallSolidPy::Type, shapeFix, "FixSmallSolid");
+    Base::Interpreter().addType(&Part::ShapeFix_FreeBoundsPy::Type, shapeFix, "FreeBounds");
+    Base::Interpreter().addType(&Part::ShapeFix_ShapeTolerancePy::Type, shapeFix, "ShapeTolerance");
+    Base::Interpreter().addType(&Part::ShapeFix_SplitCommonVertexPy::Type, shapeFix, "SplitCommonVertex");
+    Base::Interpreter().addType(&Part::ShapeFix_SplitToolPy::Type, shapeFix, "SplitTool");
+
     // ShapeUpgrade sub-module
     PyObject* shapeUpgrade(module.getAttr("ShapeUpgrade").ptr());
     Base::Interpreter().addType(&Part::UnifySameDomainPy::Type, shapeUpgrade, "UnifySameDomain");
+
+    // ChFi2d sub-module
+    PyObject* chFi2d(module.getAttr("ChFi2d").ptr());
+    Base::Interpreter().addType(&Part::ChFi2d_AnaFilletAlgoPy::Type, chFi2d, "AnaFilletAlgo");
+    Base::Interpreter().addType(&Part::ChFi2d_FilletAlgoPy::Type, chFi2d, "FilletAlgo");
+    Base::Interpreter().addType(&Part::ChFi2d_ChamferAPIPy::Type, chFi2d, "ChamferAPI");
+    Base::Interpreter().addType(&Part::ChFi2d_FilletAPIPy::Type, chFi2d, "FilletAPI");
 
     Part::TopoShape             ::init();
     Part::PropertyPartShape     ::init();
@@ -485,78 +538,8 @@ PyMOD_INIT_FUNC(Part)
 
     IGESControl_Controller::Init();
     STEPControl_Controller::Init();
-    // set the user-defined settings
-    Base::Reference<ParameterGrp> hGrp = App::GetApplication().GetUserParameter()
-        .GetGroup("BaseApp")->GetGroup("Preferences")->GetGroup("Mod/Part");
 
-    // General
-    Base::Reference<ParameterGrp> hGenGrp = hGrp->GetGroup("General");
-    // http://www.opencascade.org/org/forum/thread_20801/
-    // read.surfacecurve.mode:
-    // A preference for the computation of curves in an entity which has both 2D and 3D representation.
-    // Each TopoDS_Edge in TopoDS_Face must have a 3D and 2D curve that references the surface.
-    // If both 2D and 3D representation of the entity are present, the computation of these curves depends on
-    // the following values of parameter:
-    // 0: "Default" - no preference, both curves are taken
-    // 3: "3DUse_Preferred" - 3D curves are used to rebuild 2D ones
-    // Additional modes for IGES
-    //  2: "2DUse_Preferred" - the 2D is used to rebuild the 3D in case of their inconsistency
-    // -2: "2DUse_Forced" - the 2D is always used to rebuild the 3D (even if 2D is present in the file)
-    // -3: "3DUse_Forced" - the 3D is always used to rebuild the 2D (even if 2D is present in the file)
-    int readsurfacecurve = hGenGrp->GetInt("ReadSurfaceCurveMode", 0);
-    Interface_Static::SetIVal("read.surfacecurve.mode", readsurfacecurve);
-
-    // write.surfacecurve.mode (STEP-only):
-    // This parameter indicates whether parametric curves (curves in parametric space of surface) should be
-    // written into the STEP file. This parameter can be set to Off in order to minimize the size of the resulting
-    // STEP file.
-    // Off (0) : writes STEP files without pcurves. This mode decreases the size of the resulting file.
-    // On (1) : (default) writes pcurves to STEP file
-    int writesurfacecurve = hGenGrp->GetInt("WriteSurfaceCurveMode", 1);
-    Interface_Static::SetIVal("write.surfacecurve.mode", writesurfacecurve);
-
-    //IGES handling
-    Base::Reference<ParameterGrp> hIgesGrp = hGrp->GetGroup("IGES");
-    int value = Interface_Static::IVal("write.iges.brep.mode");
-    bool brep = hIgesGrp->GetBool("BrepMode", value > 0);
-    Interface_Static::SetIVal("write.iges.brep.mode",brep ? 1 : 0);
-    Interface_Static::SetCVal("write.iges.header.company", hIgesGrp->GetASCII("Company").c_str());
-    Interface_Static::SetCVal("write.iges.header.author", hIgesGrp->GetASCII("Author").c_str());
-    Interface_Static::SetCVal("write.iges.header.product", hIgesGrp->GetASCII("Product",
-       Interface_Static::CVal("write.iges.header.product")).c_str());
-
-    int unitIges = hIgesGrp->GetInt("Unit", 0);
-    switch (unitIges) {
-        case 1:
-            Interface_Static::SetCVal("write.iges.unit","M");
-            break;
-        case 2:
-            Interface_Static::SetCVal("write.iges.unit","INCH");
-            break;
-        default:
-            Interface_Static::SetCVal("write.iges.unit","MM");
-            break;
-    }
-
-    //STEP handling
-    Base::Reference<ParameterGrp> hStepGrp = hGrp->GetGroup("STEP");
-    int unitStep = hStepGrp->GetInt("Unit", 0);
-    switch (unitStep) {
-        case 1:
-            Interface_Static::SetCVal("write.step.unit","M");
-            break;
-        case 2:
-            Interface_Static::SetCVal("write.step.unit","INCH");
-            break;
-        default:
-            Interface_Static::SetCVal("write.step.unit","MM");
-            break;
-    }
-
-    std::string ap = hStepGrp->GetASCII("Scheme", Interface_Static::CVal("write.step.schema"));
-    Interface_Static::SetCVal("write.step.schema", ap.c_str());
-    Interface_Static::SetCVal("write.step.product.name", hStepGrp->GetASCII("Product",
-       Interface_Static::CVal("write.step.product.name")).c_str());
+    ImportExportSettings::initialize();
 
     PyMOD_Return(partModule);
 }

@@ -69,7 +69,7 @@ Gui::PropertyEditor::PropertyItemFactory* Gui::PropertyEditor::PropertyItemFacto
 
 PropertyItemFactory& PropertyItemFactory::instance()
 {
-    if (_singleton == nullptr)
+    if (!_singleton)
         _singleton = new PropertyItemFactory;
     return *_singleton;
 }
@@ -123,7 +123,7 @@ void PropertyItem::reset()
 void PropertyItem::onChange()
 {
     if(hasExpression()) {
-        for(auto child : childItems) {
+        for(auto child : qAsConst(childItems)) {
             if(child && child->hasExpression())
                 child->setExpression(std::shared_ptr<App::Expression>());
         }
@@ -1356,7 +1356,7 @@ public:
     }
 
     bool apply(const std::string &propName) {
-        if (!ExpressionBinding::apply(propName)) {
+        if (!ExpressionBinding::apply(propName)) { // clazy:exclude=skipped-base-method
             QVariant data = property("coords");
             if (data.canConvert<Base::Vector3d>()) {
                 const Base::Vector3d& value = data.value<Base::Vector3d>();
@@ -1554,7 +1554,7 @@ void PropertyEditorWidget::setValue(const QVariant& val)
 {
     variant = val;
     showValue(variant);
-    valueChanged(variant);
+    Q_EMIT valueChanged(variant);
 }
 
 // ---------------------------------------------------------------
@@ -1724,9 +1724,9 @@ void PropertyVectorDistanceItem::setValue(const QVariant& variant)
 
     Base::QuantityFormat format(Base::QuantityFormat::Fixed, decimals());
     QString data = QString::fromLatin1("(%1, %2, %3)")
-                    .arg(Base::UnitsApi::toNumber(x, format))
-                    .arg(Base::UnitsApi::toNumber(y, format))
-                    .arg(Base::UnitsApi::toNumber(z, format));
+                    .arg(Base::UnitsApi::toNumber(x, format),
+                         Base::UnitsApi::toNumber(y, format),
+                         Base::UnitsApi::toNumber(z, format));
     setPropertyValue(data);
 }
 
@@ -2412,10 +2412,10 @@ void PropertyRotationItem::setValue(const QVariant& value)
     h.getValue(axis, angle);
     Base::QuantityFormat format(Base::QuantityFormat::Fixed, decimals());
     QString data = QString::fromLatin1("App.Rotation(App.Vector(%1,%2,%3),%4)")
-                    .arg(Base::UnitsApi::toNumber(axis.x, format))
-                    .arg(Base::UnitsApi::toNumber(axis.y, format))
-                    .arg(Base::UnitsApi::toNumber(axis.z, format))
-                    .arg(Base::UnitsApi::toNumber(angle, format));
+                    .arg(Base::UnitsApi::toNumber(axis.x, format),
+                         Base::UnitsApi::toNumber(axis.y, format),
+                         Base::UnitsApi::toNumber(axis.z, format),
+                         Base::UnitsApi::toNumber(angle, format));
     setPropertyValue(data);
 }
 
@@ -2724,13 +2724,13 @@ void PropertyPlacementItem::setValue(const QVariant& value)
     QString data = QString::fromLatin1("App.Placement("
                                       "App.Vector(%1,%2,%3),"
                                       "App.Rotation(App.Vector(%4,%5,%6),%7))")
-                    .arg(Base::UnitsApi::toNumber(pos.x, format))
-                    .arg(Base::UnitsApi::toNumber(pos.y, format))
-                    .arg(Base::UnitsApi::toNumber(pos.z, format))
-                    .arg(Base::UnitsApi::toNumber(axis.x, format))
-                    .arg(Base::UnitsApi::toNumber(axis.y, format))
-                    .arg(Base::UnitsApi::toNumber(axis.z, format))
-                    .arg(Base::UnitsApi::toNumber(angle, format));
+                    .arg(Base::UnitsApi::toNumber(pos.x, format),
+                         Base::UnitsApi::toNumber(pos.y, format),
+                         Base::UnitsApi::toNumber(pos.z, format),
+                         Base::UnitsApi::toNumber(axis.x, format),
+                         Base::UnitsApi::toNumber(axis.y, format),
+                         Base::UnitsApi::toNumber(axis.z, format),
+                         Base::UnitsApi::toNumber(angle, format));
     setPropertyValue(data);
 }
 
@@ -2800,8 +2800,9 @@ QStringList PropertyEnumItem::getEnum() const
     auto prop = getFirstProperty();
     if (prop && prop->getTypeId().isDerivedFrom(App::PropertyEnumeration::getClassTypeId())) {
         const App::PropertyEnumeration* prop_enum = static_cast<const App::PropertyEnumeration*>(prop);
-        for(int i=0; i<prop_enum->getEnum().maxValue(); ++i)
-            res.push_back(QString::fromUtf8(prop_enum->getEnums()[i]));
+        std::vector<std::string> enums = prop_enum->getEnumVector();
+        for (const auto& it : enums)
+            res.push_back(QString::fromStdString(it));
     }
     return res;
 }
@@ -2887,7 +2888,7 @@ QWidget* PropertyEnumItem::createEditor(QWidget* parent, const QObject* receiver
     for (std::vector<App::Property*>::const_iterator it = items.begin(); it != items.end(); ++it) {
         if ((*it)->getTypeId() == App::PropertyEnumeration::getClassTypeId()) {
             App::PropertyEnumeration* prop = static_cast<App::PropertyEnumeration*>(*it);
-            if (prop->getEnums() == nullptr) {
+            if (!prop->hasEnums()) {
                 commonModes.clear();
                 return nullptr;
             }
@@ -2970,7 +2971,7 @@ QWidget* PropertyEnumItem::createEditor(QWidget* parent, const QObject* receiver
     });
     QObject::connect(menu, &QMenu::triggered, this, [=](QAction *action) {
         button->setText(action->data().toString());
-        button->picked();
+        Q_EMIT button->picked();
     });
     QObject::connect(button, SIGNAL(picked()), receiver, method);
     return button;
@@ -4373,7 +4374,7 @@ void LinkLabel::onLinkChanged() {
         auto links = dlg->currentLinks();
         if(links != dlg->originalLinks()) {
             link = QVariant::fromValue(links);
-            /*emit*/ linkChanged(link);
+            Q_EMIT  linkChanged(link);
             updatePropertyLink();
         }
     }

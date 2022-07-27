@@ -422,7 +422,8 @@ GLuint NaviCubeImplementation::createCubeFaceTex(QtGLWidget* gl, float gap, cons
 	Q_UNUSED(gl);
 	QOpenGLTexture* texture = new QOpenGLTexture(image.mirrored());
 	m_glTextures.push_back(texture);
-	texture->setMinificationFilter(QOpenGLTexture::Nearest);
+	texture->generateMipMaps();
+	texture->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
 	texture->setMagnificationFilter(QOpenGLTexture::Linear);
 	return texture->textureId();
 }
@@ -527,7 +528,8 @@ GLuint NaviCubeImplementation::createButtonTex(QtGLWidget* gl, int button) {
 	Q_UNUSED(gl);
 	QOpenGLTexture* texture = new QOpenGLTexture(image.mirrored());
 	m_glTextures.push_back(texture);
-	texture->setMinificationFilter(QOpenGLTexture::Nearest);
+	texture->generateMipMaps();
+	texture->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
 	texture->setMagnificationFilter(QOpenGLTexture::Linear);
 	return texture->textureId();
 }
@@ -599,7 +601,8 @@ GLuint NaviCubeImplementation::createMenuTex(QtGLWidget* gl, bool forPicking) {
 	Q_UNUSED(gl);
 	QOpenGLTexture* texture = new QOpenGLTexture(image.mirrored());
 	m_glTextures.push_back(texture);
-	texture->setMinificationFilter(QOpenGLTexture::Linear);
+	texture->generateMipMaps();
+	texture->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
 	texture->setMagnificationFilter(QOpenGLTexture::Linear);
 	return texture->textureId();
 }
@@ -900,7 +903,7 @@ void NaviCubeImplementation::drawNaviCube(bool pickMode) {
 	// FIXME actually now that we have Qt5, we could probably do this earlier (as we do not need the opengl context)
 	if (!m_NaviCubeInitialised) {
 		QtGLWidget* gl = static_cast<QtGLWidget*>(m_View3DInventorViewer->viewport());
-		if (gl == nullptr)
+		if (!gl)
 			return;
 		initNaviCube(gl);
 		m_NaviCubeInitialised = true;

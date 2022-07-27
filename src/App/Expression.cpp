@@ -1517,7 +1517,7 @@ void OperatorExpression::_toString(std::ostream &s, bool persistent,int) const
         leftOperator = static_cast<OperatorExpression*>(left)->op;
     if (left->priority() < priority()) // Check on operator priority first
         needsParens = true;
-    else if (leftOperator == op) { // Equal priority?
+    else if (leftOperator == op) { // Same operator ?
         if (!isLeftAssociative())
             needsParens = true;
         //else if (!isCommutative())
@@ -1588,14 +1588,14 @@ void OperatorExpression::_toString(std::ostream &s, bool persistent,int) const
         rightOperator = static_cast<OperatorExpression*>(right)->op;
     if (right->priority() < priority()) // Check on operator priority first
         needsParens = true;
-    else if (rightOperator == op) { // Equal priority?
+    else if (rightOperator == op) { // Same operator ?
         if (!isRightAssociative())
             needsParens = true;
         else if (!isCommutative())
             needsParens = true;
     }
-    else if (right->priority() == priority()) {
-        if (!isRightAssociative())
+    else if (right->priority() == priority()) { // Same priority ?
+        if (!isRightAssociative() || rightOperator == MOD)
             needsParens = true;
     }
 
@@ -1976,11 +1976,11 @@ Py::Object FunctionExpression::evalAggregate(
                 if (!p)
                     continue;
 
-                if ((qp = freecad_dynamic_cast<PropertyQuantity>(p)) != nullptr)
+                if ((qp = freecad_dynamic_cast<PropertyQuantity>(p)))
                     c->collect(qp->getQuantityValue());
-                else if ((fp = freecad_dynamic_cast<PropertyFloat>(p)) != nullptr)
+                else if ((fp = freecad_dynamic_cast<PropertyFloat>(p)))
                     c->collect(Quantity(fp->getValue()));
-                else if ((ip = freecad_dynamic_cast<PropertyInteger>(p)) != nullptr)
+                else if ((ip = freecad_dynamic_cast<PropertyInteger>(p)))
                     c->collect(Quantity(ip->getValue()));
                 else
                     _EXPR_THROW("Invalid property type for aggregate.", owner);
@@ -2858,7 +2858,7 @@ Expression *ConditionalExpression::simplify() const
     std::unique_ptr<Expression> e(condition->simplify());
     NumberExpression * v = freecad_dynamic_cast<NumberExpression>(e.get());
 
-    if (v == nullptr)
+    if (!v)
         return new ConditionalExpression(owner, condition->simplify(), trueExpr->simplify(), falseExpr->simplify());
     else {
         if (fabs(v->getValue()) > 0.5)
@@ -3327,7 +3327,7 @@ Expression * App::ExpressionParser::parse(const App::DocumentObject *owner, cons
     if (result != 0)
         throw ParserError("Failed to parse expression.");
 
-    if (ScanResult == nullptr)
+    if (!ScanResult)
         throw ParserError("Unknown error in expression");
 
     if (valueExpression)
@@ -3355,7 +3355,7 @@ UnitExpression * ExpressionParser::parseUnit(const App::DocumentObject *owner, c
     if (result != 0)
         throw ParserError("Failed to parse expression.");
 
-    if (ScanResult == nullptr)
+    if (!ScanResult)
         throw ParserError("Unknown error in expression");
 
     // Simplify expression

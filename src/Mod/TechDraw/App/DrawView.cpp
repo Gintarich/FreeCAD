@@ -77,8 +77,8 @@ DrawView::DrawView(void):
     mouseMove(false)
 {
     static const char *group = "Base";
-    ADD_PROPERTY_TYPE(X, (0.0), group, (App::PropertyType)(App::Prop_None), "X position");
-    ADD_PROPERTY_TYPE(Y, (0.0), group, (App::PropertyType)(App::Prop_None), "Y position");
+    ADD_PROPERTY_TYPE(X, (0.0), group, (App::PropertyType)(App::Prop_Output), "X position");
+    ADD_PROPERTY_TYPE(Y, (0.0), group, (App::PropertyType)(App::Prop_Output), "Y position");
     ADD_PROPERTY_TYPE(LockPosition, (false), group, App::Prop_Output, "Lock View position to parent Page or Group");
     ADD_PROPERTY_TYPE(Rotation, (0.0), group, App::Prop_Output, "Rotation in degrees counterclockwise");
 
@@ -99,14 +99,13 @@ DrawView::~DrawView()
 App::DocumentObjectExecReturn *DrawView::execute(void)
 {
 //    Base::Console().Message("DV::execute() - %s touched: %d\n", getNameInDocument(), isTouched());
-    if (findParentPage() == nullptr) {
+    if (!findParentPage()) {
         return App::DocumentObject::execute();
     }
     handleXYLock();
-    requestPaint();
-    //documentObject::recompute causes an infinite loop.
     //should not be necessary to purgeTouched here, but it prevents a superfluous feature recompute
     purgeTouched();                           //this should not be necessary!
+    requestPaint();
     return App::DocumentObject::execute();
 }
 
@@ -133,7 +132,7 @@ void DrawView::onChanged(const App::Property* prop)
             auto page = findParentPage();
             if (ScaleType.isValue("Page")) {
                 Scale.setStatus(App::Property::ReadOnly,true);
-                if (page != nullptr) {
+                if (page) {
                     if(std::abs(page->Scale.getValue() - getScale()) > FLT_EPSILON) {
                        Scale.setValue(page->Scale.getValue());
                     }
@@ -159,9 +158,7 @@ void DrawView::onChanged(const App::Property* prop)
             requestPaint();
         } else if ((prop == &X) ||
             (prop == &Y)) {
-            DrawView::execute();
-            X.purgeTouched();
-            Y.purgeTouched();
+            //X,Y changes are only interesting to DPGI and Gui side
         }
     }
     App::DocumentObject::onChanged(prop);
@@ -388,7 +385,6 @@ bool DrawView::checkFit(void) const
 }
 
 //!check if View is too big for page
-//should check if unscaled rect is too big for page
 bool DrawView::checkFit(TechDraw::DrawPage* p) const
 {
     bool result = true;
@@ -396,12 +392,12 @@ bool DrawView::checkFit(TechDraw::DrawPage* p) const
 
     double width = 0.0;
     double height = 0.0;
-    QRectF viewBox = getRect();    //rect is scaled
+    QRectF viewBox = getRect();         //rect is scaled
     if (!viewBox.isValid()) {
         result = true;
     } else {
-        width = viewBox.width() / getScale();        //unscaled rect w x h
-        height = viewBox.height() / getScale(); 
+        width = viewBox.width();        //scaled rect w x h
+        height = viewBox.height();
         width *= fudge;
         height *= fudge;
         if ( (width > p->getPageWidth()) ||
@@ -417,8 +413,14 @@ void DrawView::setPosition(double x, double y, bool force)
 //    Base::Console().Message("DV::setPosition(%.3f,%.3f) - \n",x,y,getNameInDocument());
     if ( (!isLocked()) ||
          (force) ) {
-        X.setValue(x);
-        Y.setValue(y);
+        double currX = X.getValue();
+        double currY = X.getValue();
+        if (!DrawUtil::fpCompare(currX, x, 0.001)) {    // 0.001mm tolerance
+            X.setValue(x);
+        }
+        if (!DrawUtil::fpCompare(currY, y, 0.001)) {
+            Y.setValue(y);
+        }
     }
 }
 
@@ -479,7 +481,7 @@ void DrawView::handleChangedPropertyType(
         if (strcmp(glink.getTypeId().getName(), TypeName) == 0) {            //property in file is plg
             glink.setContainer(this);
             glink.Restore(reader);
-            if (glink.getValue() != nullptr) {
+            if (glink.getValue()) {
                 static_cast<App::PropertyLinkList*>(prop)->setScope(App::LinkScope::Global);
                 static_cast<App::PropertyLinkList*>(prop)->setValue(glink.getValue());
             }
@@ -487,7 +489,7 @@ void DrawView::handleChangedPropertyType(
         else if (strcmp(link.getTypeId().getName(), TypeName) == 0) {            //property in file is pl
             link.setContainer(this);
             link.Restore(reader);
-            if (link.getValue() != nullptr) {
+            if (link.getValue()) {
                 static_cast<App::PropertyLinkList*>(prop)->setScope(App::LinkScope::Global);
                 static_cast<App::PropertyLinkList*>(prop)->setValue(link.getValue());
             }

@@ -278,7 +278,12 @@ bool DocumentWeakPtrT::expired() const noexcept
     return (d->_document == nullptr);
 }
 
-Gui::Document* DocumentWeakPtrT::operator->() noexcept
+Gui::Document* DocumentWeakPtrT::operator*() const noexcept
+{
+    return d->_document;
+}
+
+Gui::Document* DocumentWeakPtrT::operator->() const noexcept
 {
     return d->_document;
 }
@@ -378,7 +383,12 @@ ViewProviderWeakPtrT& ViewProviderWeakPtrT::operator= (ViewProviderDocumentObjec
     return *this;
 }
 
-ViewProviderDocumentObject* ViewProviderWeakPtrT::operator->() noexcept
+ViewProviderDocumentObject* ViewProviderWeakPtrT::operator*() const noexcept
+{
+    return d->get();
+}
+
+ViewProviderDocumentObject* ViewProviderWeakPtrT::operator->() const noexcept
 {
     return d->get();
 }
@@ -412,7 +422,7 @@ void DocumentObserver::attachDocument(Document* doc)
 {
     detachDocument();
 
-    if (doc == nullptr)
+    if (!doc)
         return;
 
     this->connectDocumentCreatedObject = doc->signalNewObject.connect(std::bind

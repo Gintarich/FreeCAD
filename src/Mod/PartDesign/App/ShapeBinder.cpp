@@ -125,6 +125,9 @@ App::DocumentObjectExecReturn* ShapeBinder::execute(void) {
             this->Placement.setValue(shape.getTransform());
             this->Shape.setValue(shape);
         }
+        else {
+            this->Shape.setValue(shape);
+        }
     }
 
     return Part::Feature::execute();
@@ -201,7 +204,7 @@ Part::TopoShape ShapeBinder::buildShapeFromReferences(App::GeoFeature* obj, std:
             return part->Shape.getValue();
 
         std::vector<TopoDS_Shape> shapes;
-        for (std::string sub : subs) {
+        for (const std::string& sub : subs) {
             shapes.push_back(part->Shape.getShape().getSubShape(sub.c_str()));
         }
 

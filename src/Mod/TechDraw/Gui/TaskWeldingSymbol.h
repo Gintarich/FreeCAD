@@ -50,6 +50,7 @@ class Face;
 
 namespace TechDrawGui
 {
+class QGSPage;
 class QGVPage;
 class QGIView;
 class QGILeaderLine;
@@ -97,6 +98,7 @@ public:
     ~TaskWeldingSymbol();
 
 public Q_SLOTS:
+    void symbolDialog(const char* source);
     void onArrowSymbolCreateClicked();
     void onArrowSymbolClicked();
     void onOtherSymbolCreateClicked();

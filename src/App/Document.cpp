@@ -2402,7 +2402,7 @@ private:
                     fn = str.str();
                 }
 
-                if (fi.renameFile(fn.c_str()) == false)
+                if (!fi.renameFile(fn.c_str()))
                     Base::Console().Warning("Cannot rename project file to backup file\n");
             }
             else {
@@ -2411,7 +2411,7 @@ private:
         }
 
         Base::FileInfo tmp(sourcename);
-        if (tmp.renameFile(targetname.c_str()) == false) {
+        if (!tmp.renameFile(targetname.c_str())) {
             throw Base::FileException(
                 "Cannot rename tmp save file to project file", targetname);
         }
@@ -2511,7 +2511,7 @@ private:
                             }
                         }
                         else {
-                            if (renameFileNoErase(fi, fn+".FCBak") == false) {
+                            if (!renameFileNoErase(fi, fn+".FCBak")) {
                                 fn = fn + "-";
                             }
                             else {
@@ -2555,7 +2555,7 @@ private:
         }
 
         Base::FileInfo tmp(sourcename);
-        if (tmp.renameFile(targetname.c_str()) == false) {
+        if (!tmp.renameFile(targetname.c_str())) {
             throw Base::FileException(
                 "Save interrupted: Cannot rename temporary file to project file", tmp);
         }
@@ -2614,23 +2614,30 @@ bool Document::saveToFile(const char* filename) const
     bool policy = App::GetApplication().GetParameterGroupByPath
                 ("User parameter:BaseApp/Preferences/Document")->GetBool("BackupPolicy",true);
 
+    //realpath is canonical filename i.e. without symlink
+#ifdef FC_OS_WIN32
+    QString utf8Name = QString::fromUtf8(filename);
+    auto realpath = fs::weakly_canonical(fs::absolute(fs::path(utf8Name.toStdWString())));
+    std::string nativePath = QString::fromStdWString(realpath.native()).toStdString();
+#else
+    auto realpath = fs::weakly_canonical(fs::absolute(fs::path(filename)));
+    std::string nativePath = realpath.native();
+#endif
+
     // make a tmp. file where to save the project data first and then rename to
     // the actual file name. This may be useful if overwriting an existing file
     // fails so that the data of the work up to now isn't lost.
     std::string uuid = Base::Uuid::createUuid();
-    std::string fn = filename;
+    std::string fn = nativePath;
     if (policy) {
         fn += ".";
         fn += uuid;
     }
     Base::FileInfo tmp(fn);
+
+
     // In case some folders in the path do not exist
-#ifdef FC_OS_WIN32
-    QString utf8Name = QString::fromUtf8(filename);
-    auto parentPath = fs::absolute(fs::path(utf8Name.toStdWString())).parent_path();
-#else
-    auto parentPath = fs::absolute(fs::path(filename)).parent_path();
-#endif
+    auto parentPath = realpath.parent_path();
     fs::create_directories(parentPath);
 
     // open extra scope to close ZipWriter properly
@@ -2677,9 +2684,9 @@ bool Document::saveToFile(const char* filename) const
             count_bak = -1;
         }
         bool useFCBakExtension = App::GetApplication().GetParameterGroupByPath
-                ("User parameter:BaseApp/Preferences/Document")->GetBool("UseFCBakExtension",false);
-        std::string	saveBackupDateFormat = App::GetApplication().GetParameterGroupByPath
-                ("User parameter:BaseApp/Preferences/Document")->GetASCII("SaveBackupDateFormat","%Y%m%d-%H%M%S");
+            ("User parameter:BaseApp/Preferences/Document")->GetBool("UseFCBakExtension",false);
+        std::string saveBackupDateFormat = App::GetApplication().GetParameterGroupByPath
+            ("User parameter:BaseApp/Preferences/Document")->GetASCII("SaveBackupDateFormat","%Y%m%d-%H%M%S");
 
         BackupPolicy policy;
         if (useFCBakExtension) {
@@ -2691,7 +2698,7 @@ bool Document::saveToFile(const char* filename) const
             policy.setPolicy(BackupPolicy::Standard);
         }
         policy.setNumberOfFiles(count_bak);
-        policy.apply(fn, filename);
+        policy.apply(fn, nativePath);
     }
 
     signalFinishSave(*this, filename);
@@ -3884,8 +3891,6 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
     pcObject->pcNameInDocument = &(d->objectMap.find(ObjectName)->first);
     // insert in the vector
     d->objectArray.push_back(pcObject);
-    // insert in the adjacence list and reference through the ConectionMap
-    //_DepConMap[pcObject] = add_vertex(_DepList);
 
     // If we are restoring, don't set the Label object now; it will be restored later. This is to avoid potential duplicate
     // label conflicts later.
@@ -4126,27 +4131,6 @@ void Document::removeObject(const char* sName)
     TransactionLocker tlock;
 
     _checkTransaction(pos->second,nullptr,__LINE__);
-
-#if 0
-    if(!d->rollback && d->activeUndoTransaction && pos->second->hasChildElement()) {
-        // Preserve link group sub object global visibilities. Normally those
-        // claimed object should be hidden in global coordinate space. However,
-        // when the group is deleted, the user will naturally try to show the
-        // children, which may now in the global space. When the parent is
-        // undeleted, having its children shown in both the local and global
-        // coordinate space is very confusing. Hence, we preserve the visibility
-        // here
-        for(auto &sub : pos->second->getSubObjects()) {
-            if(sub.empty())
-                continue;
-            if(sub[sub.size()-1]!='.')
-                sub += '.';
-            auto sobj = pos->second->getSubObject(sub.c_str());
-            if(sobj && sobj->getDocument()==this && !sobj->Visibility.getValue())
-                d->activeUndoTransaction->addObjectChange(sobj,&sobj->Visibility);
-        }
-    }
-#endif
 
     if (d->activeObject == pos->second)
         d->activeObject = nullptr;

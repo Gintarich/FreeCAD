@@ -299,7 +299,7 @@ void CmdPartDesignShapeBinder::activated(int iMsg)
         PartDesignGui::setEdit(support.getValue());
     } else {
         PartDesign::Body *pcActiveBody = PartDesignGui::getBody(/*messageIfNot = */true);
-        if (pcActiveBody == nullptr)
+        if (!pcActiveBody)
             return;
 
         std::string FeatName = getUniqueObjectName("ShapeBinder",pcActiveBody);
@@ -979,7 +979,7 @@ unsigned validateSketches(std::vector<App::DocumentObject*>& sketches,
 }
 
 void prepareProfileBased(PartDesign::Body *pcActiveBody, Gui::Command* cmd, const std::string& which,
-                        boost::function<void (Part::Feature*, App::DocumentObject*)> func)
+                         std::function<void (Part::Feature*, App::DocumentObject*)> func)
 {
     auto base_worker = [=](App::DocumentObject* feature, const std::vector<string> &subs) {
 
@@ -2167,7 +2167,7 @@ bool CmdPartDesignThickness::isActive(void)
 //===========================================================================
 
 void prepareTransformed(PartDesign::Body *pcActiveBody, Gui::Command* cmd, const std::string& which,
-    boost::function<void(App::DocumentObject*, std::vector<App::DocumentObject*>)> func)
+                        std::function<void(App::DocumentObject*, std::vector<App::DocumentObject*>)> func)
 {
     std::string FeatName = cmd->getUniqueObjectName(which.c_str(), pcActiveBody);
 
@@ -2558,7 +2558,7 @@ void CmdPartDesignMultiTransform::activated(int iMsg)
             prevFeature = pcActiveBody->getPrevSolidFeature(trFeat);
         }
         Gui::Selection().clearSelection();
-        if (prevFeature != nullptr)
+        if (prevFeature)
             Gui::Selection().addSelection(prevFeature->getDocument()->getName(), prevFeature->getNameInDocument());
 
         openCommand(QT_TRANSLATE_NOOP("Command", "Convert to MultiTransform feature"));
@@ -2608,7 +2608,7 @@ void CmdPartDesignMultiTransform::activated(int iMsg)
 
             // Make sure the user isn't presented with an empty screen because no transformations are defined yet...
             App::DocumentObject* prevSolid = pcActiveBody->Tip.getValue();
-            if (prevSolid != nullptr) {
+            if (prevSolid) {
                 Part::Feature* feat = static_cast<Part::Feature*>(prevSolid);
                 FCMD_OBJ_CMD(Feat,"Shape = "<<getObjectCmd(feat)<<".Shape");
             }

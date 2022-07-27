@@ -54,11 +54,11 @@ std::vector<App::DocumentObject*> ViewProviderLoft::claimChildren(void)const
     PartDesign::Loft* pcLoft = static_cast<PartDesign::Loft*>(getObject());
 
     App::DocumentObject* sketch = pcLoft->getVerifiedSketch(true);
-    if (sketch != nullptr)
+    if (sketch)
         temp.push_back(sketch);
 
     for(App::DocumentObject* obj : pcLoft->Sections.getValues()) {
-        if (obj != nullptr && obj->isDerivedFrom(Part::Part2DObject::getClassTypeId()))
+        if (obj && obj->isDerivedFrom(Part::Part2DObject::getClassTypeId()))
             temp.push_back(obj);
     }
 
@@ -118,7 +118,7 @@ void ViewProviderLoft::highlightSection(bool on)
 {
     PartDesign::Loft* pcLoft = static_cast<PartDesign::Loft*>(getObject());
     auto sections = pcLoft->Sections.getSubListValues();
-    for (auto it : sections) {
+    for (auto& it : sections) {
         // only take the entire shape when we have a sketch selected, but
         // not a point of the sketch
         auto subName = it.second.empty() ? "" : it.second.front();

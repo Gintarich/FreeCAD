@@ -443,7 +443,7 @@ private:
 
 void ViewProviderInspection::inspectCallback(void * ud, SoEventCallback * n)
 {
-    Gui::View3DInventorViewer* view  = reinterpret_cast<Gui::View3DInventorViewer*>(n->getUserData());
+    Gui::View3DInventorViewer* view  = static_cast<Gui::View3DInventorViewer*>(n->getUserData());
     const SoEvent* ev = n->getEvent();
     if (ev->getTypeId() == SoMouseButtonEvent::getClassTypeId()) {
         const SoMouseButtonEvent * mbe = static_cast<const SoMouseButtonEvent *>(ev);
@@ -479,7 +479,7 @@ void ViewProviderInspection::inspectCallback(void * ud, SoEventCallback * n)
         }
         else if (mbe->getButton() == SoMouseButtonEvent::BUTTON1 && mbe->getState() == SoButtonEvent::UP) {
             const SoPickedPoint * point = n->getPickedPoint();
-            if (point == nullptr) {
+            if (!point) {
                 Base::Console().Message("No point picked.\n");
                 return;
             }

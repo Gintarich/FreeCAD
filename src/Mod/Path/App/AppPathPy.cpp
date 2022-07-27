@@ -322,8 +322,8 @@ private:
         static char* kwd_list[] = {"shapes", "start", "return_end",
                 PARAM_FIELD_STRINGS(ARG,AREA_PARAMS_PATH), nullptr};
         if (!PyArg_ParseTupleAndKeywords(args.ptr(), kwds.ptr(),
-                "O|O!O" PARAM_PY_KWDS(AREA_PARAMS_PATH),
-                kwd_list, &pShapes, &(Base::VectorPy::Type), &start, &return_end,
+                "O|O!O!" PARAM_PY_KWDS(AREA_PARAMS_PATH),
+                kwd_list, &pShapes, &(Base::VectorPy::Type), &start, &PyBool_Type, &return_end,
                 PARAM_REF(PARAM_FARG,AREA_PARAMS_PATH)))
             throw Py::Exception();
 
@@ -355,7 +355,7 @@ private:
             std::unique_ptr<Toolpath> path(new Toolpath);
             Area::toPath(*path,shapes,start?&pstart:nullptr, &pend,
                     PARAM_PY_FIELDS(PARAM_FARG,AREA_PARAMS_PATH));
-            if(!PyObject_IsTrue(return_end))
+            if (!Base::asBoolean(return_end))
                 return Py::asObject(new PathPy(path.release()));
             Py::Tuple tuple(2);
             tuple.setItem(0, Py::asObject(new PathPy(path.release())));
@@ -407,7 +407,7 @@ private:
 
         try {
             bool need_arc_plane = arc_plane==Area::ArcPlaneAuto;
-            std::list<TopoDS_Shape> wires = Area::sortWires(shapes,start!=nullptr,&pstart,
+            std::list<TopoDS_Shape> wires = Area::sortWires(shapes, start != nullptr, &pstart,
                     &pend, nullptr, &arc_plane, PARAM_PY_FIELDS(PARAM_FARG,AREA_PARAMS_SORT));
             Py::List list;
             for(auto &wire : wires) {

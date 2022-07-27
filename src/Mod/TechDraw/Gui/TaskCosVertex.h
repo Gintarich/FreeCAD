@@ -39,11 +39,13 @@ namespace TechDraw
 {
 class DrawPage;
 class DrawView;
+class DrawViewPart;
 class DrawCosVertex;
 }
 
 namespace TechDrawGui
 {
+class QGSPage;
 class QGVPage;
 class QGIView;
 class QGIPrimPath;
@@ -66,7 +68,7 @@ public:
 
 public Q_SLOTS:
     void onTrackerClicked(bool b);
-    void onTrackerFinished(std::vector<QPointF> pts, QGIView* qgParent);
+    void onTrackerFinished(std::vector<QPointF> pts, TechDrawGui::QGIView* qgParent);
 
 public:
     virtual bool accept();
@@ -98,7 +100,7 @@ private:
     QGTracker* m_tracker;
     
     MDIViewPage* m_mdi;
-    QGraphicsScene* m_scene;
+    QGSPage* m_scene;
     QGVPage* m_view;
     TechDraw::DrawViewPart* m_baseFeat;
     TechDraw::DrawPage* m_basePage;

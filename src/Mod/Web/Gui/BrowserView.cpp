@@ -231,7 +231,7 @@ Py::Object BrowserViewPy::getattr(const char * attr)
     if (name == "__dict__" || name == "__class__") {
         Py::Dict dict_self(BaseType::getattr("__dict__"));
         Py::Dict dict_base(base.getattr("__dict__"));
-        for (auto it : dict_base) {
+        for (const auto& it : dict_base) {
             dict_self.setItem(it.first, it.second);
         }
         return dict_self;
@@ -405,10 +405,10 @@ void WebView::triggerContextMenuAction(int id)
 
     switch (id) {
     case WebAction::OpenLink:
-        openLinkInExternalBrowser(url);
+        Q_EMIT openLinkInExternalBrowser(url);
         break;
     case WebAction::OpenLinkInNewWindow:
-        openLinkInNewWindow(url);
+        Q_EMIT openLinkInNewWindow(url);
         break;
     case WebAction::ViewSource:
         Q_EMIT viewSource(url);
@@ -511,6 +511,10 @@ BrowserView::BrowserView(QWidget* parent)
             this, SLOT(onOpenLinkInExternalBrowser(const QUrl &)));
     connect(view, SIGNAL(openLinkInNewWindow(const QUrl &)),
             this, SLOT(onOpenLinkInNewWindow(const QUrl &)));
+    connect(view, SIGNAL(loadStarted()),
+            this, SLOT(onUpdateBrowserActions()));
+    connect(view, SIGNAL(loadFinished(bool)),
+            this, SLOT(onUpdateBrowserActions()));
 }
 
 /** Destroys the object and frees any allocated resources */
@@ -529,8 +533,7 @@ void BrowserView::urlFilter(const QUrl & url)
     //QString username = url.userName();
 
     // path handling
-    QString path     = url.path();
-    QFileInfo fi(path);
+    QString path = url.path();
     QUrl exturl(url);
 
     // query
@@ -783,6 +786,18 @@ void BrowserView::onOpenLinkInNewWindow(const QUrl& url)
     view->load(url);
     Gui::getMainWindow()->addWindow(view);
     Gui::getMainWindow()->setActiveWindow(this);
+}
+
+void BrowserView::onUpdateBrowserActions()
+{
+    CommandManager& mgr = Application::Instance->commandManager();
+    std::vector<const char*> cmds = {"Web_BrowserBack", "Web_BrowserNext", "Web_BrowserRefresh", "Web_BrowserStop",
+                                     "Web_BrowserZoomIn", "Web_BrowserZoomOut", "Web_BrowserSetURL"};
+    for (const auto& it : cmds) {
+        Gui::Command* cmd = mgr.getCommandByName(it);
+        if (cmd)
+            cmd->testActive();
+    }
 }
 
 void BrowserView::OnChange(Base::Subject<const char*> &rCaller,const char* rcReason)

@@ -296,14 +296,24 @@ std::vector<TopoDS_Wire> ProfileBased::getProfileWires() const {
 // Note: We cannot return a reference, because it will become Null.
 // Not clear where, because we check for IsNull() here, but as soon as it is passed out of
 // this method, it becomes null!
-const TopoDS_Face ProfileBased::getSupportFace() const {
-    const Part::Part2DObject* sketch = getVerifiedSketch();
-    if (sketch->MapMode.getValue() == Attacher::mmFlatFace && sketch->Support.getValue()) {
+const TopoDS_Face ProfileBased::getSupportFace() const
+{
+    const Part::Part2DObject* sketch = getVerifiedSketch(true);
+    if (sketch) {
+        return getSupportFace(sketch);
+    }
+
+    return getSupportFace(Profile);
+}
+
+TopoDS_Face ProfileBased::getSupportFace(const Part::Part2DObject* sketch) const
+{
+    if (sketch && sketch->MapMode.getValue() == Attacher::mmFlatFace && sketch->Support.getValue()) {
         const auto& Support = sketch->Support;
         App::DocumentObject* ref = Support.getValue();
 
-        Part::Feature* part = static_cast<Part::Feature*>(ref);
-        if (part && part->getTypeId().isDerivedFrom(Part::Feature::getClassTypeId())) {
+        Part::Feature* part = dynamic_cast<Part::Feature*>(ref);
+        if (part) {
             const std::vector<std::string>& sub = Support.getSubValues();
             assert(sub.size() == 1);
 
@@ -333,7 +343,18 @@ const TopoDS_Face ProfileBased::getSupportFace() const {
         }
     }
     return TopoDS::Face(Feature::makeShapeFromPlane(sketch));
+}
 
+TopoDS_Face ProfileBased::getSupportFace(const App::PropertyLinkSub& link) const
+{
+    App::DocumentObject* result = link.getValue();
+    if (!result) {
+        throw Base::RuntimeError("No support linked");
+    }
+
+    TopoDS_Face face;
+    getFaceFromLinkSub(face, link);
+    return face;
 }
 
 int ProfileBased::getSketchAxisCount(void) const
@@ -396,14 +417,13 @@ void ProfileBased::onChanged(const App::Property* prop)
 }
 
 
-void ProfileBased::getUpToFaceFromLinkSub(TopoDS_Face& upToFace,
-    const App::PropertyLinkSub& refFace)
+void ProfileBased::getFaceFromLinkSub(TopoDS_Face& upToFace, const App::PropertyLinkSub& refFace)
 {
     App::DocumentObject* ref = refFace.getValue();
     std::vector<std::string> subStrings = refFace.getSubValues();
 
-    if (ref == nullptr)
-        throw Base::ValueError("SketchBased: Up to face: No face selected");
+    if (!ref)
+        throw Base::ValueError("SketchBased: No face selected");
 
     if (ref->getTypeId().isDerivedFrom(App::Plane::getClassTypeId())) {
         upToFace = TopoDS::Face(makeShapeFromPlane(ref));
@@ -416,16 +436,16 @@ void ProfileBased::getUpToFaceFromLinkSub(TopoDS_Face& upToFace,
     }
 
     if (!ref->getTypeId().isDerivedFrom(Part::Feature::getClassTypeId()))
-        throw Base::TypeError("SketchBased: Up to face: Must be face of a feature");
+        throw Base::TypeError("SketchBased: Must be face of a feature");
     Part::TopoShape baseShape = static_cast<Part::Feature*>(ref)->Shape.getShape();
 
     if (subStrings.empty() || subStrings[0].empty())
-        throw Base::ValueError("SketchBased: Up to face: No face selected");
+        throw Base::ValueError("SketchBased: No face selected");
     // TODO: Check for multiple UpToFaces?
 
     upToFace = TopoDS::Face(baseShape.getSubShape(subStrings[0].c_str()));
     if (upToFace.IsNull())
-        throw Base::ValueError("SketchBased: Up to face: Failed to extract face");
+        throw Base::ValueError("SketchBased: Failed to extract face");
 }
 
 void ProfileBased::getUpToFace(TopoDS_Face& upToFace,
@@ -494,11 +514,7 @@ void ProfileBased::getUpToFace(TopoDS_Face& upToFace,
             BRepAdaptor_Surface adapt(upToFace, Standard_False);
             // use the placement of the adapter, not of the upToFace
             loc = TopLoc_Location(adapt.Trsf());
-            BRepBuilderAPI_MakeFace mkFace(adapt.Surface().Surface()
-#if OCC_VERSION_HEX >= 0x060502
-                , Precision::Confusion()
-#endif
-            );
+            BRepBuilderAPI_MakeFace mkFace(adapt.Surface().Surface(), Precision::Confusion());
             if (!mkFace.IsDone())
                 throw Base::ValueError("SketchBased: Up To Face: Failed to create unlimited face");
             upToFace = TopoDS::Face(mkFace.Shape());
@@ -687,12 +703,7 @@ bool ProfileBased::checkLineCrossesFace(const gp_Lin& line, const TopoDS_Face& f
         if (intersector.IsDone()) {
             for (int i = 1; i <= intersector.NbExt(); i++) {
 
-
-#if OCC_VERSION_HEX >= 0x060500
                 if (intersector.SquareDistance(i) < Precision::Confusion()) {
-#else
-                if (intersector.Value(i) < Precision::Confusion()) {
-#endif
                     if (intersector.IsParallel()) {
                         // A line that is coincident with the axis produces three intersections
                         // 1 with the line itself and 2 with the adjacent edges

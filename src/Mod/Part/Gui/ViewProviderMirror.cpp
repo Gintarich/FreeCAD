@@ -206,7 +206,7 @@ void ViewProviderMirror::dragFinishCallback(void *, SoDragger *)
 
 void ViewProviderMirror::dragMotionCallback(void *data, SoDragger *drag)
 {
-    ViewProviderMirror* that = reinterpret_cast<ViewProviderMirror*>(data);
+    ViewProviderMirror* that = static_cast<ViewProviderMirror*>(data);
     const SbMatrix& mat = drag->getMotionMatrix();
     // the new axis of the plane
     SbRotation rot(mat);
@@ -264,6 +264,12 @@ void ViewProviderFillet::updateData(const App::Property* prop)
                 else if (!colBase.empty() && colBase[0] != this->ShapeColor.getValue()) {
                     colBase.resize(baseMap.Extent(), colBase[0]);
                     applyColor(hist[0], colBase, colFill);
+                }
+
+                // If the view provider has set a transparency then override the values
+                // of the input shapes
+                if (Transparency.getValue() > 0) {
+                    applyTransparency(Transparency.getValue(), colFill);
                 }
 
                 this->DiffuseColor.setValues(colFill);
@@ -357,21 +363,29 @@ void ViewProviderChamfer::updateData(const App::Property* prop)
             TopExp::MapShapes(baseShape, TopAbs_FACE, baseMap);
             TopExp::MapShapes(chamShape, TopAbs_FACE, chamMap);
 
-            Gui::ViewProvider* vpBase = Gui::Application::Instance->getViewProvider(objBase);
-            std::vector<App::Color> colBase = static_cast<PartGui::ViewProviderPart*>(vpBase)->DiffuseColor.getValues();
-            std::vector<App::Color> colCham;
-            colCham.resize(chamMap.Extent(), static_cast<PartGui::ViewProviderPart*>(vpBase)->ShapeColor.getValue());
-            applyTransparency(static_cast<PartGui::ViewProviderPart*>(vpBase)->Transparency.getValue(),colBase);
+            auto vpBase = dynamic_cast<PartGui::ViewProviderPart*>(Gui::Application::Instance->getViewProvider(objBase));
+            if (vpBase) {
+                std::vector<App::Color> colBase = static_cast<PartGui::ViewProviderPart*>(vpBase)->DiffuseColor.getValues();
+                std::vector<App::Color> colCham;
+                colCham.resize(chamMap.Extent(), static_cast<PartGui::ViewProviderPart*>(vpBase)->ShapeColor.getValue());
+                applyTransparency(static_cast<PartGui::ViewProviderPart*>(vpBase)->Transparency.getValue(),colBase);
 
-            if (static_cast<int>(colBase.size()) == baseMap.Extent()) {
-                applyColor(hist[0], colBase, colCham);
-            }
-            else if (!colBase.empty() && colBase[0] != this->ShapeColor.getValue()) {
-                colBase.resize(baseMap.Extent(), colBase[0]);
-                applyColor(hist[0], colBase, colCham);
-            }
+                if (static_cast<int>(colBase.size()) == baseMap.Extent()) {
+                    applyColor(hist[0], colBase, colCham);
+                }
+                else if (!colBase.empty() && colBase[0] != this->ShapeColor.getValue()) {
+                    colBase.resize(baseMap.Extent(), colBase[0]);
+                    applyColor(hist[0], colBase, colCham);
+                }
 
-            this->DiffuseColor.setValues(colCham);
+                // If the view provider has set a transparency then override the values
+                // of the input shapes
+                if (Transparency.getValue() > 0) {
+                    applyTransparency(Transparency.getValue(), colCham);
+                }
+
+                this->DiffuseColor.setValues(colCham);
+            }
         }
     }
 }

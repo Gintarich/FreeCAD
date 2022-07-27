@@ -40,7 +40,6 @@
 # include <QPainter>
 # include <QPointer>
 # include <QTextStream>
-# include <boost_bind_bind.hpp>
 #endif
 
 #include <App/ComplexGeoDataPy.h>
@@ -343,7 +342,7 @@ void StdCmdFreezeViews::activated(int iMsg)
 
         QList<QAction*> acts = pcAction->actions();
         int index = 1;
-        for (QList<QAction*>::ConstIterator it = acts.begin()+offset; it != acts.end(); ++it, index++) {
+        for (QList<QAction*>::Iterator it = acts.begin()+offset; it != acts.end(); ++it, index++) {
             if (!(*it)->isVisible()) {
                 savedViews++;
                 QString viewnr = QString(QObject::tr("Restore view &%1")).arg(index);
@@ -360,7 +359,7 @@ void StdCmdFreezeViews::activated(int iMsg)
     else if (iMsg == 4) {
         savedViews = 0;
         QList<QAction*> acts = pcAction->actions();
-        for (QList<QAction*>::ConstIterator it = acts.begin()+offset; it != acts.end(); ++it)
+        for (QList<QAction*>::Iterator it = acts.begin()+offset; it != acts.end(); ++it)
             (*it)->setVisible(false);
     }
     else if (iMsg >= offset) {
@@ -389,7 +388,7 @@ void StdCmdFreezeViews::onSaveViews()
             << "<FrozenViews SchemaVersion=\"1\">\n";
         str << "  <Views Count=\"" << savedViews <<"\">\n";
 
-        for (QList<QAction*>::ConstIterator it = acts.begin()+offset; it != acts.end(); ++it) {
+        for (QList<QAction*>::Iterator it = acts.begin()+offset; it != acts.end(); ++it) {
             if ( !(*it)->isVisible() )
                 break;
             QString data = (*it)->toolTip();
@@ -530,7 +529,7 @@ void StdCmdFreezeViews::languageChange()
     acts[3]->setText(QObject::tr("Freeze view"));
     acts[4]->setText(QObject::tr("Clear views"));
     int index=1;
-    for (QList<QAction*>::ConstIterator it = acts.begin()+5; it != acts.end(); ++it, index++) {
+    for (QList<QAction*>::Iterator it = acts.begin()+5; it != acts.end(); ++it, index++) {
         if ((*it)->isVisible()) {
             QString viewnr = QString(QObject::tr("Restore view &%1")).arg(index);
             (*it)->setText(viewnr);
@@ -560,24 +559,12 @@ StdCmdToggleClipPlane::StdCmdToggleClipPlane()
 Action * StdCmdToggleClipPlane::createAction(void)
 {
     Action *pcAction = (Action*)Command::createAction();
-#if 0
-    pcAction->setCheckable(true);
-#endif
     return pcAction;
 }
 
 void StdCmdToggleClipPlane::activated(int iMsg)
 {
     Q_UNUSED(iMsg);
-#if 0
-    View3DInventor* view = qobject_cast<View3DInventor*>(getMainWindow()->activeWindow());
-    if (view) {
-        if (iMsg > 0 && !view->hasClippingPlane())
-            view->toggleClippingPlane();
-        else if (iMsg == 0 && view->hasClippingPlane())
-            view->toggleClippingPlane();
-    }
-#else
     static QPointer<Gui::Dialog::Clipping> clipping = nullptr;
     if (!clipping) {
         View3DInventor* view = qobject_cast<View3DInventor*>(getMainWindow()->activeWindow());
@@ -585,29 +572,12 @@ void StdCmdToggleClipPlane::activated(int iMsg)
             clipping = Gui::Dialog::Clipping::makeDockWidget(view);
         }
     }
-#endif
 }
 
 bool StdCmdToggleClipPlane::isActive(void)
 {
-#if 0
-    View3DInventor* view = qobject_cast<View3DInventor*>(getMainWindow()->activeWindow());
-    if (view) {
-        Action* action = qobject_cast<Action*>(_pcAction);
-        if (action->isChecked() != view->hasClippingPlane())
-            action->setChecked(view->hasClippingPlane());
-        return true;
-    }
-    else {
-        Action* action = qobject_cast<Action*>(_pcAction);
-        if (action->isChecked())
-            action->setChecked(false);
-        return false;
-    }
-#else
     View3DInventor* view = qobject_cast<View3DInventor*>(getMainWindow()->activeWindow());
     return view ? true : false;
-#endif
 }
 
 //===========================================================================
@@ -691,7 +661,6 @@ Gui::Action * StdCmdDrawStyle::createAction(void)
     a6->setObjectName(QString::fromLatin1("Std_DrawStyleFlatLines"));
     a6->setShortcut(QKeySequence(QString::fromUtf8("V,7")));
     a6->setWhatsThis(QString::fromLatin1(getWhatsThis()));
-
 
     pcAction->setIcon(a0->icon());
 
@@ -1152,26 +1121,13 @@ StdCmdSetAppearance::StdCmdSetAppearance()
 void StdCmdSetAppearance::activated(int iMsg)
 {
     Q_UNUSED(iMsg);
-#if 0
-    static QPointer<QDialog> dlg = 0;
-    if (!dlg)
-        dlg = new Gui::Dialog::DlgDisplayPropertiesImp(true, getMainWindow());
-    dlg->setModal(false);
-    dlg->setAttribute(Qt::WA_DeleteOnClose);
-    dlg->show();
-#else
     Gui::Control().showDialog(new Gui::Dialog::TaskDisplayProperties());
-#endif
 }
 
 bool StdCmdSetAppearance::isActive(void)
 {
-#if 0
-    return Gui::Selection().size() != 0;
-#else
     return (Gui::Control().activeDialog() == nullptr) &&
            (Gui::Selection().size() != 0);
-#endif
 }
 
 //===========================================================================
@@ -1518,13 +1474,11 @@ StdCmdViewFitSelection::StdCmdViewFitSelection()
 void StdCmdViewFitSelection::activated(int iMsg)
 {
     Q_UNUSED(iMsg);
-    //doCommand(Command::Gui,"Gui.activeDocument().activeView().fitAll()");
     doCommand(Command::Gui,"Gui.SendMsgToActiveView(\"ViewSelection\")");
 }
 
 bool StdCmdViewFitSelection::isActive(void)
 {
-  //return isViewOfType(Gui::View3DInventor::getClassTypeId());
   return getGuiApplication()->sendHasMsgToActiveView("ViewSelection");
 }
 
@@ -1734,7 +1688,6 @@ void StdViewDockUndockFullscreen::activated(int iMsg)
             else
                 clone->setCurrentViewMode(MDIView::FullScreen);
         }
-
         // destroy the old view
         view->deleteSelf();
     }
@@ -1780,8 +1733,7 @@ StdCmdViewVR::StdCmdViewVR()
 
 void StdCmdViewVR::activated(int iMsg)
 {
-    Q_UNUSED(iMsg);
-  //doCommand(Command::Gui,"Gui.activeDocument().activeView().fitAll()");
+   Q_UNUSED(iMsg);
    doCommand(Command::Gui,"Gui.SendMsgToActiveView(\"ViewVR\")");
 }
 
@@ -1824,7 +1776,7 @@ void StdViewScreenShot::activated(int iMsg)
         Base::Reference<ParameterGrp> hExt = App::GetApplication().GetUserParameter().GetGroup("BaseApp")
                                    ->GetGroup("Preferences")->GetGroup("General");
         QString ext = QString::fromLatin1(hExt->GetASCII("OffscreenImageFormat").c_str());
-        int backtype = hExt->GetInt("OffscreenImageBackground",0);
+        int backtype = hExt->GetInt("OffscreenImageBackground", 0);
 
         Base::Reference<ParameterGrp> methodGrp = App::GetApplication().GetParameterGroupByPath
             ("User parameter:BaseApp/Preferences/View");
@@ -1862,7 +1814,7 @@ void StdViewScreenShot::activated(int iMsg)
 
         if (fd.exec() == QDialog::Accepted) {
             selFilter = fd.selectedNameFilter();
-            QString fn = fd.selectedFiles().front();
+            QString fn = fd.selectedFiles().constFirst();
             // We must convert '\' path separators to '/' before otherwise
             // Python would interpret them as escape sequences.
             fn.replace(QLatin1Char('\\'), QLatin1Char('/'));
@@ -1889,14 +1841,14 @@ void StdViewScreenShot::activated(int iMsg)
 
             // which background chosen
             const char* background;
-            switch(opt->backgroundType()){
-                case 0:  background="Current"; break;
-                case 1:  background="White"; break;
-                case 2:  background="Black"; break;
-                case 3:  background="Transparent"; break;
-                default: background="Current"; break;
+            switch (opt->backgroundType()) {
+            case 0:  background = "Current"; break;
+            case 1:  background = "White"; break;
+            case 2:  background = "Black"; break;
+            case 3:  background = "Transparent"; break;
+            default: background = "Current"; break;
             }
-            hExt->SetInt("OffscreenImageBackground",opt->backgroundType());
+            hExt->SetInt("OffscreenImageBackground", opt->backgroundType());
 
             QString comment = opt->comment();
             if (!comment.isEmpty()) {
@@ -1904,17 +1856,17 @@ void StdViewScreenShot::activated(int iMsg)
                 // otherwise Python would interpret it as an invalid command.
                 // Python does the decoding for us.
 #if QT_VERSION >= QT_VERSION_CHECK(5,15,0)
-                QStringList lines = comment.split(QLatin1String("\n"), Qt::KeepEmptyParts );
+                QStringList lines = comment.split(QLatin1String("\n"), Qt::KeepEmptyParts);
 #else
-                QStringList lines = comment.split(QLatin1String("\n"), QString::KeepEmptyParts );
+                QStringList lines = comment.split(QLatin1String("\n"), QString::KeepEmptyParts);
 #endif
                 comment = lines.join(QLatin1String("\\n"));
-                doCommand(Gui,"Gui.activeDocument().activeView().saveImage('%s',%d,%d,'%s','%s')",
-                            fn.toUtf8().constData(),w,h,background,comment.toUtf8().constData());
+                doCommand(Gui, "Gui.activeDocument().activeView().saveImage('%s',%d,%d,'%s','%s')",
+                          fn.toUtf8().constData(), w, h, background, comment.toUtf8().constData());
             }
             else {
-                doCommand(Gui,"Gui.activeDocument().activeView().saveImage('%s',%d,%d,'%s')",
-                            fn.toUtf8().constData(),w,h,background);
+                doCommand(Gui, "Gui.activeDocument().activeView().saveImage('%s',%d,%d,'%s')",
+                          fn.toUtf8().constData(), w, h, background);
             }
 
             // When adding a watermark check if the image could be created
@@ -1924,7 +1876,7 @@ void StdViewScreenShot::activated(int iMsg)
                 if (fi.exists() && pixmap.load(fn)) {
                     QString name = qApp->applicationName();
                     std::map<std::string, std::string>& config = App::Application::Config();
-                    QString url  = QString::fromLatin1(config["MaintainerUrl"].c_str());
+                    QString url = QString::fromLatin1(config["MaintainerUrl"].c_str());
                     url = QUrl(url).host();
 
                     QPixmap appicon = Gui::BitmapFactory().pixmap(config["AppIcon"].c_str());
@@ -1932,7 +1884,7 @@ void StdViewScreenShot::activated(int iMsg)
                     QPainter painter;
                     painter.begin(&pixmap);
 
-                    painter.drawPixmap(8, h-15-appicon.height(), appicon);
+                    painter.drawPixmap(8, h - 15 - appicon.height(), appicon);
 
                     QFont font = painter.font();
                     font.setPointSize(20);
@@ -1942,12 +1894,13 @@ void StdViewScreenShot::activated(int iMsg)
                     int h = pixmap.height();
 
                     painter.setFont(font);
-                    painter.drawText(8+appicon.width(), h-24, name);
+                    painter.drawText(8 + appicon.width(), h - 24, name);
 
                     font.setPointSize(12);
-                    int u = QtTools::horizontalAdvance(fm, url);
+                    QFontMetrics fm2(font);
+                    int u = QtTools::horizontalAdvance(fm2, url);
                     painter.setFont(font);
-                    painter.drawText(8+appicon.width()+n-u, h-9, url);
+                    painter.drawText(8 + appicon.width() + n - u, h - 6, url);
 
                     painter.end();
                     pixmap.save(fn);
@@ -1989,7 +1942,7 @@ void StdCmdViewCreate::activated(int iMsg)
 
 bool StdCmdViewCreate::isActive(void)
 {
-    return (getActiveGuiDocument()!=nullptr);
+    return (getActiveGuiDocument() != nullptr);
 }
 
 //===========================================================================
@@ -2040,95 +1993,7 @@ bool StdCmdToggleNavigation::isActive(void)
 
 
 
-#if 0 // old Axis command
-// Command to show/hide axis cross
-class StdCmdAxisCross : public Gui::Command
-{
-private:
-    SoShapeScale* axisCross;
-    SoGroup* axisGroup;
-public:
-    StdCmdAxisCross() : Command("Std_AxisCross"), axisCross(0), axisGroup(0)
-    {
-        sGroup        = "Standard-View";
-        sMenuText     = QT_TR_NOOP("Toggle axis cross");
-        sToolTipText  = QT_TR_NOOP("Toggle axis cross");
-        sStatusTip    = QT_TR_NOOP("Toggle axis cross");
-        sWhatsThis    = "Std_AxisCross";
-        sPixmap       = "Std_AxisCross";
-    }
-    ~StdCmdAxisCross()
-    {
-        if (axisGroup)
-            axisGroup->unref();
-        if (axisCross)
-            axisCross->unref();
-    }
-    const char* className() const
-    { return "StdCmdAxisCross"; }
 
-    Action * createAction(void)
-    {
-        axisCross = new Gui::SoShapeScale;
-        axisCross->ref();
-        Gui::SoAxisCrossKit* axisKit = new Gui::SoAxisCrossKit();
-        axisKit->set("xAxis.appearance.drawStyle", "lineWidth 2");
-        axisKit->set("yAxis.appearance.drawStyle", "lineWidth 2");
-        axisKit->set("zAxis.appearance.drawStyle", "lineWidth 2");
-        axisCross->setPart("shape", axisKit);
-        axisGroup = new SoSkipBoundingGroup;
-        axisGroup->ref();
-        axisGroup->addChild(axisCross);
-
-        Action *pcAction = Gui::Command::createAction();
-        pcAction->setCheckable(true);
-        return pcAction;
-    }
-
-protected:
-    void activated(int iMsg)
-    {
-        float scale = 1.0f;
-
-        Gui::View3DInventor* view = qobject_cast<Gui::View3DInventor*>
-            (getMainWindow()->activeWindow());
-        if (view) {
-            SoNode* scene = view->getViewer()->getSceneGraph();
-            SoSeparator* sep = static_cast<SoSeparator*>(scene);
-            bool hasaxis = (sep->findChild(axisGroup) != -1);
-            if (iMsg > 0 && !hasaxis) {
-                axisCross->scaleFactor = scale;
-                sep->addChild(axisGroup);
-            }
-            else if (iMsg == 0 && hasaxis) {
-                sep->removeChild(axisGroup);
-            }
-        }
-    }
-
-    bool isActive(void)
-    {
-        Gui::View3DInventor* view = qobject_cast<View3DInventor*>(Gui::getMainWindow()->activeWindow());
-        if (view) {
-            Gui::View3DInventorViewer* viewer = view->getViewer();
-            if (!viewer)
-                return false; // no active viewer
-            SoGroup* group = dynamic_cast<SoGroup*>(viewer->getSceneGraph());
-            if (!group)
-                return false; // empty scene graph
-            bool hasaxis = group->findChild(axisGroup) != -1;
-            if (_pcAction->isChecked() != hasaxis)
-                _pcAction->setChecked(hasaxis);
-            return true;
-        }
-        else {
-            if (_pcAction->isChecked())
-                _pcAction->setChecked(false);
-            return false;
-        }
-    }
-};
-#else
 //===========================================================================
 // Std_ViewExample1
 //===========================================================================
@@ -2151,7 +2016,7 @@ void StdCmdAxisCross::activated(int iMsg)
     Q_UNUSED(iMsg);
     Gui::View3DInventor* view = qobject_cast<View3DInventor*>(Gui::getMainWindow()->activeWindow());
     if (view) {
-        if (view->getViewer()->hasAxisCross() == false)
+        if (!view->getViewer()->hasAxisCross())
             doCommand(Command::Gui,"Gui.ActiveDocument.ActiveView.setAxisCross(True)");
         else
             doCommand(Command::Gui,"Gui.ActiveDocument.ActiveView.setAxisCross(False)");
@@ -2174,8 +2039,6 @@ bool StdCmdAxisCross::isActive(void)
     return false;
 
 }
-
-#endif
 
 //===========================================================================
 // Std_ViewExample1
@@ -2568,8 +2431,8 @@ public:
     // Also supports aborting the selection mode by pressing (releasing) the Escape key. 
     static void selectionCallback(void * ud, SoEventCallback * n)
     {
-        SelectionCallbackHandler* selectionHandler = reinterpret_cast<SelectionCallbackHandler*>(ud);
-        Gui::View3DInventorViewer* view = reinterpret_cast<Gui::View3DInventorViewer*>(n->getUserData());
+        SelectionCallbackHandler* selectionHandler = static_cast<SelectionCallbackHandler*>(ud);
+        Gui::View3DInventorViewer* view = static_cast<Gui::View3DInventorViewer*>(n->getUserData());
         const SoEvent* ev = n->getEvent();
         if (ev->isOfType(SoKeyboardEvent::getClassTypeId())) {
 
@@ -2873,7 +2736,7 @@ static std::vector<std::string> getBoxSelection(
 static void doSelect(void* ud, SoEventCallback * cb)
 {
     bool selectElement = ud ? true : false;
-    Gui::View3DInventorViewer* viewer = reinterpret_cast<Gui::View3DInventorViewer*>(cb->getUserData());
+    Gui::View3DInventorViewer* viewer = static_cast<Gui::View3DInventorViewer*>(cb->getUserData());
 
     SoNode* root = viewer->getSceneGraph();
     static_cast<Gui::SoFCUnifiedSelection*>(root)->selectionRole.setValue(true);
@@ -3132,7 +2995,7 @@ bool StdCmdTreeSelectAllInstances::isActive(void)
     if(!obj || !obj->getNameInDocument())
         return false;
     return dynamic_cast<ViewProviderDocumentObject*>(
-            Application::Instance->getViewProvider(obj))!=nullptr;
+            Application::Instance->getViewProvider(obj)) != nullptr;
 }
 
 void StdCmdTreeSelectAllInstances::activated(int iMsg)
@@ -3150,7 +3013,8 @@ void StdCmdTreeSelectAllInstances::activated(int iMsg)
         return;
     Selection().selStackPush();
     Selection().clearCompleteSelection();
-    for(auto tree : getMainWindow()->findChildren<TreeWidget*>())
+    const auto trees = getMainWindow()->findChildren<TreeWidget*>();
+    for(auto tree : trees)
         tree->selectAllInstances(*vpd);
     Selection().selStackPush();
 }
@@ -3307,7 +3171,7 @@ bool StdCmdTextureMapping::isActive(void)
 {
     Gui::MDIView* view = getMainWindow()->activeWindow();
     return view && view->isDerivedFrom(Gui::View3DInventor::getClassTypeId())
-                && (Gui::Control().activeDialog()==nullptr);
+                && (Gui::Control().activeDialog() == nullptr);
 }
 
 DEF_STD_CMD(StdCmdDemoMode)
@@ -3658,7 +3522,8 @@ StdTreeDrag::StdTreeDrag()
 void StdTreeDrag::activated(int)
 {
     if(Gui::Selection().hasSelection()) {
-        for(auto tree : getMainWindow()->findChildren<TreeWidget*>()) {
+        const auto trees = getMainWindow()->findChildren<TreeWidget*>();
+        for(auto tree : trees) {
             if(tree->isVisible()) {
                 tree->startDragging();
                 break;
@@ -3830,7 +3695,6 @@ void CreateViewStdCommands(void)
     rcCmdMgr.addCommand(new StdCmdSelBack());
     rcCmdMgr.addCommand(new StdCmdSelForward());
     rcCmdMgr.addCommand(new StdCmdTreeViewActions());
-
 
     auto hGrp = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/View");
     if(hGrp->GetASCII("GestureRollFwdCommand").empty())

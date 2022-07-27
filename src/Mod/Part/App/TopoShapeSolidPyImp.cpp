@@ -20,44 +20,40 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 
 #ifndef _PreComp_
-# include <Standard_Version.hxx>
-# include <BRepGProp.hxx>
-# include <BRepTools.hxx>
-# include <BRepOffset_MakeOffset.hxx>
-#if OCC_VERSION_HEX >= 0x060600
+# include <BRepBuilderAPI_MakeSolid.hxx>
 # include <BRepClass3d.hxx>
-#endif
+# include <BRepGProp.hxx>
+# include <BRepLib.hxx>
+# include <BRepOffset_MakeOffset.hxx>
 # include <GProp_GProps.hxx>
 # include <GProp_PrincipalProps.hxx>
-# include <BRepBuilderAPI_MakeSolid.hxx>
-# include <BRepLib.hxx>
 # include <Precision.hxx>
 # include <TopExp_Explorer.hxx>
 # include <TopoDS.hxx>
-# include <TopoDS_Solid.hxx>
-# include <TopoDS_Shell.hxx>
 # include <TopoDS_CompSolid.hxx>
+# include <TopoDS_Shell.hxx>
+# include <TopoDS_Solid.hxx>
 # include <gp_Ax1.hxx>
-# include <gp_Pnt.hxx>
 # include <gp_Dir.hxx>
+# include <gp_Pnt.hxx>
 # include <Standard_Failure.hxx>
+# include <Standard_Version.hxx>
 #endif
 
-#include <Base/VectorPy.h>
 #include <Base/GeometryPyCXX.h>
+#include <Base/VectorPy.h>
 
-#include "TopoShape.h"
-#include "Tools.h"
 #include "OCCError.h"
+#include "Tools.h"
 
 // inclusion of the generated files (generated out of TopoShapeSolidPy.xml)
 #include "TopoShapeShellPy.h"
 #include "TopoShapeSolidPy.h"
 #include "TopoShapeSolidPy.cpp"
+
 
 using namespace Part;
 
@@ -219,11 +215,7 @@ Py::Object TopoShapeSolidPy::getOuterShell(void) const
     TopoDS_Shell shell;
     const TopoDS_Shape& shape = getTopoShapePtr()->getShape();
     if (!shape.IsNull() && shape.ShapeType() == TopAbs_SOLID)
-#if OCC_VERSION_HEX >= 0x060600
         shell = BRepClass3d::OuterShell(TopoDS::Solid(shape));
-#else
-        shell = BRepTools::OuterShell(TopoDS::Solid(shape));
-#endif
     return Py::Object(new TopoShapeShellPy(new TopoShape(shell)),true);
 }
 

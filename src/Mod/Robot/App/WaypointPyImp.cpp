@@ -43,7 +43,6 @@ using namespace Base;
 std::string WaypointPy::representation(void) const
 {
     double A,B,C;
-    //PlacementPy::PointerType ptr = reinterpret_cast<PlacementPy::PointerType>(_pcTwinPointer);
     std::stringstream str;
     getWaypointPtr()->EndPos.getRotation().getYawPitchRoll(A,B,C);
     str.precision(5);
@@ -114,7 +113,7 @@ int WaypointPy::PyInit(PyObject* args, PyObject* kwd)
     else
         getWaypointPtr()->Type = Waypoint::UNDEF;
 
-    if (vel == nullptr)
+    if (!vel)
         switch (getWaypointPtr()->Type) {
         case Waypoint::PTP:
             getWaypointPtr()->Velocity = 100;
@@ -133,7 +132,7 @@ int WaypointPy::PyInit(PyObject* args, PyObject* kwd)
     getWaypointPtr()->Cont = cont ? true : false;
     getWaypointPtr()->Tool = tool;
     getWaypointPtr()->Base = base;
-    if (acc == nullptr)
+    if (!acc)
         getWaypointPtr()->Acceleration = 100;
     else
         getWaypointPtr()->Acceleration = Base::UnitsApi::toDouble(acc, Base::Unit::Acceleration);
@@ -202,8 +201,7 @@ Py::Object WaypointPy::getPos(void) const
 
 void WaypointPy::setPos(Py::Object arg)
 {
-    union PyType_Object pyType = {&(Base::PlacementPy::Type)};
-    Py::Type PlacementType(pyType.o);
+    Py::Type PlacementType(Base::getTypeAsObject(&(Base::PlacementPy::Type)));
     if(arg.isType(PlacementType))
         getWaypointPtr()->EndPos = *static_cast<Base::PlacementPy*>((*arg))->getPlacementPtr();
 }

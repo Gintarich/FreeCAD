@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ka" sourcelanguage="en">
   <context>
+    <name>BoundarySelector</name>
+    <message>
+      <location filename="../../../femguiutils/selection_widgets.py" line="132"/>
+      <source>Select Faces/Edges/Vertexes</source>
+      <translation>მონიშნეთ ზედაპირები/წიბოები/წვეროები</translation>
+    </message>
+    <message>
+      <location filename="../../../femguiutils/selection_widgets.py" line="136"/>
+      <source>To add references: select them in the 3D view  and click "Add".</source>
+      <translation>ბმის დასამატებლად: აირჩიეთ ისინი 3D ხედში და დააწექით "დამატება"-ს.</translation>
+    </message>
+  </context>
+  <context>
     <name>CmdFemConstraintBearing</name>
     <message>
       <location filename="../../Command.cpp" line="288"/>
@@ -321,17 +334,17 @@
   <context>
     <name>CmdFemPostApllyChanges</name>
     <message>
-      <location filename="../../Command.cpp" line="1737"/>
+      <location filename="../../Command.cpp" line="1752"/>
       <source>Fem</source>
       <translation type="unfinished">Fem</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1738"/>
+      <location filename="../../Command.cpp" line="1753"/>
       <source>Apply changes to pipeline</source>
       <translation>მილსადენის ცვლილებების გადატარება</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1739"/>
+      <location filename="../../Command.cpp" line="1754"/>
       <source>Apply changes to parameters directly and not on recompute only...</source>
       <translation>პარამეტრების ცვლილებების პირდაპირ და არა მხოლოდ გადათვლისას გადატარება...</translation>
     </message>
@@ -339,27 +352,27 @@
   <context>
     <name>CmdFemPostClipFilter</name>
     <message>
-      <location filename="../../Command.cpp" line="1281"/>
+      <location filename="../../Command.cpp" line="1296"/>
       <source>Fem</source>
       <translation type="unfinished">Fem</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1282"/>
+      <location filename="../../Command.cpp" line="1297"/>
       <source>Region clip filter</source>
       <translation>არეალის კვეთის ფილტრი</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1283"/>
+      <location filename="../../Command.cpp" line="1298"/>
       <source>Define/create a clip filter which uses functions to define the cliped region</source>
       <translation>ფილტრის აღწერა/შექმნა, რომელიც კვეთის არეალის აღსაწერად ფუნქციებს იყენებს</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1665"/>
+      <location filename="../../Command.cpp" line="1680"/>
       <source>Wrong selection</source>
       <translation>არასწორი არჩევანი</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1666"/>
+      <location filename="../../Command.cpp" line="1681"/>
       <source>Select a pipeline, please.</source>
       <translation>გთხოვთ, აირჩიოთ მილსადენი.</translation>
     </message>
@@ -367,7 +380,7 @@
   <context>
     <name>CmdFemPostCreateDataAtPointFilter</name>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="903"/>
+      <location filename="../../TaskPostBoxes.cpp" line="947"/>
       <source>Data At Point</source>
       <translation>წერტილის მონაცემები</translation>
     </message>
@@ -375,17 +388,17 @@
   <context>
     <name>CmdFemPostCutFilter</name>
     <message>
-      <location filename="../../Command.cpp" line="1324"/>
+      <location filename="../../Command.cpp" line="1339"/>
       <source>Fem</source>
       <translation type="unfinished">Fem</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1325"/>
+      <location filename="../../Command.cpp" line="1340"/>
       <source>Function cut filter</source>
       <translation>ამოჭრის ფუნქციის ფილტრი</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1326"/>
+      <location filename="../../Command.cpp" line="1341"/>
       <source>Cut the data along an implicit function</source>
       <translation>მონაცემების არაცხადი ფუნქციის გასწვრივ კვეთა</translation>
     </message>
@@ -393,17 +406,17 @@
   <context>
     <name>CmdFemPostDataAlongLineFilter</name>
     <message>
-      <location filename="../../Command.cpp" line="1367"/>
+      <location filename="../../Command.cpp" line="1382"/>
       <source>Fem</source>
       <translation type="unfinished">Fem</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1368"/>
+      <location filename="../../Command.cpp" line="1383"/>
       <source>Line clip filter</source>
       <translation>ხაზის კვეთის ფილტრი</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1369"/>
+      <location filename="../../Command.cpp" line="1384"/>
       <source>Define/create a clip filter which clips a field along a line</source>
       <translation>ფილტრის აღწერა/შექმნა, რომელიც ველს ხაზის გასწვრივ კვეთს</translation>
     </message>
@@ -411,17 +424,17 @@
   <context>
     <name>CmdFemPostDataAtPointFilter</name>
     <message>
-      <location filename="../../Command.cpp" line="1408"/>
+      <location filename="../../Command.cpp" line="1423"/>
       <source>Fem</source>
       <translation type="unfinished">Fem</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1409"/>
+      <location filename="../../Command.cpp" line="1424"/>
       <source>Data at point clip filter</source>
       <translation>მონაცემების ფილტრი წერტილის ჭრილზე</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1410"/>
+      <location filename="../../Command.cpp" line="1425"/>
       <source>Define/create a clip filter which clips a field data at point</source>
       <translation>ფილტრის აღწერა/შექმნა, რომელიც ველის მონაცემებს წერტილზე კვეთს</translation>
     </message>
@@ -429,27 +442,27 @@
   <context>
     <name>CmdFemPostFunctions</name>
     <message>
-      <location filename="../../Command.cpp" line="1597"/>
+      <location filename="../../Command.cpp" line="1612"/>
       <source>Fem</source>
       <translation type="unfinished">Fem</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1598"/>
+      <location filename="../../Command.cpp" line="1613"/>
       <source>Filter functions</source>
       <translation>ფილტრის ფუნქციები</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1599"/>
+      <location filename="../../Command.cpp" line="1614"/>
       <source>Functions for use in postprocessing filter...</source>
       <translation>პოსტპროცესორის ფილტრის მიერ გამოყენებული ფუნქციები...</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1710"/>
+      <location filename="../../Command.cpp" line="1725"/>
       <source>Plane</source>
       <translation>სიბრტყე</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1715"/>
+      <location filename="../../Command.cpp" line="1730"/>
       <source>Sphere</source>
       <translation>სფერო</translation>
     </message>
@@ -457,29 +470,65 @@
   <context>
     <name>CmdFemPostLinearizedStressesFilter</name>
     <message>
-      <location filename="../../Command.cpp" line="1453"/>
+      <location filename="../../Command.cpp" line="1219"/>
+      <source>Thickness [mm]</source>
+      <comment>Plot X-Axis Label</comment>
+      <translation>სისქე [mm]</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1220"/>
+      <source>Stress [MPa]</source>
+      <comment>Plot Y-Axis Label</comment>
+      <translation>მექანიკური ძაბვა [MPa]</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1221"/>
+      <source>Linearized Stresses</source>
+      <comment>Plot title</comment>
+      <translation type="unfinished">Linearized Stresses</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1222"/>
+      <source>Membrane</source>
+      <comment>Plot legend item label</comment>
+      <translation>მემბრანა</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1223"/>
+      <source>Membrane and Bending</source>
+      <comment>Plot legend item label</comment>
+      <translation type="unfinished">Membrane and Bending</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1224"/>
+      <source>Total</source>
+      <comment>Plot legend item label</comment>
+      <translation>სულ</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1468"/>
       <source>Fem</source>
       <translation type="unfinished">Fem</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1454"/>
+      <location filename="../../Command.cpp" line="1469"/>
       <source>Stress linearization plot</source>
       <translation>დეფორმაციის ხაზოვნების დახაზვა</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1455"/>
+      <location filename="../../Command.cpp" line="1470"/>
       <source>Define/create stress linearization plots</source>
       <translation>განსაზღვრეთ/დაამატეთ სტრესის ხაზოვანი ნახაზები</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1485"/>
-      <location filename="../../Command.cpp" line="1491"/>
+      <location filename="../../Command.cpp" line="1500"/>
+      <location filename="../../Command.cpp" line="1506"/>
       <source>Wrong selection</source>
       <translation>არასწორი არჩევანი</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1486"/>
-      <location filename="../../Command.cpp" line="1492"/>
+      <location filename="../../Command.cpp" line="1501"/>
+      <location filename="../../Command.cpp" line="1507"/>
       <source>Select a Clip filter which clips a STRESS field along a line, please.</source>
       <translation>გთხოვთ, აირჩიეთ კვეთს ფილტრი, რომელიც სტრესის ველს ხაზის გასწვრივ კვეთს.</translation>
     </message>
@@ -487,27 +536,27 @@
   <context>
     <name>CmdFemPostPipelineFromResult</name>
     <message>
-      <location filename="../../Command.cpp" line="1776"/>
+      <location filename="../../Command.cpp" line="1791"/>
       <source>Fem</source>
       <translation type="unfinished">Fem</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1777"/>
+      <location filename="../../Command.cpp" line="1792"/>
       <source>Post pipeline from result</source>
       <translation>მაჩვენე მილსადენი შედეგიდან</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1778"/>
+      <location filename="../../Command.cpp" line="1793"/>
       <source>Creates a post processing pipeline from a result object</source>
       <translation>შედეგის ობიექტიდან მილსადენის პოსტპროცესინგის შექმნა</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1841"/>
+      <location filename="../../Command.cpp" line="1856"/>
       <source>Wrong selection type</source>
       <translation>მონიშნულის არასწორი ტიპი</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1842"/>
+      <location filename="../../Command.cpp" line="1857"/>
       <source>Select a result object, please.</source>
       <translation>გთხოვთ მონიშნოთ შედეგი.</translation>
     </message>
@@ -515,17 +564,17 @@
   <context>
     <name>CmdFemPostScalarClipFilter</name>
     <message>
-      <location filename="../../Command.cpp" line="1515"/>
+      <location filename="../../Command.cpp" line="1530"/>
       <source>Fem</source>
       <translation type="unfinished">Fem</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1516"/>
+      <location filename="../../Command.cpp" line="1531"/>
       <source>Scalar clip filter</source>
       <translation>სკალარის კვეთის ფილტრი</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1517"/>
+      <location filename="../../Command.cpp" line="1532"/>
       <source>Define/create a clip filter which clips a field with a scalar value</source>
       <translation>ფილტრის აღწერა/შექმნა, რომელიც ველს სკალარული მნიშვნელობით კვეთს</translation>
     </message>
@@ -533,17 +582,17 @@
   <context>
     <name>CmdFemPostWarpVectorFilter</name>
     <message>
-      <location filename="../../Command.cpp" line="1556"/>
+      <location filename="../../Command.cpp" line="1571"/>
       <source>Fem</source>
       <translation type="unfinished">Fem</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1557"/>
+      <location filename="../../Command.cpp" line="1572"/>
       <source>Warp filter</source>
       <translation>დეფორმაციის ვიზუალიზაციის ფილტრი</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1558"/>
+      <location filename="../../Command.cpp" line="1573"/>
       <source>Warp the geometry along a vector field by a certain factor</source>
       <translation>გეომეტრიის მითითებული ფაქტორით დეფორმაცია ვექტორული ველის გასწვრივ</translation>
     </message>
@@ -641,17 +690,17 @@
       <translation>კვანძების ჯგუფის შექმნა</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1193"/>
+      <location filename="../../Command.cpp" line="1194"/>
       <source>Create filter</source>
       <translation>ფილტრის შექმნა</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1621"/>
+      <location filename="../../Command.cpp" line="1636"/>
       <source>Create function</source>
       <translation>ფუნქციის შექმნა</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1824"/>
+      <location filename="../../Command.cpp" line="1839"/>
       <source>Create pipeline from result</source>
       <translation>შედეგიდან მილსადენის შექმნა</translation>
     </message>
@@ -662,11 +711,65 @@
     </message>
   </context>
   <context>
+    <name>ControlWidget</name>
+    <message>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="215"/>
+      <source>Solver Control</source>
+      <translation>გადამწყვეტის კონტროლი</translation>
+    </message>
+    <message>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="226"/>
+      <source>Working Directory</source>
+      <translation>სამუშაო საქაღალდე</translation>
+    </message>
+    <message>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="230"/>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="303"/>
+      <source>Write</source>
+      <translation>ჩაწერა</translation>
+    </message>
+    <message>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="231"/>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="304"/>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="308"/>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="312"/>
+      <source>Edit</source>
+      <translation>ჩასწორება</translation>
+    </message>
+    <message>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="245"/>
+      <source>Elapsed Time:</source>
+      <translation>გასული დრო:</translation>
+    </message>
+    <message>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="305"/>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="309"/>
+      <source>Run</source>
+      <translation>გაშვება</translation>
+    </message>
+    <message>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="307"/>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="311"/>
+      <source>Re-write</source>
+      <translation>თავიდან-ჩაწერა</translation>
+    </message>
+    <message>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="313"/>
+      <source>Re-run</source>
+      <translation>თავიდან-გაშვება</translation>
+    </message>
+    <message>
+      <location filename="../../../femsolver/solver_taskpanel.py" line="315"/>
+      <source>Abort</source>
+      <translation>შეწყვეტა</translation>
+    </message>
+  </context>
+  <context>
     <name>Dialog</name>
     <message>
-      <location filename="../ui/MeshGroupXDMFExport.ui" line="14"/>
-      <location filename="../../TaskPanelConstraintTemperature.ui" line="14"/>
       <location filename="../../TaskPanelInitialTemperature.ui" line="14"/>
+      <location filename="../../TaskPanelConstraintTemperature.ui" line="14"/>
+      <location filename="../ui/MeshGroupXDMFExport.ui" line="14"/>
       <source>Dialog</source>
       <translation>ფანჯარა</translation>
     </message>
@@ -706,20 +809,20 @@
       <translation>აირჩიეთ წვეროები, ხაზები და ზედაპირები: </translation>
     </message>
     <message>
-      <location filename="../../TaskPanelConstraintTemperature.ui" line="39"/>
       <location filename="../../TaskPanelInitialTemperature.ui" line="43"/>
+      <location filename="../../TaskPanelConstraintTemperature.ui" line="39"/>
       <source>Temperature:</source>
       <translation>ტემპერატურა:</translation>
     </message>
     <message>
-      <location filename="../../TaskPanelConstraintTemperature.ui" line="52"/>
       <location filename="../../TaskPanelInitialTemperature.ui" line="56"/>
+      <location filename="../../TaskPanelConstraintTemperature.ui" line="52"/>
       <source>25</source>
       <translation>25</translation>
     </message>
     <message>
-      <location filename="../../TaskPanelConstraintTemperature.ui" line="68"/>
       <location filename="../../TaskPanelInitialTemperature.ui" line="72"/>
+      <location filename="../../TaskPanelConstraintTemperature.ui" line="68"/>
       <source>ºC</source>
       <translation>ºC</translation>
     </message>
@@ -742,16 +845,700 @@
     </message>
   </context>
   <context>
+    <name>FEM</name>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="290"/>
+      <source>Displacement Magnitude</source>
+      <translation>გადაადგილების სიდიდე</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="300"/>
+      <source>Displacement X</source>
+      <translation>გადაადგილება X</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="310"/>
+      <source>Displacement Y</source>
+      <translation>გადაადგილება Y</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="320"/>
+      <source>Displacement Z</source>
+      <translation>გადაადგილება Z</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="327"/>
+      <source>von Mises Stress</source>
+      <translation>ფონ მიზესის სტრესი</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="334"/>
+      <source>Max Shear Stress</source>
+      <translation>მაქს. ძვრის ძაბვა</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="341"/>
+      <source>Max Principal Stress</source>
+      <translation>მთავარი ძაბვის მაქს.</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="348"/>
+      <source>Temperature</source>
+      <translation>ტემპერატურა</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="355"/>
+      <source>Mass Flow Rate</source>
+      <translation>მასის დინების სიჩქარე</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="362"/>
+      <source>Network Pressure</source>
+      <translation>ქსელის დატვირთვა</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="369"/>
+      <source>Min Principal Stress</source>
+      <translation>მთავარი ძაბვის მინ.</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="376"/>
+      <source>Equivalent Plastic Strain</source>
+      <translation>ექვივალენტური პლასტიკური დეფორმაცია</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="395"/>
+      <source>Information</source>
+      <translation>ინფორმაცია</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="397"/>
+      <source>No histogram available.
+Please select a result type first.</source>
+      <translation type="unfinished">No histogram available.
+Please select a result type first.</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="510"/>
+      <source>Histogram of {}</source>
+      <translation>{}-ის ჰისტოგრამა</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="511"/>
+      <source>Nodes</source>
+      <translation>კვანძები</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="632"/>
+      <source>FEM: there are no nodes in result mesh, there will be nothing to show.</source>
+      <translation type="unfinished">FEM: there are no nodes in result mesh, there will be nothing to show.</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="635"/>
+      <source>Empty result mesh</source>
+      <translation>ცარიელი შედეგი ბადე</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="642"/>
+      <source>FEM: Graphical bending stress output for beam or shell FEM Meshes not yet supported.</source>
+      <translation type="unfinished">FEM: Graphical bending stress output for beam or shell FEM Meshes not yet supported.</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="645"/>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="649"/>
+      <source>No result object</source>
+      <translation>შედეგი ობიექტის გარეშე</translation>
+    </message>
+    <message>
+      <location filename="../../../femtaskpanels/task_result_mechanical.py" line="647"/>
+      <source>FEM: Result node numbers are not equal to FEM Mesh NodeCount.</source>
+      <translation type="unfinished">FEM: Result node numbers are not equal to FEM Mesh NodeCount.</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_Analysis</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="57"/>
+      <source>Analysis container</source>
+      <translation>ანალიზის კონტეინერი</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="62"/>
+      <source>Creates an analysis container with standard solver CalculiX</source>
+      <translation>ანალიზის კონტეინერის შექმნა სტანდარტული CalculiX ამომხსნელით</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ClippingPlaneAdd</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="85"/>
+      <source>Clipping plane on face</source>
+      <translation>კვეთის სიბრტყე ზედაპირზე</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="89"/>
+      <source>Add a clipping plane on a selected face</source>
+      <translation>მონიშნულ ზედაპირზე მკვეთი სიბრტყის დამატება</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ClippingPlaneRemoveAll</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="140"/>
+      <location filename="../../../femcommands/commands.py" line="144"/>
+      <source>Remove all clipping planes</source>
+      <translation>კვეთის ყველა სიბრტყის მოცილება</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ConstantVacuumPermittivity</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="166"/>
+      <source>Constant vacuum permittivity</source>
+      <translation>ვაკუუმის გამტარობის მუდმივა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="170"/>
+      <source>Creates a FEM constant vacuum permittivity to overwrite standard value</source>
+      <translation>სემ ვაკუუმის გამტარობის კონსტანტის შექმნა სტანდარტულ მნიშვნელობაზე გადასაწერად</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ConstraintBodyHeatSource</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="185"/>
+      <source>Constraint body heat source</source>
+      <translation>სხეულის სითბოს წყაროს შეზღუდვა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="189"/>
+      <source>Creates a FEM constraint body heat source</source>
+      <translation>სხეულის სითბოს წყაროს FEM შეზღუდვის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ConstraintCentrif</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="202"/>
+      <source>Constraint centrif</source>
+      <translation>ცენტრიფუგის შეზღუდვა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="206"/>
+      <source>Creates a FEM constraint centrif</source>
+      <translation>ცენტრიფუგის სემ შეზღუდვის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ConstraintElectrostaticPotential</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="219"/>
+      <source>Constraint electrostatic potential</source>
+      <translation>ელექტროსტატიკური პოტენციალის შეზღუდვა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="223"/>
+      <source>Creates a FEM constraint electrostatic potential</source>
+      <translation>სემ ელექტროსტატიკური პოტენციალის შეზღუდვის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ConstraintFlowVelocity</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="236"/>
+      <source>Constraint flow velocity</source>
+      <translation>დინების სიჩქარის ზღვარი</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="240"/>
+      <source>Creates a FEM constraint flow velocity</source>
+      <translation>ქმნის სემ დინების სიჩქარის შეზღუდვას</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ConstraintInitialFlowVelocity</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="253"/>
+      <source>Constraint initial flow velocity</source>
+      <translation>დინების საწყისი სიჩქარის ზღვარი</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="257"/>
+      <source>Creates a FEM constraint initial flow velocity</source>
+      <translation>ქმნის სემ დინების საწყისი სიჩქარის შეზღუდვას</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ConstraintSectionPrint</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="270"/>
+      <source>Constraint sectionprint</source>
+      <translation>განივი კვეთის შეზღუდვა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="274"/>
+      <source>Creates a FEM constraint sectionprint</source>
+      <translation>სემ განივი კვეთის შეზღუდვის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ConstraintSelfWeight</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="287"/>
+      <source>Constraint self weight</source>
+      <translation>საკუთარი წონის შეზღუდვა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="291"/>
+      <source>Creates a FEM constraint self weight</source>
+      <translation>საკუთარი წონის სემ შეზღუდვის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ConstraintTie</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="304"/>
+      <source>Constraint tie</source>
+      <translation>კავშირის შეზღუდვა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="308"/>
+      <source>Creates a FEM constraint tie</source>
+      <translation>სემ კავშირის შეზღუდვის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ElementFluid1D</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="321"/>
+      <source>Fluid section for 1D flow</source>
+      <translation>სითხის კვეთა 1D დინებისთვის</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="325"/>
+      <source>Creates a FEM fluid section for 1D flow</source>
+      <translation>სემ სითხის 1D დინების კვეთის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ElementGeometry1D</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="338"/>
+      <source>Beam cross section</source>
+      <translation>კოჭის კვეთი</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="342"/>
+      <source>Creates a FEM beam cross section</source>
+      <translation>სემ კოჭის კვეთის სექციის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ElementGeometry2D</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="355"/>
+      <source>Shell plate thickness</source>
+      <translation>გარსის ფილის სისქე</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="359"/>
+      <source>Creates a FEM shell plate thickness</source>
+      <translation>სემ გარსის ფილის სისქის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ElementRotation1D</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="372"/>
+      <source>Beam rotation</source>
+      <translation>კოჭის მობრუნება</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="376"/>
+      <source>Creates a FEM beam rotation</source>
+      <translation>სემ კოჭის შემობრუნების შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_EquationElasticity</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="406"/>
+      <source>Elasticity equation</source>
+      <translation>დრეკადობის განტოლება</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="410"/>
+      <source>Creates a FEM equation for elasticity</source>
+      <translation>სემ ელასტიურობის განტოლების შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_EquationElectricforce</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="457"/>
+      <source>Electricforce equation</source>
+      <translation>ელექტროძალის განტოლება</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="461"/>
+      <source>Creates a FEM equation for electric forces</source>
+      <translation>ელექტრო ძალების სემ განტოლების შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_EquationElectrostatic</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="389"/>
+      <source>Electrostatic equation</source>
+      <translation>ელექტროსტატიკური ტოლობა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="393"/>
+      <source>Creates a FEM equation for electrostatic</source>
+      <translation>სემ ელექტროსტატიკური განტოლების შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_EquationFlow</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="423"/>
+      <source>Flow equation</source>
+      <translation>დინების ტოლობა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="427"/>
+      <source>Creates a FEM equation for flow</source>
+      <translation>სემ დინების განტოლების შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_EquationFlux</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="440"/>
+      <source>Flux equation</source>
+      <translation>ნაკადის განტოლება</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="444"/>
+      <source>Creates a FEM equation for flux</source>
+      <translation>სემ ნაკადის განტოლების შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_EquationHeat</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="474"/>
+      <source>Heat equation</source>
+      <translation>სითბოს ფორმულა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="478"/>
+      <source>Creates a FEM equation for heat</source>
+      <translation>სემ სითბოს განტოლების შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_Examples</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="492"/>
+      <location filename="../../../femcommands/commands.py" line="496"/>
+      <source>Open FEM examples</source>
+      <translation>სემ მაგალითების გახსნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_FEMMesh2Mesh</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="655"/>
+      <source>FEM mesh to mesh</source>
+      <translation>სემ ბადიდან ბადემდე</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="659"/>
+      <source>Convert the surface of a FEM mesh to a mesh</source>
+      <translation>სემ ბადის ზედაპირის ბადედ გარდაქმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MaterialEditor</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="513"/>
+      <source>Material editor</source>
+      <translation>მასალების რედაქტორი</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="517"/>
+      <source>Opens the FreeCAD material editor</source>
+      <translation>FreeCAD-ის მასალების რედაქტორის გახსნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MaterialFluid</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="533"/>
+      <source>Material for fluid</source>
+      <translation>დენადი მასალა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="537"/>
+      <source>Creates a FEM material for fluid</source>
+      <translation>სითვისთვის სემ მასალის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MaterialMechanicalNonlinear</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="550"/>
+      <source>Nonlinear mechanical material</source>
+      <translation>არახაზოვანი მექანიკური მასალა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="554"/>
+      <source>Creates a nonlinear mechanical material</source>
+      <translation>არახაზოვანი მექანიკური მასალის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MaterialReinforced</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="620"/>
+      <source>Reinforced material (concrete)</source>
+      <translation>არმირებული მასალა (ბეტონი)</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="624"/>
+      <source>Creates a material for reinforced matrix material such as concrete</source>
+      <translation>არმირებული მატრიცული მასალის, მაგალითად რკინაბეტონის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MaterialSolid</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="637"/>
+      <source>Material for solid</source>
+      <translation>მყარი მასალა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="642"/>
+      <source>Creates a FEM material for solid</source>
+      <translation>სითხისთვის სემ მასალის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MeshBoundaryLayer</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="702"/>
+      <source>FEM mesh boundary layer</source>
+      <translation>სემ ბადის სასაზღვრო ფენა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="706"/>
+      <source>Creates a FEM mesh boundary layer</source>
+      <translation>სემ ბადის შემომსაზღვრელი შრის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MeshClear</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="719"/>
+      <source>Clear FEM mesh</source>
+      <translation>სემ ბადის გასუფთავება</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="723"/>
+      <source>Clear the Mesh of a FEM mesh object</source>
+      <translation>ბადის ან სემ ბადის ობიექტის გასუფთავება</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MeshDisplayInfo</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="744"/>
+      <location filename="../../../femcommands/commands.py" line="748"/>
+      <source>Display FEM mesh info</source>
+      <translation>სემ ბადის ინფორმაციის ჩვენება</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MeshGmshFromShape</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="773"/>
+      <source>FEM mesh from shape by Gmsh</source>
+      <translation>მონახაზიდან სემ ბადის Gmsh-ის გამოყენებით შექმნა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="777"/>
+      <source>Create a FEM mesh from a shape by Gmsh mesher</source>
+      <translation>მოხაზულობიდან Gmsh-ის მეშვეობით სემ ბადის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MeshGroup</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="818"/>
+      <source>FEM mesh group</source>
+      <translation>სემ ბადეების ჯგუფი</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="822"/>
+      <source>Creates a FEM mesh group</source>
+      <translation>სემ ბადის ჯგუფის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MeshNetgenFromShape</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="835"/>
+      <source>FEM mesh from shape by Netgen</source>
+      <translation>მონახაზიდან სემ ბადის Netgen-ის გამოყენებით შექმნა</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="839"/>
+      <source>Create a FEM mesh from a solid or face shape by Netgen internal mesher</source>
+      <translation>სემ ბადის მყარი სხეულისაგან ან ზედაპირის მოხაზულობისგან Netgen შიდა მეშერით შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_MeshRegion</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="880"/>
+      <source>FEM mesh region</source>
+      <translation>სემ ბადის რეგიონი</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="884"/>
+      <source>Creates a FEM mesh region</source>
+      <translation>სემ ბადის რეგიონის შექმნა</translation>
+    </message>
+  </context>
+  <context>
     <name>FEM_PostCreateFunctions</name>
     <message>
-      <location filename="../../Command.cpp" line="1711"/>
+      <location filename="../../Command.cpp" line="1726"/>
       <source>Create a plane function, defined by its origin and normal</source>
       <translation>შექმენით სიბრტყის ფუნქცია, აღწერილი მისი საწყისი წერტილითა და ნორმალით</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1716"/>
+      <location filename="../../Command.cpp" line="1731"/>
       <source>Create a sphere function, defined by its center and radius</source>
       <translation>შექმენით სფეროს ფუნქცია, აღწერილი მისი ცენტრით და რადიუსით</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ResultShow</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="897"/>
+      <source>Show result</source>
+      <translation>შედეგების ჩვენება</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="902"/>
+      <source>Shows and visualizes selected result data</source>
+      <translation>შედეგის მონიშნული მონაცემების ჩვენება და ვიზუალიზაცია</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_ResultsPurge</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="917"/>
+      <source>Purge results</source>
+      <translation>შედეგების გასუფთავება</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="922"/>
+      <source>Purges all results from active analysis</source>
+      <translation>აქტიური ანალიზის ყველა შედეგის წაშლა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_SolverCalculix</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="980"/>
+      <source>Solver CalculiX (new framework)</source>
+      <translation>ამომხსნელი CalculiX-ი (ახალი framework)</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="985"/>
+      <source>Creates a FEM solver CalculiX new framework (less result error handling)</source>
+      <translation>სემ ამომხსნელის CalculiX ახალი Framework-ით შექმნა (ნაკლები შედეგის შეცდომები)</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_SolverCalculixCxxtools</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="939"/>
+      <source>Solver CalculiX Standard</source>
+      <translation>ამომხსნელის CalculiX სტანდარტი</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="944"/>
+      <source>Creates a standard FEM solver CalculiX with ccx tools</source>
+      <translation>Cxx ხელსაწყოებით სტანდარტული CalculiX სემ ამომხსნელის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_SolverControl</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="999"/>
+      <source>Solver job control</source>
+      <translation>გადამწყვეტის ამოცანების კონტროლი</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="1004"/>
+      <source>Changes solver attributes and runs the calculations for the selected solver</source>
+      <translation>ცვლის ამომხსნელის ატრიბუტებს და აწარმოებს გამოთვლებს არჩეული ამომხსნელისთვის</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_SolverElmer</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="1016"/>
+      <source>Solver Elmer</source>
+      <translation>გადამწყვეტი Elmder</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="1021"/>
+      <source>Creates a FEM solver Elmer</source>
+      <translation>სემ „Elmer“ ამოხსნელის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_SolverMystran</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="1032"/>
+      <source>Solver Mystran</source>
+      <translation>Mystran ამომხსნელი</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="1034"/>
+      <source>Creates a FEM solver Mystran</source>
+      <translation>სემ „Mystran“ ამოხსნელის შექმნა</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_SolverRun</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="1044"/>
+      <source>Run solver calculations</source>
+      <translation>ამომხსნელის გამოთვლების გაშვება</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="1049"/>
+      <source>Runs the calculations for the selected solver</source>
+      <translation>გამოთვლების არჩეული ამომხსნელით გაშვება</translation>
+    </message>
+  </context>
+  <context>
+    <name>FEM_SolverZ88</name>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="1064"/>
+      <source>Solver Z88</source>
+      <translation>გადამწყვეტი Z88</translation>
+    </message>
+    <message>
+      <location filename="../../../femcommands/commands.py" line="1066"/>
+      <source>Creates a FEM solver Z88</source>
+      <translation>სემ Z88 ამოხსნელისთვის ამოცანის შექმნა</translation>
     </message>
   </context>
   <context>
@@ -911,7 +1698,7 @@
       <location filename="../../DlgSettingsFemCcx.ui" line="463"/>
       <location filename="../../DlgSettingsFemCcx.ui" line="502"/>
       <source>s</source>
-      <translation type="unfinished">s</translation>
+      <translation>s</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemCcx.ui" line="470"/>
@@ -1200,7 +1987,7 @@ constraint or material is applied.</source>
     <message>
       <location filename="../../DlgSettingsFemGmsh.ui" line="65"/>
       <source>Gmsh binary path</source>
-      <translation type="unfinished">Gmsh binary path</translation>
+      <translation>Ბილიკ gmsh-ის გამშვებ ფაილამდე</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemGmsh.ui" line="99"/>
@@ -1279,7 +2066,7 @@ FreeCAD-ის შედეგი ობიექტი: შემოტან�
     <message>
       <location filename="../../DlgSettingsFemMaterial.ui" line="31"/>
       <source>The cards built-in to FreeCAD will be listed as available.</source>
-      <translation type="unfinished">The cards built-in to FreeCAD will be listed as available.</translation>
+      <translation>FreeCAD-ში ჩაშენებული ბარათები მონიშნული იქნება, როგორც ხელმისაწვდომი.</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemMaterial.ui" line="34"/>
@@ -1289,19 +2076,19 @@ FreeCAD-ის შედეგი ობიექტი: შემოტან�
     <message>
       <location filename="../../DlgSettingsFemMaterial.ui" line="50"/>
       <source>Also cards from FreeCAD's preferences directory will be listed as available.</source>
-      <translation type="unfinished">Also cards from FreeCAD's preferences directory will be listed as available.</translation>
+      <translation>ბარათები FreeCAD-ის პარამეტრებს საქაღალდიდან ასევე მოინიშნებიან, როგორც ხელმისაწვდომი.</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemMaterial.ui" line="53"/>
       <source>Use materials from Materials directory in user's FreeCAD preference directory</source>
-      <translation type="unfinished">Use materials from Materials directory in user's FreeCAD preference directory</translation>
+      <translation>მასალების FreeCAD-ის პარამეტრების საქაღალდეში მდებარე 'Materials' საქაღალდიდან წაკითხვა</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemMaterial.ui" line="69"/>
       <source>Also material cards also from the specified directory
 will be listed as available.</source>
-      <translation type="unfinished">Also material cards also from the specified directory
-will be listed as available.</translation>
+      <translation>მასალის ბარათები მითითებული საქაღალდიდან
+ასევე იქნებიან მოშიშნულები, როგორც ხელმისაწვდომი.</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemMaterial.ui" line="73"/>
@@ -1321,7 +2108,7 @@ will be listed as available.</translation>
     <message>
       <location filename="../../DlgSettingsFemMaterial.ui" line="154"/>
       <source>Duplicate cards will be deleted from the displayed material card list.</source>
-      <translation type="unfinished">Duplicate cards will be deleted from the displayed material card list.</translation>
+      <translation>დუბლირებული ბარათები წაიშლება ნაჩვენები მასალების ბარათის სიიდან.</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemMaterial.ui" line="157"/>
@@ -1332,13 +2119,13 @@ will be listed as available.</translation>
       <location filename="../../DlgSettingsFemMaterial.ui" line="173"/>
       <source>Material cards appear sorted by their resources (locations).
 If unchecked, they will be sorted by their name.</source>
-      <translation type="unfinished">Material cards appear sorted by their resources (locations).
-If unchecked, they will be sorted by their name.</translation>
+      <translation>როგორც ჩანს, მასალის ბარათები თავისი რესურსების(მდებარეობების) მიხედვთაა დალაგებული.
+თუ გამორთულია, ისინი სახელის მიხედვით დალაგდება.</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemMaterial.ui" line="177"/>
       <source>Sort by resources</source>
-      <translation type="unfinished">Sort by resources</translation>
+      <translation>რესურსებით დალაგება</translation>
     </message>
   </context>
   <context>
@@ -1376,7 +2163,7 @@ If unchecked, they will be sorted by their name.</translation>
     <message>
       <location filename="../../DlgSettingsFemMystran.ui" line="119"/>
       <source>Write comments to input file</source>
-      <translation type="unfinished">Write comments to input file</translation>
+      <translation>კომენტარების შესატან ფაილში ჩაწერა</translation>
     </message>
   </context>
   <context>
@@ -1409,37 +2196,37 @@ If unchecked, they will be sorted by their name.</translation>
     <message>
       <location filename="../../DlgSettingsFemZ88.ui" line="138"/>
       <source>Solver settings</source>
-      <translation type="unfinished">Solver settings</translation>
+      <translation>ამომხსნელის მორგება</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemZ88.ui" line="149"/>
       <source>Solver method</source>
-      <translation type="unfinished">Solver method</translation>
+      <translation>ამომხსნელის მეთოდი</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemZ88.ui" line="165"/>
       <source>Solver method to be used</source>
-      <translation type="unfinished">Solver method to be used</translation>
+      <translation>ამომხსნელის გამოყენებული მეთოდი</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemZ88.ui" line="178"/>
       <source>Iteration solver with SOR preconditioning (-sorcg)</source>
-      <translation type="unfinished">Iteration solver with SOR preconditioning (-sorcg)</translation>
+      <translation>იტერაციის ამომხსნელი SOR წინაპირობით (-sorcg)</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemZ88.ui" line="183"/>
       <source>Iteration solver with SIC preconditioning (-siccg)</source>
-      <translation type="unfinished">Iteration solver with SIC preconditioning (-siccg)</translation>
+      <translation>იტერაციის ამომხსნელი siC წინაპირობით (-siccg)</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemZ88.ui" line="188"/>
       <source>Simple Cholesky solver (-choly)</source>
-      <translation type="unfinished">Simple Cholesky solver (-choly)</translation>
+      <translation>ჩოლესკის მარტივი ამომხსნელი (-choly)</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemZ88.ui" line="196"/>
       <source>Max places in stiffness matrix</source>
-      <translation type="unfinished">Max places in stiffness matrix</translation>
+      <translation>მაქს. ადგილები სიმაგრის მატრიცაში</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemZ88.ui" line="209"/>
@@ -1447,15 +2234,15 @@ If unchecked, they will be sorted by their name.</translation>
 You might need to increase this when using the
 Cholesky solver and you get the error message
 that "MAXGS" needs to be increased.</source>
-      <translation type="unfinished">Maximal places in stiffnes matrix.
-You might need to increase this when using the
-Cholesky solver and you get the error message
-that "MAXGS" needs to be increased.</translation>
+      <translation>მაქსიმალური ადგილები სიმყიფის მატრიცაში.
+შეიძლება დაგჭირდეთ ამ პარამეტრის გაზრდა, როცა
+ქოლესკის ამომხსნელს იყენებთ და იღებთ შეცდომას, რომ
+საჭიროა "MAXGS"-ის გაზრდა.</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemZ88.ui" line="240"/>
       <source>Max places in coincidence vector</source>
-      <translation type="unfinished">Max places in coincidence vector</translation>
+      <translation>მაქსიმალური ადგილები დამთხვევის ვექტორში</translation>
     </message>
     <message>
       <location filename="../../DlgSettingsFemZ88.ui" line="253"/>
@@ -1466,13 +2253,13 @@ that "MAXGS" needs to be increased.</translation>
 You might need to increase this when using an
 iterative solver and you get the error message
 that "MAXKOI" needs to be increased.</source>
-      <translation type="unfinished">Maximal places in coincidence vector.
-(number of knots per element times
- number of finite elements)
+      <translation>მაქსიმალური ადგილები დამთხვევის ვექტორში
+(თითოეული ელემენტის კვანძების რიცხვი 
+ გამრავლებული სასრული ელემენტების რიცხვზე).
 
-You might need to increase this when using an
-iterative solver and you get the error message
-that "MAXKOI" needs to be increased.</translation>
+შეიძლება დაგჭირდეთ ამისი გაზრდა, თუ იყენებთ 
+იტერაციულ ამომხსნელს და დაინახავთ 
+შეცდომას, რომ საჭიროა "MAXKOI"-ის გაზრდა.</translation>
     </message>
   </context>
   <context>
@@ -1632,7 +2419,7 @@ that "MAXKOI" needs to be increased.</translation>
   <context>
     <name>FemGui::TaskDlgPost</name>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="266"/>
+      <location filename="../../TaskPostBoxes.cpp" line="267"/>
       <source>Input error</source>
       <translation type="unfinished">Input error</translation>
     </message>
@@ -2276,7 +3063,7 @@ that "MAXKOI" needs to be increased.</translation>
   <context>
     <name>FemGui::TaskPostClip</name>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="413"/>
+      <location filename="../../TaskPostBoxes.cpp" line="414"/>
       <source>Clip region, choose implicit function</source>
       <translation>რეგიონის კვეთა, აირჩიეთ არაცხადი ფუნქცია</translation>
     </message>
@@ -2284,7 +3071,7 @@ that "MAXKOI" needs to be increased.</translation>
   <context>
     <name>FemGui::TaskPostCut</name>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="1160"/>
+      <location filename="../../TaskPostBoxes.cpp" line="1204"/>
       <source>Function cut, choose implicit function</source>
       <translation>ფუნქციის კვეთა, აირჩიეთ არაცხადი ფუნქცია</translation>
     </message>
@@ -2292,15 +3079,21 @@ that "MAXKOI" needs to be increased.</translation>
   <context>
     <name>FemGui::TaskPostDataAlongLine</name>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="540"/>
+      <location filename="../../TaskPostBoxes.cpp" line="541"/>
       <source>Data along a line options</source>
       <translation>ხაზის გასწვრივი მონაცემების პარამეტრები</translation>
+    </message>
+    <message>
+      <location filename="../../TaskPostBoxes.cpp" line="736"/>
+      <source>Length</source>
+      <comment>X-Axis plot label</comment>
+      <translation>სიგრძე</translation>
     </message>
   </context>
   <context>
     <name>FemGui::TaskPostDataAtPoint</name>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="750"/>
+      <location filename="../../TaskPostBoxes.cpp" line="759"/>
       <source>Data at point options</source>
       <translation>წერტილის მონაცემების პარამეტრები</translation>
     </message>
@@ -2308,7 +3101,7 @@ that "MAXKOI" needs to be increased.</translation>
   <context>
     <name>FemGui::TaskPostDisplay</name>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="333"/>
+      <location filename="../../TaskPostBoxes.cpp" line="334"/>
       <source>Result display options</source>
       <translation>შედეგის ჩვენების მორგება</translation>
     </message>
@@ -2316,7 +3109,7 @@ that "MAXKOI" needs to be increased.</translation>
   <context>
     <name>FemGui::TaskPostFunction</name>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="390"/>
+      <location filename="../../TaskPostBoxes.cpp" line="391"/>
       <source>Implicit function</source>
       <translation>არაცხადი ფუნქცია</translation>
     </message>
@@ -2324,7 +3117,7 @@ that "MAXKOI" needs to be increased.</translation>
   <context>
     <name>FemGui::TaskPostScalarClip</name>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="911"/>
+      <location filename="../../TaskPostBoxes.cpp" line="955"/>
       <source>Scalar clip options</source>
       <translation>სკალარის ფილტრის მორგება</translation>
     </message>
@@ -2332,7 +3125,7 @@ that "MAXKOI" needs to be increased.</translation>
   <context>
     <name>FemGui::TaskPostWarpVector</name>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="1019"/>
+      <location filename="../../TaskPostBoxes.cpp" line="1063"/>
       <source>Warp options</source>
       <translation>გადატანის პარამეტრები</translation>
     </message>
@@ -2369,15 +3162,15 @@ that "MAXKOI" needs to be increased.</translation>
   <context>
     <name>FemMaterial</name>
     <message>
-      <location filename="../ui/Material.ui" line="14"/>
       <location filename="../ui/MaterialReinforcement.ui" line="14"/>
+      <location filename="../ui/Material.ui" line="14"/>
       <source>FEM material</source>
       <translation>სემის მასალა</translation>
     </message>
     <message>
-      <location filename="../ui/Material.ui" line="26"/>
       <location filename="../ui/MaterialReinforcement.ui" line="37"/>
       <location filename="../ui/MaterialReinforcement.ui" line="110"/>
+      <location filename="../ui/Material.ui" line="26"/>
       <source>Material</source>
       <translation>მასალა</translation>
     </message>
@@ -2402,9 +3195,9 @@ that "MAXKOI" needs to be increased.</translation>
       <translation>მასალის სახელი</translation>
     </message>
     <message>
-      <location filename="../ui/Material.ui" line="71"/>
       <location filename="../ui/MaterialReinforcement.ui" line="74"/>
       <location filename="../ui/MaterialReinforcement.ui" line="147"/>
+      <location filename="../ui/Material.ui" line="71"/>
       <source>TextLabel</source>
       <translation>ტექსტური წარწერა</translation>
     </message>
@@ -2441,7 +3234,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/Material.ui" line="174"/>
       <source>0 kg/m^3</source>
-      <translation type="unfinished">0 kg/m^3</translation>
+      <translation>0 კგ/მ^3</translation>
     </message>
     <message>
       <location filename="../ui/Material.ui" line="210"/>
@@ -2456,7 +3249,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/Material.ui" line="240"/>
       <source>0 Pa</source>
-      <translation type="unfinished">0 Pa</translation>
+      <translation>0 პა</translation>
     </message>
     <message>
       <location filename="../ui/Material.ui" line="265"/>
@@ -2476,7 +3269,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/Material.ui" line="344"/>
       <source>0 m^2/s</source>
-      <translation type="unfinished">0 m^2/s</translation>
+      <translation>0 მ^2/წმ</translation>
     </message>
     <message>
       <location filename="../ui/Material.ui" line="380"/>
@@ -2491,7 +3284,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/Material.ui" line="410"/>
       <source>0 W/m/K</source>
-      <translation type="unfinished">0 W/m/K</translation>
+      <translation>0 W/m/K</translation>
     </message>
     <message>
       <location filename="../ui/Material.ui" line="435"/>
@@ -2502,7 +3295,7 @@ that "MAXKOI" needs to be increased.</translation>
       <location filename="../ui/Material.ui" line="454"/>
       <location filename="../ui/Material.ui" line="542"/>
       <source>0 m/m/K</source>
-      <translation type="unfinished">0 m/m/K</translation>
+      <translation>0 მ/მ/K</translation>
     </message>
     <message>
       <location filename="../ui/Material.ui" line="479"/>
@@ -2512,7 +3305,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/Material.ui" line="498"/>
       <source>0 J/kg/K</source>
-      <translation type="unfinished">0 J/kg/K</translation>
+      <translation>0 ჯ/კგ/კ</translation>
     </message>
     <message>
       <location filename="../ui/Material.ui" line="523"/>
@@ -2657,7 +3450,7 @@ that "MAXKOI" needs to be increased.</translation>
       <location filename="../ui/ElementFluid1D.ui" line="278"/>
       <location filename="../ui/ElementFluid1D.ui" line="348"/>
       <source>0 kg/s</source>
-      <translation type="unfinished">0 kg/s</translation>
+      <translation>0 კგ/წმ</translation>
     </message>
     <message>
       <location filename="../ui/ElementFluid1D.ui" line="297"/>
@@ -2775,6 +3568,9 @@ that "MAXKOI" needs to be increased.</translation>
     </message>
     <message>
       <location filename="../ui/ConstraintTie.ui" line="52"/>
+      <location filename="../ui/MeshBoundaryLayer.ui" line="50"/>
+      <location filename="../ui/MeshRegion.ui" line="56"/>
+      <location filename="../ui/ElementGeometry2D.ui" line="52"/>
       <location filename="../ui/ElementFluid1D.ui" line="92"/>
       <location filename="../ui/ElementFluid1D.ui" line="745"/>
       <location filename="../ui/ElementFluid1D.ui" line="766"/>
@@ -2783,9 +3579,6 @@ that "MAXKOI" needs to be increased.</translation>
       <location filename="../ui/ElementGeometry1D.ui" line="200"/>
       <location filename="../ui/ElementGeometry1D.ui" line="262"/>
       <location filename="../ui/ElementGeometry1D.ui" line="306"/>
-      <location filename="../ui/ElementGeometry2D.ui" line="52"/>
-      <location filename="../ui/MeshBoundaryLayer.ui" line="50"/>
-      <location filename="../ui/MeshRegion.ui" line="56"/>
       <source>0 mm</source>
       <translation>0 მმ</translation>
     </message>
@@ -2800,11 +3593,11 @@ that "MAXKOI" needs to be increased.</translation>
       <translation>ცენტრიფუგის პარამეტრი</translation>
     </message>
     <message>
-      <location filename="../ui/ConstraintCentrif.ui" line="26"/>
       <location filename="../ui/ConstraintTie.ui" line="26"/>
-      <location filename="../ui/ElementGeometry2D.ui" line="26"/>
       <location filename="../ui/MeshBoundaryLayer.ui" line="26"/>
+      <location filename="../ui/ConstraintCentrif.ui" line="26"/>
       <location filename="../ui/MeshRegion.ui" line="26"/>
+      <location filename="../ui/ElementGeometry2D.ui" line="26"/>
       <source>Parameter</source>
       <translation>პარამეტრი</translation>
     </message>
@@ -2821,7 +3614,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/ConstraintCentrif.ui" line="80"/>
       <source>0 1/s</source>
-      <translation type="unfinished">0 1/s</translation>
+      <translation>0 1/წმ</translation>
     </message>
     <message>
       <location filename="../ui/ConstraintCentrif.ui" line="92"/>
@@ -2848,7 +3641,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/ElectrostaticPotential.ui" line="51"/>
       <source>Electric potential in V</source>
-      <translation type="unfinished">Electric potential in V</translation>
+      <translation>ელექტრული პოტენციალი ვოლტებში</translation>
     </message>
     <message>
       <location filename="../ui/ElectrostaticPotential.ui" line="76"/>
@@ -2865,7 +3658,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/ElectrostaticPotential.ui" line="88"/>
       <source>Whether the constraint defines a constant potential</source>
-      <translation type="unfinished">Whether the constraint defines a constant potential</translation>
+      <translation>განსაზღვრავს თუ არა შეზღუდვა მუდმივ პოტენციალს</translation>
     </message>
     <message>
       <location filename="../ui/ElectrostaticPotential.ui" line="91"/>
@@ -2875,7 +3668,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/ElectrostaticPotential.ui" line="101"/>
       <source>Whether the constraint defines a farfield potential</source>
-      <translation type="unfinished">Whether the constraint defines a farfield potential</translation>
+      <translation>განსაზღვრავს თუ არა შეზღუდვა შორი ველის პოტენციალს</translation>
     </message>
     <message>
       <location filename="../ui/ElectrostaticPotential.ui" line="104"/>
@@ -2885,7 +3678,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/ElectrostaticPotential.ui" line="111"/>
       <source>Whether the constraint is for the electric force</source>
-      <translation type="unfinished">Whether the constraint is for the electric force</translation>
+      <translation>არის თუ არა შეზღუდვა ელექტრული ძალისთვის</translation>
     </message>
     <message>
       <location filename="../ui/ElectrostaticPotential.ui" line="114"/>
@@ -2900,8 +3693,8 @@ that "MAXKOI" needs to be increased.</translation>
     </message>
     <message>
       <location filename="../ui/ElectrostaticPotential.ui" line="159"/>
-      <source>Counter of the body (or face) with a capcitance</source>
-      <translation type="unfinished">Counter of the body (or face) with a capcitance</translation>
+      <source>Counter of the body (or face) with a capacitance</source>
+      <translation>ტევადობის მქონე სხეულის (ან ზედაპირის) მთვლელი</translation>
     </message>
     <message>
       <location filename="../ui/ElementGeometry1D.ui" line="14"/>
@@ -2909,8 +3702,8 @@ that "MAXKOI" needs to be increased.</translation>
       <translation>კოჭის სექციის პარამეტრი</translation>
     </message>
     <message>
-      <location filename="../ui/ElementGeometry1D.ui" line="20"/>
       <location filename="../ui/ElementRotation1D.ui" line="20"/>
+      <location filename="../ui/ElementGeometry1D.ui" line="20"/>
       <source>Cross section parameter</source>
       <translation>განივი გადანაჭერის პარამეტრი</translation>
     </message>
@@ -2953,7 +3746,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../ui/ElementRotation1D.ui" line="61"/>
       <source>0 degree</source>
-      <translation type="unfinished">0 degree</translation>
+      <translation>0 გრადუსი</translation>
     </message>
     <message>
       <location filename="../ui/ElementRotation1D.ui" line="89"/>
@@ -3042,6 +3835,39 @@ that "MAXKOI" needs to be increased.</translation>
       <location filename="../ui/MeshRegion.ui" line="37"/>
       <source>Max element size:</source>
       <translation>ელემენტის მაქს. ზომა:</translation>
+    </message>
+  </context>
+  <context>
+    <name>GeometryElementsSelection</name>
+    <message>
+      <location filename="../../../femguiutils/selection_widgets.py" line="273"/>
+      <source>Geometry reference selector for a</source>
+      <translation>გეომეტრიის მიბმის ამრჩევი</translation>
+    </message>
+    <message>
+      <location filename="../../../femguiutils/selection_widgets.py" line="276"/>
+      <source>Add</source>
+      <translation>დამატება</translation>
+    </message>
+    <message>
+      <location filename="../../../femguiutils/selection_widgets.py" line="283"/>
+      <source>Click on "Add" and select geometric elements to add them to the list.{}The following geometry elements are allowed to select: {}{}{}</source>
+      <translation>დააწკაპუნეთ ღილაკზე „დამატება“ და აირჩიეთ გეომეტრიული ელემენტები სიაში დასამატებლად.{} გაქვთ შემდეგი გეომეტრიის ელემენტების არჩევის უფლება: {}{}{}</translation>
+    </message>
+    <message>
+      <location filename="../../../femguiutils/selection_widgets.py" line="286"/>
+      <source>{}If no geometry is added to the list, all remaining ones are used.</source>
+      <translation>{} თუ სიაში გეომეტრიები არაა, გამოყენებული იქნება ყველა დანარჩენი.</translation>
+    </message>
+    <message>
+      <location filename="../../../femguiutils/selection_widgets.py" line="300"/>
+      <source>Selection mode</source>
+      <translation>მონიშვნის რეჟიმი</translation>
+    </message>
+    <message>
+      <location filename="../../../femguiutils/selection_widgets.py" line="302"/>
+      <source>Solid</source>
+      <translation>მყარი სხეული</translation>
     </message>
   </context>
   <context>
@@ -3144,11 +3970,11 @@ that "MAXKOI" needs to be increased.</translation>
       <translation>ზღვრის ჩასწორება</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderFemConstraintBearing.cpp" line="77"/>
-      <location filename="../../ViewProviderFemConstraintFixed.cpp" line="77"/>
       <location filename="../../ViewProviderFemConstraintFluidBoundary.cpp" line="75"/>
       <location filename="../../ViewProviderFemConstraintForce.cpp" line="76"/>
+      <location filename="../../ViewProviderFemConstraintBearing.cpp" line="77"/>
       <location filename="../../ViewProviderFemConstraintGear.cpp" line="76"/>
+      <location filename="../../ViewProviderFemConstraintFixed.cpp" line="77"/>
       <location filename="../../ViewProviderFemConstraintPulley.cpp" line="75"/>
       <location filename="../../ViewProviderFemPostFunction.cpp" line="340"/>
       <location filename="../../ViewProviderFemPostObject.cpp" line="604"/>
@@ -3156,11 +3982,11 @@ that "MAXKOI" needs to be increased.</translation>
       <translation type="unfinished">A dialog is already open in the task panel</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderFemConstraintBearing.cpp" line="78"/>
-      <location filename="../../ViewProviderFemConstraintFixed.cpp" line="78"/>
       <location filename="../../ViewProviderFemConstraintFluidBoundary.cpp" line="76"/>
       <location filename="../../ViewProviderFemConstraintForce.cpp" line="77"/>
+      <location filename="../../ViewProviderFemConstraintBearing.cpp" line="78"/>
       <location filename="../../ViewProviderFemConstraintGear.cpp" line="77"/>
+      <location filename="../../ViewProviderFemConstraintFixed.cpp" line="78"/>
       <location filename="../../ViewProviderFemConstraintPulley.cpp" line="76"/>
       <location filename="../../ViewProviderFemPostFunction.cpp" line="341"/>
       <location filename="../../ViewProviderFemPostObject.cpp" line="605"/>
@@ -3255,7 +4081,7 @@ that "MAXKOI" needs to be increased.</translation>
       <translation>გარდაქნის შეზღუდვა</translation>
     </message>
     <message>
-      <location filename="../../TaskPostBoxes.cpp" line="247"/>
+      <location filename="../../TaskPostBoxes.cpp" line="248"/>
       <source>Edit post processing object</source>
       <translation>პოსტპროცესორის ობიექტის ჩასწორება</translation>
     </message>
@@ -3267,7 +4093,7 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../../PropertyFemMeshItem.cpp" line="111"/>
       <source>Edges</source>
-      <translation type="unfinished">Edges</translation>
+      <translation>წიბოები</translation>
     </message>
     <message>
       <location filename="../../PropertyFemMeshItem.cpp" line="112"/>
@@ -3277,17 +4103,17 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../../PropertyFemMeshItem.cpp" line="113"/>
       <source>Polygons</source>
-      <translation type="unfinished">Polygons</translation>
+      <translation>მრავალკუთხედები</translation>
     </message>
     <message>
       <location filename="../../PropertyFemMeshItem.cpp" line="114"/>
       <source>Volumes</source>
-      <translation type="unfinished">Volumes</translation>
+      <translation>მოცულობები</translation>
     </message>
     <message>
       <location filename="../../PropertyFemMeshItem.cpp" line="115"/>
       <source>Polyhedrons</source>
-      <translation type="unfinished">Polyhedrons</translation>
+      <translation>მრავალწახნაგები</translation>
     </message>
     <message>
       <location filename="../../PropertyFemMeshItem.cpp" line="116"/>
@@ -3297,8 +4123,8 @@ that "MAXKOI" needs to be increased.</translation>
     <message>
       <location filename="../../ViewProviderAnalysis.cpp" line="227"/>
       <location filename="../../ViewProviderFemPostFunction.cpp" line="150"/>
-      <location filename="../../ViewProviderFemPostObject.cpp" line="681"/>
       <location filename="../../ViewProviderSolver.cpp" line="71"/>
+      <location filename="../../ViewProviderFemPostObject.cpp" line="681"/>
       <source>Are you sure you want to continue?</source>
       <translation>დარწმუნებული ბრძანდებით, რომ გნებავთ გააგრძელოთ?</translation>
     </message>
@@ -3362,8 +4188,8 @@ that "MAXKOI" needs to be increased.</translation>
     </message>
     <message>
       <location filename="../ui/ResultShow.ui" line="130"/>
-      <source>Peeq</source>
-      <translation>Peeq</translation>
+      <source>Equivalent Plastic Strain</source>
+      <translation>ექვივალენტური პლასტიკური დეფორმაცია</translation>
     </message>
     <message>
       <location filename="../ui/ResultShow.ui" line="137"/>
@@ -3421,22 +4247,30 @@ that "MAXKOI" needs to be increased.</translation>
       <translation>მომხმარებლის მიერ განსაზღვრული განტოლება</translation>
     </message>
     <message>
-      <location filename="../ui/ResultShow.ui" line="333"/>
-      <source>Calculate and plot</source>
-      <translation>დათვლა და დახაზვა</translation>
+      <location filename="../ui/ResultShow.ui" line="331"/>
+      <source>Runs the equation given in the field below,
+outputs the results to the Min and Max fields
+and colors the result mesh accordingly</source>
+      <translation type="unfinished">Runs the equation given in the field below,
+outputs the results to the Min and Max fields
+and colors the result mesh accordingly</translation>
     </message>
     <message>
-      <location filename="../ui/ResultShow.ui" line="340"/>
-      <source>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;&lt;span style=" font-family:'Ubuntu'; font-size:8pt;"&gt;P1-P3 # Stress intensity stress equation. Available values are numpy array format. Calculation np.function can be used on available values. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;&lt;span style=" font-family:'Ubuntu'; font-size:8pt;"&gt;P1-P3 # Stress intensity stress equation. Available values are numpy array format. Calculation np.function can be used on available values. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../ui/ResultShow.ui" line="336"/>
+      <source>Calculate</source>
+      <translation>გამოთვლა</translation>
+    </message>
+    <message>
+      <location filename="../ui/ResultShow.ui" line="355"/>
+      <source>Enter here an equation to be calculated.
+For possible variables, see the description box below.</source>
+      <translation type="unfinished">Enter here an equation to be calculated.
+For possible variables, see the description box below.</translation>
+    </message>
+    <message>
+      <location filename="../ui/ResultShow.ui" line="359"/>
+      <source>P1 - P3 # Max - Min Principal Stress</source>
+      <translation>P1 - P3 # მაქს-მინ ძირითადი ძაბვა</translation>
     </message>
     <message>
       <location filename="../ui/ResultHints.ui" line="14"/>
@@ -3479,44 +4313,72 @@ p, li { white-space: pre-wrap; }
       <translation>მასის დინების სიჩქარე: მდ</translation>
     </message>
     <message>
-      <location filename="../ui/ResultHints.ui" line="148"/>
+      <location filename="../ui/ResultHints.ui" line="158"/>
       <source>von Mises stress: vM</source>
       <translation>ფონ მიზეზის სტრესი: vM</translation>
     </message>
     <message>
-      <location filename="../ui/ResultHints.ui" line="158"/>
+      <location filename="../ui/ResultHints.ui" line="178"/>
+      <source>max shear stress: MS</source>
+      <translation>მაქს. ძვრის ძაბვა: MS</translation>
+    </message>
+    <message>
+      <location filename="../ui/ResultHints.ui" line="188"/>
+      <source>max princ. stress vector: s3x, s3y, s3z</source>
+      <translation type="unfinished">max princ. stress vector: s3x, s3y, s3z</translation>
+    </message>
+    <message>
+      <location filename="../ui/ResultHints.ui" line="198"/>
+      <source>max principal stress: P1</source>
+      <translation>მთავარი ძაბვის მაქს.: P1</translation>
+    </message>
+    <message>
+      <location filename="../ui/ResultHints.ui" line="208"/>
+      <source>med princ. stress vector: s2x, s2y, s2z</source>
+      <translation type="unfinished">med princ. stress vector: s2x, s2y, s2z</translation>
+    </message>
+    <message>
+      <location filename="../ui/ResultHints.ui" line="218"/>
+      <source>med principal stress: P2</source>
+      <translation>მთავარი ძაბვის საშ.: P1</translation>
+    </message>
+    <message>
+      <location filename="../ui/ResultHints.ui" line="228"/>
+      <source>min princ. stress vector: s1x, s1y, s1z</source>
+      <translation type="unfinished">min princ. stress vector: s1x, s1y, s1z</translation>
+    </message>
+    <message>
+      <location filename="../ui/ResultHints.ui" line="238"/>
+      <source>min principal stress: P3</source>
+      <translation>მთავარი ძაბვის მინ.: P3</translation>
+    </message>
+    <message>
+      <location filename="../ui/ResultHints.ui" line="148"/>
       <source>reinforcement ratio: rx, ry, rz</source>
       <translation>არმირების ფარდობა: rx, ry, rz</translation>
     </message>
     <message>
-      <location filename="../ui/ResultHints.ui" line="168"/>
-      <source>principal stresses: P1, P2, P3</source>
-      <translation>ძირითადი დატვირთვები: P1, P2, P3</translation>
-    </message>
-    <message>
-      <location filename="../ui/ResultHints.ui" line="178"/>
+      <location filename="../ui/ResultHints.ui" line="248"/>
       <source>Mohr Coulomb: mc</source>
       <translation>Mohr Coulomb: mc</translation>
     </message>
     <message>
-      <location filename="../ui/ResultHints.ui" line="188"/>
+      <location filename="../ui/ResultHints.ui" line="168"/>
       <source>equivalent plastic strain: Peeq</source>
       <translation>პლასტმასის ექვივალენტური დეფორმაცია: Peeq</translation>
     </message>
+  </context>
+  <context>
+    <name>SolidSelector</name>
     <message>
-      <location filename="../ui/ResultHints.ui" line="198"/>
-      <source>min. principal stress vector: s1x, s1y, s1z</source>
-      <translation>მინ. მთავარი ძაბვის ვექტორი: s1x, s1y, s1z</translation>
+      <location filename="../../../femguiutils/selection_widgets.py" line="151"/>
+      <source>Select Solids</source>
+      <translation>ობიექტების არჩევა</translation>
     </message>
     <message>
-      <location filename="../ui/ResultHints.ui" line="208"/>
-      <source>med. principal stress vector: s2x, s2y, s2z</source>
-      <translation>საშ. მთავარი ძაბვის ვექტორი: s2x, s2y, s2z</translation>
-    </message>
-    <message>
-      <location filename="../ui/ResultHints.ui" line="218"/>
-      <source>max. principal stress vector: s3x, s3y, s3z</source>
-      <translation>მაქს. მთავარი ძაბვის ვექტორი: s3x, s3y, s3z</translation>
+      <location filename="../../../femguiutils/selection_widgets.py" line="155"/>
+      <source>Select elements part of the solid that shall be added to the list. To add the solid click "Add".</source>
+      <translation>აირჩიეთ მყარი სხეულის ნაწილის ელემენტები, რომლებიც სიას დაემატება. მყარი სხეულის დასამატებლად დააწექით ღილაკს "დამატება".</translation>
     </message>
   </context>
   <context>
@@ -3611,14 +4473,14 @@ p, li { white-space: pre-wrap; }
       <location filename="../../ViewProviderAnalysis.cpp" line="222"/>
       <source>The analysis is not empty, therefore the
 following referencing objects might be lost:</source>
-      <translation type="unfinished">The analysis is not empty, therefore the
-following referencing objects might be lost:</translation>
+      <translation>ანალიზი ცარიელი არაა, ამიტომ
+შემდეგი ბმის ობიექტები შეიძლება დაიკარგოს:</translation>
     </message>
     <message>
       <location filename="../../ViewProviderAnalysis.cpp" line="230"/>
       <location filename="../../ViewProviderFemPostFunction.cpp" line="153"/>
-      <location filename="../../ViewProviderFemPostObject.cpp" line="684"/>
       <location filename="../../ViewProviderSolver.cpp" line="74"/>
+      <location filename="../../ViewProviderFemPostObject.cpp" line="684"/>
       <source>Object dependencies</source>
       <translation>ობიექტის დამოკიდებულებები</translation>
     </message>
@@ -3626,22 +4488,22 @@ following referencing objects might be lost:</translation>
       <location filename="../../ViewProviderFemPostFunction.cpp" line="145"/>
       <source>The functions list is not empty, therefore the
 following referencing objects might be lost:</source>
-      <translation type="unfinished">The functions list is not empty, therefore the
-following referencing objects might be lost:</translation>
+      <translation>ფუნქციების სია ცარიელი არაა, ამიტომ
+შემდეგი ბმის ობიექტები შეიძლება დაიკარგოს:</translation>
     </message>
     <message>
       <location filename="../../ViewProviderFemPostObject.cpp" line="676"/>
       <source>The pipeline is not empty, therefore the
 following referencing objects might be lost:</source>
-      <translation type="unfinished">The pipeline is not empty, therefore the
-following referencing objects might be lost:</translation>
+      <translation>მილსადენი ცარიელი არაა, ამიტომ
+შემდეგი ბმის ობიექტები შეიძლება დაიკარგოს:</translation>
     </message>
     <message>
       <location filename="../../ViewProviderSolver.cpp" line="66"/>
       <source>The solver is not empty, therefore the
 following referencing objects might be lost:</source>
-      <translation type="unfinished">The solver is not empty, therefore the
-following referencing objects might be lost:</translation>
+      <translation>ამომხსნელი ცარიელი არაა, ამიტომ
+შემდეგი ბმის ობიექტები შეიძლება დაიკარგოს:</translation>
     </message>
   </context>
   <context>
@@ -4214,7 +5076,7 @@ normal vector of the face is used as direction</source>
     <message>
       <location filename="../../TaskFemConstraintHeatflux.ui" line="156"/>
       <source>1 W/m^2</source>
-      <translation type="unfinished">1 W/m^2</translation>
+      <translation>1 W/მ^2</translation>
     </message>
   </context>
   <context>
@@ -4522,22 +5384,32 @@ normal vector of the face is used as direction</source>
   <context>
     <name>TaskPostDataAtPoint</name>
     <message>
-      <location filename="../../TaskPostDataAtPoint.ui" line="14"/>
-      <source>Form</source>
-      <translation>ფორმა</translation>
-    </message>
-    <message>
-      <location filename="../../TaskPostDataAtPoint.ui" line="29"/>
+      <location filename="../../TaskPostDataAtPoint.ui" line="17"/>
       <source>Center</source>
       <translation>ცენტრი</translation>
     </message>
     <message>
-      <location filename="../../TaskPostDataAtPoint.ui" line="107"/>
+      <location filename="../../TaskPostDataAtPoint.ui" line="23"/>
+      <source>x</source>
+      <translation>x</translation>
+    </message>
+    <message>
+      <location filename="../../TaskPostDataAtPoint.ui" line="33"/>
+      <source>y</source>
+      <translation>y</translation>
+    </message>
+    <message>
+      <location filename="../../TaskPostDataAtPoint.ui" line="43"/>
+      <source>z</source>
+      <translation>z</translation>
+    </message>
+    <message>
+      <location filename="../../TaskPostDataAtPoint.ui" line="116"/>
       <source>Select Point</source>
       <translation>აირჩიეთ წერტილი</translation>
     </message>
     <message>
-      <location filename="../../TaskPostDataAtPoint.ui" line="126"/>
+      <location filename="../../TaskPostDataAtPoint.ui" line="135"/>
       <source>Field</source>
       <translation>ველი</translation>
     </message>
@@ -4967,24 +5839,37 @@ normal vector of the face is used as direction</source>
     </message>
   </context>
   <context>
+    <name>_Selector</name>
+    <message>
+      <location filename="../../../femguiutils/selection_widgets.py" line="52"/>
+      <source>Add</source>
+      <translation>დამატება</translation>
+    </message>
+    <message>
+      <location filename="../../../femguiutils/selection_widgets.py" line="53"/>
+      <source>Remove</source>
+      <translation>მოცილება</translation>
+    </message>
+  </context>
+  <context>
     <name>setupFilter</name>
     <message>
       <location filename="../../Command.cpp" line="1145"/>
       <source>Error: A filter can only be applied to a single object.</source>
-      <translation type="unfinished">Error: A filter can only be applied to a single object.</translation>
+      <translation>შეცდომა: ფილტრი მხოლოდ ერთ ობიექტზე შეიძლება გადატარდეს.</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="1146"/>
-      <location filename="../../Command.cpp" line="1161"/>
-      <location filename="../../Command.cpp" line="1188"/>
+      <location filename="../../Command.cpp" line="1162"/>
+      <location filename="../../Command.cpp" line="1189"/>
       <source>The filter could not be set up.</source>
-      <translation type="unfinished">The filter could not be set up.</translation>
+      <translation>ფილტრის მორგება შეუძლებელია.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1160"/>
-      <location filename="../../Command.cpp" line="1187"/>
+      <location filename="../../Command.cpp" line="1161"/>
+      <location filename="../../Command.cpp" line="1188"/>
       <source>Error: no post processing object selected.</source>
-      <translation type="unfinished">Error: no post processing object selected.</translation>
+      <translation>შეცდომა: პოსტპროცესინგის ობიექტი მონიშნული არაა.</translation>
     </message>
   </context>
 </TS>

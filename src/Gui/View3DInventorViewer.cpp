@@ -389,36 +389,16 @@ void View3DInventorViewer::init()
     cam->nearDistance = 0;
     cam->farDistance = 10;
 
-    // dragger
-    //SoSeparator * dragSep = new SoSeparator();
-    //SoScale *scale = new SoScale();
-    //scale->scaleFactor = SbVec3f  (0.2,0.2,0.2);
-    //dragSep->addChild(scale);
-    //SoCenterballDragger *dragger = new SoCenterballDragger();
-    //dragger->center = SbVec3f  (0.8,0.8,0);
-    ////dragger->rotation = SbRotation(rrot[0],rrot[1],rrot[2],rrot[3]);
-    //dragSep->addChild(dragger);
-
     this->foregroundroot->addChild(cam);
     this->foregroundroot->addChild(lm);
     this->foregroundroot->addChild(bc);
-    //this->foregroundroot->addChild(dragSep);
 
-#if 0
-    // NOTE: For every mouse click event the SoSelection searches for the picked
-    // point which causes a certain slow-down because for all objects the primitives
-    // must be created. Using an SoSeparator avoids this drawback.
-    SoSelection* selectionRoot = new SoSelection();
-    selectionRoot->addSelectionCallback(View3DInventorViewer::selectCB, this);
-    selectionRoot->addDeselectionCallback(View3DInventorViewer::deselectCB, this);
-    selectionRoot->setPickFilterCallback(View3DInventorViewer::pickFilterCB, this);
-#else
     // NOTE: For every mouse click event the SoFCUnifiedSelection searches for the picked
     // point which causes a certain slow-down because for all objects the primitives
     // must be created. Using an SoSeparator avoids this drawback.
     selectionRoot = new Gui::SoFCUnifiedSelection();
     selectionRoot->applySettings();
-#endif
+
     // set the ViewProvider root node
     pcViewProviderRoot = selectionRoot;
 
@@ -453,7 +433,6 @@ void View3DInventorViewer::init()
 
     auto pcGroupOnTopPickStyle = new SoPickStyle;
     pcGroupOnTopPickStyle->style = SoPickStyle::UNPICKABLE;
-    // pcGroupOnTopPickStyle->style = SoPickStyle::SHAPE_ON_TOP;
     pcGroupOnTopPickStyle->setOverride(true);
     pcGroupOnTop->addChild(pcGroupOnTopPickStyle);
 
@@ -503,14 +482,12 @@ void View3DInventorViewer::init()
     this->getSoRenderManager()->getGLRenderAction()->setCacheContext(id);
 
     // set the transparency and antialiasing settings
-//  getGLRenderAction()->setTransparencyType(SoGLRenderAction::SORTED_OBJECT_BLEND);
     getSoRenderManager()->getGLRenderAction()->setTransparencyType(SoGLRenderAction::SORTED_OBJECT_SORTED_TRIANGLE_BLEND);
-//  getGLRenderAction()->setSmoothing(true);
 
     // Settings
     setSeekTime(0.4f);
 
-    if (isSeekValuePercentage() == false)
+    if (!isSeekValuePercentage())
         setSeekValueAsPercentage(true);
 
     setSeekDistance(100);
@@ -1082,14 +1059,15 @@ void View3DInventorViewer::resetEditingRoot(bool updateLinks)
     }
 }
 
-SoPickedPoint* View3DInventorViewer::getPointOnRay(const SbVec2s& pos, ViewProvider* vp) const
+SoPickedPoint* View3DInventorViewer::getPointOnRay(const SbVec2s& pos, const ViewProvider* vp) const
 {
     SoPath *path;
-    if(vp == editViewProvider && pcEditingRoot->getNumChildren()>1) {
+    if (vp == editViewProvider && pcEditingRoot->getNumChildren() > 1) {
         path = new SoPath(1);
         path->ref();
         path->append(pcEditingRoot);
-    }else{
+    }
+    else {
         //first get the path to this node and calculate the current transformation
         SoSearchAction sa;
         sa.setNode(vp->getRoot());
@@ -1128,17 +1106,18 @@ SoPickedPoint* View3DInventorViewer::getPointOnRay(const SbVec2s& pos, ViewProvi
     return (pick ? new SoPickedPoint(*pick) : nullptr);
 }
 
-SoPickedPoint* View3DInventorViewer::getPointOnRay(const SbVec3f& pos,const SbVec3f& dir, ViewProvider* vp) const
+SoPickedPoint* View3DInventorViewer::getPointOnRay(const SbVec3f& pos, const SbVec3f& dir, const ViewProvider* vp) const
 {
     // Note: There seems to be a  bug with setRay() which causes SoRayPickAction
     // to fail to get intersections between the ray and a line
 
     SoPath *path;
-    if(vp == editViewProvider && pcEditingRoot->getNumChildren()>1) {
+    if (vp == editViewProvider && pcEditingRoot->getNumChildren() > 1) {
         path = new SoPath(1);
         path->ref();
         path->append(pcEditingRoot);
-    }else{
+    }
+    else {
         //first get the path to this node and calculate the current setTransformation
         SoSearchAction sa;
         sa.setNode(vp->getRoot());
@@ -1290,14 +1269,14 @@ void View3DInventorViewer::setGLWidgetCB(void* userdata, SoAction* action)
     // Coin error in SoNode::GLRenderS(): GL error: 'GL_STACK_UNDERFLOW', nodetype:
     // Separator (set envvar COIN_GLERROR_DEBUGGING=1 and re-run to get more information)
     if (action->isOfType(SoGLRenderAction::getClassTypeId())) {
-        QWidget* gl = reinterpret_cast<QWidget*>(userdata);
+        QWidget* gl = static_cast<QWidget*>(userdata);
         SoGLWidgetElement::set(action->getState(), qobject_cast<QtGLWidget*>(gl));
     }
 }
 
 void View3DInventorViewer::handleEventCB(void* ud, SoEventCallback* n)
 {
-    View3DInventorViewer* that = reinterpret_cast<View3DInventorViewer*>(ud);
+    View3DInventorViewer* that = static_cast<View3DInventorViewer*>(ud);
     SoGLRenderAction* glra = that->getSoRenderManager()->getGLRenderAction();
     SoAction* action = n->getAction();
     SoGLRenderActionElement::set(action->getState(), glra);
@@ -1445,18 +1424,13 @@ bool View3DInventorViewer::hasAxisCross(void)
 
 void View3DInventorViewer::setNavigationType(Base::Type t)
 {
-    if (t.isBad())
-        return;
-
     if (this->navigation && this->navigation->getTypeId() == t)
         return; // nothing to do
 
-    Base::BaseClass* base = static_cast<Base::BaseClass*>(t.createInstance());
-    if (!base)
-        return;
-
-    if (!base->getTypeId().isDerivedFrom(NavigationStyle::getClassTypeId())) {
-        delete base;
+    Base::Type type = Base::Type::getTypeIfDerivedFrom(t.getName(), NavigationStyle::getClassTypeId());
+    NavigationStyle* ns = static_cast<NavigationStyle*>(type.createInstance());
+    // createInstance could return a null pointer
+    if (!ns) {
 #if FC_DEBUG
         SoDebugError::postWarning("View3DInventorViewer::setNavigationType",
                                   "Navigation object must be of type NavigationStyle.");
@@ -1464,7 +1438,6 @@ void View3DInventorViewer::setNavigationType(Base::Type t)
         return;
     }
 
-    NavigationStyle* ns = static_cast<NavigationStyle*>(base);
     if (this->navigation) {
         ns->operator = (*this->navigation);
         delete this->navigation;
@@ -2169,9 +2142,6 @@ void View3DInventorViewer::renderToFramebuffer(QtGLFramebufferObject* fbo)
     glClearColor(col.redF(), col.greenF(), col.blueF(), col.alphaF());
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    // If on then transparent areas may shine through opaque areas
-    //glDepthRange(0.1,1.0);
-
     SoBoxSelectionRenderAction gl(SbViewportRegion(width, height));
     // When creating a new GL render action we have to copy over the cache context id
     // For further details see init().
@@ -2372,11 +2342,6 @@ void View3DInventorViewer::renderScene(void)
         this->getSoRenderManager()->scheduleRedraw();
     }
 
-#if 0 // this breaks highlighting of edges
-    glDisable(GL_LIGHTING);
-    glDisable(GL_DEPTH_TEST);
-#endif
-
     printDimension();
     navigation->redraw();
 
@@ -2394,11 +2359,6 @@ void View3DInventorViewer::renderScene(void)
 
     if (naviCubeEnabled)
         naviCube->drawNaviCube();
-
-#if 0 // this breaks highlighting of edges
-    glEnable(GL_LIGHTING);
-    glEnable(GL_DEPTH_TEST);
-#endif
 }
 
 void View3DInventorViewer::setSeekMode(SbBool on)
@@ -2812,7 +2772,7 @@ void View3DInventorViewer::setCameraType(SoType t)
         // close camera but we don't have this other ugly effect.
         SoCamera* cam = this->getSoRenderManager()->getCamera();
 
-        if(cam == nullptr)
+        if(!cam)
             return;
 
         static_cast<SoPerspectiveCamera*>(cam)->heightAngle = (float)(M_PI / 4.0);
@@ -2854,7 +2814,7 @@ namespace Gui {
 void View3DInventorViewer::moveCameraTo(const SbRotation& rot, const SbVec3f& pos, int steps, int ms)
 {
     SoCamera* cam = this->getSoRenderManager()->getCamera();
-    if (cam == nullptr)
+    if (!cam)
         return;
 
     CameraAnimation anim(cam, rot, pos);
@@ -3286,14 +3246,8 @@ void View3DInventorViewer::drawAxisCross(void)
     // Set the viewport in the OpenGL canvas. Dimensions are calculated
     // as a percentage of the total canvas size.
     SbVec2s view = this->getSoRenderManager()->getSize();
-    const int pixelarea =
-        int(float(this->axiscrossSize)/100.0f * std::min(view[0], view[1]));
-#if 0 // middle of canvas
-    SbVec2s origin(view[0]/2 - pixelarea/2, view[1]/2 - pixelarea/2);
-#endif // middle of canvas
-#if 1 // lower right of canvas
+    const int pixelarea = int(float(this->axiscrossSize)/100.0f * std::min(view[0], view[1]));
     SbVec2s origin(view[0] - pixelarea, 0);
-#endif // lower right of canvas
     glViewport(origin[0], origin[1], pixelarea, pixelarea);
 
     // Set up the projection matrix.
@@ -3329,7 +3283,7 @@ void View3DInventorViewer::drawAxisCross(void)
     // Find unit vector end points.
     SbMatrix px;
     glGetFloatv(GL_PROJECTION_MATRIX, (float*)px);
-    SbMatrix comb = mx.multRight(px);
+    SbMatrix comb = mx.multRight(px); // clazy:exclude=rule-of-two-soft
 
     SbVec3f xpos;
     comb.multVecMatrix(SbVec3f(1,0,0), xpos);
@@ -3755,3 +3709,4 @@ void View3DInventorViewer::dragLeaveEvent(QDragLeaveEvent *e)
     inherited::dragLeaveEvent(e);
 }
 
+#include "moc_View3DInventorViewer.cpp"

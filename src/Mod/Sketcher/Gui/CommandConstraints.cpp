@@ -72,10 +72,6 @@ namespace SketcherGui
 
 ConstraintCreationMode constraintCreationMode = Driving;
 
-void ActivateHandler(Gui::Document *doc, DrawSketchHandler *handler);
-
-bool isCreateGeoActive(Gui::Document *doc);
-
 bool isCreateConstraintActive(Gui::Document *doc)
 {
     if (doc) {
@@ -673,7 +669,7 @@ protected:
     virtual void applyConstraint(std::vector<SelIdPair> &, int) {}
     virtual void activated(int /*iMsg*/);
     virtual bool isActive(void)
-    { return isCreateGeoActive(getActiveGuiDocument()); }
+    { return isCommandActive(getActiveGuiDocument()); }
 };
 
 class DrawSketchHandlerGenConstraint: public DrawSketchHandler
@@ -4419,7 +4415,6 @@ void CmdSketcherConstrainTangent::applyConstraint(std::vector<SelIdPair> &selSeq
 {
     SketcherGui::ViewProviderSketch* sketchgui = static_cast<SketcherGui::ViewProviderSketch*>(getActiveGuiDocument()->getInEdit());
     Sketcher::SketchObject* Obj = sketchgui->getSketchObject();
-    QString strError;
 
     int GeoId1 = GeoEnum::GeoUndef, GeoId2 = GeoEnum::GeoUndef, GeoId3 = GeoEnum::GeoUndef;
     Sketcher::PointPos PosId1 = Sketcher::PointPos::none, PosId2 = Sketcher::PointPos::none, PosId3 = Sketcher::PointPos::none;
@@ -5708,7 +5703,7 @@ void CmdSketcherCompConstrainRadDia::languageChange()
 
 bool CmdSketcherCompConstrainRadDia::isActive(void)
 {
-    return isCreateGeoActive(getActiveGuiDocument());
+    return isCommandActive(getActiveGuiDocument());
 }
 
 // ======================================================================================
@@ -6407,7 +6402,6 @@ void CmdSketcherConstrainEqual::applyConstraint(std::vector<SelIdPair> &selSeq, 
 {
     SketcherGui::ViewProviderSketch* sketchgui = static_cast<SketcherGui::ViewProviderSketch*>(getActiveGuiDocument()->getInEdit());
     Sketcher::SketchObject* Obj = sketchgui->getSketchObject();
-    QString strError;
 
     int GeoId1 = GeoEnum::GeoUndef, GeoId2 = GeoEnum::GeoUndef;
 
@@ -6655,7 +6649,6 @@ void CmdSketcherConstrainSymmetric::applyConstraint(std::vector<SelIdPair> &selS
 {
     SketcherGui::ViewProviderSketch* sketchgui = static_cast<SketcherGui::ViewProviderSketch*>(getActiveGuiDocument()->getInEdit());
     Sketcher::SketchObject* Obj = sketchgui->getSketchObject();
-    QString strError;
 
     int GeoId1 = GeoEnum::GeoUndef, GeoId2 = GeoEnum::GeoUndef, GeoId3 = GeoEnum::GeoUndef;
     Sketcher::PointPos PosId1 = Sketcher::PointPos::none, PosId2 = Sketcher::PointPos::none, PosId3 = Sketcher::PointPos::none;
@@ -7520,7 +7513,7 @@ void CmdSketcherToggleDrivingConstraint::activated(int iMsg)
 
 bool CmdSketcherToggleDrivingConstraint::isActive(void)
 {
-    return isCreateGeoActive( getActiveGuiDocument() );
+    return isCommandActive( getActiveGuiDocument() );
 }
 
 DEF_STD_CMD_A(CmdSketcherToggleActiveConstraint)

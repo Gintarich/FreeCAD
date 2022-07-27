@@ -96,7 +96,7 @@ void QGIViewAnnotation::setViewAnnoFeature(TechDraw::DrawViewAnnotation *obj)
 void QGIViewAnnotation::updateView(bool update)
 {
     auto viewAnno( dynamic_cast<TechDraw::DrawViewAnnotation *>(getViewObject()) );
-    if( viewAnno == nullptr)
+    if (!viewAnno)
         return;
 
     if (update ||
@@ -129,7 +129,7 @@ void QGIViewAnnotation::draw()
 void QGIViewAnnotation::drawAnnotation()
 {
     auto viewAnno( dynamic_cast<TechDraw::DrawViewAnnotation *>(getViewObject()) );
-    if( viewAnno == nullptr ) {
+    if (!viewAnno) {
         return;
     }
 
@@ -156,7 +156,7 @@ void QGIViewAnnotation::drawAnnotation()
     }
     ss << "line-height:" << viewAnno->LineSpace.getValue() << "%; ";
     App::Color c = viewAnno->TextColor.getValue();
-    ss << "color:" << c.asCSSString() << "; ";
+    ss << "color:" << c.asHexString() << "; ";
     ss << "}\n</style>\n</head>\n<body>\n<p>";
     for(std::vector<std::string>::const_iterator it = annoText.begin(); it != annoText.end(); it++) {
         if (it != annoText.begin()) {
@@ -189,7 +189,7 @@ void QGIViewAnnotation::mouseDoubleClickEvent(QGraphicsSceneMouseEvent* event)
     Q_UNUSED(event);
 
     TechDraw::DrawViewAnnotation *annotation = dynamic_cast<TechDraw::DrawViewAnnotation *>(getViewObject());
-    if (annotation == nullptr) {
+    if (!annotation) {
         return;
     }
 

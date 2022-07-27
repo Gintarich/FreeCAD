@@ -463,7 +463,7 @@ PyObject* Gui::Application::sActivateView(PyObject * /*self*/, PyObject *args)
         return nullptr;
 
     Base::Type type = Base::Type::fromName(typeStr);
-    Instance->activateView(type, PyObject_IsTrue(create) ? true : false);
+    Instance->activateView(type, Base::asBoolean(create));
 
     Py_Return;
 }
@@ -831,7 +831,7 @@ PyObject* Application::sSendActiveView(PyObject * /*self*/, PyObject *args)
 
     const char* ppReturn = nullptr;
     if (!Instance->sendMsgToActiveView(psCommandStr,&ppReturn)) {
-        if (!PyObject_IsTrue(suppress))
+        if (!Base::asBoolean(suppress))
             Base::Console().Warning("Unknown view command: %s\n",psCommandStr);
     }
 
@@ -852,7 +852,7 @@ PyObject* Application::sSendFocusView(PyObject * /*self*/, PyObject *args)
 
     const char* ppReturn = nullptr;
     if (!Instance->sendMsgToFocusView(psCommandStr,&ppReturn)) {
-        if (!PyObject_IsTrue(suppress))
+        if (!Base::asBoolean(suppress))
             Base::Console().Warning("Unknown view command: %s\n",psCommandStr);
     }
 
@@ -1007,7 +1007,7 @@ PyObject* Application::sActivateWorkbenchHandler(PyObject * /*self*/, PyObject *
     catch (const Base::Exception& e) {
         std::stringstream err;
         err << psKey << ": " << e.what();
-        PyErr_SetString(Base::PyExc_FC_GeneralError, err.str().c_str());
+        PyErr_SetString(e.getPyExceptionType(), err.str().c_str());
         return nullptr;
     }
     catch (const XERCES_CPP_NAMESPACE_QUALIFIER TranscodingException& e) {
@@ -1640,7 +1640,7 @@ PyObject* Application::sCoinRemoveAllChildren(PyObject * /*self*/, PyObject *arg
     PY_TRY {
         void* ptr = nullptr;
         Base::Interpreter().convertSWIGPointerObj("pivy.coin","_p_SoGroup", pynode, &ptr, 0);
-        coinRemoveAllChildren(reinterpret_cast<SoGroup*>(ptr));
+        coinRemoveAllChildren(static_cast<SoGroup*>(ptr));
         Py_Return;
     }
     PY_CATCH;

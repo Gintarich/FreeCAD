@@ -128,7 +128,7 @@ void ViewProviderShapeBinder::unsetEdit(int ModNum) {
     PartGui::ViewProviderPart::unsetEdit(ModNum);
 }
 
-void ViewProviderShapeBinder::highlightReferences(const bool on, bool /*auxiliary*/)
+void ViewProviderShapeBinder::highlightReferences(bool on)
 {
     App::GeoFeature* obj = nullptr;
     std::vector<std::string> subs;
@@ -144,7 +144,7 @@ void ViewProviderShapeBinder::highlightReferences(const bool on, bool /*auxiliar
 
     PartGui::ViewProviderPart* svp = dynamic_cast<PartGui::ViewProviderPart*>(
         Gui::Application::Instance->getViewProvider(obj));
-    if (svp == nullptr)
+    if (!svp)
         return;
 
     if (on) {
@@ -160,7 +160,7 @@ void ViewProviderShapeBinder::highlightReferences(const bool on, bool /*auxiliar
             std::vector<App::Color> fcolors = originalFaceColors;
             fcolors.resize(eMap.Extent(), svp->ShapeColor.getValue());
 
-            for (std::string e : subs) {
+            for (const std::string& e : subs) {
                 // Note: stoi may throw, but it strictly shouldn't happen
                 if (e.compare(0, 4, "Edge") == 0) {
                     int idx = std::stoi(e.substr(4)) - 1;
@@ -248,7 +248,7 @@ void ViewProviderSubShapeBinder::onChanged(const App::Property* prop) {
             shapeColor.setPackedValue(Gui::ViewParams::instance()->getDefaultShapeColor());
             lineColor.setPackedValue(Gui::ViewParams::instance()->getDefaultShapeLineColor());
             pointColor = lineColor;
-            transparency = 0;
+            transparency = Gui::ViewParams::instance()->getDefaultShapeTransparency();
             linewidth = Gui::ViewParams::instance()->getDefaultShapeLineWidth();
         }
         ShapeColor.setValue(shapeColor);
